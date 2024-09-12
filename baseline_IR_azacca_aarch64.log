@@ -1,0 +1,121 @@
+cd /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common && make clean
+make[1]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common'
+rm -f *.ll
+make[1]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common'
+cd /scr/studyztp/test/NPB3.4-OMP-custom-makefile/BT && make clean_all
+make[1]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/BT'
+rm -f *.o *~ *.mod mputil*
+rm -f npbparams.h core blk_par.h
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+for size in A B C D E ; do \
+	rm -rf /scr/studyztp/test/NPB3.4-OMP-custom-makefile/BT/$size; \
+done
+make[1]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/BT'
+cd /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common && make clean
+make[1]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common'
+rm -f *.ll
+make[1]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common'
+cd /scr/studyztp/test/NPB3.4-OMP-custom-makefile/CG && make clean_all
+make[1]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/CG'
+rm -f *.o *~ *.mod
+rm -f npbparams.h core
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+for size in A B C D E ; do \
+	rm -rf /scr/studyztp/test/NPB3.4-OMP-custom-makefile/CG/$size; \
+done
+make[1]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/CG'
+cd /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common && make clean
+make[1]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common'
+rm -f *.ll
+make[1]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common'
+cd /scr/studyztp/test/NPB3.4-OMP-custom-makefile/EP && make clean_all
+make[1]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/EP'
+rm -f *.o *~ *.mod
+rm -f npbparams.h core
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+for size in A B C D E ; do \
+	rm -rf /scr/studyztp/test/NPB3.4-OMP-custom-makefile/EP/$size; \
+done
+make[1]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/EP'
+cd /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common && make clean
+make[1]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common'
+rm -f *.ll
+make[1]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common'
+cd /scr/studyztp/test/NPB3.4-OMP-custom-makefile/IS && make clean_all
+make[1]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/IS'
+rm -f *.o *~ mputil*
+rm -f npbparams.h core
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+for size in A B C D E ; do \
+	rm -rf /scr/studyztp/test/NPB3.4-OMP-custom-makefile/IS/$size; \
+done
+make[1]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/IS'
+cd /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common && make clean
+make[1]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common'
+rm -f *.ll
+make[1]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common'
+cd /scr/studyztp/test/NPB3.4-OMP-custom-makefile/FT && make clean_all
+make[1]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/FT'
+rm -f *.o *~ mputil* *.mod
+rm -f ft npbparams.h core blk_par.h
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+for size in A B C D E ; do \
+	rm -rf /scr/studyztp/test/NPB3.4-OMP-custom-makefile/FT/$size; \
+done
+make[1]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/FT'
+cd /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common && make clean
+make[1]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common'
+rm -f *.ll
+make[1]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common'
+cd /scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU && make clean_all
+make[1]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+rm -f *.o *~ *.mod npbparams.h
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+for size in A B C D E ; do \
+	rm -rf /scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU/$size; \
+done
+make[1]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+cd /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common && make clean
+make[1]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common'
+rm -f *.ll
+make[1]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common'
+cd /scr/studyztp/test/NPB3.4-OMP-custom-makefile/MG && make clean_all
+make[1]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/MG'
+rm -f *.o *~ *.mod
+rm -f npbparams.h core
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+for size in A B C D E ; do \
+	rm -rf /scr/studyztp/test/NPB3.4-OMP-custom-makefile/MG/$size; \
+done
+make[1]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/MG'
+cd /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common && make clean
+make[1]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common'
+rm -f *.ll
+make[1]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common'
+cd /scr/studyztp/test/NPB3.4-OMP-custom-makefile/SP && make clean_all
+make[1]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/SP'
+rm -f *.o *~ *.mod mputil*
+rm -f npbparams.h core blk_par.h
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+for size in A B C D E ; do \
+	rm -rf /scr/studyztp/test/NPB3.4-OMP-custom-makefile/SP/$size; \
+done
+make[1]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/SP'
+all input arguments are Namespace(region_size_list=[1000000000], arch='aarch64', machine_name='azacca', thread_list=[8], size_list=['C'], if_make_source=True, if_make_base=False, if_make_final=False, if_run=False, num_run=10, papi_naive=False, time_naive=False, profiling=False, papi_profiling=False, marker_overhead=False, papi_measuring=False, region_info='', num_pool=1)
+finished /scr/studyztp/test/NPB3.4-OMP-custom-makefile ['make', '-B', 'all'] 8 threads CompletedProcess(args=['make', '-B', 'all'], returncode=0)
+finished /scr/studyztp/test/NPB3.4-OMP-custom-makefile ['make', '-B', 'all'] 8 threads CompletedProcess(args=['make', '-B', 'all'], returncode=0)
+finished /scr/studyztp/test/NPB3.4-OMP-custom-makefile ['make', '-B', 'all'] 8 threads CompletedProcess(args=['make', '-B', 'all'], returncode=0)
+finished /scr/studyztp/test/NPB3.4-OMP-custom-makefile ['make', '-B', 'all'] 8 threads CompletedProcess(args=['make', '-B', 'all'], returncode=0)
+finished /scr/studyztp/test/NPB3.4-OMP-custom-makefile ['make', '-B', 'all'] 8 threads CompletedProcess(args=['make', '-B', 'all'], returncode=0)
+finished /scr/studyztp/test/NPB3.4-OMP-custom-makefile ['make', '-B', 'all'] 8 threads CompletedProcess(args=['make', '-B', 'all'], returncode=0)
+finished /scr/studyztp/test/NPB3.4-OMP-custom-makefile ['make', '-B', 'all'] 8 threads CompletedProcess(args=['make', '-B', 'all'], returncode=0)
+finished /scr/studyztp/test/NPB3.4-OMP-custom-makefile ['make', '-B', 'all'] 8 threads CompletedProcess(args=['make', '-B', 'all'], returncode=0)
+All done!

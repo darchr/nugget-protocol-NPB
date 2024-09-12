@@ -1,0 +1,237 @@
+cd /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common && make all FC='/scr/studyztp/compiler/llvm-dir/bin/flang-new' CC='/scr/studyztp/compiler/llvm-dir/bin/clang' CPP='/scr/studyztp/compiler/llvm-dir/bin/clang++' OPT='/scr/studyztp/compiler/llvm-dir/bin/opt' LLVM_LINK='/scr/studyztp/compiler/llvm-dir/bin/llvm-link' HW_FLAGS='' LIB_FLAGS='-fopenmp -lm ' OPT_FLAGS='-O3 ' LLC='/scr/studyztp/compiler/llvm-dir/bin/llc' LLC_FLAGS='-relocation-model=pic -filetype=obj' BASIC_FLAGS=' -fopenmp -lm  -O3   ' COMMON='/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common' SYS_DIR='/scr/studyztp/test/NPB3.4-OMP-custom-makefile/sys' PAPI_LINE='-I/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/include -L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/lib -lpapi -lpthread' M5_LINE='-no-pie -I/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5 -L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5/all_outs/aarch64 -lm5' M5_INCLUDE='-I/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5' M5_LIB='-L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5/all_outs/aarch64 -lm5' HOST_ARCH='aarch64-unknown-linux-gnu' TARGET_ARCH='aarch64' SIZE='A'
+make[1]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common'
+/scr/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -emit-llvm c_print_results.c -o c_print_results.ll
+/scr/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -emit-llvm c_timers.c -o c_timers.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm print_results.f90 -o print_results.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm randdp.f90 -o randdp.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm randdpvec.f90 -o randdpvec.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm randi8_safe.f90 -o randi8_safe.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm randi8.f90 -o randi8.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm timers.f90 -o timers.ll
+/scr/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -emit-llvm wtime.c -o wtime.ll
+/scr/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DPROFILING -emit-llvm \
+c_helper.c -o c_profiling.ll
+/scr/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DNAIVE -emit-llvm \
+c_helper.c -o c_naive.ll
+/scr/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DUSING_PAPI_PROFILING -emit-llvm \
+c_helper.c -o c_papi_profiling.ll -I/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/include -L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/lib -lpapi -lpthread
+/scr/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DMEASURING -DPAPI_MEASURING -emit-llvm \
+c_helper.c -o c_papi_measuring.ll -I/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/include -L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/lib -lpapi -lpthread
+/scr/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DMEASURING -DM5_FS_MEASURING -emit-llvm \
+c_helper.c -o c_m5_fs_measuring.ll -no-pie -I/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5 -L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5/all_outs/aarch64 -lm5
+/scr/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DPAPI_NAIVE -emit-llvm \
+c_helper.c -o c_papi_naive.ll -I/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/include -L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/lib -lpapi -lpthread
+/scr/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DTIMING_NAIVE -emit-llvm \
+c_helper.c -o c_time_naive.ll
+/scr/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DMEASURING -DMARKER_OVERHEAD_MEASURING \
+-emit-llvm c_helper.c -o c_marker_overhead_measuring.ll -I/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/include -L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/lib -lpapi -lpthread
+/scr/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DLOOPPOINT_M5_FS -emit-llvm \
+c_helper.c -o c_marker_looppoint_m5_fs.ll -no-pie -I/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5 -L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5/all_outs/aarch64 -lm5
+/scr/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DM5_FS_WARMUP_MARKER_ONLY -emit-llvm \
+c_helper.c -o c_m5_fs_warmup_marker_only.ll -no-pie -I/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5 -L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5/all_outs/aarch64 -lm5
+/scr/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DPROFILING -emit-llvm \
+single_thread_c_helper.c -o single_thread_c_profiling.ll
+/scr/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DUSING_PAPI_PROFILING -emit-llvm \
+single_thread_c_helper.c -o single_thread_c_papi_profiling.ll -I/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/include -L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/lib -lpapi -lpthread
+/scr/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DMEASURING -DPAPI_MEASURING -emit-llvm \
+single_thread_c_helper.c -o single_thread_c_papi_measuring.ll -I/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/include -L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/lib -lpapi -lpthread
+/scr/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DMEASURING -DM5_FS_MEASURING -emit-llvm \
+single_thread_c_helper.c -o single_thread_c_m5_fs_measuring.ll -no-pie -I/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5 -L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5/all_outs/aarch64 -lm5
+/scr/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DMEASURING -DMARKER_OVERHEAD_MEASURING -emit-llvm \
+single_thread_c_helper.c -o single_thread_c_marker_overhead_measuring.ll -I/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/include -L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/lib -lpapi -lpthread
+/scr/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DM5_FS_NAIVE -emit-llvm \
+c_helper.c -o c_m5_fs_naive.ll -no-pie -I/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5 -L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5/all_outs/aarch64 -lm5
+make[1]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common'
+cd /scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU && make all FC='/scr/studyztp/compiler/llvm-dir/bin/flang-new' CC='/scr/studyztp/compiler/llvm-dir/bin/clang' CPP='/scr/studyztp/compiler/llvm-dir/bin/clang++' OPT='/scr/studyztp/compiler/llvm-dir/bin/opt' LLVM_LINK='/scr/studyztp/compiler/llvm-dir/bin/llvm-link' HW_FLAGS='' LIB_FLAGS='-fopenmp -lm ' OPT_FLAGS='-O3 ' LLC='/scr/studyztp/compiler/llvm-dir/bin/llc' LLC_FLAGS='-relocation-model=pic -filetype=obj' BASIC_FLAGS=' -fopenmp -lm  -O3   ' COMMON='/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common' SYS_DIR='/scr/studyztp/test/NPB3.4-OMP-custom-makefile/sys' PAPI_LINE='-I/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/include -L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/lib -lpapi -lpthread' M5_LINE='-no-pie -I/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5 -L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5/all_outs/aarch64 -lm5' M5_INCLUDE='-I/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5' M5_LIB='-L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5/all_outs/aarch64 -lm5' HOST_ARCH='aarch64-unknown-linux-gnu' TARGET_ARCH='aarch64' SIZE='A'
+make[1]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+/scr/studyztp/compiler/llvm-dir/bin/clang -o setparams /scr/studyztp/test/NPB3.4-OMP-custom-makefile/sys/setparams.c --target=aarch64-unknown-linux-gnu
+make clean_all_sizes;
+make[2]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+for size in A B C D E ; do \
+	rm -f /scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU/$size/*.ll; \
+	rm -f /scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU/$size/*.bc; \
+	rm -f /scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU/$size/npbparams.h; \
+done
+make[2]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+for size in A B C D E ; do \
+	make clean; \
+	./setparams lu $size; \
+	mkdir -p $size; \
+	make lu.bc SIZE=$size; \
+	cp /scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU/*.ll /scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU/$size/; \
+	cp /scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU/*.bc /scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU/$size/; \
+	cp npbparams.h /scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU/$size/; \
+	/scr/studyztp/compiler/llvm-dir/bin/opt -O3  /scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU/$size/lu.bc -o /scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU/$size/lu_O3_2024-09-12-01-09-25.bc; \
+done
+make[2]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+rm -f *.o *~ *.mod npbparams.h
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+make[2]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+make[2]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm lu_data.f90 -o lu_data.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm lu.f90 -o lu.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm read_input.f90 -o read_input.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm domain.f90 -o domain.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setcoeff.f90 -o setcoeff.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setbv.f90 -o setbv.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm exact.f90 -o exact.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setiv.f90 -o setiv.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm erhs.f90 -o erhs.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm ssor.f90 -o ssor.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm rhs.f90 -o rhs.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm l2norm.f90 -o l2norm.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm jacld.f90 -o jacld.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm blts.f90 -o blts.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm jacu.f90 -o jacu.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm buts.f90 -o buts.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm error.f90 -o error.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm pintgr.f90 -o pintgr.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm verify.f90 -o verify.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm syncs.f90 -o syncs.ll
+/scr/studyztp/compiler/llvm-dir/bin/llvm-link -o lu.bc lu.ll lu_data.ll read_input.ll \
+domain.ll setcoeff.ll setbv.ll exact.ll setiv.ll \
+erhs.ll ssor.ll rhs.ll l2norm.ll \
+jacld.ll blts.ll jacu.ll buts.ll error.ll \
+pintgr.ll verify.ll /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/print_results.ll \
+syncs.ll /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/timers.ll /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/wtime.ll
+make[2]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+make[2]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+rm -f *.o *~ *.mod npbparams.h
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+make[2]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+make[2]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm lu_data.f90 -o lu_data.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm lu.f90 -o lu.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm read_input.f90 -o read_input.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm domain.f90 -o domain.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setcoeff.f90 -o setcoeff.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setbv.f90 -o setbv.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm exact.f90 -o exact.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setiv.f90 -o setiv.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm erhs.f90 -o erhs.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm ssor.f90 -o ssor.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm rhs.f90 -o rhs.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm l2norm.f90 -o l2norm.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm jacld.f90 -o jacld.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm blts.f90 -o blts.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm jacu.f90 -o jacu.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm buts.f90 -o buts.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm error.f90 -o error.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm pintgr.f90 -o pintgr.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm verify.f90 -o verify.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm syncs.f90 -o syncs.ll
+/scr/studyztp/compiler/llvm-dir/bin/llvm-link -o lu.bc lu.ll lu_data.ll read_input.ll \
+domain.ll setcoeff.ll setbv.ll exact.ll setiv.ll \
+erhs.ll ssor.ll rhs.ll l2norm.ll \
+jacld.ll blts.ll jacu.ll buts.ll error.ll \
+pintgr.ll verify.ll /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/print_results.ll \
+syncs.ll /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/timers.ll /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/wtime.ll
+make[2]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+make[2]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+rm -f *.o *~ *.mod npbparams.h
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+make[2]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+make[2]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm lu_data.f90 -o lu_data.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm lu.f90 -o lu.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm read_input.f90 -o read_input.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm domain.f90 -o domain.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setcoeff.f90 -o setcoeff.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setbv.f90 -o setbv.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm exact.f90 -o exact.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setiv.f90 -o setiv.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm erhs.f90 -o erhs.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm ssor.f90 -o ssor.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm rhs.f90 -o rhs.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm l2norm.f90 -o l2norm.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm jacld.f90 -o jacld.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm blts.f90 -o blts.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm jacu.f90 -o jacu.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm buts.f90 -o buts.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm error.f90 -o error.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm pintgr.f90 -o pintgr.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm verify.f90 -o verify.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm syncs.f90 -o syncs.ll
+/scr/studyztp/compiler/llvm-dir/bin/llvm-link -o lu.bc lu.ll lu_data.ll read_input.ll \
+domain.ll setcoeff.ll setbv.ll exact.ll setiv.ll \
+erhs.ll ssor.ll rhs.ll l2norm.ll \
+jacld.ll blts.ll jacu.ll buts.ll error.ll \
+pintgr.ll verify.ll /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/print_results.ll \
+syncs.ll /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/timers.ll /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/wtime.ll
+make[2]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+make[2]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+rm -f *.o *~ *.mod npbparams.h
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+make[2]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+make[2]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm lu_data.f90 -o lu_data.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm lu.f90 -o lu.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm read_input.f90 -o read_input.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm domain.f90 -o domain.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setcoeff.f90 -o setcoeff.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setbv.f90 -o setbv.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm exact.f90 -o exact.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setiv.f90 -o setiv.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm erhs.f90 -o erhs.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm ssor.f90 -o ssor.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm rhs.f90 -o rhs.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm l2norm.f90 -o l2norm.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm jacld.f90 -o jacld.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm blts.f90 -o blts.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm jacu.f90 -o jacu.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm buts.f90 -o buts.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm error.f90 -o error.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm pintgr.f90 -o pintgr.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm verify.f90 -o verify.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm syncs.f90 -o syncs.ll
+/scr/studyztp/compiler/llvm-dir/bin/llvm-link -o lu.bc lu.ll lu_data.ll read_input.ll \
+domain.ll setcoeff.ll setbv.ll exact.ll setiv.ll \
+erhs.ll ssor.ll rhs.ll l2norm.ll \
+jacld.ll blts.ll jacu.ll buts.ll error.ll \
+pintgr.ll verify.ll /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/print_results.ll \
+syncs.ll /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/timers.ll /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/wtime.ll
+make[2]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+make[2]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+rm -f *.o *~ *.mod npbparams.h
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+make[2]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+make[2]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm lu_data.f90 -o lu_data.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm lu.f90 -o lu.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm read_input.f90 -o read_input.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm domain.f90 -o domain.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setcoeff.f90 -o setcoeff.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setbv.f90 -o setbv.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm exact.f90 -o exact.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setiv.f90 -o setiv.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm erhs.f90 -o erhs.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm ssor.f90 -o ssor.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm rhs.f90 -o rhs.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm l2norm.f90 -o l2norm.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm jacld.f90 -o jacld.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm blts.f90 -o blts.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm jacu.f90 -o jacu.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm buts.f90 -o buts.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm error.f90 -o error.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm pintgr.f90 -o pintgr.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm verify.f90 -o verify.ll
+/scr/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm syncs.f90 -o syncs.ll
+/scr/studyztp/compiler/llvm-dir/bin/llvm-link -o lu.bc lu.ll lu_data.ll read_input.ll \
+domain.ll setcoeff.ll setbv.ll exact.ll setiv.ll \
+erhs.ll ssor.ll rhs.ll l2norm.ll \
+jacld.ll blts.ll jacu.ll buts.ll error.ll \
+pintgr.ll verify.ll /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/print_results.ll \
+syncs.ll /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/timers.ll /scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/wtime.ll
+make[2]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+make clean;
+make[2]: Entering directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+rm -f *.o *~ *.mod npbparams.h
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+make[2]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'
+make[1]: Leaving directory '/scr/studyztp/test/NPB3.4-OMP-custom-makefile/LU'

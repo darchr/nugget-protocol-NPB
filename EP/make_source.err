@@ -1,0 +1,136 @@
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lpapi: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lpthread: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/lib' [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lpapi: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lpthread: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/lib' [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm5: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-no-pie' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5/all_outs/aarch64' [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lpapi: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lpthread: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/lib' [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lpapi: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lpthread: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/lib' [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm5: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-no-pie' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5/all_outs/aarch64' [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm5: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-no-pie' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5/all_outs/aarch64' [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lpapi: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lpthread: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/lib' [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lpapi: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lpthread: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/lib' [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm5: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-no-pie' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5/all_outs/aarch64' [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lpapi: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lpthread: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/all_papi/aarch64/lib' [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm5: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-no-pie' [-Wunused-command-line-argument]
+clang: warning: argument unused during compilation: '-L/scr/studyztp/test/NPB3.4-OMP-custom-makefile/common/gem5/all_outs/aarch64' [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+./ep.f90:125:7: warning: Reference to the procedure 'vranlc' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+        call vranlc(0, t1, a, x)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+./ep.f90:106:7: previous reference to 'vranlc'
+        call vranlc(0, dum(1), dum(2), dum(3))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+./ep.f90:177:10: warning: Reference to the procedure 'vranlc' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+           call vranlc(2 * nk, t1, a, x)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+./ep.f90:106:7: previous reference to 'vranlc'
+        call vranlc(0, dum(1), dum(2), dum(3))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+./ep.f90:125:7: warning: Reference to the procedure 'vranlc' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+        call vranlc(0, t1, a, x)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+./ep.f90:106:7: previous reference to 'vranlc'
+        call vranlc(0, dum(1), dum(2), dum(3))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+./ep.f90:177:10: warning: Reference to the procedure 'vranlc' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+           call vranlc(2 * nk, t1, a, x)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+./ep.f90:106:7: previous reference to 'vranlc'
+        call vranlc(0, dum(1), dum(2), dum(3))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+./ep.f90:125:7: warning: Reference to the procedure 'vranlc' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+        call vranlc(0, t1, a, x)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+./ep.f90:106:7: previous reference to 'vranlc'
+        call vranlc(0, dum(1), dum(2), dum(3))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+./ep.f90:177:10: warning: Reference to the procedure 'vranlc' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+           call vranlc(2 * nk, t1, a, x)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+./ep.f90:106:7: previous reference to 'vranlc'
+        call vranlc(0, dum(1), dum(2), dum(3))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+./ep.f90:125:7: warning: Reference to the procedure 'vranlc' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+        call vranlc(0, t1, a, x)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+./ep.f90:106:7: previous reference to 'vranlc'
+        call vranlc(0, dum(1), dum(2), dum(3))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+./ep.f90:177:10: warning: Reference to the procedure 'vranlc' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+           call vranlc(2 * nk, t1, a, x)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+./ep.f90:106:7: previous reference to 'vranlc'
+        call vranlc(0, dum(1), dum(2), dum(3))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+./ep.f90:125:7: warning: Reference to the procedure 'vranlc' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+        call vranlc(0, t1, a, x)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+./ep.f90:106:7: previous reference to 'vranlc'
+        call vranlc(0, dum(1), dum(2), dum(3))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+./ep.f90:177:10: warning: Reference to the procedure 'vranlc' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+           call vranlc(2 * nk, t1, a, x)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+./ep.f90:106:7: previous reference to 'vranlc'
+        call vranlc(0, dum(1), dum(2), dum(3))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
