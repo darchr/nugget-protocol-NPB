@@ -11,7 +11,6 @@
 #define ARRAY_SIZE 1000
 
 __attribute__((no_profile_instrument_function))
-
 unsigned long long calculate_nsec_difference(struct timespec start, struct timespec end) {
     long long nsec_diff = end.tv_nsec - start.tv_nsec;
     long long sec_diff = end.tv_sec - start.tv_sec;
