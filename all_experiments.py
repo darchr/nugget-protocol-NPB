@@ -19,6 +19,7 @@ parser.add_argument("--if_make_base", type=bool, default=False)
 parser.add_argument("--if_make_final", type=bool, default=False)
 parser.add_argument("--if_run", type=bool, default=False)
 parser.add_argument("--num_run", type=int, default=10)
+parser.add_argument("--benchmarks", nargs="+", type=str, default=["bt", "cg", "ep", "ft", "is", "lu", "mg", "sp"])
 
 parser.add_argument("--papi_naive", type=bool, default=False)
 parser.add_argument("--time_naive", type=bool, default=False)
@@ -58,7 +59,7 @@ def process_this(run_ball):
         print("finished", dir, command, process_code)
     return process_code
 
-benchmarks = ["bt", "cg", "ep", "is", "ft", "lu", "mg", "sp"]
+benchmarks = args.benchmarks
 thread_list = args.thread_list
 region_size_list = args.region_size_list
 arch = args.arch
