@@ -1,5 +1,7 @@
 # compiler related paths
+ifeq ($(LLVM_BIN),)
 LLVM_BIN = /scr/studyztp/compiler/llvm-dir/bin
+endif
 FC = ${LLVM_BIN}/flang-new
 CC = ${LLVM_BIN}/clang
 CPP = ${LLVM_BIN}/clang++

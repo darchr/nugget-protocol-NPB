@@ -26,7 +26,7 @@ all: c_print_results.ll c_timers.ll print_results.ll randdp.ll randdpvec.ll \
 	single_thread_c_papi_profiling.ll \
 	single_thread_c_papi_measuring.ll \
 	single_thread_c_m5_fs_measuring.ll \
-	single_thread_c_marker_overhead_measuring.ll \
+	single_thread_c_m5_fs_measuring_inst.ll \
 	c_m5_fs_naive.ll \
 	c_m5_fs_inst_naive.ll
 
@@ -67,7 +67,7 @@ c_profiling.ll: c_helper.c
 
 c_papi_profiling.ll: c_helper.c 
 	${CC} ${FLAGS} -S -DUSING_PAPI_PROFILING -emit-llvm \
-	c_helper.c -o c_papi_profiling.ll ${PAPI_LINE}
+	c_helper.c -o c_papi_profiling.ll 
 
 c_papi_measuring.ll: c_helper.c 
 	${CC} ${FLAGS} -S -DMEASURING -DPAPI_MEASURING -emit-llvm \
@@ -126,9 +126,11 @@ single_thread_c_m5_fs_measuring.ll: single_thread_c_helper.c
 	${CC} ${FLAGS} -S -DMEASURING -DM5_FS_MEASURING -emit-llvm \
 	single_thread_c_helper.c -o single_thread_c_m5_fs_measuring.ll ${M5_LINE}
 
-single_thread_c_marker_overhead_measuring.ll: single_thread_c_helper.c
-	${CC} ${FLAGS} -S -DMEASURING -DMARKER_OVERHEAD_MEASURING -emit-llvm \
-	single_thread_c_helper.c -o single_thread_c_marker_overhead_measuring.ll ${PAPI_LINE}
+single_thread_c_m5_fs_measuring_inst.ll: single_thread_c_helper.c
+	${CC} ${FLAGS} -S -DMEASURING -DM5_FS_MEASURING -DUSING_INST_MODE \
+	-emit-llvm single_thread_c_helper.c -o \
+	single_thread_c_m5_fs_measuring_inst.ll \
+	${M5_LINE}
 
 c_m5_fs_naive.ll: c_helper.c
 	${CC} ${FLAGS} -S -DM5_FS_NAIVE -emit-llvm \

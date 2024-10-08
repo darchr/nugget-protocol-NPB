@@ -2,11 +2,21 @@
 #include <string.h>
 #include <stdint.h>
 #include <stdlib.h>
+#include <time.h> 
 
 #define BOOL uint8_t
 #define TRUE 1
 #define FALSE 0
+
 #define ARRAY_SIZE 1000
+
+__attribute__((no_profile_instrument_function))
+
+unsigned long long calculate_nsec_difference(struct timespec start, struct timespec end) {
+    long long nsec_diff = end.tv_nsec - start.tv_nsec;
+    long long sec_diff = end.tv_sec - start.tv_sec;
+    return sec_diff * 1000000000LL + nsec_diff;
+}
 
 #ifdef PROFILING
 unsigned long long counter = 0;
@@ -25,6 +35,7 @@ BOOL if_start = FALSE;
 
 __attribute__((no_profile_instrument_function))
 void increase_array() {
+
     current_array_size += ARRAY_SIZE;
     bbv_array = (unsigned long long**)realloc(bbv_array, current_array_size * sizeof(unsigned long long*));
     timestamp_array = (unsigned long long**)realloc(timestamp_array, current_array_size * sizeof(unsigned long long*));
@@ -207,6 +218,8 @@ void roi_begin_() {
         printf("PAPI_library_init failed due to %d.\n", retval);
     }
     retval = PAPI_set_domain(PAPI_DOM_ALL);
+    // this specifies that we want to measure all the domains 
+    // (user, kernel, etc.)
     if (retval != PAPI_OK) {
         printf("PAPI_set_domain failed due to %d.\n", retval);
     }
@@ -237,8 +250,8 @@ unsigned long long warmup_threshold;
 unsigned long long start_threshold;
 unsigned long long end_threshold;
 
-BOOL if_start_not_met = FALSE;
 BOOL if_warmup_not_met = FALSE;
+BOOL if_start_not_met = FALSE;
 BOOL if_end_not_met = FALSE;
 
 #ifdef PAPI_MEASURING
@@ -287,6 +300,8 @@ void roi_begin_() {
 
 __attribute__((no_profile_instrument_function, noinline))
 void roi_end_() {
+    // do nothing because  the program should exit before this function 
+    // is called
     printf("ROI ended\n");
 }
 
@@ -300,19 +315,23 @@ void roi_end_() {
 __attribute__((no_profile_instrument_function))
 void warmup_event() {
     printf("M5_FS Warmup marker\n");
+#ifdef USING_INST_MODE
+    m5_work_begin(0, 0);
+#else
     m5_work_begin_addr(0, 0);
+#endif
 }
 
 __attribute__((no_profile_instrument_function))
 void start_event() {
     printf("M5_FS Start marker\n");
-    m5_work_begin_addr(0, 0);
+    m5_work_begin(0, 0);
 }
 
 __attribute__((no_profile_instrument_function))
 void end_event() {
     printf("M5_FS End marker\n");
-    m5_work_end_addr(0, 0);
+    m5_work_end(0, 0);
 }
 
 __attribute__((no_profile_instrument_function))
@@ -336,75 +355,23 @@ void roi_begin_() {
         m5op_addr = 0x0;
         printf("Unsupported architecture\n");
     }
-    map_m5_mem();
+
+#ifndef USING_INST_MODE
     printf("M5_FS ADDR MOP initialized\n");
+    map_m5_mem();
+#endif
     printf("M5_FS ROI started\n");
 }
 
 __attribute__((no_profile_instrument_function))
 void roi_end_() {
+#ifndef USING_INST_MODE
     unmap_m5_mem();
+#endif
     printf("M5_FS ROI ended\n");
 }
 
-#elif defined(MARKER_OVERHEAD_MEASURING) // M5_FS_MEASURING
-
-#include <papi.h>
-
-
-__attribute__((no_profile_instrument_function))
-void start_event() {
-    printf("Start marker\n");
-}
-
-__attribute__((no_profile_instrument_function))
-void warmup_event() {
-    printf("Warmup marker\n");
-}
-
-__attribute__((no_profile_instrument_function))
-void end_event() {
-    printf("End marker\n");
-}
-
-__attribute__((no_profile_instrument_function))
-void roi_begin_() {
-
-    if_warmup_not_met = TRUE;
-
-    printf("ROI started\n");
-
-    int retval = PAPI_library_init(PAPI_VER_CURRENT);
-    if (retval != PAPI_VER_CURRENT) {
-        printf("PAPI_library_init failed due to %d.\n", retval);
-    }
-    retval = PAPI_set_domain(PAPI_DOM_ALL);
-    if (retval != PAPI_OK) {
-        printf("PAPI_set_domain failed due to %d.\n", retval);
-    }
-    printf("ROI started\n");
-    printf("PAPI initialized\n");
-
-    printf("PAPI region begin\n");
-
-    retval = PAPI_hl_region_begin("0");
-    if (retval != PAPI_OK) {
-        printf("PAPI_hl_region_begin failed due to %d.\n", retval);
-    }
-}
-
-__attribute__((no_profile_instrument_function, noinline))
-void roi_end_() {
-    int retval = PAPI_hl_region_end("0");
-    if (retval != PAPI_OK) {
-        printf("PAPI_hl_region_end failed due to %d.\n", retval);
-    }
-    printf("PAPI region end\n");
-    printf("PAPI ended\n");
-    printf("ROI end\n");
-}
-
-#endif // MARKER_OVERHEAD_MEASURING
+#endif // M5_FS_MEASURING
 
 __attribute__((no_profile_instrument_function))
 void setup_threshold(unsigned long long warmup, unsigned long long start, unsigned long long end) {

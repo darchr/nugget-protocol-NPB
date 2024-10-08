@@ -13,12 +13,21 @@
 
 __attribute__((no_profile_instrument_function))
 unsigned long long calculate_nsec_difference(struct timespec start, struct timespec end) {
+/*
+ * :param: start: the start time
+ * :param: end: the end time
+ * :return: the difference between the two times in nanoseconds
+*/
     long long nsec_diff = end.tv_nsec - start.tv_nsec;
     long long sec_diff = end.tv_sec - start.tv_sec;
     return sec_diff * 1000000000LL + nsec_diff;
 }
 
 #ifdef PROFILING
+/**
+ * @brief When compile with the PROFILING flag, the helper fucntions will be 
+ * used for analyzing the phase of the program.
+ */
 #include <stdatomic.h>
 
 atomic_ullong counter;
@@ -27,9 +36,10 @@ omp_lock_t lock;
 BOOL wait = FALSE;
 BOOL if_start = FALSE;
 unsigned long long region = 0;
-
 unsigned long long total_num_bbs = 0;
+
 unsigned long long num_threads = 0;
+
 unsigned long long* bbv;
 unsigned long long* timestamp;
 unsigned long long** bbv_array;
@@ -39,15 +49,23 @@ unsigned long long current_array_size = ARRAY_SIZE;
 
 __attribute__((no_profile_instrument_function))
 void increase_array() {
+/*
+ * this function is used to increase the size of the bbv_array and 
+ * timestamp_array arrays when the current size is not enough to store the data
+ */
     current_array_size += ARRAY_SIZE;
+
     bbv_array = (unsigned long long**) realloc(bbv_array, current_array_size * sizeof(unsigned long long*));
     timestamp_array = (unsigned long long**) realloc(timestamp_array, current_array_size * sizeof(unsigned long long*));
+
     if (bbv_array == NULL || timestamp_array == NULL) {
         printf("Failed to allocate memory for bbv_array and timestamp_array arrays\n");
         exit(1);
     }
+
     for (unsigned long long i = current_array_size - ARRAY_SIZE; i < current_array_size; i++) {
         bbv_array[i] = (unsigned long long*)malloc(((total_num_bbs + 64) * num_threads) * sizeof(unsigned long long));
+        // pad the array with 64 elements to avoid false sharing
         timestamp_array[i] = (unsigned long long*)malloc(((total_num_bbs + 64) * num_threads) * sizeof(unsigned long long));
         if (bbv_array[i] == NULL || timestamp_array[i] == NULL) {
             printf("Failed to allocate memory for bbv_array and timestamp_array arrays\n");
@@ -65,11 +83,17 @@ void increase_array() {
 
 __attribute__((no_profile_instrument_function))
 void process_data() {
+/*
+ * this function is used to store the data for the current region and reset
+ * the counter for the next region.
+ * only one thread will execute this function at each end of the region.
+ */
     counter_array[region] = atomic_load(&counter);
     region ++;
     bbv = bbv_array[region];
     timestamp = timestamp_array[region];
     if (region + 100 >= current_array_size) {
+    // increase the size of the arrays when the current size is not enough
         increase_array();
     }
     atomic_store(&counter, 0);
@@ -77,8 +101,18 @@ void process_data() {
 
 __attribute__((no_profile_instrument_function))
 void bb_hook(unsigned long long bb_inst, unsigned long long bb_id, unsigned long long threshold) {
+/*
+ * :param: bb_inst: the number of IR instructions in the basic block
+ * :param: bb_id: the id of the basic block
+ * :param: threshold: the threshold for the number of IR instructions in the 
+ *  region
+ * this function is designed to be called at the end of each IR basic block.
+*/
     if(if_start) {
+    // only start to count the IR instructions when the if_start is TRUE
         if (wait) {
+        // if there is a thread reached the threshold, then wait for all the
+        // threads to reach the threshold
             omp_set_lock(&lock);
             omp_unset_lock(&lock);
         }
@@ -93,6 +127,8 @@ void bb_hook(unsigned long long bb_inst, unsigned long long bb_id, unsigned long
         if (cur_counter >= threshold) {
             omp_set_lock(&lock);
             if (atomic_load(&counter) >= threshold) {
+            // this ensures that only one thread will execute the process_data
+            // function at each end of the region
                 wait = TRUE;
                 process_data();
                 wait = FALSE;
@@ -104,7 +140,12 @@ void bb_hook(unsigned long long bb_inst, unsigned long long bb_id, unsigned long
 
 __attribute__((no_profile_instrument_function))
 void init_array(unsigned long long num_bbs) {
+/*
+ * :param: num_bbs: the total number of basic blocks in the program
+ * this function is used to initialize the arrays for storing the data
+*/
     total_num_bbs = num_bbs;
+    // store the total number of basic blocks
     num_threads = omp_get_max_threads();
     bbv_array = (unsigned long long**)malloc(current_array_size * sizeof(unsigned long long*));
     timestamp_array = (unsigned long long**)malloc(current_array_size * sizeof(unsigned long long*));
@@ -130,6 +171,9 @@ void init_array(unsigned long long num_bbs) {
 
 __attribute__((no_profile_instrument_function))
 void delete_arrays() {
+/*
+ * this function is used to free the memory allocated for the arrays
+*/
     for (unsigned long long i = 0; i < current_array_size; i++) {
         free(bbv_array[i]);
         free(timestamp_array[i]);
@@ -141,6 +185,12 @@ void delete_arrays() {
 
 __attribute__((no_profile_instrument_function))
 void roi_begin_() {
+/*
+* this function is used to initialize the variables and arrays for the
+* profiling.
+* this is meant to be called at the beginning of the region of interest.
+*/
+
     atomic_init(&counter, 0);
     omp_init_lock(&lock);
     if_start = TRUE;
@@ -150,10 +200,17 @@ void roi_begin_() {
 
 __attribute__((no_profile_instrument_function))
 void roi_end_() {
+/*
+* this function is used to store the data for the last region and print the
+* data to the output file.
+* this is meant to be called at the end of the region of interest.
+*/
+
     if_start = FALSE;
     omp_destroy_lock(&lock);
 
     process_data();
+    // store the data for the last region
 
     char outputfile[256];
     sprintf(outputfile, "all_output_%d_threads.txt", omp_get_max_threads());
@@ -195,6 +252,10 @@ void roi_end_() {
 #endif // PROFILING
 
 #ifdef NAIVE
+/**
+ * @brief When compile with the NAIVE flag, the helper fucntions will do
+ * nothing but print helper messages.
+ */
 __attribute__((no_profile_instrument_function))
 void roi_begin_() {
     printf("ROI begin\n");
@@ -204,12 +265,16 @@ __attribute__((no_profile_instrument_function))
 void roi_end_() {
     printf("ROI end\n");
 }
-
 #endif // NAIVE
 
 #ifdef USING_PAPI_PROFILING
+/*
+ * @brief When compile with the USING_PAPI_PROFILING flag, the helper functions
+ * will be used for prifling the program with timers instead of collecting the
+ * IR basic block vector.
+*/
 #include <stdatomic.h>
-#include <papi.h>
+
 atomic_ullong counter;
 
 omp_lock_t lock;
@@ -225,6 +290,10 @@ struct timespec start, end;
 
 __attribute__((no_profile_instrument_function))
 void increase_array() {
+/*
+ * this function is used to increase the size of the timestamp_array and 
+ * counter_array arrays when the current size is not enough to store the data
+*/
     current_array_size += ARRAY_SIZE;
     timestamp_array = (unsigned long long*) realloc(timestamp_array, current_array_size * sizeof(unsigned long long));
     counter_array = (unsigned long long*) realloc(counter_array, current_array_size * sizeof(unsigned long long));
@@ -237,12 +306,15 @@ void increase_array() {
 __attribute__((no_profile_instrument_function))
 void start_papi_region() {
     clock_gettime(CLOCK_MONOTONIC, &start);
+    // record the start time of the region
 }
 
 __attribute__((no_profile_instrument_function))
 void end_papi_region() {
     clock_gettime(CLOCK_MONOTONIC, &end);
+    // record the end time of the region
     unsigned long long nsec_diff = calculate_nsec_difference(start, end);
+    // calculate the time in nanosecond taken for the region
     timestamp_array[region] = nsec_diff;
     counter_array[region] = atomic_load(&counter);
     total_IR_inst += counter_array[region];
@@ -255,6 +327,20 @@ void end_papi_region() {
 
 __attribute__((no_profile_instrument_function))
 void bb_hook(unsigned long long bb_inst, unsigned long long threshold) {
+/*
+ * :param: bb_inst: the number of IR instructions in the basic block
+ * :param: threshold: the threshold for the number of IR instructions in the
+ *  region
+ * this function is designed to be called at the end of each IR basic block.
+ * it will record the number of IR instructions and check if the threshold
+ * is reached.
+ * if the threshold is reached, then it will call the end_papi_region
+ * function to record the time taken for the region.
+ * only one thread will execute the end_papi_region function at each end of
+ * the region.
+ * this function is used for profiling the program with timers.
+ * it will not collect the IR basic block vector.
+*/
     if (if_start) {
         if (wait) {
             omp_set_lock(&lock);
@@ -328,6 +414,10 @@ void roi_end_() {
 #endif // USING_PAPI_PROFILING
 
 #ifdef MEASURING
+/**
+ * @brief When compile with the MEASURING flag, the helper functions will be
+ * used for measuring the nuggets.
+ */
 #include <stdatomic.h>
 
 atomic_ullong warmup_counter;
@@ -347,9 +437,16 @@ BOOL if_end_not_met = FALSE;
 struct timespec start, end;
 
 #ifdef PAPI_MEASURING
-
+/*
+ * @brief When compile with the PAPI_MEASURING flag, the helper functions will
+ * be used for measuring the nuggets with timers on hardware.
+*/
 __attribute__((no_profile_instrument_function))
-void warmup_event() {}
+void warmup_event() {
+/*
+ * real hardware measurement doesn't need warmup
+*/
+}
 
 __attribute__((no_profile_instrument_function))
 void start_event() {
@@ -382,6 +479,10 @@ void roi_end_() {
 }
 
 #elif defined(M5_FS_MEASURING) // PAPI_MEASURING
+/*
+ * @brief When compile with the M5_FS_MEASURING flag, the helper functions will
+ * be used for measuring the nuggets with the m5ops.
+*/
 
 #include "gem5/m5ops.h"
 #include "m5_mmap.h"
@@ -401,21 +502,13 @@ void warmup_event() {
 __attribute__((no_profile_instrument_function))
 void start_event() {
     printf("M5_FS Start marker\n");
-#ifdef USING_INST_MODE
     m5_work_begin(0, 0);
-#else
-    m5_work_begin_addr(0, 0);
-#endif
 }
 
 __attribute__((no_profile_instrument_function))
 void end_event() {
     printf("M5_FS End marker\n");
-#ifdef USING_INST_MODE
     m5_work_end(0, 0);
-#else
-    m5_work_end_addr(0, 0);
-#endif
 }
 
 __attribute__((no_profile_instrument_function))
@@ -434,6 +527,7 @@ void roi_begin_() {
     printf("arch     = %s\n", buffer.machine);
 
     if (strcmp(buffer.machine, "x86_64") == 0) {
+    // different magic address for different architectures
         m5op_addr = 0xFFFF0000;
     } else if (strcmp(buffer.machine, "aarch64") == 0) {
         m5op_addr = 0x10010000;
@@ -441,11 +535,13 @@ void roi_begin_() {
         m5op_addr = 0x0;
         printf("Unsupported architecture\n");
     }
-    printf("M5_FS ADDR MOP initialized\n");
-    printf("M5_FS ROI started\n");
+    
 #ifndef USING_INST_MODE
+    printf("M5_FS ADDR MODE initialized\n");
     map_m5_mem();
 #endif
+    
+    printf("M5_FS ROI started\n");
 }
 
 __attribute__((no_profile_instrument_function))
@@ -457,6 +553,10 @@ void roi_end_() {
 }
 
 #elif defined(MARKER_OVERHEAD_MEASURING) // M5_FS_MEASURING
+/*
+ * @brief When compile with the MARKER_OVERHEAD_MEASURING flag, the helper
+ * functions will be used for measuring the marker overhead.
+*/
 
 #include <papi.h>
 
@@ -513,6 +613,14 @@ void roi_end_() {
 
 __attribute__((no_profile_instrument_function))
 void setup_threshold(unsigned long long warm_up, unsigned long long start, unsigned long long end) {
+/*
+ * :param: warm_up: the threshold for the warm up marker
+ * :param: start: the threshold for the start marker
+ * :param: end: the threshold for the end marker
+ * 
+ * this function is used to set the thresholds for the warm up, start and end
+ * markers
+*/
     warmup_threshold = warm_up;
     start_threshold = start;
     end_threshold = end;
@@ -628,71 +736,6 @@ void roi_end_() {
 
 #endif // TIMING_NAIVE
 
-#ifdef LOOPPOINT_M5_FS
-
-#include "gem5/m5ops.h"
-#include "m5_mmap.h"
-#include <errno.h>
-#include <sys/utsname.h>
-#include <unistd.h>
-
-__attribute__((no_profile_instrument_function, noinline))
-void roi_begin_() {
-    struct utsname buffer;
-    errno = 0;
-    if (uname(&buffer) != 0) {
-        perror("uname");
-        exit(1);
-    }
-
-    printf("arch     = %s\n", buffer.machine);
-
-    if (strcmp(buffer.machine, "x86_64") == 0) {
-        m5op_addr = 0xFFFF0000;
-    } else if (strcmp(buffer.machine, "aarch64") == 0) {
-        m5op_addr = 0x10010000;
-    } else {
-        m5op_addr = 0x0;
-        printf("Unsupported architecture\n");
-    }
-    printf("LOOPPOINT_M5_FS ADDR MOP initialized\n");
-    printf("LOOPPOINT_M5_FS ROI started\n");
-
-    char buf[256 * 1024];
-    int pid = getpid();
-    sprintf(buf,"cat /proc/%i/maps > proc_maps.txt;",pid);
-    printf("running %s\n",buf);
-    system(buf);
-    printf("ready to call m5 writefile\n");
-    if (m5op_addr == 0x10010000) {
-        system("m5 --addr 0x10010000 writefile proc_maps.txt;");
-    } else {
-        system("m5 writefile proc_maps.txt;");
-    }
-
-    printf("calling M5 workbegin\n");
-#ifdef USING_INST_MODE
-    m5_work_begin(0, 0);
-#else
-    map_m5_mem();
-    m5_work_begin_addr(0, 0);
-#endif
-}
-
-__attribute__((no_profile_instrument_function, noinline))
-void roi_end_() {
-#ifdef USING_INST_MODE
-    m5_work_end(0, 0);
-#else
-    m5_work_end_addr(0, 0);
-    unmap_m5_mem();
-#endif
-    printf("M5 workend calledr\n");
-    printf("M5_FS ROI ended\n");
-}
-
-#endif // LOOPPOINT_M5_FS
-
 #ifdef M5_FS_NAIVE
 
 #include "gem5/m5ops.h"
@@ -786,26 +829,20 @@ void roi_begin_() {
         printf("Unsupported architecture\n");
     }
     
-    printf("M5_FS ADDR MOP initialized\n");
     printf("M5_FS ROI started\n");
 
     if_warmup_not_met = TRUE;
 
-    printf("calling M5 workbegin\n");
-#ifdef USING_INST_MODE
-    m5_work_begin(0, 0);
-#else
+#ifndef USING_INST_MODE
+    printf("M5_FS ADDR MOP initialized\n");
     map_m5_mem();
-    m5_work_begin_addr(0, 0);
 #endif
 }
 
 __attribute__((no_profile_instrument_function, noinline))
 void roi_end_() {
-#ifdef USING_INST_MODE
     m5_work_end(0, 0);
-#else
-    m5_work_end_addr(0, 0);
+#ifndef USING_INST_MODE
     unmap_m5_mem();
 #endif
     printf("M5 workend calledr\n");
