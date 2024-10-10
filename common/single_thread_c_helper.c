@@ -75,7 +75,7 @@ __attribute__((no_profile_instrument_function))
 void bb_hook(unsigned long long bb_inst, unsigned long long bb_id, unsigned long long threshold) {
     if (if_start) {
         counter += bb_inst;
-        bbv[bb_id] += bb_inst;
+        bbv[bb_id] += 1;
         timestamp[bb_id] = counter;
         if (counter > threshold) {
             process_data();
