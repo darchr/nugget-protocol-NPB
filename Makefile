@@ -298,6 +298,12 @@ final_compile_c_papi_profiling_${PROGRAM}_${SIZE}_${TARGET_ARCH}_${REGION_LENGTH
 	cd ${PROGRAM_PATH}/${SIZE}/c_papi_profiling/${REGION_LENGTH} && mkdir -p ${TARGET_ARCH}
 	cd ${PROGRAM_PATH}/${SIZE}/c_papi_profiling/${REGION_LENGTH}/${TARGET_ARCH} && ${COMPILER} ${HW_FLAGS} ${LIB_FLAGS} ${PAPI_LINE} ../${PROGRAM}_papi_profiling_opt.bc -o ${PROGRAM}_${TARGET_ARCH}_${VERSION_STAMP}.c_papi_profiling --target=${TARGET_ARCH}-unknown-linux-gnu
 
+final_compile_with_llc_c_papi_profiling: get_version final_compile_c_papi_profiling_${PROGRAM}_${SIZE}_${TARGET_ARCH}_${REGION_LENGTH}
+final_compile_with_llc_c_papi_profiling_${PROGRAM}_${SIZE}_${TARGET_ARCH}_${REGION_LENGTH}:
+	cd ${PROGRAM_PATH}/${SIZE}/c_papi_profiling/${REGION_LENGTH} && mkdir -p ${TARGET_ARCH}
+	cd ${PROGRAM_PATH}/${SIZE}/c_papi_profiling/${REGION_LENGTH}/${TARGET_ARCH} && ${LLC} ${LLC_FLAGS} ../${PROGRAM}_papi_profiling_opt.bc -o ${PROGRAM}_${TARGET_ARCH}_${VERSION_STAMP}.o
+	cd ${PROGRAM_PATH}/${SIZE}/c_papi_profiling/${REGION_LENGTH}/${TARGET_ARCH} && ${COMPILER} ${HW_FLAGS} ${LIB_FLAGS} ${PAPI_LINE} ${PROGRAM}_${TARGET_ARCH}_${VERSION_STAMP}.o -o ${PROGRAM}_${TARGET_ARCH}_${VERSION_STAMP}.c_papi_profiling --target=${TARGET_ARCH}-unknown-linux-gnu
+
 final_compile_c_papi_measuring: get_version final_compile_c_papi_measuring_${PROGRAM}_${SIZE}_${TARGET_ARCH}_${REGION_LENGTH}_${REGION_ID}
 final_compile_c_papi_measuring_${PROGRAM}_${SIZE}_${TARGET_ARCH}_${REGION_LENGTH}_${REGION_ID}:
 	cd ${PROGRAM_PATH}/${SIZE}/c_papi_measuring/${THREAD_SIZE}/${REGION_LENGTH}/${REGION_ID} && mkdir -p ${TARGET_ARCH}

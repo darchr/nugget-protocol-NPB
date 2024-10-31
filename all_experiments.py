@@ -30,6 +30,8 @@ parser.add_argument("--papi_measuring", type=bool, default=False)
 parser.add_argument("--region_info", type=str, default="")
 parser.add_argument("--num_pool", type=int, default=1)
 
+parser.add_argument("--with-llc", type=bool, default=False)
+
 args = parser.parse_args()
 
 def process_this(run_ball):
@@ -234,20 +236,28 @@ if args.if_make_final:
                         })
                     if args.profiling:
                         if thread == 1:
+                            if args.with_llc:
+                                exp_name = "final_compile_with_llc_single_thread_c_profiling"
+                            else:
+                                exp_name = "final_compile_single_thread_c_profiling"
                             process_this({
-                                "cmd": ["make", "final_compile_single_thread_c_profiling"],
+                                "cmd": ["make", exp_name],
                                 "env": make_ball_env,
                                 "dir": workdir.as_posix(),
-                                "stdout": Path(workdir/f"{bench.upper()}/final_compile_single_thread_c_profiling.log").as_posix(),
-                                "stderr": Path(workdir/f"{bench.upper()}/final_compile_single_thread_c_profiling.err").as_posix()
+                                "stdout": Path(workdir/f"{bench.upper()}/{exp_name}.log").as_posix(),
+                                "stderr": Path(workdir/f"{bench.upper()}/{exp_name}.err").as_posix()
                             })
                         else:
+                            if args.with_llc:
+                                exp_name = "final_compile_with_llc_c_profiling"
+                            else:
+                                exp_name = "final_compile_c_profiling"
                             process_this({
-                                "cmd": ["make", "final_compile_c_profiling"],
+                                "cmd": ["make", exp_name],
                                 "env": make_ball_env,
                                 "dir": workdir.as_posix(),
-                                "stdout": Path(workdir/f"{bench.upper()}/final_compile_c_profiling.log").as_posix(),
-                                "stderr": Path(workdir/f"{bench.upper()}/final_compile_c_profiling.err").as_posix()
+                                "stdout": Path(workdir/f"{bench.upper()}/{exp_name}.log").as_posix(),
+                                "stderr": Path(workdir/f"{bench.upper()}/{exp_name}.err").as_posix()
                             })
                     if args.papi_profiling:
                         if thread == 1:
@@ -308,6 +318,7 @@ if args.if_make_final:
                                 })
 
 if args.if_run:
+
     runs = []
 
     papi_event = ['PAPI_TOT_CYC', 'PAPI_TOT_INS', 'PAPI_BR_MSP', 'PAPI_L1_DCA', 'PAPI_L2_DCR']
