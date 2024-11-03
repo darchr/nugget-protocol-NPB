@@ -301,21 +301,22 @@ if args.if_make_final:
                             region_env = make_ball_env.copy()
                             region_env["REGION_ID"] = str(rid)
                             if thread == 1:
-                                process_this({
-                                    "cmd": ["make", "final_compile_single_thread_c_papi_measuring"],
-                                    "env": region_env,
-                                    "dir": workdir.as_posix(),
-                                    "stdout": Path(workdir/f"{bench.upper()}/final_compile_single_thread_c_papi_measuring.log").as_posix(),
-                                    "stderr": Path(workdir/f"{bench.upper()}/final_compile_single_thread_c_papi_measuring.err").as_posix()
-                                })
+                                if args.with_llc:
+                                    exp_name = "final_compile_with_llc_single_thread_c_papi_measuring"
+                                else:
+                                    exp_name = "final_compile_single_thread_c_papi_measuring"
                             else:
-                                process_this({
-                                    "cmd": ["make", "final_compile_c_papi_measuring"],
-                                    "env": region_env,
-                                    "dir": workdir.as_posix(),
-                                    "stdout": Path(workdir/f"{bench.upper()}/final_compile_c_papi_measuring.log").as_posix(),
-                                    "stderr": Path(workdir/f"{bench.upper()}/final_compile_c_papi_measuring.err").as_posix()
-                                })
+                                if args.with_llc:
+                                    exp_name = "final_compile_with_llc_c_papi_measuring"
+                                else:
+                                    exp_name = "final_compile_c_papi_measuring"
+                            process_this({
+                                "cmd": ["make", exp_name],
+                                "env": region_env,
+                                "dir": workdir.as_posix(),
+                                "stdout": Path(workdir/f"{bench.upper()}/{exp_name}.log").as_posix(),
+                                "stderr": Path(workdir/f"{bench.upper()}/{exp_name}.err").as_posix()
+                            })
 
 if args.if_run:
 
