@@ -104,7 +104,7 @@ if args.if_make_base:
                     rid_env = must_env.copy()
                     rid_env["REGION_ID"] = str(rid)
                     rid_env["REGION_LENGTH"] = str(region_size)
-                    rid_env["TRHEAD_SIZE"] = str(thread)
+                    rid_env["THREAD_SIZE"] = str(thread)
                     rid_env["SIZE"] = size
                     rid_env["PROGRAM"] = bench
                     rid_env["TARGET_ARCH"] = arch
@@ -121,7 +121,7 @@ if args.if_make_base:
                 run_env["SIZE"] = size
                 run_env["PROGRAM"] = bench
                 run_env["TARGET_ARCH"] = arch
-                run_env["TRHEAD_SIZE"] = str(thread)
+                run_env["THREAD_SIZE"] = str(thread)
                 run_env["REGION_LENGTH"] = str(region_size)
 
                 process_this( {
@@ -142,7 +142,7 @@ if args.if_make_final:
                     rid_env = must_env.copy()
                     rid_env["REGION_ID"] = str(rid)
                     rid_env["REGION_LENGTH"] = str(region_size)
-                    rid_env["TRHEAD_SIZE"] = str(thread)
+                    rid_env["THREAD_SIZE"] = str(thread)
                     rid_env["SIZE"] = size
                     rid_env["PROGRAM"] = bench
                     rid_env["TARGET_ARCH"] = arch
@@ -159,7 +159,7 @@ if args.if_make_final:
                 run_env["SIZE"] = size
                 run_env["PROGRAM"] = bench
                 run_env["TARGET_ARCH"] = arch
-                run_env["TRHEAD_SIZE"] = str(thread)
+                run_env["THREAD_SIZE"] = str(thread)
                 run_env["REGION_LENGTH"] = str(region_size)
 
                 process_this( {
