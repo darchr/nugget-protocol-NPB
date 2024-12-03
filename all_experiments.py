@@ -219,12 +219,16 @@ if args.if_make_final:
                     make_ball_env["THREAD_SIZE"] = str(thread)
 
                     if args.papi_naive:
+                        if args.with_llc:
+                            exp_name = "final_compile_with_llc_c_papi_naive"
+                        else:
+                            exp_name = "final_compile_c_papi_naive"
                         process_this({
-                            "cmd": ["make", "final_compile_c_papi_naive"],
+                            "cmd": ["make", exp_name],
                             "env": make_ball_env,
                             "dir": workdir.as_posix(),
-                            "stdout": Path(workdir/f"{bench.upper()}/final_compile_c_papi_naive.log").as_posix(),
-                            "stderr": Path(workdir/f"{bench.upper()}/final_compile_c_papi_naive.err").as_posix()
+                            "stdout": Path(workdir/f"{bench.upper()}/{exp_name}.log").as_posix(),
+                            "stderr": Path(workdir/f"{bench.upper()}/{exp_name}.err").as_posix()
                         })
                     if args.time_naive:
                         process_this({

@@ -402,6 +402,12 @@ final_compile_c_papi_naive_${PROGRAM}_${SIZE}_${TARGET_ARCH}:
 	cd ${PROGRAM_PATH}/${SIZE}/c_papi_naive && mkdir -p ${TARGET_ARCH}
 	cd ${PROGRAM_PATH}/${SIZE}/c_papi_naive/${TARGET_ARCH} && ${COMPILER} ${HW_FLAGS} ${LIB_FLAGS} ${PAPI_LINE} ../${PROGRAM}_papi_naive.bc -o ${PROGRAM}_${TARGET_ARCH}_${VERSION_STAMP}.c_papi_naive --target=${TARGET_ARCH}-unknown-linux-gnu
 
+final_compile_with_llc_c_papi_naive: get_version final_compile_with_llc_c_papi_naive_${PROGRAM}_${SIZE}_${TARGET_ARCH}
+final_compile_with_llc_c_papi_naive_${PROGRAM}_${SIZE}_${TARGET_ARCH}:
+	cd ${PROGRAM_PATH}/${SIZE}/c_papi_naive && mkdir -p ${TARGET_ARCH}
+	cd ${PROGRAM_PATH}/${SIZE}/c_papi_naive/${TARGET_ARCH} && ${LLC} ${LLC_FLAGS} ../${PROGRAM}_papi_naive.bc -o ${PROGRAM}_${TARGET_ARCH}_${VERSION_STAMP}.o
+	cd ${PROGRAM_PATH}/${SIZE}/c_papi_naive/${TARGET_ARCH} && ${COMPILER} ${HW_FLAGS} ${LIB_FLAGS} ${PAPI_LINE} ${PROGRAM}_${TARGET_ARCH}_${VERSION_STAMP}.o -o ${PROGRAM}_${TARGET_ARCH}_${VERSION_STAMP}.c_papi_naive --target=${TARGET_ARCH}-unknown-linux-gnu
+
 final_compile_c_time_naive: get_version final_compile_c_time_naive_${PROGRAM}_${SIZE}_${TARGET_ARCH}
 final_compile_c_time_naive_${PROGRAM}_${SIZE}_${TARGET_ARCH}:
 	cd ${PROGRAM_PATH}/${SIZE}/c_time_naive && mkdir -p ${TARGET_ARCH}
