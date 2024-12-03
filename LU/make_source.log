@@ -1,0 +1,248 @@
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common && make all FC='/home/studyztp/compiler/llvm-dir/bin/flang-new' CC='/home/studyztp/compiler/llvm-dir/bin/clang' CPP='/home/studyztp/compiler/llvm-dir/bin/clang++' OPT='/home/studyztp/compiler/llvm-dir/bin/opt' LLVM_LINK='/home/studyztp/compiler/llvm-dir/bin/llvm-link' LIB_FLAGS='-fopenmp -lm ' OPT_FLAGS='-O3 ' LLC='/home/studyztp/compiler/llvm-dir/bin/llc' LLC_FLAGS='-relocation-model=pic -filetype=obj ' BASIC_FLAGS='-fopenmp -lm  -O3   ' COMMON='/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common' SYS_DIR='/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/sys' PAPI_LINE='-I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/include -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/lib -lpapi -lpthread' M5_LINE='-no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5' M5_INCLUDE='-I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5' M5_LIB='-L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5' HOST_ARCH='x86_64-unknown-linux-gnu' TARGET_ARCH='x86_64' SIZE='B'
+make[1]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common'
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -emit-llvm c_print_results.c -o c_print_results.ll
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -emit-llvm c_timers.c -o c_timers.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm print_results.f90 -o print_results.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm randdp.f90 -o randdp.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm randdpvec.f90 -o randdpvec.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm randi8_safe.f90 -o randi8_safe.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm randi8.f90 -o randi8.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm timers.f90 -o timers.ll
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -emit-llvm wtime.c -o wtime.ll
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DPROFILING -emit-llvm \
+c_helper.c -o c_profiling.ll
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DNAIVE -emit-llvm \
+c_helper.c -o c_naive.ll
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DUSING_PAPI_PROFILING -emit-llvm \
+c_helper.c -o c_papi_profiling.ll 
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DMEASURING -DPAPI_MEASURING -emit-llvm \
+c_helper.c -o c_papi_measuring.ll 
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DMEASURING -DM5_FS_MEASURING -emit-llvm \
+c_helper.c -o c_m5_fs_measuring.ll -no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DMEASURING -DM5_FS_MEASURING \
+-DUSING_INST_MODE -emit-llvm \
+c_helper.c -o c_m5_fs_inst_measuring.ll -no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DPAPI_NAIVE -emit-llvm \
+c_helper.c -o c_papi_naive.ll -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/include -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/lib -lpapi -lpthread
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DTIMING_NAIVE -emit-llvm \
+c_helper.c -o c_time_naive.ll
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DMEASURING -DMARKER_OVERHEAD_MEASURING \
+-emit-llvm c_helper.c -o c_marker_overhead_measuring.ll -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/include -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/lib -lpapi -lpthread
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DLOOPPOINT_M5_FS -emit-llvm \
+c_helper.c -o c_marker_looppoint_m5_fs.ll -no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DLOOPPOINT_M5_FS -DUSING_INST_MODE -emit-llvm \
+c_helper.c -o c_marker_looppoint_m5_fs_inst.ll -no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DM5_FS_WARMUP_MARKER_ONLY -emit-llvm \
+c_helper.c -o c_m5_fs_warmup_marker_only.ll -no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DM5_FS_WARMUP_MARKER_ONLY -DUSING_INST_MODE \
+-emit-llvm c_helper.c -o c_m5_fs_inst_warmup_marker_only.ll -no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DPROFILING -emit-llvm \
+single_thread_c_helper.c -o single_thread_c_profiling.ll
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DUSING_PAPI_PROFILING -emit-llvm \
+single_thread_c_helper.c -o single_thread_c_papi_profiling.ll -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/include -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/lib -lpapi -lpthread
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DMEASURING -DPAPI_MEASURING -emit-llvm \
+single_thread_c_helper.c -o single_thread_c_papi_measuring.ll -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/include -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/lib -lpapi -lpthread
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DMEASURING -DM5_FS_MEASURING -emit-llvm \
+single_thread_c_helper.c -o single_thread_c_m5_fs_measuring.ll -no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DMEASURING -DM5_FS_MEASURING -DUSING_INST_MODE \
+-emit-llvm single_thread_c_helper.c -o \
+single_thread_c_m5_fs_inst_measuring.ll \
+-no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DM5_FS_NAIVE -emit-llvm \
+c_helper.c -o c_m5_fs_naive.ll -no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DM5_FS_NAIVE -DUSING_INST_MODE -emit-llvm \
+c_helper.c -o c_m5_fs_inst_naive.ll -no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5
+make[1]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common'
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU && make all FC='/home/studyztp/compiler/llvm-dir/bin/flang-new' CC='/home/studyztp/compiler/llvm-dir/bin/clang' CPP='/home/studyztp/compiler/llvm-dir/bin/clang++' OPT='/home/studyztp/compiler/llvm-dir/bin/opt' LLVM_LINK='/home/studyztp/compiler/llvm-dir/bin/llvm-link' LIB_FLAGS='-fopenmp -lm ' OPT_FLAGS='-O3 ' LLC='/home/studyztp/compiler/llvm-dir/bin/llc' LLC_FLAGS='-relocation-model=pic -filetype=obj ' BASIC_FLAGS='-fopenmp -lm  -O3   ' COMMON='/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common' SYS_DIR='/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/sys' PAPI_LINE='-I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/include -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/lib -lpapi -lpthread' M5_LINE='-no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5' M5_INCLUDE='-I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5' M5_LIB='-L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5' HOST_ARCH='x86_64-unknown-linux-gnu' TARGET_ARCH='x86_64' SIZE='B'
+make[1]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+/home/studyztp/compiler/llvm-dir/bin/clang -o setparams /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/sys/setparams.c --target=x86_64-unknown-linux-gnu
+make clean_all_sizes;
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+for size in A B C D E ; do \
+	rm -f /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU/$size/*.ll; \
+	rm -f /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU/$size/*.bc; \
+	rm -f /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU/$size/npbparams.h; \
+done
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+for size in A B C D E ; do \
+	make clean; \
+	./setparams lu $size; \
+	mkdir -p $size; \
+	make lu.bc SIZE=$size; \
+	cp /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU/*.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU/$size/; \
+	cp /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU/*.bc /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU/$size/; \
+	cp npbparams.h /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU/$size/; \
+	/home/studyztp/compiler/llvm-dir/bin/opt -O3  /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU/$size/lu.bc -o /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU/$size/lu_O3_2024-12-03-13-52-56.bc; \
+done
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+rm -f *.o *~ *.mod npbparams.h
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm lu_data.f90 -o lu_data.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm lu.f90 -o lu.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm read_input.f90 -o read_input.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm domain.f90 -o domain.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setcoeff.f90 -o setcoeff.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setbv.f90 -o setbv.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm exact.f90 -o exact.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setiv.f90 -o setiv.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm erhs.f90 -o erhs.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm ssor.f90 -o ssor.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm rhs.f90 -o rhs.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm l2norm.f90 -o l2norm.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm jacld.f90 -o jacld.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm blts.f90 -o blts.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm jacu.f90 -o jacu.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm buts.f90 -o buts.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm error.f90 -o error.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm pintgr.f90 -o pintgr.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm verify.f90 -o verify.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm syncs.f90 -o syncs.ll
+/home/studyztp/compiler/llvm-dir/bin/llvm-link -o lu.bc lu.ll lu_data.ll read_input.ll \
+domain.ll setcoeff.ll setbv.ll exact.ll setiv.ll \
+erhs.ll ssor.ll rhs.ll l2norm.ll \
+jacld.ll blts.ll jacu.ll buts.ll error.ll \
+pintgr.ll verify.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/print_results.ll \
+syncs.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/timers.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/wtime.ll
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+rm -f *.o *~ *.mod npbparams.h
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm lu_data.f90 -o lu_data.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm lu.f90 -o lu.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm read_input.f90 -o read_input.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm domain.f90 -o domain.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setcoeff.f90 -o setcoeff.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setbv.f90 -o setbv.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm exact.f90 -o exact.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setiv.f90 -o setiv.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm erhs.f90 -o erhs.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm ssor.f90 -o ssor.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm rhs.f90 -o rhs.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm l2norm.f90 -o l2norm.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm jacld.f90 -o jacld.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm blts.f90 -o blts.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm jacu.f90 -o jacu.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm buts.f90 -o buts.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm error.f90 -o error.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm pintgr.f90 -o pintgr.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm verify.f90 -o verify.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm syncs.f90 -o syncs.ll
+/home/studyztp/compiler/llvm-dir/bin/llvm-link -o lu.bc lu.ll lu_data.ll read_input.ll \
+domain.ll setcoeff.ll setbv.ll exact.ll setiv.ll \
+erhs.ll ssor.ll rhs.ll l2norm.ll \
+jacld.ll blts.ll jacu.ll buts.ll error.ll \
+pintgr.ll verify.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/print_results.ll \
+syncs.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/timers.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/wtime.ll
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+rm -f *.o *~ *.mod npbparams.h
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm lu_data.f90 -o lu_data.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm lu.f90 -o lu.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm read_input.f90 -o read_input.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm domain.f90 -o domain.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setcoeff.f90 -o setcoeff.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setbv.f90 -o setbv.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm exact.f90 -o exact.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setiv.f90 -o setiv.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm erhs.f90 -o erhs.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm ssor.f90 -o ssor.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm rhs.f90 -o rhs.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm l2norm.f90 -o l2norm.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm jacld.f90 -o jacld.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm blts.f90 -o blts.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm jacu.f90 -o jacu.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm buts.f90 -o buts.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm error.f90 -o error.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm pintgr.f90 -o pintgr.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm verify.f90 -o verify.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm syncs.f90 -o syncs.ll
+/home/studyztp/compiler/llvm-dir/bin/llvm-link -o lu.bc lu.ll lu_data.ll read_input.ll \
+domain.ll setcoeff.ll setbv.ll exact.ll setiv.ll \
+erhs.ll ssor.ll rhs.ll l2norm.ll \
+jacld.ll blts.ll jacu.ll buts.ll error.ll \
+pintgr.ll verify.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/print_results.ll \
+syncs.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/timers.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/wtime.ll
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+rm -f *.o *~ *.mod npbparams.h
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm lu_data.f90 -o lu_data.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm lu.f90 -o lu.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm read_input.f90 -o read_input.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm domain.f90 -o domain.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setcoeff.f90 -o setcoeff.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setbv.f90 -o setbv.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm exact.f90 -o exact.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setiv.f90 -o setiv.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm erhs.f90 -o erhs.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm ssor.f90 -o ssor.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm rhs.f90 -o rhs.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm l2norm.f90 -o l2norm.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm jacld.f90 -o jacld.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm blts.f90 -o blts.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm jacu.f90 -o jacu.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm buts.f90 -o buts.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm error.f90 -o error.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm pintgr.f90 -o pintgr.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm verify.f90 -o verify.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm syncs.f90 -o syncs.ll
+/home/studyztp/compiler/llvm-dir/bin/llvm-link -o lu.bc lu.ll lu_data.ll read_input.ll \
+domain.ll setcoeff.ll setbv.ll exact.ll setiv.ll \
+erhs.ll ssor.ll rhs.ll l2norm.ll \
+jacld.ll blts.ll jacu.ll buts.ll error.ll \
+pintgr.ll verify.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/print_results.ll \
+syncs.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/timers.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/wtime.ll
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+rm -f *.o *~ *.mod npbparams.h
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm lu_data.f90 -o lu_data.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm lu.f90 -o lu.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm read_input.f90 -o read_input.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm domain.f90 -o domain.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setcoeff.f90 -o setcoeff.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setbv.f90 -o setbv.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm exact.f90 -o exact.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm setiv.f90 -o setiv.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm erhs.f90 -o erhs.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm ssor.f90 -o ssor.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm rhs.f90 -o rhs.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm l2norm.f90 -o l2norm.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm jacld.f90 -o jacld.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm blts.f90 -o blts.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm jacu.f90 -o jacu.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm buts.f90 -o buts.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm error.f90 -o error.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm pintgr.f90 -o pintgr.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm verify.f90 -o verify.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm syncs.f90 -o syncs.ll
+/home/studyztp/compiler/llvm-dir/bin/llvm-link -o lu.bc lu.ll lu_data.ll read_input.ll \
+domain.ll setcoeff.ll setbv.ll exact.ll setiv.ll \
+erhs.ll ssor.ll rhs.ll l2norm.ll \
+jacld.ll blts.ll jacu.ll buts.ll error.ll \
+pintgr.ll verify.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/print_results.ll \
+syncs.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/timers.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/wtime.ll
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+make clean;
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+rm -f *.o *~ *.mod npbparams.h
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+make[1]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'

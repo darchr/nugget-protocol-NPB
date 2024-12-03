@@ -1,0 +1,144 @@
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common && make all FC='/home/studyztp/compiler/llvm-dir/bin/flang-new' CC='/home/studyztp/compiler/llvm-dir/bin/clang' CPP='/home/studyztp/compiler/llvm-dir/bin/clang++' OPT='/home/studyztp/compiler/llvm-dir/bin/opt' LLVM_LINK='/home/studyztp/compiler/llvm-dir/bin/llvm-link' LIB_FLAGS='-fopenmp -lm ' OPT_FLAGS='-O3 ' LLC='/home/studyztp/compiler/llvm-dir/bin/llc' LLC_FLAGS='-relocation-model=pic -filetype=obj ' BASIC_FLAGS='-fopenmp -lm  -O3   ' COMMON='/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common' SYS_DIR='/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/sys' PAPI_LINE='-I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/include -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/lib -lpapi -lpthread' M5_LINE='-no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5' M5_INCLUDE='-I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5' M5_LIB='-L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5' HOST_ARCH='x86_64-unknown-linux-gnu' TARGET_ARCH='x86_64' SIZE='B'
+make[1]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common'
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -emit-llvm c_print_results.c -o c_print_results.ll
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -emit-llvm c_timers.c -o c_timers.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm print_results.f90 -o print_results.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm randdp.f90 -o randdp.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm randdpvec.f90 -o randdpvec.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm randi8_safe.f90 -o randi8_safe.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm randi8.f90 -o randi8.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm timers.f90 -o timers.ll
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -emit-llvm wtime.c -o wtime.ll
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DPROFILING -emit-llvm \
+c_helper.c -o c_profiling.ll
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DNAIVE -emit-llvm \
+c_helper.c -o c_naive.ll
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DUSING_PAPI_PROFILING -emit-llvm \
+c_helper.c -o c_papi_profiling.ll 
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DMEASURING -DPAPI_MEASURING -emit-llvm \
+c_helper.c -o c_papi_measuring.ll 
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DMEASURING -DM5_FS_MEASURING -emit-llvm \
+c_helper.c -o c_m5_fs_measuring.ll -no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DMEASURING -DM5_FS_MEASURING \
+-DUSING_INST_MODE -emit-llvm \
+c_helper.c -o c_m5_fs_inst_measuring.ll -no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DPAPI_NAIVE -emit-llvm \
+c_helper.c -o c_papi_naive.ll -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/include -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/lib -lpapi -lpthread
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DTIMING_NAIVE -emit-llvm \
+c_helper.c -o c_time_naive.ll
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DMEASURING -DMARKER_OVERHEAD_MEASURING \
+-emit-llvm c_helper.c -o c_marker_overhead_measuring.ll -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/include -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/lib -lpapi -lpthread
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DLOOPPOINT_M5_FS -emit-llvm \
+c_helper.c -o c_marker_looppoint_m5_fs.ll -no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DLOOPPOINT_M5_FS -DUSING_INST_MODE -emit-llvm \
+c_helper.c -o c_marker_looppoint_m5_fs_inst.ll -no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DM5_FS_WARMUP_MARKER_ONLY -emit-llvm \
+c_helper.c -o c_m5_fs_warmup_marker_only.ll -no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DM5_FS_WARMUP_MARKER_ONLY -DUSING_INST_MODE \
+-emit-llvm c_helper.c -o c_m5_fs_inst_warmup_marker_only.ll -no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DPROFILING -emit-llvm \
+single_thread_c_helper.c -o single_thread_c_profiling.ll
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DUSING_PAPI_PROFILING -emit-llvm \
+single_thread_c_helper.c -o single_thread_c_papi_profiling.ll -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/include -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/lib -lpapi -lpthread
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DMEASURING -DPAPI_MEASURING -emit-llvm \
+single_thread_c_helper.c -o single_thread_c_papi_measuring.ll -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/include -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/lib -lpapi -lpthread
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DMEASURING -DM5_FS_MEASURING -emit-llvm \
+single_thread_c_helper.c -o single_thread_c_m5_fs_measuring.ll -no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DMEASURING -DM5_FS_MEASURING -DUSING_INST_MODE \
+-emit-llvm single_thread_c_helper.c -o \
+single_thread_c_m5_fs_inst_measuring.ll \
+-no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DM5_FS_NAIVE -emit-llvm \
+c_helper.c -o c_m5_fs_naive.ll -no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5
+/home/studyztp/compiler/llvm-dir/bin/clang -fopenmp -lm  -O3    -S -DM5_FS_NAIVE -DUSING_INST_MODE -emit-llvm \
+c_helper.c -o c_m5_fs_inst_naive.ll -no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5
+make[1]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common'
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG && make all FC='/home/studyztp/compiler/llvm-dir/bin/flang-new' CC='/home/studyztp/compiler/llvm-dir/bin/clang' CPP='/home/studyztp/compiler/llvm-dir/bin/clang++' OPT='/home/studyztp/compiler/llvm-dir/bin/opt' LLVM_LINK='/home/studyztp/compiler/llvm-dir/bin/llvm-link' LIB_FLAGS='-fopenmp -lm ' OPT_FLAGS='-O3 ' LLC='/home/studyztp/compiler/llvm-dir/bin/llc' LLC_FLAGS='-relocation-model=pic -filetype=obj ' BASIC_FLAGS='-fopenmp -lm  -O3   ' COMMON='/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common' SYS_DIR='/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/sys' PAPI_LINE='-I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/include -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/all_papi/x86_64/lib -lpapi -lpthread' M5_LINE='-no-pie -I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5 -L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5' M5_INCLUDE='-I/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5' M5_LIB='-L/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/gem5/all_outs/x86_64 -lm5' HOST_ARCH='x86_64-unknown-linux-gnu' TARGET_ARCH='x86_64' SIZE='B'
+make[1]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+/home/studyztp/compiler/llvm-dir/bin/clang -o setparams /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/sys/setparams.c --target=x86_64-unknown-linux-gnu
+make clean_all_sizes;
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+for size in A B C D E ; do \
+	rm -f /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG/$size/*.ll; \
+	rm -f /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG/$size/*.bc; \
+	rm -f /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG/$size/npbparams.h; \
+done
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+for size in A B C D E ; do \
+	make clean; \
+	./setparams mg $size; \
+	mkdir -p $size; \
+	make mg.bc SIZE=$size; \
+	cp /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG/*.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG/$size/; \
+	cp /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG/*.bc /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG/$size/; \
+	cp npbparams.h /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG/$size/; \
+	/home/studyztp/compiler/llvm-dir/bin/opt -O3  /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG/$size/mg.bc -o /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG/$size/mg_O3_2024-12-03-13-53-11.bc; \
+done
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+rm -f *.o *~ *.mod
+rm -f npbparams.h core
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm mg_data.f90 -o mg_data.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm mg.f90 -o mg.ll
+/home/studyztp/compiler/llvm-dir/bin/llvm-link -o mg.bc mg.ll mg_data.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/print_results.ll \
+/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/randi8.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/timers.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/wtime.ll
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+rm -f *.o *~ *.mod
+rm -f npbparams.h core
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm mg_data.f90 -o mg_data.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm mg.f90 -o mg.ll
+/home/studyztp/compiler/llvm-dir/bin/llvm-link -o mg.bc mg.ll mg_data.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/print_results.ll \
+/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/randi8.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/timers.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/wtime.ll
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+rm -f *.o *~ *.mod
+rm -f npbparams.h core
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm mg_data.f90 -o mg_data.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm mg.f90 -o mg.ll
+/home/studyztp/compiler/llvm-dir/bin/llvm-link -o mg.bc mg.ll mg_data.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/print_results.ll \
+/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/randi8.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/timers.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/wtime.ll
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+rm -f *.o *~ *.mod
+rm -f npbparams.h core
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm mg_data.f90 -o mg_data.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm mg.f90 -o mg.ll
+/home/studyztp/compiler/llvm-dir/bin/llvm-link -o mg.bc mg.ll mg_data.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/print_results.ll \
+/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/randi8.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/timers.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/wtime.ll
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+rm -f *.o *~ *.mod
+rm -f npbparams.h core
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm mg_data.f90 -o mg_data.ll
+/home/studyztp/compiler/llvm-dir/bin/flang-new -fopenmp -lm  -O3    -S -emit-llvm mg.f90 -o mg.ll
+/home/studyztp/compiler/llvm-dir/bin/llvm-link -o mg.bc mg.ll mg_data.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/print_results.ll \
+/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/randi8.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/timers.ll /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/wtime.ll
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+make clean;
+make[2]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+rm -f *.o *~ *.mod
+rm -f npbparams.h core
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+make[2]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+make[1]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'

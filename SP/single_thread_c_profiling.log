@@ -1,0 +1,10 @@
+PROGRAM_PATH=/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/SP/B
+PROGRAM=sp
+FILE=/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/SP/B/sp_O3_2024-12-03-13-53-16.bc
+2024-12-03-13-53-16
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/SP/B && mkdir -p single_thread_c_profiling
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/SP/B/single_thread_c_profiling && mkdir -p 100000000
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/SP/B/single_thread_c_profiling/100000000 && /home/studyztp/compiler/llvm-dir/bin/llvm-link -o sp_profiling.bc /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/SP/B/sp_O3_2024-12-03-13-53-16.bc /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/single_thread_c_profiling.ll
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/SP/B/single_thread_c_profiling/100000000 && /home/studyztp/compiler/llvm-dir/bin/opt -passes=phase-analysis -phase-analysis-output-file=basic_block_info_output_2024-12-03-13-53-16.txt sp_profiling.bc -o sp_profiling_opt.bc \
+	-phase-analysis-using-papi=false -phase-analysis-region-length=100000000 \
+	2>> phase_analysis_log_2024-12-03-13-53-16.log

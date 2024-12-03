@@ -1,0 +1,145 @@
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common && make clean
+make[1]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common'
+rm -f *.ll
+make[1]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common'
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/BT && make clean_all
+make[1]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/BT'
+rm -f *.o *~ *.mod mputil*
+rm -f npbparams.h core blk_par.h
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+for size in A B C D E ; do \
+	rm -rf /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/BT/$size; \
+done
+make[1]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/BT'
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common && make clean
+make[1]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common'
+rm -f *.ll
+make[1]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common'
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/CG && make clean_all
+make[1]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/CG'
+rm -f *.o *~ *.mod
+rm -f npbparams.h core
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+for size in A B C D E ; do \
+	rm -rf /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/CG/$size; \
+done
+make[1]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/CG'
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common && make clean
+make[1]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common'
+rm -f *.ll
+make[1]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common'
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/EP && make clean_all
+make[1]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/EP'
+rm -f *.o *~ *.mod
+rm -f npbparams.h core
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+for size in A B C D E ; do \
+	rm -rf /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/EP/$size; \
+done
+make[1]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/EP'
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common && make clean
+make[1]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common'
+rm -f *.ll
+make[1]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common'
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/FT && make clean_all
+make[1]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/FT'
+rm -f *.o *~ mputil* *.mod
+rm -f ft npbparams.h core blk_par.h
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+for size in A B C D E ; do \
+	rm -rf /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/FT/$size; \
+done
+make[1]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/FT'
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common && make clean
+make[1]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common'
+rm -f *.ll
+make[1]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common'
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/IS && make clean_all
+make[1]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/IS'
+rm -f *.o *~ mputil*
+rm -f npbparams.h core
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+for size in A B C D E ; do \
+	rm -rf /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/IS/$size; \
+done
+make[1]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/IS'
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common && make clean
+make[1]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common'
+rm -f *.ll
+make[1]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common'
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU && make clean_all
+make[1]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+rm -f *.o *~ *.mod npbparams.h
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+for size in A B C D E ; do \
+	rm -rf /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU/$size; \
+done
+make[1]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/LU'
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common && make clean
+make[1]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common'
+rm -f *.ll
+make[1]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common'
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG && make clean_all
+make[1]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+rm -f *.o *~ *.mod
+rm -f npbparams.h core
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+for size in A B C D E ; do \
+	rm -rf /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG/$size; \
+done
+make[1]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/MG'
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common && make clean
+make[1]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common'
+rm -f *.ll
+make[1]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common'
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/SP && make clean_all
+make[1]: Entering directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/SP'
+rm -f *.o *~ *.mod mputil*
+rm -f npbparams.h core blk_par.h
+if [ -d rii_files ]; then rm -r rii_files; fi
+rm -f *.ll *.bc
+for size in A B C D E ; do \
+	rm -rf /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/SP/$size; \
+done
+make[1]: Leaving directory '/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/SP'
+all input arguments are Namespace(region_size_list=[100000000], arch='x86_64', machine_name='liberty', thread_list=[1], size_list=['B'], if_make_source=True, if_make_base=True, if_make_final=False, if_run=False, num_run=10, benchmarks=['bt', 'cg', 'ep', 'ft', 'is', 'lu', 'mg', 'sp'], papi_naive=True, time_naive=False, profiling=True, papi_profiling=True, marker_overhead=False, papi_measuring=False, region_info='', num_pool=1, with_llc=False)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', '-B', 'all'] 0 threads CompletedProcess(args=['make', '-B', 'all'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', '-B', 'all'] 0 threads CompletedProcess(args=['make', '-B', 'all'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', '-B', 'all'] 0 threads CompletedProcess(args=['make', '-B', 'all'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', '-B', 'all'] 0 threads CompletedProcess(args=['make', '-B', 'all'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', '-B', 'all'] 0 threads CompletedProcess(args=['make', '-B', 'all'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', '-B', 'all'] 0 threads CompletedProcess(args=['make', '-B', 'all'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', '-B', 'all'] 0 threads CompletedProcess(args=['make', '-B', 'all'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', '-B', 'all'] 0 threads CompletedProcess(args=['make', '-B', 'all'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'c_papi_naive'] 0 threads CompletedProcess(args=['make', 'c_papi_naive'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'single_thread_c_profiling'] 0 threads CompletedProcess(args=['make', 'single_thread_c_profiling'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'single_thread_c_papi_profiling'] 0 threads CompletedProcess(args=['make', 'single_thread_c_papi_profiling'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'c_papi_naive'] 0 threads CompletedProcess(args=['make', 'c_papi_naive'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'single_thread_c_profiling'] 0 threads CompletedProcess(args=['make', 'single_thread_c_profiling'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'single_thread_c_papi_profiling'] 0 threads CompletedProcess(args=['make', 'single_thread_c_papi_profiling'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'c_papi_naive'] 0 threads CompletedProcess(args=['make', 'c_papi_naive'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'single_thread_c_profiling'] 0 threads CompletedProcess(args=['make', 'single_thread_c_profiling'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'single_thread_c_papi_profiling'] 0 threads CompletedProcess(args=['make', 'single_thread_c_papi_profiling'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'c_papi_naive'] 0 threads CompletedProcess(args=['make', 'c_papi_naive'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'single_thread_c_profiling'] 0 threads CompletedProcess(args=['make', 'single_thread_c_profiling'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'single_thread_c_papi_profiling'] 0 threads CompletedProcess(args=['make', 'single_thread_c_papi_profiling'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'c_papi_naive'] 0 threads CompletedProcess(args=['make', 'c_papi_naive'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'single_thread_c_profiling'] 0 threads CompletedProcess(args=['make', 'single_thread_c_profiling'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'single_thread_c_papi_profiling'] 0 threads CompletedProcess(args=['make', 'single_thread_c_papi_profiling'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'c_papi_naive'] 0 threads CompletedProcess(args=['make', 'c_papi_naive'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'single_thread_c_profiling'] 0 threads CompletedProcess(args=['make', 'single_thread_c_profiling'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'single_thread_c_papi_profiling'] 0 threads CompletedProcess(args=['make', 'single_thread_c_papi_profiling'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'c_papi_naive'] 0 threads CompletedProcess(args=['make', 'c_papi_naive'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'single_thread_c_profiling'] 0 threads CompletedProcess(args=['make', 'single_thread_c_profiling'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'single_thread_c_papi_profiling'] 0 threads CompletedProcess(args=['make', 'single_thread_c_papi_profiling'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'c_papi_naive'] 0 threads CompletedProcess(args=['make', 'c_papi_naive'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'single_thread_c_profiling'] 0 threads CompletedProcess(args=['make', 'single_thread_c_profiling'], returncode=0)
+finished /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB ['make', 'single_thread_c_papi_profiling'] 0 threads CompletedProcess(args=['make', 'single_thread_c_papi_profiling'], returncode=0)
+All done!

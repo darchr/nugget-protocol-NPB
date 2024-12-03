@@ -1,0 +1,7 @@
+Threshold: 100000000
+Skipping function: calculate_nsec_difference
+Skipping function: start_papi_region
+Skipping function: end_papi_region
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_

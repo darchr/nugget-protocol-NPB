@@ -1,0 +1,10 @@
+PROGRAM_PATH=/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/CG/B
+PROGRAM=cg
+FILE=/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/CG/B/cg_O3_2024-12-03-13-52-45.bc
+2024-12-03-13-52-45
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/CG/B && mkdir -p single_thread_c_papi_profiling
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/CG/B/single_thread_c_papi_profiling && mkdir -p 100000000
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/CG/B/single_thread_c_papi_profiling/100000000 && /home/studyztp/compiler/llvm-dir/bin/llvm-link -o cg_papi_profiling.bc /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/CG/B/cg_O3_2024-12-03-13-52-45.bc /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/single_thread_c_papi_profiling.ll
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/CG/B/single_thread_c_papi_profiling/100000000 && /home/studyztp/compiler/llvm-dir/bin/opt -passes=phase-analysis -phase-analysis-output-file=basic_block_info_output_2024-12-03-13-52-45.txt cg_papi_profiling.bc -o cg_papi_profiling_opt.bc \
+	-phase-analysis-using-papi=true -phase-analysis-region-length=100000000 \
+	2>> phase_analysis_log_2024-12-03-13-52-45.log

@@ -1,0 +1,6 @@
+PROGRAM_PATH=/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/FT/B
+PROGRAM=ft
+FILE=/home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/FT/B/ft_O3_2024-12-03-13-52-50.bc
+2024-12-03-13-52-50
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/FT/B && mkdir -p c_papi_naive
+cd /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/FT/B/c_papi_naive && /home/studyztp/compiler/llvm-dir/bin/llvm-link -o ft_papi_naive.bc /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/FT/B/ft_O3_2024-12-03-13-52-50.bc /home/studyztp/experiments/panning/hardware-experiment/nugget-protocol-NPB/common/c_papi_naive.ll
