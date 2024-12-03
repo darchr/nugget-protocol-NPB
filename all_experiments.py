@@ -237,7 +237,7 @@ if args.if_make_final:
                     if args.profiling:
                         if thread == 1:
                             if args.with_llc:
-                                exp_name = "final_compile_with_llc_single_thread_c_profiling"
+                                exp_name = "final_compile_single_thread_with_llc_c_profiling"
                             else:
                                 exp_name = "final_compile_single_thread_c_profiling"
                             process_this({
@@ -261,20 +261,28 @@ if args.if_make_final:
                             })
                     if args.papi_profiling:
                         if thread == 1:
+                            if args.with_llc:
+                                exp_name = "final_compile_single_thread_with_llc_c_papi_profiling"
+                            else:
+                                exp_name = "final_compile_single_thread_c_papi_profiling"
                             process_this({
-                                "cmd": ["make", "final_compile_single_thread_c_papi_profiling"],
+                                "cmd": ["make", exp_name],
                                 "env": make_ball_env,
                                 "dir": workdir.as_posix(),
-                                "stdout": Path(workdir/f"{bench.upper()}/final_compile_single_thread_c_papi_profiling.log").as_posix(),
-                                "stderr": Path(workdir/f"{bench.upper()}/final_compile_single_thread_c_papi_profiling.err").as_posix()
+                                "stdout": Path(workdir/f"{bench.upper()}/{exp_name}.log").as_posix(),
+                                "stderr": Path(workdir/f"{bench.upper()}/{exp_name}.err").as_posix()
                             })
                         else:
+                            if args.with_llc:
+                                exp_name = "final_compile_with_llc_c_papi_profiling"
+                            else:
+                                exp_name = "final_compile_c_papi_profiling"
                             process_this({
-                                "cmd": ["make", "final_compile_c_papi_profiling"],
+                                "cmd": ["make", exp_name],
                                 "env": make_ball_env,
                                 "dir": workdir.as_posix(),
-                                "stdout": Path(workdir/f"{bench.upper()}/final_compile_c_papi_profiling.log").as_posix(),
-                                "stderr": Path(workdir/f"{bench.upper()}/final_compile_c_papi_profiling.err").as_posix()
+                                "stdout": Path(workdir/f"{bench.upper()}/{exp_name}.log").as_posix(),
+                                "stderr": Path(workdir/f"{bench.upper()}/{exp_name}.err").as_posix()
                             })
                     if args.marker_overhead:
                         for rid in region_info[bench]:
