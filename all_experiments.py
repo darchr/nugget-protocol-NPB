@@ -314,7 +314,7 @@ if args.if_make_final:
                             region_env["REGION_ID"] = str(rid)
                             if thread == 1:
                                 if args.with_llc:
-                                    exp_name = "final_compile_with_llc_single_thread_c_papi_measuring"
+                                    exp_name = "final_compile_single_thread_with_llc_c_papi_measuring"
                                 else:
                                     exp_name = "final_compile_single_thread_c_papi_measuring"
                             else:
