@@ -389,8 +389,7 @@ void roi_end_() {
 
     FILE *fptr;
 
-    char outputfile[256];
-    sprintf(outputfile, "all_output_%d_threads.txt", omp_get_max_threads());
+    char outputfile[] = "analysis-output.csv";
 
     fptr = fopen(outputfile, "w");
     if (fptr == NULL) {
@@ -398,11 +397,53 @@ void roi_end_() {
         exit(1);
     }
 
-    for (unsigned long long i = 0; i < region; i ++) {
-        fprintf(fptr, "Region: %llu\n", i);
-        fprintf(fptr, "Total IR instructions: %llu\n", counter_array[i]);
-        fprintf(fptr, "Time: %llu\n", timestamp_array[i]);
+    unsigned long long total_IR_inst = 0;
+    unsigned long long index = 0;
+
+    fprintf(fptr, "type,region,thread,data\n");
+
+    for (unsigned long long i = 0; i < region; i++) {
+        // the format of each line in the output file is:
+        // type, region, thread, data
+
+        for (unsigned long long j = 0; j < num_threads; j++) {
+            fprintf(fptr, "bbv,%llu,%llu", i, j);
+            index = j * (total_num_bbs + 64);
+            for (unsigned long long k = 0; k < total_num_bbs; k++) {
+                if (bbv_array[i][index] != 0) {
+                    fprintf(fptr, ",%llu", bbv_array[i][index]);
+                }
+                index ++;
+            }
+            fprintf(fptr, "\n");
+
+            fprintf(fptr, "csv,%llu,%llu", i, j);
+            index = j * (total_num_bbs + 64);
+            for (unsigned long long k = 0; k < total_num_bbs; k++) {
+                if (timestamp_array[i][index] != 0) {
+                    fprintf(fptr, ",%llu", timestamp_array[i][index]);
+                }
+                index ++;
+            }
+            fprintf(fptr, "\n");
+
+            fprintf(fptr, "bb_id,%llu,%llu", i, j);
+            index = j * (total_num_bbs + 64);
+            for (unsigned long long k = 0; k < total_num_bbs; k++) {
+                if (bbv_array[i][index] != 0) {
+                    fprintf(fptr, ",%llu", k);
+                }
+                index ++;
+            }
+            fprintf(fptr, "\n");
+        }
     }
+
+    fprintf(fptr, "region_inst,N/A,N/A");
+    for (unsigned long long i = 0; i < region; i++) {
+        fprintf(fptr, ",%llu", counter_array[i]);
+    }
+    fprintf(fptr, "\n");
 
     fclose(fptr);
 

@@ -131,8 +131,7 @@ void roi_end_() {
 
     process_data();
 
-    char outputfile[256];
-    sprintf(outputfile, "all_output_1_threads.txt");
+    char outputfile[] = "analysis-output.csv";
 
     FILE* fptr = fopen(outputfile, "w");
     if (fptr == NULL) {
@@ -142,17 +141,39 @@ void roi_end_() {
 
     unsigned long long total_IR_inst = 0;
 
+    fprintf(fptr, "type,region,thread,data\n");
+
     for (unsigned long long i = 0; i < region; i ++) {
-        fprintf(fptr, "Region: %llu\n", i);
-        total_IR_inst += counter_array[i];
-        fprintf(fptr, "Total IR instructions: %llu\n", total_IR_inst);
-        fprintf(fptr, "Total IR instructions in region: %llu\n", counter_array[i]);
-        fprintf(fptr, "Thread 0 BBV and Timestamp: [");
+        fprintf(fptr, "bbv,%llu,0", i);
         for (unsigned long long k = 0; k < total_num_bbs; k ++) {
-            fprintf(fptr, "%llu:%llu,", bbv_array[i][k], timestamp_array[i][k]);
+            if (bbv_array[i][k] != 0) {
+                fprintf(fptr, ",%llu", bbv_array[i][k]);
+            }
         }
-        fprintf(fptr, "]\n");
+        fprintf(fptr, "\n");
+
+        fprintf(fptr, "csv,%llu,0", i);
+        for (unsigned long long k = 0; k < total_num_bbs; k ++) {
+            if (timestamp_array[i][k] != 0) {
+                fprintf(fptr, ",%llu", timestamp_array[i][k]);
+            }
+        }
+        fprintf(fptr, "\n");
+
+        fprintf(fptr, "bb_id,%llu,0", i);
+        for (unsigned long long k = 0; k < total_num_bbs; k ++) {
+            if (bbv_array[i][k] != 0) {
+                fprintf(fptr, ",%llu", k);
+            }
+        }
+        fprintf(fptr, "\n");
     }
+
+    fprintf(fptr, "region_inst,N/A,N/A");
+    for (unsigned long long i = 0; i < region; i++) {
+        fprintf(fptr, ",%llu", counter_array[i]);
+    }
+    fprintf(fptr, "\n");
 
     fclose(fptr);
 
