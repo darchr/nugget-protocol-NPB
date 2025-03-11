@@ -277,6 +277,10 @@
 
       call timer_start( T_bench )
 
+#ifdef USE_NUGGET
+      call roi_begin
+#endif
+
 !---------------------------------------------------------------------
 !---->
 !  Main Iteration for inverse power method
@@ -335,6 +339,10 @@
 
 
       enddo                              ! end of main iter inv pow meth
+
+#ifdef USE_NUGGET
+      call roi_end
+#endif
 
       call timer_stop( T_bench )
 
