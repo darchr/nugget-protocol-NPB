@@ -99,8 +99,6 @@
       call timer_start(T_total)
       if (timers_enabled) call timer_start(T_setup)
 
-      call roi_begin
-
       call compute_indexmap(twiddle, dims(1), dims(2), dims(3))
 
       call compute_initial_conditions(u1, dims(1), dims(2), dims(3))
@@ -127,8 +125,6 @@
       end do
 
       call verify(nx, ny, nz, niter, verified, class)
-
-      call roi_end
 
       call timer_stop(t_total)
       total_time = timer_read(t_total)

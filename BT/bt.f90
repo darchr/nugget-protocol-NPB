@@ -144,7 +144,9 @@
        end do
        call timer_start(1)
 
-       call roi_begin
+#ifdef USE_NUGGET
+      call roi_begin
+#endif
 
        do  step = 1, niter
 
@@ -158,7 +160,9 @@
 
        end do
 
-       call roi_end
+#ifdef USE_NUGGET
+      call roi_end
+#endif
 
        call timer_stop(1)
        tmax = timer_read(1)

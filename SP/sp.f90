@@ -147,8 +147,6 @@
        end do
        call timer_start(1)
 
-       call roi_begin
-
        do  step = 1, niter
 
           if (mod(step, 20) .eq. 0 .or. step .eq. 1) then
@@ -159,8 +157,6 @@
           call adi
 
        end do
-
-       call roi_end
 
        call timer_stop(1)
        tmax = timer_read(1)

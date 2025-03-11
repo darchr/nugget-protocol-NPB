@@ -29,7 +29,7 @@
 #---------------------------------------------------------------------------
 # This is the fortran compiler used for Fortran programs
 #---------------------------------------------------------------------------
-FC = 
+FC = gfortran
 # This links fortran programs; usually the same as ${FC}
 FLINK	= $(FC)
 
@@ -46,7 +46,7 @@ F_INC =
 #---------------------------------------------------------------------------
 # Global *compile time* flags for Fortran programs
 #---------------------------------------------------------------------------
-FFLAGS	= 
+FFLAGS	= -O3 -fopenmp
 
 #---------------------------------------------------------------------------
 # Global *link time* flags. Flags for increasing maximum executable 
@@ -75,14 +75,14 @@ FLINKFLAGS = $(FFLAGS)
 #---------------------------------------------------------------------------
 # This is the C compiler used for C programs
 #---------------------------------------------------------------------------
-CC = 
+CC = gcc
 # This links C programs; usually the same as ${CC}
 CLINK	= $(CC)
 
 #---------------------------------------------------------------------------
 # These macros are passed to the linker 
 #---------------------------------------------------------------------------
-C_LIB  = 
+C_LIB  = -lm
 
 #---------------------------------------------------------------------------
 # These macros are passed to the compiler 
@@ -104,7 +104,7 @@ C_INC =
 # _LARGEFILE64_SOURCE - are standard compiler flags which allow to work with 
 # files larger than 2GB.
 #---------------------------------------------------------------------------
-CFLAGS	= 
+CFLAGS	= -O3 -fopenmp
 
 #---------------------------------------------------------------------------
 # Global *link time* flags. Flags for increasing maximum executable 
@@ -120,7 +120,7 @@ CLINKFLAGS = $(CFLAGS)
 # this compiler go here also; typically there are few flags required; hence 
 # there are no separate macros provided for such flags.
 #---------------------------------------------------------------------------
-UCC	= 
+UCC	= gcc
 
 
 #---------------------------------------------------------------------------

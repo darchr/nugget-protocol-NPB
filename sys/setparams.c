@@ -45,7 +45,7 @@
  * won't accidentally change it. 
  */
 
-#define VERSION "3.4.2"
+#define VERSION "3.4.3"
 
 /* controls verbose output from setparams */
 /* #define VERBOSE */
@@ -722,7 +722,11 @@ void write_ep_info(FILE *fp, char class)
 
 #define VERBOSE
 #define LL 400
+
+#ifndef DEFFILE
 #define DEFFILE "../config/make.def"
+#endif
+
 #define DEFAULT_MESSAGE "(none)"
 FILE *deffile;
 void write_compiler_info(int type, FILE *fp)

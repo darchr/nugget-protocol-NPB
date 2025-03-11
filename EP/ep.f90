@@ -119,8 +119,6 @@
 
       call timer_start(1)
 
-      call roi_begin
-
       t1 = a
       call vranlc(0, t1, a, x)
 
@@ -212,8 +210,6 @@
       do 160 i = 0, nq - 1
          gc = gc + q(i)
  160  continue
-
-      call roi_end
 
       call timer_stop(1)
       tm  = timer_read(1)

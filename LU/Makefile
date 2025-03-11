@@ -1,137 +1,60 @@
-PROGRAM = lu
-
+SHELL=/bin/sh
 BENCHMARK=lu
 BENCHMARKU=LU
 SVER=
 
-FLAGS=${BASIC_FLAGS}
+include ../config/make.def
 
-CURRENT_DATE=$(shell date +"%Y-%m-%d-%H-%M-%S")
-CURRENT_PATH = $(shell pwd)
+OBJS = lu.o lu_data.o read_input.o \
+       domain.o setcoeff.o setbv.o exact.o setiv.o \
+       erhs.o ssor$(SVER).o rhs.o l2norm.o \
+       jacld.o blts.o jacu.o buts.o error.o \
+       pintgr.o verify.o ${COMMON}/print_results.o \
+       ${COMMON}/timers.o ${COMMON}/wtime.o
 
-ALL_SIZE = A B C D E 
+include ../sys/make.common
 
-all: pre 
-	make clean_all_sizes;
-	for size in ${ALL_SIZE}; do \
-		make clean; \
-		./setparams ${PROGRAM} $$size; \
-		mkdir -p $$size; \
-		make lu.bc SIZE=$$size; \
-		cp ${CURRENT_PATH}/*.ll ${CURRENT_PATH}/$$size/; \
-		cp ${CURRENT_PATH}/*.bc ${CURRENT_PATH}/$$size/; \
-		cp npbparams.h ${CURRENT_PATH}/$$size/; \
-		${OPT} ${OPT_FLAGS} ${CURRENT_PATH}/$$size/lu.bc -o ${CURRENT_PATH}/$$size/lu_O3_${CURRENT_DATE}.bc; \
-	done
-	make clean;
+# npbparams.h is included by lu_data module (via lu_data.o)
 
-pre: ${SYS_DIR}/setparams.c
-	${CC} -o setparams ${SYS_DIR}/setparams.c --target=${HOST_ARCH}
+${PROGRAM}: config
+	@if [ x$(VERSION) = xdoac -o x$(VERSION) = xDOAC ] ; then	\
+		${MAKE} SVER=_doac exec;			\
+	elif [ x$(VERSION) = xhp -o x$(VERSION) = xHP ] ; then	\
+		${MAKE} SVER=_hp exec;				\
+	else							\
+		${MAKE} exec-sync;				\
+	fi
 
-lu.bc: lu.ll lu_data.ll read_input.ll \
-	domain.ll setcoeff.ll setbv.ll exact.ll setiv.ll \
-	erhs.ll ssor${SVER}.ll rhs.ll l2norm.ll \
-	jacld.ll blts.ll jacu.ll buts.ll error.ll \
-	pintgr.ll verify.ll ${COMMON}/print_results.ll \
-	syncs.ll ${COMMON}/timers.ll ${COMMON}/wtime.ll
-	${LLVM_LINK} -o lu.bc lu.ll lu_data.ll read_input.ll \
-	domain.ll setcoeff.ll setbv.ll exact.ll setiv.ll \
-	erhs.ll ssor${SVER}.ll rhs.ll l2norm.ll \
-	jacld.ll blts.ll jacu.ll buts.ll error.ll \
-	pintgr.ll verify.ll ${COMMON}/print_results.ll \
-	syncs.ll ${COMMON}/timers.ll ${COMMON}/wtime.ll
+exec-sync: $(OBJS) syncs.o
+	${FLINK} ${FLINKFLAGS} -o ${PROGRAM} ${OBJS} syncs.o ${F_LIB}
 
-lu_O3.bc: lu.bc
-	${OPT} ${OPT_FLAGS} lu.bc -o lu_O3_${CURRENT_DATE}.bc
+exec: $(OBJS)
+	${FLINK} ${FLINKFLAGS} -o ${PROGRAM} ${OBJS} ${F_LIB}
 
-lu.ll: lu.f90 lu_data.ll
-	${FC} ${FLAGS} -S -emit-llvm lu.f90 -o lu.ll
+.f90.o :
+	${FCOMPILE} $<
 
-lu_data.ll: lu_data.f90 npbparams.h
-	${FC} ${FLAGS} -S -emit-llvm lu_data.f90 -o lu_data.ll
-
-blts.ll: blts.f90
-	${FC} ${FLAGS} -S -emit-llvm blts.f90 -o blts.ll
-
-buts.ll: buts.f90
-	${FC} ${FLAGS} -S -emit-llvm buts.f90 -o buts.ll
-
-erhs.ll: erhs.f90 lu_data.ll
-	${FC} ${FLAGS} -S -emit-llvm erhs.f90 -o erhs.ll
-
-error.ll: error.f90 lu_data.ll
-	${FC} ${FLAGS} -S -emit-llvm error.f90 -o error.ll
-
-exact.ll: exact.f90 lu_data.ll
-	${FC} ${FLAGS} -S -emit-llvm exact.f90 -o exact.ll
-
-jacld.ll: jacld.f90 lu_data.ll
-	${FC} ${FLAGS} -S -emit-llvm jacld.f90 -o jacld.ll
-
-jacu.ll: jacu.f90 lu_data.ll
-	${FC} ${FLAGS} -S -emit-llvm jacu.f90 -o jacu.ll
-
-l2norm.ll: l2norm.f90
-	${FC} ${FLAGS} -S -emit-llvm l2norm.f90 -o l2norm.ll
-
-pintgr.ll: pintgr.f90 lu_data.ll
-	${FC} ${FLAGS} -S -emit-llvm pintgr.f90 -o pintgr.ll
-
-read_input.ll: read_input.f90 lu_data.ll
-	${FC} ${FLAGS} -S -emit-llvm read_input.f90 -o read_input.ll
-
-rhs.ll: rhs.f90 lu_data.ll
-	${FC} ${FLAGS} -S -emit-llvm rhs.f90 -o rhs.ll
-
-setbv.ll: setbv.f90 lu_data.ll
-	${FC} ${FLAGS} -S -emit-llvm setbv.f90 -o setbv.ll
-
-setiv.ll: setiv.f90 lu_data.ll
-	${FC} ${FLAGS} -S -emit-llvm setiv.f90 -o setiv.ll
-
-setcoeff.ll: setcoeff.f90 lu_data.ll
-	${FC} ${FLAGS} -S -emit-llvm setcoeff.f90 -o setcoeff.ll
-
-ssor${SVER}.ll: ssor${SVER}.f90 lu_data.ll
-	${FC} ${FLAGS} -S -emit-llvm ssor${SVER}.f90 -o ssor${SVER}.ll
-
-domain.ll: domain.f90 lu_data.ll
-	${FC} ${FLAGS} -S -emit-llvm domain.f90 -o domain.ll
-
-verify.ll: verify.f90 lu_data.ll
-	${FC} ${FLAGS} -S -emit-llvm verify.f90 -o verify.ll
-
-syncs.ll: syncs.f90 lu_data.ll
-	${FC} ${FLAGS} -S -emit-llvm syncs.f90 -o syncs.ll
+lu.o:		lu.f90 lu_data.o
+blts.o:		blts.f90
+buts.o:		buts.f90
+erhs.o:		erhs.f90 lu_data.o
+error.o:	error.f90 lu_data.o
+exact.o:	exact.f90 lu_data.o
+jacld.o:	jacld.f90 lu_data.o
+jacu.o:		jacu.f90 lu_data.o
+l2norm.o:	l2norm.f90
+pintgr.o:	pintgr.f90 lu_data.o
+read_input.o:	read_input.f90 lu_data.o
+rhs.o:		rhs.f90 lu_data.o
+setbv.o:	setbv.f90 lu_data.o
+setiv.o:	setiv.f90 lu_data.o
+setcoeff.o:	setcoeff.f90 lu_data.o
+ssor$(SVER).o:	ssor$(SVER).f90 lu_data.o
+domain.o:	domain.f90 lu_data.o
+verify.o:	verify.f90 lu_data.o
+syncs.o:	syncs.f90 lu_data.o
+lu_data.o:	lu_data.f90 npbparams.h
 
 clean:
 	- rm -f *.o *~ *.mod npbparams.h
 	- if [ -d rii_files ]; then rm -r rii_files; fi
-	- rm -f *.ll *.bc
-
-clean_all_sizes:
-	for size in ${ALL_SIZE}; do \
-		rm -f ${CURRENT_PATH}/$$size/*.ll; \
-		rm -f ${CURRENT_PATH}/$$size/*.bc; \
-		rm -f ${CURRENT_PATH}/$$size/npbparams.h; \
-	done
-
-clean_naive:
-	- rm -rf naive
-
-clean_profiling:
-	- rm -rf profiling
-
-clean_m5_fs:
-	- rm -rf m5_fs
-
-clean_papi:
-	- rm -rf papi
-
-clean_all:
-	- rm -f *.o *~ *.mod npbparams.h
-	- if [ -d rii_files ]; then rm -r rii_files; fi
-	- rm -f *.ll *.bc
-	for size in ${ALL_SIZE}; do \
-		rm -rf ${CURRENT_PATH}/$$size; \
-	done

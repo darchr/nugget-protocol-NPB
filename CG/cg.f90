@@ -277,8 +277,6 @@
 
       call timer_start( T_bench )
 
-      call roi_begin
-
 !---------------------------------------------------------------------
 !---->
 !  Main Iteration for inverse power method
@@ -337,8 +335,6 @@
 
 
       enddo                              ! end of main iter inv pow meth
-
-      call roi_end
 
       call timer_stop( T_bench )
 

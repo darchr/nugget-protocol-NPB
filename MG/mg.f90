@@ -233,8 +233,6 @@
 
       call timer_start(T_bench)
 
-      call roi_begin
-
       if (timeron) call timer_start(T_resid2)
       call resid(u,v,r,n1,n2,n3,a,k)
       if (timeron) call timer_stop(T_resid2)
@@ -257,8 +255,6 @@
 
 
       call norm2u3(r,n1,n2,n3,rnm2,rnmu,nx(lt),ny(lt),nz(lt))
-
-      call roi_end
 
       call timer_stop(T_bench)
 
