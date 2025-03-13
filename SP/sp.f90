@@ -147,6 +147,10 @@
        end do
        call timer_start(1)
 
+#ifdef USE_NUGGET
+   call roi_begin
+#endif
+
        do  step = 1, niter
 
           if (mod(step, 20) .eq. 0 .or. step .eq. 1) then
@@ -157,6 +161,10 @@
           call adi
 
        end do
+
+#ifdef USE_NUGGET
+   call roi_end
+#endif
 
        call timer_stop(1)
        tmax = timer_read(1)

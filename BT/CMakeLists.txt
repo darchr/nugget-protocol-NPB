@@ -38,33 +38,16 @@ set(ALL_SOURCE_CODE
     ${COMMON_DIR}/wtime.c
 )
 
-# ------------------------------------------------------------------------------
-# If we are building the BLK version, we need to generate blk_par.h from blk_par0.h
-# This replicates the Makefile step:
-#
-#   sed -e 's/= 0/= $(BLKFAC)/' blk_par0.h > blk_par.h_wk
-#   diff blk_par.h_wk blk_par.h > /dev/null || mv -f blk_par.h_wk blk_par.h
-# ------------------------------------------------------------------------------
+if (EXISTS "${CMAKE_CURRENT_BINARY_DIR}/blk_par.h")
+    file(REMOVE "${CMAKE_CURRENT_BINARY_DIR}/blk_par.h")
+endif()
 
-add_custom_command(
-    OUTPUT blk_par.h
-    COMMAND ${CMAKE_COMMAND} -E echo "Generating blk_par.h with BLKFAC=${BLKFAC}"
-    COMMAND sed -e "s/= 0/= ${BLKFAC}/" ${CMAKE_CURRENT_SOURCE_DIR}/blk_par0.h
-            > ${CMAKE_CURRENT_BINARY_DIR}/blk_par.h_wk
-    # Remove the compare step and just copy the file
-    COMMAND ${CMAKE_COMMAND} -E copy
-            ${CMAKE_CURRENT_BINARY_DIR}/blk_par.h_wk
-            ${CMAKE_CURRENT_BINARY_DIR}/blk_par.h
-    COMMAND ${CMAKE_COMMAND} -E remove -f
-            ${CMAKE_CURRENT_BINARY_DIR}/blk_par.h_wk
-    DEPENDS ${CMAKE_CURRENT_SOURCE_DIR}/blk_par0.h
-    COMMENT "Generating blk_par.h from blk_par0.h using BLKFAC=${BLKFAC}"
-)
+file(READ "${CMAKE_CURRENT_SOURCE_DIR}/blk_par0.h" BLKPAR0_CONTENTS)
+string(REPLACE "=0" "=${BLKFAC}" BLKPAR_CONTENTS "${BLKPAR0_CONTENTS}")
+string(REPLACE "= 0" "=${BLKFAC}" BLKPAR_CONTENTS "${BLKPAR_CONTENTS}")
+file(WRITE "${CMAKE_CURRENT_BINARY_DIR}/blk_par.h" "${BLKPAR_CONTENTS}")
 
-# We'll make a phony target so that we always generate it before building the .f90 that includes it
-add_custom_target(generate_blk_par ALL
-    DEPENDS blk_par.h)
-
+message(STATUS "Built blk_par.h with BLKFAC=${BLKFAC}") 
 
 if("${CLASSES}" STREQUAL "")
     if(DEFINED ENV{CLASSES})
@@ -102,10 +85,18 @@ foreach(CLASS ${CLASSES})
 
     # Create the executable for this class
     add_executable(bt_${CLASS} ${ALL_SOURCE_CODE})
-    
+
+    target_compile_options(bt_${CLASS} PRIVATE 
+        -cpp
+        -O3
+        -fopenmp
+    )
+
+    target_link_libraries(bt_${CLASS} PRIVATE m)
+    target_link_libraries(bt_${CLASS} PRIVATE -fopenmp)
+
     # Add dependencies
     add_dependencies(bt_${CLASS} generate_npbparams_${CLASS})
-    add_dependencies(bt_${CLASS} generate_blk_par)
 
     # Set include directories
     target_include_directories(bt_${CLASS} PRIVATE ${COMMON_DIR})

@@ -57,6 +57,15 @@ foreach(CLASS ${CLASSES})
 
     # Create the executable for this class
     add_executable(cg_${CLASS} ${ALL_SOURCE_CODE})
+
+    target_compile_options(cg_${CLASS} PRIVATE 
+        -cpp
+        -O3
+        -fopenmp
+    )
+
+    target_link_libraries(cg_${CLASS} PRIVATE m)
+    target_link_libraries(cg_${CLASS} PRIVATE -fopenmp)
     
     # Add dependencies
     add_dependencies(cg_${CLASS} generate_npbparams_${CLASS})

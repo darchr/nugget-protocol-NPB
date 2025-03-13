@@ -43,6 +43,17 @@
 #include <omp.h>
 #endif
 
+#ifdef USE_NUGGET
+#ifdef __cplusplus
+extern "C" {
+#endif
+void roi_begin_();
+void roi_end_();
+#ifdef __cplusplus
+}
+#endif
+#endif
+
 
 /*****************************************************************/
 /* For serial IS, buckets are not really req'd to solve NPB1 IS  */
@@ -978,6 +989,9 @@ int main( int argc, char **argv )
 /*  Start timer  */             
     timer_start( 0 );
 
+#ifdef USE_NUGGET
+    roi_begin_();
+#endif
 
 /*  This is the main iteration */
     for( iteration=1; iteration<=MAX_ITERATIONS; iteration++ )
@@ -986,6 +1000,9 @@ int main( int argc, char **argv )
         rank( iteration );
     }
 
+#ifdef USE_NUGGET
+    roi_end_();
+#endif
 
 /*  End of timing, obtain maximum time of all processors */
     timer_stop( 0 );

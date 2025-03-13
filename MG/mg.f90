@@ -233,6 +233,10 @@
 
       call timer_start(T_bench)
 
+#ifdef USE_NUGGET
+   call roi_begin
+#endif
+
       if (timeron) call timer_start(T_resid2)
       call resid(u,v,r,n1,n2,n3,a,k)
       if (timeron) call timer_stop(T_resid2)
@@ -255,6 +259,10 @@
 
 
       call norm2u3(r,n1,n2,n3,rnm2,rnmu,nx(lt),ny(lt),nz(lt))
+
+#ifdef USE_NUGGET
+   call roi_end
+#endif
 
       call timer_stop(T_bench)
 

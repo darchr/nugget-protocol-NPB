@@ -54,6 +54,12 @@
          call timer_clear(i)
       end do
       call timer_start(1)
+
+#ifdef USE_NUGGET
+if (niter > 1) then
+   call roi_begin
+endif
+#endif
  
 !---------------------------------------------------------------------
 !   the timestep loop
@@ -237,6 +243,12 @@
  
       end do
   900 continue
+
+#ifdef USE_NUGGET
+if (niter > 1) then
+   call roi_end
+endif
+#endif
  
       call timer_stop(1)
       maxtime= timer_read(1)

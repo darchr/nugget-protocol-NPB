@@ -97,6 +97,11 @@
       end do
 
       call timer_start(T_total)
+
+#ifdef USE_NUGGET
+      call roi_begin
+#endif
+
       if (timers_enabled) call timer_start(T_setup)
 
       call compute_indexmap(twiddle, dims(1), dims(2), dims(3))
@@ -125,6 +130,10 @@
       end do
 
       call verify(nx, ny, nz, niter, verified, class)
+
+#ifdef USE_NUGGET
+      call roi_end
+#endif
 
       call timer_stop(t_total)
       total_time = timer_read(t_total)
