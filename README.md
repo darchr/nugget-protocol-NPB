@@ -10,3 +10,14 @@ mkdir cbuild && cd cbuild
 cmake ..
 cmake --build .
 ```
+
+You can also build each benchmark individually.
+One example:
+```
+mkdir BT/cbuild && cd BT/cbuild
+export CLASSES="A B"
+cmake ..
+cmake --build .
+```
+
+All built binaries will be under `cbuild/bin`.
