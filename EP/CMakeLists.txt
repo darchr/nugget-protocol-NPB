@@ -5,8 +5,11 @@ set(SYS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../sys)
 set(COMMON_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../common)
 set(CONFIG_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../config)
 
-add_executable(setparams ${SYS_DIR}/setparams.c)
-target_compile_definitions(setparams PRIVATE DEFFILE="${CONFIG_DIR}/make.def")
+# Check if setparams target exists before creating it
+if(NOT TARGET setparams)
+    add_executable(setparams ${SYS_DIR}/setparams.c)
+    target_compile_definitions(setparams PRIVATE DEFFILE="${CONFIG_DIR}/make.def")
+endif()
 
 if("${RAND}" STREQUAL "")
     set(RAND "randi8")
@@ -53,7 +56,7 @@ foreach(CLASS ${CLASSES})
     )
 
     # Create target for this class's npbparams.h
-    add_custom_target(generate_npbparams_${CLASS} 
+    add_custom_target(generate_npbparams_ep_${CLASS} 
         DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${CLASS}/npbparams.h)
 
     # Create the executable for this class
@@ -69,7 +72,7 @@ foreach(CLASS ${CLASSES})
     target_link_libraries(ep_${CLASS} PRIVATE -fopenmp)
     
     # Add dependencies
-    add_dependencies(ep_${CLASS} generate_npbparams_${CLASS})
+    add_dependencies(ep_${CLASS} generate_npbparams_ep_${CLASS})
 
     # Set include directories
     target_include_directories(ep_${CLASS} PRIVATE ${COMMON_DIR})

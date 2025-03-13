@@ -5,8 +5,11 @@ set(SYS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../sys)
 set(COMMON_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../common)
 set(CONFIG_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../config)
 
-add_executable(setparams ${SYS_DIR}/setparams.c)
-target_compile_definitions(setparams PRIVATE DEFFILE="${CONFIG_DIR}/make.def")
+# Check if setparams target exists before creating it
+if(NOT TARGET setparams)
+    add_executable(setparams ${SYS_DIR}/setparams.c)
+    target_compile_definitions(setparams PRIVATE DEFFILE="${CONFIG_DIR}/make.def")
+endif()
 
 set(ALL_SOURCE_CODE
     is.c
@@ -27,6 +30,10 @@ if("${CLASSES}" STREQUAL "")
     endif()
 endif()
 
+# For IS, it is known that class D,E is not supported
+list(REMOVE_ITEM CLASSES D)
+list(REMOVE_ITEM CLASSES E)
+
 message(STATUS "Building IS classes: ${CLASSES}")
 
 foreach(CLASS ${CLASSES})
@@ -46,7 +53,7 @@ foreach(CLASS ${CLASSES})
     )
 
     # Create target for this class's npbparams.h
-    add_custom_target(generate_npbparams_${CLASS} 
+    add_custom_target(generate_npbparams_is_${CLASS} 
         DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${CLASS}/npbparams.h)
 
     # Create the executable for this class
@@ -62,7 +69,7 @@ foreach(CLASS ${CLASSES})
     target_link_libraries(is_${CLASS} PRIVATE -fopenmp)
     
     # Add dependencies
-    add_dependencies(is_${CLASS} generate_npbparams_${CLASS})
+    add_dependencies(is_${CLASS} generate_npbparams_is_${CLASS})
 
     # Set include directories
     target_include_directories(is_${CLASS} PRIVATE ${COMMON_DIR})

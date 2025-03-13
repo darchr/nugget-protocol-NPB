@@ -5,8 +5,11 @@ set(SYS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../sys)
 set(COMMON_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../common)
 set(CONFIG_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../config)
 
-add_executable(setparams ${SYS_DIR}/setparams.c)
-target_compile_definitions(setparams PRIVATE DEFFILE="${CONFIG_DIR}/make.def")
+# Check if setparams target exists before creating it
+if(NOT TARGET setparams)
+    add_executable(setparams ${SYS_DIR}/setparams.c)
+    target_compile_definitions(setparams PRIVATE DEFFILE="${CONFIG_DIR}/make.def")
+endif()
 
 if("${BLKFAC}" STREQUAL "")
     set(BLKFAC 32)
@@ -66,14 +69,14 @@ foreach(CLASS ${CLASSES})
     )
 
     # Create target for this class's npbparams.h
-    add_custom_target(generate_npbparams_${CLASS} 
+    add_custom_target(generate_npbparams_ft_${CLASS} 
         DEPENDS ${CMAKE_CURRENT_BINARY_DIR}/${CLASS}/npbparams.h)
 
     # Create the executable for this class
     add_executable(ft_${CLASS} ${ALL_SOURCE_CODE})
     
     # Add dependencies
-    add_dependencies(ft_${CLASS} generate_npbparams_${CLASS})
+    add_dependencies(ft_${CLASS} generate_npbparams_ft_${CLASS})
 
     target_compile_options(ft_${CLASS} PRIVATE 
         -cpp

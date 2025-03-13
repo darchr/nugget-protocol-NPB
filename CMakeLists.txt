@@ -6,7 +6,7 @@ set(COMMON_DIR ${CMAKE_CURRENT_SOURCE_DIR}/common)
 set(CONFIG_DIR ${CMAKE_CURRENT_SOURCE_DIR}/config)
 
 set(ALL_CLASSES A B C D E)
-set(TARGET_BENCHMARKS BT)
+set(TARGET_BENCHMARKS BT CG EP FT IS LU MG SP)
 
 # Allow specific classes to be selected via cmake option
 set(CLASSES ${ALL_CLASSES} CACHE STRING "NPB problem classes to build")
@@ -14,6 +14,4 @@ set(CLASSES ${ALL_CLASSES} CACHE STRING "NPB problem classes to build")
 foreach(TARGET ${TARGET_BENCHMARKS})
     add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/${TARGET})
 endforeach()
-
-
 
