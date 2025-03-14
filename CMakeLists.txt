@@ -182,7 +182,7 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
         set(ALL_BCS "")
 
         if("${SOURCE_BC_FILE_PATH}" STREQUAL "" OR "${SOURCE_BC_FILE_BASENAME}" STREQUAL "")
-            message(FATAL_ERROR "No BC_FILE_PATH or BC_FILE_BASENAME")
+            message(FATAL_ERROR "No SOURCE_BC_FILE_PATH or SOURCE_BC_FILE_BASENAME")
         endif()
 
         foreach(benchmark ${TARGET_BENCHMARKS})
