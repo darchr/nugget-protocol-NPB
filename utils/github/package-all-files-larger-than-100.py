@@ -30,9 +30,6 @@ def split_file(file_path: Path):
 def check_dir(dir_path: Path):
     for file in dir_path.iterdir():
         if file.is_dir():
-            if file.name in excluded_folders:
-                print(f"Skipping {file}")
-                continue
             check_dir(file)
         else:
             if file.stat().st_size > size_limit:
