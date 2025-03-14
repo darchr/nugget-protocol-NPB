@@ -20,10 +20,10 @@ if(NOT "${BLK}" STREQUAL "")
 endif()
 
 set(ALL_SOURCE_CODE
-    add.f90
-    adi.f90
     bt_data.f90
     bt.f90
+    add.f90
+    adi.f90
     error.f90
     exact_rhs.f90
     exact_solution.f90

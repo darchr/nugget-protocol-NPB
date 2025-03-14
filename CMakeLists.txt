@@ -5,7 +5,7 @@ set(SYS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/sys)
 set(COMMON_DIR ${CMAKE_CURRENT_SOURCE_DIR}/common)
 set(CONFIG_DIR ${CMAKE_CURRENT_SOURCE_DIR}/config)
 
-set(TARGET_CLASSES A B C D E)
+set(TARGET_CLASSES C)
 set(TARGET_BENCHMARKS BT CG EP FT IS LU MG SP)
 
 # Allow specific classes to be selected via cmake option
@@ -84,6 +84,7 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
                 EXTRA_LIBS ${EXTRA_LIBS}
                 EXTRA_LIB_PATHS ${EXTRA_LIB_PATHS}
                 HOOK_TARGET ${HOOK_TARGET}
+                OPT_CMD ${OPT_CMD}
             )
             list(APPEND ALL_BCS ${TARGET_NAME}_${benchmark})
         endforeach()
@@ -94,14 +95,30 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
         message(STATUS "Building npb-analysis-exe")
         message(STATUS "TARGET_NAME ${TARGET_NAME}")
         set(ALL_EXES "")
+
+        if("${BC_FILE_PATH}" STREQUAL "" OR "${BC_FILE_BASENAME}" STREQUAL "")
+            message(FATAL_ERROR "No BC_FILE_PATH or BC_FILE_BASENAME")
+        endif()
         
         foreach(benchmark ${TARGET_BENCHMARKS})
+
+            if(NOT "${FINAL_BC_FILE_PATH}" STREQUAL "")
+                set(FINAL_BC_FILE_PATHS ${FINAL_BC_FILE_PATH}/${FINAL_BC_FILE_BASENAME}_${benchmark}/${FINAL_BC_FILE_BASENAME}_${benchmark}.bc)
+            else()
+                set(FINAL_BC_FILE_PATHS "")
+            endif()
+
+            set(BENCH_BC_FILE_PATH ${BC_FILE_PATH}/${BC_FILE_BASENAME}_${benchmark}/${BC_FILE_BASENAME}_${benchmark}.bc)
+            if(NOT EXISTS ${BENCH_BC_FILE_PATH})
+                message(FATAL_ERROR "BC file ${BENCH_BC_FILE_PATH} does not exist")
+            endif()
+
             get_target_property(LINKER_LANG ${benchmark} LINKER_LANGUAGE)
             llvmir_set_final_compiler(${LINKER_LANG})
             nugget_compile_exe(
                 TARGET ${TARGET_NAME}_${benchmark}
                 DEPEND_TARGETS ${benchmark}
-                BC_FILE_PATH ${${benchmark}_BC_FILE_PATH}
+                BC_FILE_PATH ${BENCH_BC_FILE_PATH}
                 EXTRA_FLAGS ${EXTRA_FLAGS}
                 EXTRA_INCLUDES ${EXTRA_INCLUDES}
                 EXTRA_LIB_PATHS ${EXTRA_LIB_PATHS}
@@ -109,7 +126,7 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
                 LLC_CMD ${LLC_CMD}
                 EXTRACT_FUNCTIONS ${EXTRACT_FUNCTIONS}
                 ADDITIONAL_OPT ${ADDITIONAL_OPT}
-                FINAL_BC_FILE_PATHS ${${benchmark}_FINAL_BC_FILE_PATHS}
+                FINAL_BC_FILE_PATHS ${FINAL_BC_FILE_PATHS}
             )
             list(APPEND ALL_EXES ${TARGET_NAME}_${benchmark})
         endforeach()

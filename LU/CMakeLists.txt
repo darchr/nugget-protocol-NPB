@@ -14,8 +14,8 @@ endif()
 # can setup SVER
 
 set(ALL_SOURCE_CODE
-    lu.f90
     lu_data.f90
+    lu.f90
     read_input.f90
     domain.f90
     setcoeff.f90

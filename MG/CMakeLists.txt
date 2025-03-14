@@ -16,8 +16,8 @@ if("${RAND}" STREQUAL "")
 endif()
 
 set(ALL_SOURCE_CODE
-    mg.f90
     mg_data.f90
+    mg.f90
     ${COMMON_DIR}/print_results.f90
     ${COMMON_DIR}/${RAND}.f90
     ${COMMON_DIR}/timers.f90

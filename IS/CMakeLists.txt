@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.30 FATAL_ERROR)
-project(IS LANGUAGES Fortran C)
+project(IS LANGUAGES C)
 
 set(SYS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../sys)
 set(COMMON_DIR ${CMAKE_CURRENT_SOURCE_DIR}/../common)
@@ -60,7 +60,6 @@ foreach(CLASS ${CLASSES})
     add_executable(is_${CLASS} ${ALL_SOURCE_CODE})
 
     target_compile_options(is_${CLASS} PRIVATE 
-        -cpp
         -O3
         -fopenmp
     )
@@ -79,6 +78,6 @@ foreach(CLASS ${CLASSES})
     # Set Fortran as linker language
     set_target_properties(is_${CLASS} 
         PROPERTIES 
-        LINKER_LANGUAGE Fortran
+        LINKER_LANGUAGE C
         RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin)
 endforeach()
