@@ -138,6 +138,10 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
         
         set(ALL_BCS "")
 
+        if("${SOURCE_BC_FILE_PATH}" STREQUAL "" OR "${SOURCE_BC_FILE_BASENAME}" STREQUAL "")
+            message(FATAL_ERROR "No BC_FILE_PATH or BC_FILE_BASENAME")
+        endif()
+
         foreach(benchmark ${TARGET_BENCHMARKS})
             get_target_property(LINKER_LANG ${benchmark} LINKER_LANGUAGE)
             llvmir_set_final_compiler(${LINKER_LANG})
@@ -150,10 +154,15 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
                 endif()
             endif()
 
+            set(BENCH_BC_FILE_PATH ${SOURCE_BC_FILE_PATH}/${SOURCE_BC_FILE_BASENAME}_${benchmark}/${SOURCE_BC_FILE_BASENAME}_${benchmark}.bc)
+            if(NOT EXISTS ${BENCH_BC_FILE_PATH})
+                message(FATAL_ERROR "BC file ${BENCH_BC_FILE_PATH} does not exist")
+            endif()
+
             nugget_papi_profiling_bc(
                 TARGET ${TARGET_NAME}_${benchmark}
                 REGION_LENGTH ${REGION_LENGTH}
-                SOURCE_BC_FILE_PATH ${${benchmark}_SOURCE_BC_FILE_PATH}
+                SOURCE_BC_FILE_PATH ${BENCH_BC_FILE_PATH}
                 BB_INFO_OUTPUT_PATH ${BB_INFO_OUTPUT_PATH}/basic-block-info.txt
                 HOOK_TARGET ${HOOK_TARGET}
                 DEPEND_TARGETS ${benchmark}
@@ -172,13 +181,23 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
 
         set(ALL_BCS "")
 
+        if("${SOURCE_BC_FILE_PATH}" STREQUAL "" OR "${SOURCE_BC_FILE_BASENAME}" STREQUAL "")
+            message(FATAL_ERROR "No BC_FILE_PATH or BC_FILE_BASENAME")
+        endif()
+
         foreach(benchmark ${TARGET_BENCHMARKS})
             get_target_property(LINKER_LANG ${benchmark} LINKER_LANGUAGE)
             llvmir_set_final_compiler(${LINKER_LANG})
+
+            set(BENCH_BC_FILE_PATH ${SOURCE_BC_FILE_PATH}/${SOURCE_BC_FILE_BASENAME}_${benchmark}/${SOURCE_BC_FILE_BASENAME}_${benchmark}.bc)
+            if(NOT EXISTS ${BENCH_BC_FILE_PATH})
+                message(FATAL_ERROR "BC file ${BENCH_BC_FILE_PATH} does not exist")
+            endif()
+
             nugget_naive_bc(
                 TARGET ${TARGET_NAME}_${benchmark}
                 HOOK_TARGET ${HOOK_TARGET}
-                SOURCE_BC_FILE_PATH ${${benchmark}_SOURCE_BC_FILE_PATH}
+                SOURCE_BC_FILE_PATH ${BENCH_BC_FILE_PATH}
                 HOOK_BC_FILE_PATH ${HOOK_BC_FILE_PATH}
                 DEPEND_TARGETS ${benchmark}
                 EXTRA_FLAGS ${EXTRA_FLAGS}
@@ -196,12 +215,28 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
 
         set(ALL_EXES "")
 
+        if("${BC_FILE_PATH}" STREQUAL "" OR "${BC_FILE_BASENAME}" STREQUAL "")
+            message(FATAL_ERROR "No BC_FILE_PATH or BC_FILE_BASENAME")
+        endif()
+
         foreach(benchmark ${TARGET_BENCHMARKS})
             get_target_property(LINKER_LANG ${benchmark} LINKER_LANGUAGE)
             llvmir_set_final_compiler(${LINKER_LANG})
+
+            if(NOT "${FINAL_BC_FILE_PATH}" STREQUAL "")
+                set(FINAL_BC_FILE_PATHS ${FINAL_BC_FILE_PATH}/${FINAL_BC_FILE_BASENAME}_${benchmark}/${FINAL_BC_FILE_BASENAME}_${benchmark}.bc)
+            else()
+                set(FINAL_BC_FILE_PATHS "")
+            endif()
+
+            set(BENCH_BC_FILE_PATH ${BC_FILE_PATH}/${BC_FILE_BASENAME}_${benchmark}/${BC_FILE_BASENAME}_${benchmark}.bc)
+            if(NOT EXISTS ${BENCH_BC_FILE_PATH})
+                message(FATAL_ERROR "BC file ${BENCH_BC_FILE_PATH} does not exist")
+            endif()
+            
             nugget_compile_exe(
                 TARGET ${TARGET_NAME}_${benchmark}
-                BC_FILE_PATH ${${benchmark}_BC_FILE_PATH}
+                BC_FILE_PATH ${BENCH_BC_FILE_PATH}
                 DEPEND_TARGETS ${benchmark}
                 ADDITIONAL_OPT ${ADDITIONAL_OPT}
                 EXTRA_FLAGS ${EXTRA_FLAGS}
@@ -210,7 +245,7 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
                 EXTRA_LIBS ${EXTRA_LIBS}
                 LLC_CMD ${LLC_CMD}
                 EXTRACT_FUNCTIONS ${EXTRACT_FUNCTIONS}
-                FINAL_BC_FILE_PATHS ${${benchmark}_FINAL_BC_FILE_PATHS}
+                FINAL_BC_FILE_PATHS ${FINAL_BC_FILE_PATHS}
             )
             list(APPEND ALL_EXES ${TARGET_NAME}_${benchmark})
         endforeach()
@@ -218,12 +253,17 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
         add_custom_target(${TARGET_NAME} DEPENDS ${ALL_EXES})
 
     elseif("${NUGGET_PROCESS_TYPE}" STREQUAL "npb-nugget-bc")
+    # TODO: this does not fit in NPB because we need to extract the rid from a file in here instead of the config file
         message(STATUS "Building npb-nugget-bc")
 
         set(ALL_BCS "")
 
         if(NOT BB_INFO_OUTPUT_PATH)
             set(BB_INFO_OUTPUT_PATH ${CMAKE_BINARY_DIR}/nugget-bb-info-output)
+        endif()
+
+        if("${SOURCE_BC_FILE_PATH}" STREQUAL "" OR "${SOURCE_BC_FILE_BASENAME}" STREQUAL "")
+            message(FATAL_ERROR "No BC_FILE_PATH or BC_FILE_BASENAME")
         endif()
         
         foreach(benchmark ${TARGET_BENCHMARKS})
@@ -279,14 +319,12 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
         add_custom_target(${TARGET_NAME} DEPENDS ${ALL_BCS})
     
     elseif("${NUGGET_PROCESS_TYPE}" STREQUAL "npb-nugget-exe")
+    # TODO: this does not fit in NPB because we need to extract the rid from a file in here instead of the config file
         message(STATUS "Building npb-nugget-exe")
 
         set(ALL_EXES "")
 
-        if(NOT NUGGET_BC_FILE_DIR OR NOT NUGGET_BC_FILE_BASENAME)
-            message(FATAL_ERROR "NUGGET_BC_FILE_DIR or NUGGET_BC_FILE_BASENAME not defined")
-        endif()
-
+        
         foreach(benchmark ${TARGET_BENCHMARKS})
             get_target_property(LINKER_LANG ${benchmark} LINKER_LANGUAGE)
             llvmir_set_final_compiler(${LINKER_LANG})
