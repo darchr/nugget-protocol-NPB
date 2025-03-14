@@ -23,6 +23,7 @@ set(BC_FILE_BASENAME "papi_naive_bc")
 
 message(STATUS "LLC_CMD: ${LLC_CMD}")
 
-set(EXTRA_LIB_PATHS ${PAPI_PATH}/lib)
-set(EXTRA_INCLUDES ${PAPI_PATH}/include)
+set(EXTRA_LIB_PATHS -L${PAPI_PATH}/lib)
+set(EXTRA_INCLUDES -I${PAPI_PATH}/include)
 set(EXTRA_LIBS "-lpapi")
+
