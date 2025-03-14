@@ -5,7 +5,7 @@ set(SYS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/sys)
 set(COMMON_DIR ${CMAKE_CURRENT_SOURCE_DIR}/common)
 set(CONFIG_DIR ${CMAKE_CURRENT_SOURCE_DIR}/config)
 
-set(TARGET_CLASSES C)
+set(TARGET_CLASSES A C D)
 set(TARGET_BENCHMARKS BT CG EP FT IS LU MG SP)
 
 # Allow specific classes to be selected via cmake option

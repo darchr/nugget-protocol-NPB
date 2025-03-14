@@ -15,7 +15,7 @@ else()
 endif()
 
 if(LLC_CMD)
-    list(APPEND LLC_CMD -relocation-model=pic -O3)
+    list(APPEND LLC_CMD -relocation-model=pic -O2)
 endif()
 
 set(BC_FILE_PATH "${CMAKE_CURRENT_LIST_DIR}/../../../cbuild/llvm-bc")
