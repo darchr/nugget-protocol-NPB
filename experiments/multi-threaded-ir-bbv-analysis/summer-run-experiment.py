@@ -88,6 +88,10 @@ def main():
 
     size = "D"
     benchmarks = ["bt", "cg", "ep", "ft", "is", "lu", "mg", "sp"]
+
+    if size is "D":
+        benchmarks.remove("is")
+
     workdir = Path().cwd()
     runs_range = (0, 1)
     experiments_dir = Path(workdir/"experiments/multi-threaded-ir-bbv-analysis/experiments")
