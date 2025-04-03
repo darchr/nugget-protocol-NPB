@@ -311,7 +311,7 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
                 message(FATAL_ERROR "All nugget RIDs not found in ${BENCH_RID_CONFIG_FILE}")
             endif()
 
-            set(${benchmark}_MARKER_DIR ${ALL_MARKER_DIR}/${benchmark})
+            set(${benchmark}_MARKER_DIR ${ALL_MARKER_DIR}/${benchmark}/"input-files")
             if(NOT EXISTS ${${benchmark}_MARKER_DIR})
                 message(FATAL_ERROR "Marker directory ${${benchmark}_MARKER_DIR} does not exist")
             endif()
@@ -364,6 +364,7 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
         
         foreach(benchmark ${TARGET_BENCHMARKS})
             get_target_property(LINKER_LANG ${benchmark} LINKER_LANGUAGE)
+            llvmir_set_final_compiler(${LINKER_LANG})
                 
             # get the rid from the config file
             set(${benchmark}_RID_CONFIG_FILE ${ALL_NUGGET_RIDS_DIR}/${benchmark}/${RID_CONFIG_FILE_NAME})
