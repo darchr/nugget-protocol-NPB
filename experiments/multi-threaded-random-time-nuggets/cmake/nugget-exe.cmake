@@ -5,6 +5,10 @@ include(Nugget)
 
 set(TARGET_NAME "papi_nugget_exe")
 
+set(INFO_DIR ${CMAKE_CURRENT_LIST_DIR}/../../info)
+set(KMEANS_INFO_DIR ${INFO_DIR}/k-means-selections)
+set(RANDOM_SELECTIONS_DIR ${INFO_DIR}/random-selections)
+
 set(LLC_EXTRATION_FILE_PATH
     ${NUGGET_UTIL_PATH}/cmake/check-cpu-features/llc-command.txt)
 
@@ -18,7 +22,7 @@ if(LLC_CMD)
     list(APPEND LLC_CMD -relocation-model=pic -O2)
 endif()
 
-set(ALL_NUGGET_RIDS_DIR "${KMEANS_INFO_DIR}")
+set(ALL_NUGGET_RIDS_DIR "${RANDOM_SELECTIONS_DIR}")
 set(RID_CONFIG_FILE_NAME "selected-regions.txt")
 
 set(NUGGET_BC_FILE_DIR "${CMAKE_CURRENT_LIST_DIR}/../../../cbuild/llvm-bc")

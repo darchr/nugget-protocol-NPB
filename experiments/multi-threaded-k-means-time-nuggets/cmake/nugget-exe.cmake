@@ -5,6 +5,10 @@ include(Nugget)
 
 set(TARGET_NAME "papi_nugget_exe")
 
+set(INFO_DIR ${CMAKE_CURRENT_LIST_DIR}/../../info)
+set(KMEANS_INFO_DIR ${INFO_DIR}/k-means-selections)
+set(RANDOM_SELECTIONS_DIR ${INFO_DIR}/random-selections)
+
 set(LLC_EXTRATION_FILE_PATH
     ${NUGGET_UTIL_PATH}/cmake/check-cpu-features/llc-command.txt)
 
