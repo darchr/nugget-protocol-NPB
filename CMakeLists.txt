@@ -5,7 +5,16 @@ set(SYS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/sys)
 set(COMMON_DIR ${CMAKE_CURRENT_SOURCE_DIR}/common)
 set(CONFIG_DIR ${CMAKE_CURRENT_SOURCE_DIR}/config)
 
-set(TARGET_CLASSES A C D)
+if (NOT DEFINED ENV{TARGET_CLASSES})
+    message(STATUS "TARGET_CLASSES not set, using default A C D")
+    set(TARGET_CLASSES A C D)
+else()
+    string(REPLACE " " ";" CLASSES_FROM_ENV "$ENV{TARGET_CLASSES}")
+    message(STATUS "Using classes from environment variable: $ENV{TARGET_CLASSES}")
+    message(STATUS "Classes: ${CLASSES_FROM_ENV}")
+    set(TARGET_CLASSES ${CLASSES_FROM_ENV})
+endif()
+
 set(TARGET_BENCHMARKS BT CG EP FT IS LU MG SP)
 
 # Allow specific classes to be selected via cmake option
@@ -253,8 +262,17 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
         add_custom_target(${TARGET_NAME} DEPENDS ${ALL_EXES})
 
     elseif("${NUGGET_PROCESS_TYPE}" STREQUAL "npb-nugget-bc")
-    # TODO: this does not fit in NPB because we need to extract the rid from a file in here instead of the config file
+
         message(STATUS "Building npb-nugget-bc")
+
+        # for NPB, class matters for the nugget
+        # therefore, we need to exclude all the classes that are not for these
+        # nuggets  
+
+        list(LENGTH TARGET_CLASSES CLASS_COUNT)
+        if(CLASS_COUNT GREATER 1)
+            message(FATAL_ERROR "More than one class selected. Please select only one class for NPB")
+        endif()
 
         set(ALL_BCS "")
 
@@ -262,35 +280,52 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
             set(BB_INFO_OUTPUT_PATH ${CMAKE_BINARY_DIR}/nugget-bb-info-output)
         endif()
 
-        if("${SOURCE_BC_FILE_PATH}" STREQUAL "" OR "${SOURCE_BC_FILE_BASENAME}" STREQUAL "")
-            message(FATAL_ERROR "No BC_FILE_PATH or BC_FILE_BASENAME")
+        # since the list of targeted benchmark is in here, we need to get the 
+        # rid and marker here for each benchmark
+
+        if(NOT ALL_NUGGET_RIDS_DIR OR NOT RID_CONFIG_FILE_NAME)
+            message(FATAL_ERROR "No ALL_NUGGET_RIDS_DIR or RID_CONFIG_FILE_NAME")
         endif()
-        
+
+        if(NOT ALL_MARKER_DIR OR NOT MARKER_CONFIG_FILE_EXT)
+            message(FATAL_ERROR "No ALL_MARKER_DIR or MARKER_CONFIG_FILE_EXT")
+        endif()
+
+        if(NOT BB_INFO_INPUT_DIR)
+            message(FATAL_ERROR "No BB_INFO_INPUT_DIR")
+        endif()
+
         foreach(benchmark ${TARGET_BENCHMARKS})
             get_target_property(LINKER_LANG ${benchmark} LINKER_LANGUAGE)
             llvmir_set_final_compiler(${LINKER_LANG})
 
-            if("${${benchmark}_SOURCE_BC_FILE_PATH}" STREQUAL "")
-                message(FATAL_ERROR "No SOURCE_BC_FILE_PATH for ${benchmark}")
-            endif()
-            # same idea, the basic block info file is the same for all input sizes
-            if("${${benchmark}_BB_INFO_FILE_PATH}" STREQUAL "")
-                message(FATAL_ERROR "No BB_INFO_FILE_PATH for ${benchmark}")
+            # get the rid from the config file
+            set(${benchmark}_RID_CONFIG_FILE ${ALL_NUGGET_RIDS_DIR}/${benchmark}/${RID_CONFIG_FILE_NAME})
+            if(NOT EXISTS ${BENCH_RID_CONFIG_FILE})
+                message(FATAL_ERROR "RID config file ${BENCH_RID_CONFIG_FILE} does not exist")
             endif()
 
-            if("${${benchmark}_INPUT_FILE_DIR}" STREQUAL "")
-                message(FATAL_ERROR "No INPUT_FILE_DIR for ${benchmark}")
+            nugget_read_list(${benchmark}_ALL_NUGGET_RIDS ${${benchmark}_RID_CONFIG_FILE})
+            
+            if ("${${benchmark}_ALL_NUGGET_RIDS}" STREQUAL "")
+                message(FATAL_ERROR "All nugget RIDs not found in ${BENCH_RID_CONFIG_FILE}")
             endif()
 
-            if("${${benchmark}_ALL_NUGGET_RIDS}" STREQUAL "")
-                message(FATAL_ERROR "No ALL_NUGGET_RIDS for ${benchmark}")
+            set(${benchmark}_MARKER_DIR ${ALL_MARKER_DIR}/${benchmark})
+            if(NOT EXISTS ${${benchmark}_MARKER_DIR})
+                message(FATAL_ERROR "Marker directory ${${benchmark}_MARKER_DIR} does not exist")
             endif()
 
-            set(INPUT_BB_INFO_OUTPUT_PATH ${BB_INFO_OUTPUT_PATH}/${benchmark})
-            if(NOT EXISTS ${INPUT_BB_INFO_OUTPUT_PATH})
-                file(MAKE_DIRECTORY ${INPUT_BB_INFO_OUTPUT_PATH})
-                if(NOT EXISTS ${INPUT_BB_INFO_OUTPUT_PATH})
-                    message(FATAL_ERROR "Failed to create directory ${INPUT_BB_INFO_OUTPUT_PATH}")
+            set(${benchmark}_SOURCE_BC_FILE_PATH ${SOURCE_BC_FILE_PATH}/${SOURCE_BC_FILE_BASENAME}_${benchmark}_source_opted_bc/${SOURCE_BC_FILE_BASENAME}_${benchmark}_source_opted_bc.bc)
+            if(NOT EXISTS ${${benchmark}_SOURCE_BC_FILE_PATH})
+                message(FATAL_ERROR "BC file ${${benchmark}_SOURCE_BC_FILE_PATH} does not exist")
+            endif()
+
+            set(${benchmark}_BB_INFO_OUTPUT_PATH ${BB_INFO_OUTPUT_PATH}/${benchmark})
+            if(NOT EXISTS ${${benchmark}_BB_INFO_OUTPUT_PATH})
+                file(MAKE_DIRECTORY ${${benchmark}_BB_INFO_OUTPUT_PATH})
+                if(NOT EXISTS ${${benchmark}_BB_INFO_OUTPUT_PATH})
+                    message(FATAL_ERROR "Failed to create directory ${${benchmark}_BB_INFO_OUTPUT_PATH}")
                 endif()
             endif()
 
@@ -299,10 +334,10 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
                 HOOK_TARGET ${HOOK_TARGET}
                 SOURCE_BC_FILE_PATH ${${benchmark}_SOURCE_BC_FILE_PATH}
                 HOOK_BC_FILE_PATH ${HOOK_BC_FILE_PATH}
-                INPUT_FILE_DIR ${${benchmark}_INPUT_FILE_DIR}
-                INPUT_FILE_NAME_BASE ${INPUT_FILE_NAME_BASE}
-                BB_INFO_INPUT_PATH ${${benchmark}_BB_INFO_FILE_PATH}
-                BB_INFO_OUTPUT_DIR ${INPUT_BB_INFO_OUTPUT_PATH}
+                INPUT_FILE_DIR ${${benchmark}_MARKER_DIR}
+                INPUT_FILE_NAME_BASE ${MARKER_CONFIG_FILE_EXT}
+                BB_INFO_INPUT_PATH ${BB_INFO_INPUT_DIR}/${benchmark}/basic-block-info.txt
+                BB_INFO_OUTPUT_DIR ${${benchmark}_BB_INFO_OUTPUT_PATH}
                 LABEL_TARGET ${LABEL_TARGET}
                 LABEL_WARMUP ${LABEL_WARMUP}
                 DEPEND_TARGETS ${benchmark}
@@ -313,26 +348,33 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
                 EXTRA_LIBS ${EXTRA_LIBS}
             )
             list(APPEND ALL_BCS ${TARGET_NAME}_${benchmark})
-            
+
         endforeach()
 
         add_custom_target(${TARGET_NAME} DEPENDS ${ALL_BCS})
     
     elseif("${NUGGET_PROCESS_TYPE}" STREQUAL "npb-nugget-exe")
-    # TODO: this does not fit in NPB because we need to extract the rid from a file in here instead of the config file
         message(STATUS "Building npb-nugget-exe")
 
         set(ALL_EXES "")
 
+        if(NOT ALL_NUGGET_RIDS_DIR OR NOT RID_CONFIG_FILE_NAME)
+            message(FATAL_ERROR "No ALL_NUGGET_RIDS_DIR or RID_CONFIG_FILE_NAME")
+        endif()
         
         foreach(benchmark ${TARGET_BENCHMARKS})
             get_target_property(LINKER_LANG ${benchmark} LINKER_LANGUAGE)
-            llvmir_set_final_compiler(${LINKER_LANG})
-            # for npb, one benchmark might have different input
-            # therefore, we need to create nuggets for different input
                 
-            if("${${benchmark}_ALL_NUGGET_RIDS}" STREQUAL "")
-                message(FATAL_ERROR "No config for ${benchmark}_ALL_NUGGET_RIDS")
+            # get the rid from the config file
+            set(${benchmark}_RID_CONFIG_FILE ${ALL_NUGGET_RIDS_DIR}/${benchmark}/${RID_CONFIG_FILE_NAME})
+            if(NOT EXISTS ${BENCH_RID_CONFIG_FILE})
+                message(FATAL_ERROR "RID config file ${BENCH_RID_CONFIG_FILE} does not exist")
+            endif()
+
+            nugget_read_list(${benchmark}_ALL_NUGGET_RIDS ${${benchmark}_RID_CONFIG_FILE})
+            
+            if ("${${benchmark}_ALL_NUGGET_RIDS}" STREQUAL "")
+                message(FATAL_ERROR "All nugget RIDs not found in ${BENCH_RID_CONFIG_FILE}")
             endif()
 
             foreach(rid ${${benchmark}_ALL_NUGGET_RIDS})
@@ -354,7 +396,6 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
             endforeach()
 
         endforeach()
-
 
         add_custom_target(${TARGET_NAME} DEPENDS ${ALL_EXES})
 
