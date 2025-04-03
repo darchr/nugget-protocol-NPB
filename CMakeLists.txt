@@ -302,13 +302,13 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
             # get the rid from the config file
             set(${benchmark}_RID_CONFIG_FILE ${ALL_NUGGET_RIDS_DIR}/${benchmark}/${RID_CONFIG_FILE_NAME})
             if(NOT EXISTS ${BENCH_RID_CONFIG_FILE})
-                message(FATAL_ERROR "RID config file ${BENCH_RID_CONFIG_FILE} does not exist")
+                message(FATAL_ERROR "RID config file ${${benchmark}_RID_CONFIG_FILE} does not exist")
             endif()
 
             nugget_read_list(${benchmark}_ALL_NUGGET_RIDS ${${benchmark}_RID_CONFIG_FILE})
             
             if ("${${benchmark}_ALL_NUGGET_RIDS}" STREQUAL "")
-                message(FATAL_ERROR "All nugget RIDs not found in ${BENCH_RID_CONFIG_FILE}")
+                message(FATAL_ERROR "All nugget RIDs not found in ${${benchmark}_ALL_NUGGET_RIDS}")
             endif()
 
             set(${benchmark}_MARKER_DIR ${ALL_MARKER_DIR}/${benchmark}/"input-files")
