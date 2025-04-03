@@ -25,7 +25,3 @@ set(NUGGET_BC_FILE_DIR "${CMAKE_CURRENT_LIST_DIR}/../../../cbuild/llvm-bc")
 set(NUGGET_BC_FILE_BASENAME "papi_nugget_bc")
 
 message(STATUS "LLC_CMD: ${LLC_CMD}")
-
-set(EXTRA_LIB_PATHS -L${PAPI_PATH}/lib)
-set(EXTRA_INCLUDES -I${PAPI_PATH}/include)
-set(EXTRA_LIBS "-lpapi")

@@ -9,7 +9,7 @@ set(INFO_DIR ${CMAKE_CURRENT_LIST_DIR}/../../info)
 set(KMEANS_INFO_DIR ${INFO_DIR}/k-means-selections)
 set(RANDOM_SELECTIONS_DIR ${INFO_DIR}/random-selections)
 set(MARKER_DIR ${INFO_DIR}/create-markers)
-set(BB_INFO_DIR ${INFO_DIR}/bb-info-output)
+set(BB_INFO_INPUT_DIR ${INFO_DIR}/bb-info-output)
 
 set(HOOK_TARGET openmp-time-nugget)
 
