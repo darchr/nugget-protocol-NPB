@@ -25,5 +25,5 @@ message(STATUS "LLC_CMD: ${LLC_CMD}")
 
 set(EXTRA_LIB_PATHS -L${PAPI_PATH}/lib)
 set(EXTRA_INCLUDES -I${PAPI_PATH}/include)
-set(EXTRA_LIBS "-lpapi")
+set(EXTRA_LIBS -lpapi -lpfm)
 

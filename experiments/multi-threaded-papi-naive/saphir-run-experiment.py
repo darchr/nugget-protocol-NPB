@@ -21,7 +21,7 @@ def run_this(run_ball):
     dir = run_ball["dir"]
     env = run_ball["env"]
 
-    cpuset_name = "measurement/core_"  # Moved inside to ensure it's accessible
+    cpuset_name = "measurement/"  # Moved inside to ensure it's accessible
     # cset proc --exec --set=measurement/core_32 --
     command = ["cset", "proc","--exec", f"--set={cpuset_name}{str(core)}", "--" ] + cmd
 
@@ -99,7 +99,7 @@ def main():
 
     workdir = Path().cwd()
     runs_range = (0, 5)
-    experiments_dir = Path(workdir/"experiments/multi-threaded-ir-bbv-analysis/experiments")
+    experiments_dir = Path(workdir/"experiments/multi-threaded-papi-naive/experiments")
     experiments_dir.mkdir(parents=True, exist_ok=True)
 
     input_size_experiments_dir = Path(experiments_dir/size)
