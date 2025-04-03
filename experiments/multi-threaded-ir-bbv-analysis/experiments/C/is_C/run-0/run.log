@@ -1,4 +1,4 @@
-cset: --> last message, executed args into cpuset "/measurement/core_40_43", new pid is: 2839511
+cset: --> last message, executed args into cpuset "/measurement/core_36_39", new pid is: 3859421
 
 
  NAS Parallel Benchmarks (NPB3.4-OMP) - IS Benchmark
@@ -20,20 +20,21 @@ ROI begin
         8
         9
         10
+file_line_index: 283
+region: 283
 ROI end
-Region: 1131
-Total IR instructions: 0
+Total IR instructions: 113087125663
 
 
  IS Benchmark Completed
  Class           =                        C
  Size            =                134217728
  Iterations      =                       10
- Time in seconds =                  1178.04
+ Time in seconds =                  1166.57
  Total threads   =                        4
  Avail threads   =                        4
- Mop/s total     =                     1.14
- Mop/s/thread    =                     0.28
+ Mop/s total     =                     1.15
+ Mop/s/thread    =                     0.29
  Operation type  =              keys ranked
  Verification    =               SUCCESSFUL
  Version         =                    3.4.3

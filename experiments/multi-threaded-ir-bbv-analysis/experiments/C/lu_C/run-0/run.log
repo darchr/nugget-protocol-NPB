@@ -1,4 +1,4 @@
-cset: --> last message, executed args into cpuset "/measurement/core_40_43", new pid is: 2839683
+cset: --> last message, executed args into cpuset "/measurement/core_36_39", new pid is: 3859481
 
 
  NAS Parallel Benchmarks (NPB3.4-OMP) - LU Benchmark
@@ -29,7 +29,7 @@ cset: --> last message, executed args into cpuset "/measurement/core_40_43", new
            2   0.8922124588010E+03 0.8922124588010E+03 0.6371063113958E-14
            3   0.2562388145827E+04 0.2562388145827E+04 0.3016992167116E-14
            4   0.2191943438578E+04 0.2191943438578E+04 0.3734335554418E-14
-           5   0.1780780572611E+05 0.1780780572611E+05 0.1634329962061E-14
+           5   0.1780780572611E+05 0.1780780572611E+05 0.1838621207318E-14
  Comparison of RMS-norms of solution error
            1   0.2159863997170E+03 0.2159863997169E+03 0.7237465047433E-14
            2   0.1557895592399E+02 0.1557895592399E+02 0.9691941622131E-14
@@ -37,7 +37,7 @@ cset: --> last message, executed args into cpuset "/measurement/core_40_43", new
            4   0.4822626431540E+02 0.4822626431540E+02 0.5893408878723E-15
            5   0.4559029100433E+03 0.4559029100433E+03 0.3241762352955E-14
  Comparison of surface integral
-               0.6664045535722E+02 0.6664045535722E+02 0.1919219965579E-14
+               0.6664045535722E+02 0.6664045535722E+02 0.2132466628421E-14
  Verification Successful
 
 
@@ -45,11 +45,11 @@ cset: --> last message, executed args into cpuset "/measurement/core_40_43", new
  Class           =                        C
  Size            =            162x 162x 162
  Iterations      =                      250
- Time in seconds =                  3897.86
+ Time in seconds =                  4373.28
  Total threads   =                        4
  Avail threads   =                        4
- Mop/s total     =                   523.11
- Mop/s/thread    =                   130.78
+ Mop/s total     =                   466.24
+ Mop/s/thread    =                   116.56
  Operation type  =           floating point
  Verification    =               SUCCESSFUL
  Version         =                    3.4.3
@@ -72,6 +72,7 @@ cset: --> last message, executed args into cpuset "/measurement/core_40_43", new
 
 
 ROI begin
+file_line_index: 27163
+region: 27163
 ROI end
-Region: 108642
-Total IR instructions: 0
+Total IR instructions: 10865207326173

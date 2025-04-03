@@ -1,4 +1,4 @@
-cset: --> last message, executed args into cpuset "/measurement/core_36_39", new pid is: 2839393
+cset: --> last message, executed args into cpuset "/measurement/core_32_35", new pid is: 3859231
 
 
  NAS Parallel Benchmarks (NPB3.4-OMP) - BT Benchmark
@@ -30,7 +30,7 @@ cset: --> last message, executed args into cpuset "/measurement/core_36_39", new
  Comparison of RMS-norms of solution error
            1 0.1646200836909E+03 0.1646200836909E+03 0.7596613893635E-14
            2 0.1149710790382E+02 0.1149710790382E+02 0.6952710059059E-14
-           3 0.4120744620746E+02 0.4120744620746E+02 0.2586459976855E-14
+           3 0.4120744620746E+02 0.4120744620746E+02 0.2414029311732E-14
            4 0.3708765105969E+02 0.3708765105969E+02 0.7854973645884E-14
            5 0.3621105305184E+03 0.3621105305184E+03 0.7534948241943E-14
  Verification Successful
@@ -40,11 +40,11 @@ cset: --> last message, executed args into cpuset "/measurement/core_36_39", new
  Class           =                        C
  Size            =            162x 162x 162
  Iterations      =                      200
- Time in seconds =                  4752.15
+ Time in seconds =                  4462.85
  Total threads   =                        4
  Avail threads   =                        4
- Mop/s total     =                   603.15
- Mop/s/thread    =                   150.79
+ Mop/s total     =                   642.25
+ Mop/s/thread    =                   160.56
  Operation type  =           floating point
  Verification    =               SUCCESSFUL
  Version         =                    3.4.3
@@ -67,6 +67,7 @@ cset: --> last message, executed args into cpuset "/measurement/core_36_39", new
 
 
 ROI begin
+file_line_index: 33964
+region: 33964
 ROI end
-Region: 135852
-Total IR instructions: 0
+Total IR instructions: 13585373980447

@@ -1,4 +1,4 @@
-cset: --> last message, executed args into cpuset "/measurement/core_44_47", new pid is: 2839706
+cset: --> last message, executed args into cpuset "/measurement/core_40_43", new pid is: 3859492
 
 
  NAS Parallel Benchmarks (NPB3.4-OMP) - MG Benchmark
@@ -8,7 +8,7 @@ cset: --> last message, executed args into cpuset "/measurement/core_44_47", new
  Iterations:                     20
  Number of available threads:     4
 
- Initialization time:           2.549 seconds
+ Initialization time:           2.561 seconds
 
   iter   1
   iter   5
@@ -26,11 +26,11 @@ cset: --> last message, executed args into cpuset "/measurement/core_44_47", new
  Class           =                        C
  Size            =            512x 512x 512
  Iterations      =                       20
- Time in seconds =                   663.31
+ Time in seconds =                   614.74
  Total threads   =                        4
  Avail threads   =                        4
- Mop/s total     =                   234.72
- Mop/s/thread    =                    58.68
+ Mop/s total     =                   253.27
+ Mop/s/thread    =                    63.32
  Operation type  =           floating point
  Verification    =               SUCCESSFUL
  Version         =                    3.4.3
@@ -53,6 +53,7 @@ cset: --> last message, executed args into cpuset "/measurement/core_44_47", new
 
 
 ROI begin
+file_line_index: 976
+region: 976
 ROI end
-Region: 3902
-Total IR instructions: 0
+Total IR instructions: 390120707291
