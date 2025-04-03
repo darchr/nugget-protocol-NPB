@@ -311,7 +311,7 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
                 message(FATAL_ERROR "All nugget RIDs not found in ${${benchmark}_ALL_NUGGET_RIDS}")
             endif()
 
-            set(${benchmark}_MARKER_DIR ${ALL_MARKER_DIR}/${benchmark}/"input-files")
+            set(${benchmark}_MARKER_DIR ${ALL_MARKER_DIR}/${benchmark}/input-files)
             if(NOT EXISTS ${${benchmark}_MARKER_DIR})
                 message(FATAL_ERROR "Marker directory ${${benchmark}_MARKER_DIR} does not exist")
             endif()
