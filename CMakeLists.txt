@@ -18,7 +18,7 @@ endif()
 set(TARGET_BENCHMARKS BT CG EP FT IS LU MG SP)
 
 # Allow specific classes to be selected via cmake option
-set(CLASSES ${TARGET_CLASSES} CACHE STRING "NPB problem classes to build")
+set(CLASSES ${TARGET_CLASSES})
 
 foreach(TARGET ${TARGET_BENCHMARKS})
     add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/${TARGET})
