@@ -11,7 +11,7 @@ print(current_dir)
 # the following values were used:
 region_length = 400_000_000
 grace_perc = 0.98
-num_warmup_region = 1
+num_warmup_region = 0
 
 size = "C"
 
