@@ -1,0 +1,45 @@
+{
+  "papi_version":"7.2.0.0",
+  "cpu_info":"ARM Neoverse N1",
+  "max_cpu_rate_mhz":"3000",
+  "min_cpu_rate_mhz":"1000",
+  "event_definitions":{
+    "PAPI_TOT_INS":{
+      "component":"perf_event",
+      "type":"delta"
+    },
+    "PAPI_BR_INS":{
+      "component":"perf_event",
+      "type":"delta"
+    },
+    "PAPI_TOT_CYC":{
+      "component":"perf_event",
+      "type":"delta"
+    },
+    "PAPI_SYC_INS":{
+      "component":"perf_event",
+      "type":"delta"
+    },
+    "PAPI_BR_MSP":{
+      "component":"perf_event",
+      "type":"delta"
+    }
+  },
+  "threads":{
+    "0":{
+      "regions":{
+        "0":{
+          "name":"0",
+          "parent_region_id":"-1",
+          "cycles":"585298505",
+          "real_time_nsec":"23411890592",
+          "PAPI_TOT_INS":"89349769065",
+          "PAPI_BR_INS":"10015475933",
+          "PAPI_TOT_CYC":"65550282717",
+          "PAPI_SYC_INS":"943319",
+          "PAPI_BR_MSP":"295986827"
+        }
+      }
+    }
+  }
+}

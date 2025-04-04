@@ -1,0 +1,21 @@
+cset: --> last message, executed args into cpuset "/measurement/44_47", new pid is: 3900921
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - MG Benchmark
+
+ No input file. Using compiled defaults 
+ Size:  512x 512x 512  (class C)
+ Iterations:                     20
+ Number of available threads:     4
+
+ Initialization time:           1.677 seconds
+
+  iter   1
+  iter   5
+  iter  10
+  iter  15
+Warmup threshold: 1277832
+Start threshold: 20761
+End threshold: 18588
+ROI begin
+Time taken: 15155483 ns

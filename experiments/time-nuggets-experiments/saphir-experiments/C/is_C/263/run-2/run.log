@@ -1,0 +1,57 @@
+cset: --> last message, executed args into cpuset "/measurement/20_23", new pid is: 3910596
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - IS Benchmark
+
+ Size:  134217728  (class C)
+ Iterations:  10
+ Number of available threads:  4
+
+
+   iteration
+Warmup threshold: 1673714458
+Start threshold: 15384616
+End threshold: 20708030
+ROI begin
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        10
+ROI end
+
+
+ IS Benchmark Completed
+ Class           =                        C
+ Size            =                134217728
+ Iterations      =                       10
+ Time in seconds =                    73.30
+ Total threads   =                        4
+ Avail threads   =                        4
+ Mop/s total     =                    18.31
+ Mop/s/thread    =                     4.58
+ Operation type  =              keys ranked
+ Verification    =               SUCCESSFUL
+ Version         =                    3.4.3
+ Compile date    =              14 Mar 2025
+
+ Compile options:
+    CC           = gcc
+    CLINK        = $(CC)
+    C_LIB        = -lm
+    C_INC        = (none)
+    CFLAGS       = -O3 -fopenmp
+    CLINKFLAGS   = $(CFLAGS)
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
