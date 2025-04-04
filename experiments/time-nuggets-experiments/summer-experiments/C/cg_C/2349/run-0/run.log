@@ -1,0 +1,28 @@
+cset: --> last message, executed args into cpuset "/measurement/12_17", new pid is: 169611
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - CG Benchmark
+
+ Size:      150000
+ Iterations:                     75
+ Number of available threads:     4
+
+ Initialization time =           2.984 seconds
+
+   iteration           ||r||                 zeta
+        1       0.35171027836595E-12   109.9994423237398
+        5       0.88634241778693E-15    28.6471670038893
+       10       0.90657470884464E-15    28.9496695449003
+       15       0.90148779229446E-15    28.9716336228371
+       20       0.90814164360920E-15    28.9734210663748
+       25       0.90204955420249E-15    28.9735863059382
+       30       0.90425089102370E-15    28.9736033967628
+       35       0.90429026772583E-15    28.9736053266246
+       40       0.90176094050999E-15    28.9736055590700
+       45       0.90430239091359E-15    28.9736055884132
+       50       0.90407037532707E-15    28.9736055922486
+Warmup threshold: 4960
+Start threshold: 81972
+End threshold: 24542
+ROI begin
+Time taken: 11503311 ns

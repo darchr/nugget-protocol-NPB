@@ -21,7 +21,7 @@ def run_this(run_ball):
     dir = run_ball["dir"]
     env = run_ball["env"]
 
-    cpuset_name = "measurement/core_"  # Moved inside to ensure it's accessible
+    cpuset_name = "measurement/"  # Moved inside to ensure it's accessible
     # cset proc --exec --set=measurement/core_32 --
     command = ["cset", "proc","--exec", f"--set={cpuset_name}{str(core)}", "--" ] + cmd
 
@@ -72,7 +72,7 @@ def init_worker(core_queue, failed_list):
     failed_list_global = failed_list
 
 def main():
-    cores = ["32_35", "36_39", "40_43", "44_47"]
+    cores = ["6_11", "12_17", "18_23"]
     max_threads = len(cores)
 
     core_queue = multiprocessing.Queue()
@@ -86,10 +86,11 @@ def main():
 
     env = os.environ.copy()
     env["OMP_NUM_THREADS"] = "4"
-    env["LD_LIBRARY_PATH"] = "/scr/studyztp/compiler/llvm-dir/lib/aarch64-unknown-linux-gnu;"
-    env["LD_LIBRARY_PATH"] += f"{workdir}/nugget_util/hook_helper/other_tools/papi/aarch64/lib"
+    env["LD_LIBRARY_PATH"] = "/home/ztpc/compiler/llvm-dir/lib/x86_64-unknown-linux-gnu;"
+    env["LD_LIBRARY_PATH"] += f"{workdir}/nugget_util/hook_helper/other_tools/papi/x86_64/lib"
+
     env['PAPI_EVENTS'] = "PAPI_TOT_INS, PAPI_BR_INS, PAPI_TOT_CYC, PAPI_SYC_INS, PAPI_BR_MSP"
-    
+
     size = "C"
     benchmarks = ["bt", "cg", "ep", "ft", "is", "lu", "mg", "sp"]
 
@@ -97,8 +98,8 @@ def main():
         benchmarks.remove("is")
 
     workdir = Path().cwd()
-    runs_range = (0, 1)
-    experiments_dir = Path(workdir/"experiments/multi-threaded-ir-bbv-analysis/experiments")
+    runs_range = (0, 5)
+    experiments_dir = Path(workdir/"experiments/multi-threaded-papi-naive/experiments")
     experiments_dir.mkdir(parents=True, exist_ok=True)
 
     input_size_experiments_dir = Path(experiments_dir/size)

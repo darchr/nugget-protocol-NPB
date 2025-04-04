@@ -1,0 +1,69 @@
+cset: --> last message, executed args into cpuset "/measurement/12_17", new pid is: 173419
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - CG Benchmark
+
+ Size:      150000
+ Iterations:                     75
+ Number of available threads:     4
+
+ Initialization time =           3.209 seconds
+
+   iteration           ||r||                 zeta
+        1       0.35170367217941E-12   109.9994423237398
+        5       0.88686108077507E-15    28.6471670038893
+       10       0.90754624943599E-15    28.9496695449003
+       15       0.90168243746040E-15    28.9716336228371
+       20       0.90827399721842E-15    28.9734210663747
+       25       0.90312247152051E-15    28.9735863059382
+       30       0.90453134541089E-15    28.9736033967627
+       35       0.90447652254872E-15    28.9736053266246
+       40       0.90079248129209E-15    28.9736055590700
+       45       0.90338902162787E-15    28.9736055884132
+       50       0.90342556035306E-15    28.9736055922485
+       55       0.89796688205392E-15    28.9736055927632
+       60       0.90299687855814E-15    28.9736055928339
+       65       0.90060185765068E-15    28.9736055928441
+       70       0.89776296103381E-15    28.9736055928455
+       75       0.89554982749467E-15    28.9736055928458
+ Benchmark completed 
+ VERIFICATION SUCCESSFUL 
+ Zeta is     0.2897360559285E+02
+ Error is    0.2709879239913E-13
+
+
+ CG Benchmark Completed.
+ Class           =                        C
+ Size            =                   150000
+ Iterations      =                       75
+ Time in seconds =                    42.30
+ Total threads   =                        4
+ Avail threads   =                        4
+ Mop/s total     =                  3388.80
+ Mop/s/thread    =                   847.20
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.4.3
+ Compile date    =              14 Mar 2025
+
+ Compile options:
+    FC           = gfortran
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O3 -fopenmp
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = randi8
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+Warmup threshold: 281484016
+Start threshold: 82447
+End threshold: 160738
+ROI begin
+ROI end
