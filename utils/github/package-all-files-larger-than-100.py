@@ -8,7 +8,7 @@ size_limit = 90 * 1024 * 1024  # 90 MB
 workdir = Path().cwd()
 file_dir = Path(__file__).parent
 
-target_dirs = ["experiments"]
+target_dirs = ["experiments", "class-D-experiments"]
 
 all_packaged_files = []
 
