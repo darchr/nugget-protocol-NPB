@@ -10,12 +10,12 @@ print(current_dir)
 # Note that for all parameters used in creating and selecting the nuggets
 # the following values were used:
 region_length = 400_000_000
-grace_perc = 0.98
+grace_perc = 0.9
 num_warmup_region = 0
 
 size = "C"
 
-output_dir = Path(root_path/"experiments/info/create-markers")
+output_dir = Path(root_path/f"experiments/info/create-markers/{grace_perc}")
 df_dir = Path(root_path/"experiments/info/get-analysis-info")
 bb_info_dir = Path(f"{root_path}/experiments/info/bb-info-output")
 

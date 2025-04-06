@@ -36,7 +36,7 @@ from nugget_util.python_processing.analysis_functions import (
 )
 
 region_length = 400_000_000
-grace_perc = 0.98
+grace_perc = 0.9
 num_warmup_region = 0
 
 def produce_df_and_marker(analysis_df_path, out_marker_file, bb_info_path, input_file_outdir, list_of_markers):
