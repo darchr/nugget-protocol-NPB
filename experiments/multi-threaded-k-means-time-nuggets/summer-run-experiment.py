@@ -96,7 +96,7 @@ def main():
         benchmarks.remove("is")
 
     workdir = Path().cwd()
-    runs_range = (0, 1)
+    runs_range = (1, 5)
     experiments_dir = Path(workdir/"experiments/time-nuggets-experiments/experiments")
     experiments_dir.mkdir(parents=True, exist_ok=True)
 
