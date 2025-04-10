@@ -29,3 +29,9 @@ set(NUGGET_BC_FILE_DIR "${CMAKE_CURRENT_LIST_DIR}/../../../cbuild/llvm-bc")
 set(NUGGET_BC_FILE_BASENAME "m5_nugget_bc")
 
 message(STATUS "LLC_CMD: ${LLC_CMD}")
+
+set(EXTRA_LIB_PATHS -L${M5_PATH})
+set(EXTRA_INCLUDES -I${M5_INCLUDE_PATH})
+set(EXTRA_LIBS -lm5)
+
+

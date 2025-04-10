@@ -21,4 +21,9 @@ set(MARKER_CONFIG_FILE_EXT "-marker.txt")
 set(SOURCE_BC_FILE_PATH "${CMAKE_CURRENT_LIST_DIR}/../../../cbuild/llvm-bc")
 set(SOURCE_BC_FILE_BASENAME "ir_bb_analysis_bc")
 
-set(LABEL_TARGET "aarch64")
+set(LABEL_TARGET "x86_64")
+set(LABEL_WARMUP "false")
+
+set(EXTRA_LIB_PATHS -L${M5_PATH})
+set(EXTRA_INCLUDES -I${M5_INCLUDE_PATH})
+set(EXTRA_LIBS -lm5)
