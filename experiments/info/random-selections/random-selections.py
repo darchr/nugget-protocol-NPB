@@ -16,7 +16,7 @@ from nugget_util.python_processing.analysis_functions import (
 )
 
 
-size = "C"
+size = "A"
 benchmarks = ["bt", "cg", "ep", "ft", "is", "lu", "mg", "sp"]
 
 for i in range(len(benchmarks)):
@@ -28,25 +28,28 @@ output_dir = Path(workdir/"experiments/info/random-selections")
 
 idea_num_nuggets = 50
 
+num_threads = 4
+num_message_per_thread = 3
+num_header = 1 
+
 for benchmark in benchmarks:
     benchmark_info_dir = Path(info_dir/benchmark)
     benchmark_output_dir = Path(output_dir/benchmark)
     benchmark_output_dir.mkdir(parents=True, exist_ok=True)
     df_path = Path(benchmark_info_dir/f"{benchmark}_df.csv")
 
+    count_lines = 0
     with open(df_path, "r") as f:
-        df = pd.read_csv(f, header=0, dtype={'region': str, 'thread': int})
+        for line in f.readlines():
+            count_lines += 1
+    
+    total_regions = (count_lines - num_header)/(num_threads * num_message_per_thread)
 
-    bb_id_map = form_bb_id_map(df)
-
-    all_bbv = get_all_bbv(df, bb_id_map)
-
-    selected_regions = random.sample(range(0, len(all_bbv)), idea_num_nuggets)
+    selected_regions = random.sample(range(total_regions), idea_num_nuggets)
     with open(benchmark_output_dir/"selected-regions.txt", "w") as f:
         for region in selected_regions:
             f.write(f"{region}\n")
     with open(benchmark_info_dir/"total_regions.txt", "w") as f:
-        total_regions = int(len(all_bbv))
         f.write(f"{total_regions}\n")
 
     print(f"Selected {idea_num_nuggets} regions for input {benchmark} with {total_regions} total regions")

@@ -10,10 +10,12 @@ print(current_dir)
 # Note that for all parameters used in creating and selecting the nuggets
 # the following values were used:
 region_length = 400_000_000
-grace_perc = 0.9
+grace_perc = 0.98
 num_warmup_region = 0
 
-size = "C"
+size = "A"
+
+if_random_selection = False
 
 output_dir = Path(root_path/f"experiments/info/create-markers/{grace_perc}")
 df_dir = Path(root_path/"experiments/info/get-analysis-info")
@@ -59,9 +61,11 @@ if __name__ == "__main__":
         with open(k_means_selected_file, "r") as f:
             for line in f:
                 list_of_markers.append(int(line.strip()))
-        with open(random_selected_file, "r") as f:
-            for line in f:
-                list_of_markers.append(int(line.strip()))
+
+        if if_random_selection:
+            with open(random_selected_file, "r") as f:
+                for line in f:
+                    list_of_markers.append(int(line.strip()))
         list_of_markers = list(set(list_of_markers))
         list_of_markers.sort()
         print("List of markers: ", list_of_markers)

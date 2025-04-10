@@ -34,6 +34,17 @@ def get_all_rid(dir):
         results[rid_name] = rid_results
     return results, failed_list
 
+def get_all_input(dir):
+    results = {}
+    failed_list = []
+    for input_id in dir.iterdir():
+        input_id_name = int(input_id.name)
+        input_result_papi_dir = Path(input_id)
+        input_results, fetch_failed_list = get_all_rid(input_result_papi_dir)
+        results[input_id_name] = input_results
+        failed_list.append(fetch_failed_list)
+    return results, failed_list
+
 def get_all_bench(dir):
     results = {}
     failed_list = []
@@ -41,7 +52,7 @@ def get_all_bench(dir):
         if bench.is_file():
             continue
         bench_name = bench.name
-        bench_results, fetch_failed_list = get_all_rid(bench)
+        bench_results, fetch_failed_list = get_all_input(bench)
         failed_list.extend(fetch_failed_list)
         results[bench_name] = bench_results
     return results, failed_list
@@ -72,6 +83,7 @@ failed_list = []
 
 output_dir = Path("/home/studyztp/test_ground/experiments/nugget-micro/nugget-protocol-NPB/experiments/analysis/nugget-data")
 data_dir = Path("/home/studyztp/test_ground/experiments/nugget-micro/nugget-protocol-NPB/experiments/time-nuggets-experiments")
+# data_dir = Path("/home/studyztp/test_ground/experiments/nugget-micro/nugget-protocol-NPB/experiments/time-nuggets-experiments_0_9")
 results, failed_list = get_all_machine(data_dir)
 
 # convert the results to a dataframe

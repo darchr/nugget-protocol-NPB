@@ -27,9 +27,11 @@ from nugget_util.python_processing.analysis_functions import (
     k_means_select_regions
 )
 
-num_ideal_nuggets = 50
+num_ideal_nuggets = 30
+num_projection = 100
 
 def generate_k_means(nugget_info_path, analysis_df_path, num_ideal_nuggets, output_dir):
+    global num_projection
     with open(analysis_df_path, "r") as f:
         df = pd.read_csv(f, header=0, dtype={'region': str, 'thread': int})
 
@@ -45,9 +47,15 @@ def generate_k_means(nugget_info_path, analysis_df_path, num_ideal_nuggets, outp
 
     print(f"shape of all_bbv: {len(all_bbv)} {len(all_bbv[0])}")
 
-    num_projection = 100
+    while len(all_bbv) <= num_ideal_nuggets * 4:
+        num_ideal_nuggets /= 2
+        num_ideal_nuggets = int(num_ideal_nuggets)
+
     if len(all_bbv[0]) <= num_projection:
         num_projection = len(all_bbv[0])
+        num_projection = int(num_projection)
+
+    num_projection = min(num_projection, len(all_bbv))
 
     kmeans_result = k_means_select_regions(
         num_ideal_nuggets,

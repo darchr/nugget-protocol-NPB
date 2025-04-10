@@ -17,11 +17,11 @@ def run_this(run_ball):
         print(result.stdout.decode())
     return result.returncode
 
-size = "C"
+size = "A"
 benchmarks = ["bt", "cg", "ep", "ft", "is", "lu", "mg", "sp"]
 for i in range(len(benchmarks)):
     benchmarks[i] = f"{benchmarks[i]}_{size}"
-num_ideal_nuggets = 50
+num_ideal_nuggets = 30
 
 workdir = Path(root_path/"experiments/info/k-means-selections")
 bb_info_dir = Path(root_path/"experiments/info/bb-info-output")
