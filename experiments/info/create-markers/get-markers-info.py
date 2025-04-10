@@ -11,7 +11,7 @@ print(current_dir)
 # the following values were used:
 region_length = 400_000_000
 grace_perc = 0.98
-num_warmup_region = 0
+num_warmup_region = 1
 
 size = "A"
 
@@ -45,6 +45,9 @@ if __name__ == "__main__":
             continue
         benchmark = dir.name
         print(benchmark)
+        bench_size = benchmark.split("_")[1]
+        if bench_size != size:
+            continue
         bb_info_path = Path(bb_info_dir/f"{benchmark}/basic-block-info.txt")
 
         benchmark_output_dir = Path(output_dir/benchmark)
