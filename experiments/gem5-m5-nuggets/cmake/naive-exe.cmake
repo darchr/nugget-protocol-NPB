@@ -20,6 +20,8 @@ endif()
 
 if(LLC_CMD)
     list(APPEND LLC_CMD -relocation-model=pic -O2)
+else()
+    set(LLC_CMD -relocation-model=pic -O2)
 endif()
 
 set(ALL_NUGGET_RIDS_DIR "${KMEANS_INFO_DIR}")
@@ -30,6 +32,7 @@ set(NUGGET_BC_FILE_BASENAME "m5_nugget_bc")
 
 message(STATUS "LLC_CMD: ${LLC_CMD}")
 
+list(APPEND EXTRA_FLAGS -no-pie)
 set(EXTRA_LIB_PATHS -L${M5_PATH})
 set(EXTRA_INCLUDES -I${M5_INCLUDE_PATH})
 set(EXTRA_LIBS -lm5)
