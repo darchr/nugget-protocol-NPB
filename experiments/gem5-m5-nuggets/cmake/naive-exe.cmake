@@ -20,8 +20,6 @@ endif()
 
 if(LLC_CMD)
     list(APPEND LLC_CMD -relocation-model=pic -O2)
-else()
-    set(LLC_CMD -relocation-model=pic -O2)
 endif()
 
 set(ALL_NUGGET_RIDS_DIR "${KMEANS_INFO_DIR}")

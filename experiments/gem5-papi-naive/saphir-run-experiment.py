@@ -72,7 +72,10 @@ def init_worker(core_queue, failed_list):
     failed_list_global = failed_list
 
 def main():
-    cores = ["20_23", "24_27", "28_31", "32_35", "36_39", "40_43", "44_47", "48_51", "52_55", "56_59", "60_63", "64_67"]
+    cores = ["20_21", "22_23", "24_25", "26_27", "28_29", "30_31", "32_33", 
+    "34_35", "36_37", "38_39", "40_41", "42_43", "44_45", "46_47",
+    "48_49", "50_51", "52_53", "54_55", "56_57", "58_59", "60_61",
+    "62_63", "64_65", "66_67"]    
     max_threads = len(cores)
 
     core_queue = multiprocessing.Queue()
@@ -85,7 +88,7 @@ def main():
     workdir = Path().cwd()
 
     env = os.environ.copy()
-    env["OMP_NUM_THREADS"] = "4"
+    env["OMP_NUM_THREADS"] = "1"
     env["LD_LIBRARY_PATH"] = "/scr/studyztp/compiler/llvm-dir/lib/aarch64-unknown-linux-gnu;"
     env["LD_LIBRARY_PATH"] += f"{workdir}/nugget_util/hook_helper/other_tools/papi/aarch64/lib"
 
