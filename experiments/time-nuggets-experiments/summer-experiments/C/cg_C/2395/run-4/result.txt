@@ -1,1 +1,0 @@
-Time taken: 11147145 ns
