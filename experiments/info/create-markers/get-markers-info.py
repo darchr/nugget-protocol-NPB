@@ -7,11 +7,7 @@ root_path = Path(Path.cwd()).absolute()
 current_dir = Path(__file__).parent
 print(current_dir)
 
-# Note that for all parameters used in creating and selecting the nuggets
-# the following values were used:
-region_length = 400_000_000
 grace_perc = 0.98
-num_warmup_region = 1
 
 size = "A"
 

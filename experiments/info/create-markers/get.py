@@ -35,7 +35,7 @@ from nugget_util.python_processing.analysis_functions import (
     get_static_info
 )
 
-region_length = 400_000_000
+region_length = 100_000_000
 grace_perc = 0.98
 num_warmup_region = 1
 
