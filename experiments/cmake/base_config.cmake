@@ -13,7 +13,7 @@ set(LLVM_BC_DIR "${CMAKE_CURRENT_BINARY_DIR}/llvm-bc")
 # set if we should use addr mop m5 ops in the beginning and end of the ROI
 # for
 set(USE_ADDR_VERSION_M5OPS_BEGIN TRUE)
-set(USE_ADDR_VERSION_M5OPS_END TRUE)
+# set(USE_ADDR_VERSION_M5OPS_END TRUE)
 
 set(LLVM_ROOT "/scr/studyztp/compiler/llvm-dir")
 set(LLVM_BIN "${LLVM_ROOT}/bin")
