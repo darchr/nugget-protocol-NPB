@@ -1,4 +1,4 @@
-cset: --> last message, executed args into cpuset "/measurement/64_65", new pid is: 4192841
+cset: --> last message, executed args into cpuset "/measurement/24_25", new pid is: 34081
 
 
  NAS Parallel Benchmarks (NPB3.4-OMP) - MG Benchmark
@@ -8,46 +8,7 @@ cset: --> last message, executed args into cpuset "/measurement/64_65", new pid 
  Iterations:                      4
  Number of available threads:     1
 
- Initialization time:           0.713 seconds
-
-  iter   1
-  iter   4
-
- Benchmark completed 
- VERIFICATION SUCCESSFUL 
- L2 Norm is  0.2433365309069E-05
- Error is    0.1197433582083E-12
-
-
- MG Benchmark Completed.
- Class           =                        A
- Size            =            256x 256x 256
- Iterations      =                        4
- Time in seconds =                     1.12
- Total threads   =                        1
- Avail threads   =                        1
- Mop/s total     =                  3460.09
- Mop/s/thread    =                  3460.09
- Operation type  =           floating point
- Verification    =               SUCCESSFUL
- Version         =                    3.4.3
- Compile date    =              15 Apr 2025
-
- Compile options:
-    FC           = gfortran
-    FLINK        = $(FC)
-    F_LIB        = (none)
-    F_INC        = (none)
-    FFLAGS       = -O3 -fopenmp
-    FLINKFLAGS   = $(FFLAGS)
-    RAND         = randi8
-
-
- Please send all errors/feedbacks to:
-
- NPB Development Team
- npb@nas.nasa.gov
-
+ Initialization time:           0.724 seconds
 
 Warmup threshold: 1
 Start threshold: 1
@@ -57,4 +18,5 @@ Warm up marker met
 Warmup event
 Start marker met
 Start event
-ROI end
+End marker met
+End event

@@ -1,4 +1,4 @@
-cset: --> last message, executed args into cpuset "/measurement/26_27", new pid is: 4192435
+cset: --> last message, executed args into cpuset "/measurement/26_27", new pid is: 33600
 
 
  NAS Parallel Benchmarks (NPB3.4-OMP) - FT Benchmark
@@ -10,45 +10,13 @@ cset: --> last message, executed args into cpuset "/measurement/26_27", new pid 
  T =    1     Checksum =    5.046735008193D+02    5.114047905510D+02
  T =    2     Checksum =    5.059412319734D+02    5.098809666433D+02
  T =    3     Checksum =    5.069376896287D+02    5.098144042213D+02
- T =    4     Checksum =    5.077892868474D+02    5.101336130759D+02
- T =    5     Checksum =    5.085233095391D+02    5.104914655194D+02
- T =    6     Checksum =    5.091487099959D+02    5.107917842803D+02
- Result verification successful
- class = A
-
-
- FT Benchmark Completed.
- Class           =                        A
- Size            =            256x 256x 128
- Iterations      =                        6
- Time in seconds =                     3.04
- Total threads   =                        1
- Avail threads   =                        1
- Mop/s total     =                  2345.23
- Mop/s/thread    =                  2345.23
- Operation type  =           floating point
- Verification    =               SUCCESSFUL
- Version         =                    3.4.3
- Compile date    =              15 Apr 2025
-
- Compile options:
-    FC           = gfortran
-    FLINK        = $(FC)
-    F_LIB        = (none)
-    F_INC        = (none)
-    FFLAGS       = -O3 -fopenmp
-    FLINKFLAGS   = $(FFLAGS)
-    RAND         = randi8
-
-
- Please send all errors/feedbacks to:
-
- NPB Development Team
- npb@nas.nasa.gov
-
-
 Warmup threshold: 3935
 Start threshold: 91
 End threshold: 9011
 ROI begin
-ROI end
+Warm up marker met
+Warmup event
+Start marker met
+Start event
+End marker met
+End event

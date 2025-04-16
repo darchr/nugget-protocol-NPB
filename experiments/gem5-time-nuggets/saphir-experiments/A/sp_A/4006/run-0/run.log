@@ -1,4 +1,4 @@
-cset: --> last message, executed args into cpuset "/measurement/56_57", new pid is: 4192583
+cset: --> last message, executed args into cpuset "/measurement/40_41", new pid is: 33845
 
 
  NAS Parallel Benchmarks (NPB3.4-OMP) - SP Benchmark
@@ -19,65 +19,13 @@ cset: --> last message, executed args into cpuset "/measurement/56_57", new pid 
  Time step  160
  Time step  180
  Time step  200
- Time step  220
- Time step  240
- Time step  260
- Time step  280
- Time step  300
- Time step  320
- Time step  340
- Time step  360
- Time step  380
- Time step  400
- Verification being performed for class A
- accuracy setting for epsilon =  0.1000000000000E-07
- Comparison of RMS-norms of residual
-           1 0.2479982239930E+01 0.2479982239930E+01 0.5586968779145E-13
-           2 0.1127633796437E+01 0.1127633796437E+01 0.7876479248020E-14
-           3 0.1502897788877E+01 0.1502897788877E+01 0.1861578373966E-13
-           4 0.1421781621169E+01 0.1421781621170E+01 0.1639821697649E-13
-           5 0.2129211303514E+01 0.2129211303514E+01 0.3795970651636E-13
- Comparison of RMS-norms of solution error
-           1 0.1090014029782E-03 0.1090014029782E-03 0.4420056322528E-12
-           2 0.3734395176928E-04 0.3734395176928E-04 0.3629109002657E-13
-           3 0.5009278540654E-04 0.5009278540654E-04 0.3720041656370E-13
-           4 0.4767109393954E-04 0.4767109393953E-04 0.1631838068883E-12
-           5 0.1362161339921E-03 0.1362161339921E-03 0.1050644168013E-12
- Verification Successful
-
-
- SP Benchmark Completed.
- Class           =                        A
- Size            =             64x  64x  64
- Iterations      =                      400
- Time in seconds =                   148.20
- Total threads   =                        1
- Avail threads   =                        1
- Mop/s total     =                   573.61
- Mop/s/thread    =                   573.61
- Operation type  =           floating point
- Verification    =               SUCCESSFUL
- Version         =                    3.4.3
- Compile date    =              15 Apr 2025
-
- Compile options:
-    FC           = gfortran
-    FLINK        = $(FC)
-    F_LIB        = (none)
-    F_INC        = (none)
-    FFLAGS       = -O3 -fopenmp
-    FLINKFLAGS   = $(FFLAGS)
-    RAND         = (none)
-
-
- Please send all errors/feedbacks to:
-
- NPB Development Team
- npb@nas.nasa.gov
-
-
 Warmup threshold: 834844
 Start threshold: 1580
 End threshold: 1
 ROI begin
-ROI end
+Warm up marker met
+Warmup event
+Start marker met
+Start event
+End marker met
+End event

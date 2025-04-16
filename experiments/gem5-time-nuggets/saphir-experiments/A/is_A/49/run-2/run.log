@@ -1,4 +1,4 @@
-cset: --> last message, executed args into cpuset "/measurement/20_21", new pid is: 4192326
+cset: --> last message, executed args into cpuset "/measurement/20_21", new pid is: 33410
 
 
  NAS Parallel Benchmarks (NPB3.4-OMP) - IS Benchmark
@@ -20,38 +20,10 @@ ROI begin
         5
         6
         7
+Warm up marker met
+Warmup event
+Start marker met
+Start event
         8
-        9
-        10
-ROI end
-
-
- IS Benchmark Completed
- Class           =                        A
- Size            =                  8388608
- Iterations      =                       10
- Time in seconds =                     2.62
- Total threads   =                        1
- Avail threads   =                        1
- Mop/s total     =                    32.03
- Mop/s/thread    =                    32.03
- Operation type  =              keys ranked
- Verification    =               SUCCESSFUL
- Version         =                    3.4.3
- Compile date    =              15 Apr 2025
-
- Compile options:
-    CC           = gcc
-    CLINK        = $(CC)
-    C_LIB        = -lm
-    C_INC        = (none)
-    CFLAGS       = -O3 -fopenmp
-    CLINKFLAGS   = $(CFLAGS)
-
-
- Please send all errors/feedbacks to:
-
- NPB Development Team
- npb@nas.nasa.gov
-
-
+End marker met
+End event
