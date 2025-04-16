@@ -90,13 +90,22 @@ for machine, machine_results in results.items():
         for bench, bench_results in size_results.items():
             for rid, rid_results in bench_results.items():
                 for run_id, run_result in rid_results.items():
+                    total_inst = run_result["PAPI_TOT_INS"]
+                    total_branch_inst = run_result["PAPI_BR_INS"]
+                    total_cycles = run_result["PAPI_TOT_CYC"]
+                    total_branch_mistpred = run_result["PAPI_BR_MSP"]
+                    runtime = run_result["real_time_nsec"]
                     data = pd.DataFrame([{
                         "machine": machine,
                         "input_size": size,
                         "benchmark": bench,
                         "rid": rid,
                         "run_id": run_id,
-                        "runtime(ns)": run_result
+                        "runtime(ns)": runtime,
+                        "total_inst": total_inst,
+                        "total_branch_inst": total_branch_inst,
+                        "total_cycles": total_cycles,
+                        "total_branch_mistpred": total_branch_mistpred,
                     }])
                     df = pd.concat([df, data], ignore_index=True)
 # save the dataframe to a csv file

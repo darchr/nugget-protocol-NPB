@@ -68,8 +68,8 @@ failed_list = []
 
 machine_list = ["saphir"]
 
-output_dir = Path("/home/studyztp/test_ground/experiments/nugget-micro/nugget-protocol-NPB/experiments/analysis/papi-naive")
-data_dir = Path("/home/studyztp/test_ground/experiments/nugget-micro/nugget-protocol-NPB/experiments/gem5-papi-naive")
+output_dir = Path("/home/studyztp/test_ground/experiments/nugget-gem5/nugget-protocol-NPB/experiments/analysis/papi-naive")
+data_dir = Path("/home/studyztp/test_ground/experiments/nugget-gem5/nugget-protocol-NPB/experiments/gem5-papi-naive")
 results, failed_list = get_all_machine(data_dir, machine_list)
 
 # convert the results to a dataframe
