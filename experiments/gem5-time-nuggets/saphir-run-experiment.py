@@ -91,6 +91,8 @@ def main():
     env["OMP_NUM_THREADS"] = "1"
     env["LD_LIBRARY_PATH"] = "/scr/studyztp/compiler/llvm-dir/lib/aarch64-unknown-linux-gnu;"
     env["LD_LIBRARY_PATH"] += f"{workdir}/nugget_util/hook_helper/other_tools/papi/aarch64/lib"
+    
+    env['PAPI_EVENTS'] = "PAPI_TOT_INS, PAPI_BR_INS, PAPI_TOT_CYC, PAPI_SYC_INS, PAPI_BR_MSP"
 
     size = "A"
     benchmarks = ["bt", "cg", "ep", "ft", "is", "lu", "mg", "sp"]

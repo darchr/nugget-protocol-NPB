@@ -28,16 +28,6 @@ def get_all_runs(dir):
             results[run_id_name] = run_result
     return results, failed_list
 
-def get_all_rid(dir):
-    results = {}
-    failed_list = []
-    for rid in dir.iterdir():
-        rid_name = int(rid.name)
-        rid_results, fetch_failed_list = get_all_runs(rid)
-        failed_list.extend(fetch_failed_list)
-        results[rid_name] = rid_results
-    return results, failed_list
-
 def get_all_bench(dir):
     results = {}
     failed_list = []
@@ -45,7 +35,7 @@ def get_all_bench(dir):
         if bench.is_file():
             continue
         bench_name = bench.name
-        bench_results, fetch_failed_list = get_all_rid(bench)
+        bench_results, fetch_failed_list = get_all_runs(bench)
         failed_list.extend(fetch_failed_list)
         results[bench_name] = bench_results
     return results, failed_list
@@ -62,13 +52,13 @@ def get_all_size(dir):
         results[size_name] = size_results
     return results, failed_list
 
-def get_all_machine(dir):
+def get_all_machine(dir, machine_list):
     results = {}
     failed_list = []
     for machine in dir.iterdir():
-        if machine.is_file():
-            continue
         machine_name = str(machine.name).split("-")[0]
+        if machine_name not in machine_list or machine.is_file():
+            continue
         machine_results, fetch_failed_list = get_all_size(machine)
         failed_list.extend(fetch_failed_list)
         results[machine_name] = machine_results
@@ -76,10 +66,11 @@ def get_all_machine(dir):
 
 failed_list = []
 
-output_dir = Path("/home/studyztp/test_ground/experiments/nugget-gem5/nugget-protocol-NPB/experiments/analysis/nugget-data")
-data_dir = Path("/home/studyztp/test_ground/experiments/nugget-gem5/nugget-protocol-NPB/experiments/gem5-time-nuggets")
+machine_list = ["saphir"]
 
-results, failed_list = get_all_machine(data_dir)
+output_dir = Path("/home/studyztp/test_ground/experiments/nugget-micro/nugget-protocol-NPB/experiments/analysis/papi-naive")
+data_dir = Path("/home/studyztp/test_ground/experiments/nugget-micro/nugget-protocol-NPB/experiments/gem5-papi-naive")
+results, failed_list = get_all_machine(data_dir, machine_list)
 
 # convert the results to a dataframe
 
@@ -88,20 +79,28 @@ df = pd.DataFrame(columns=["machine", "input_size", "benchmark", "rid", "run_id"
 for machine, machine_results in results.items():
     for size, size_results in machine_results.items():
         for bench, bench_results in size_results.items():
-            for rid, rid_results in bench_results.items():
-                for run_id, run_result in rid_results.items():
-                    data = pd.DataFrame([{
-                        "machine": machine,
-                        "input_size": size,
-                        "benchmark": bench,
-                        "rid": rid,
-                        "run_id": run_id,
-                        "runtime(ns)": run_result
-                    }])
-                    df = pd.concat([df, data], ignore_index=True)
+            for run_id, run_result in bench_results.items():
+                total_inst = run_result["PAPI_TOT_INS"]
+                total_branch_inst = run_result["PAPI_BR_INS"]
+                total_cycles = run_result["PAPI_TOT_CYC"]
+                total_branch_mistpred = run_result["PAPI_BR_MSP"]
+                runtime = run_result["real_time_nsec"]
+                data = pd.DataFrame([{
+                    "machine": machine,
+                    "input_size": size,
+                    "benchmark": bench,
+                    "rid": -1,
+                    "run_id": run_id,
+                    "runtime(ns)": runtime,
+                    "total_inst": total_inst,
+                    "total_branch_inst": total_branch_inst,
+                    "total_cycles": total_cycles,
+                    "total_branch_mistpred": total_branch_mistpred,
+                }])
+                df = pd.concat([df, data], ignore_index=True)
 # save the dataframe to a csv file
-df.to_csv(Path(output_dir/"nugget_data.csv"), index=False)
-print("Data saved to nugget_data.csv")
+df.to_csv(Path(output_dir/"naive_data.csv"), index=False)
+print("Data saved to naive_data.csv")
 
 print("Failed list:")
 for failed in failed_list:
