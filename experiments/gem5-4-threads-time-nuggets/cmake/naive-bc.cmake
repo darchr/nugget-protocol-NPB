@@ -5,7 +5,7 @@ include(Nugget)
 
 set(TARGET_NAME time_nugget_4_threads_bc)
 
-set(INFO_DIR ${CMAKE_CURRENT_LIST_DIR}/../../info)
+set(INFO_DIR ${CMAKE_CURRENT_LIST_DIR}/../../4-threads-info)
 set(KMEANS_INFO_DIR ${INFO_DIR}/k-means-selections)
 set(MARKER_DIR ${INFO_DIR}/create-markers/0.98)
 set(BB_INFO_INPUT_DIR ${INFO_DIR}/bb-info-output)
