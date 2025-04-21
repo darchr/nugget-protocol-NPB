@@ -31,8 +31,5 @@ set(NUGGET_BC_FILE_BASENAME "time_nugget_4_threads_bc")
 message(STATUS "LLC_CMD: ${LLC_CMD}")
 
 list(APPEND EXTRA_FLAGS -no-pie)
-set(EXTRA_LIB_PATHS -L${PAPI_PATH}/lib)
-set(EXTRA_INCLUDES -I${PAPI_PATH}/include)
-set(EXTRA_LIBS -lpapi -lpfm)
 
 

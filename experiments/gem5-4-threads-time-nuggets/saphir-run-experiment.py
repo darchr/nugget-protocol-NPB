@@ -91,6 +91,8 @@ def main():
     env["OMP_NUM_THREADS"] = "1"
     env["LD_LIBRARY_PATH"] = "/scr/studyztp/compiler/llvm-dir/lib/aarch64-unknown-linux-gnu;"
     env["LD_LIBRARY_PATH"] += f"{workdir}/nugget_util/hook_helper/other_tools/papi/aarch64/lib"
+    env["OMP_SCHEDULE"] = "static"
+    env["OMP_DISPLAY_ENV"] = "TRUE"
     
     env['PAPI_EVENTS'] = "PAPI_TOT_INS, PAPI_BR_INS, PAPI_TOT_CYC, PAPI_SYC_INS, PAPI_BR_MSP"
 
@@ -102,10 +104,10 @@ def main():
 
     workdir = Path().cwd()
     runs_range = (0, 5)
-    experiments_dir = Path(workdir/"experiments/gem5-time-nuggets/saphir-experiments")
+    experiments_dir = Path(workdir/"experiments/gem5-4-threads-time-nuggets/saphir-experiments")
     experiments_dir.mkdir(parents=True, exist_ok=True)
 
-    rid_file_dir = Path(workdir/"experiments/info/k-means-selections")
+    rid_file_dir = Path(workdir/"experiments/4-threads-info/k-means-selections/")
 
     input_size_experiments_dir = Path(experiments_dir/size)
     input_size_experiments_dir.mkdir(parents=True, exist_ok=True)
@@ -142,7 +144,7 @@ def main():
             else:
                 rid_experiments_dir.mkdir(parents=True, exist_ok=True)
 
-            benchmark_binary = Path(workdir/f"cbuild/llvm-exec/papi_nugget_exe_{benchmark}_{rid}/papi_nugget_exe_{benchmark}_{rid}")
+            benchmark_binary = Path(workdir/f"cbuild/llvm-exec/time_nugget_4_threads_exe_{benchmark}_{rid}/time_nugget_4_threads_exe_{benchmark}_{rid}")
             if not benchmark_binary.exists():
                 print(f"Binary for {benchmark} does not exist")
                 exit(1)
