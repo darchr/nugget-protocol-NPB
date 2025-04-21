@@ -1,0 +1,13 @@
+cset: --> last message, executed args into cpuset "/measurement/12_17", new pid is: 14306
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - EP Benchmark
+
+ Number of random numbers generated:       536870912
+ Number of available threads:                      4
+
+Warmup threshold: 2374
+Start threshold: 102
+End threshold: 104
+ROI begin
+Time taken: 35094575 ns
