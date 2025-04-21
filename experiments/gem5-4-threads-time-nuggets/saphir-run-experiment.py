@@ -86,7 +86,7 @@ def main():
     workdir = Path().cwd()
 
     env = os.environ.copy()
-    env["OMP_NUM_THREADS"] = "1"
+    env["OMP_NUM_THREADS"] = "4"
     env["LD_LIBRARY_PATH"] = "/scr/studyztp/compiler/llvm-dir/lib/aarch64-unknown-linux-gnu;"
     env["LD_LIBRARY_PATH"] += f"{workdir}/nugget_util/hook_helper/other_tools/papi/aarch64/lib"
     env["OMP_SCHEDULE"] = "static"
