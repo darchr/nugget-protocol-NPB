@@ -1,0 +1,65 @@
+cset: --> last message, executed args into cpuset "/measurement2/90_97", new pid is: 161933
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - MG Benchmark
+
+ No input file. Using compiled defaults 
+ Size: 1024x1024x1024  (class D)
+ Iterations:                     50
+ Number of available threads:     8
+
+ Initialization time:          23.124 seconds
+
+  iter   1
+  iter   5
+  iter  10
+  iter  15
+  iter  20
+  iter  25
+  iter  30
+  iter  35
+  iter  40
+  iter  45
+  iter  50
+
+ Benchmark completed 
+ VERIFICATION SUCCESSFUL 
+ L2 Norm is  0.1583275060413E-09
+ Error is    0.1715706480891E-10
+
+
+ MG Benchmark Completed.
+ Class           =                        D
+ Size            =           1024x1024x1024
+ Iterations      =                       50
+ Time in seconds =                 14535.18
+ Total threads   =                        8
+ Avail threads   =                        8
+ Mop/s total     =                   214.23
+ Mop/s/thread    =                    26.78
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.4.3
+ Compile date    =              22 Apr 2025
+
+ Compile options:
+    FC           = gfortran
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O3 -fopenmp
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = randi8
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+ROI begin
+file_line_index: 9551
+region: 9551
+ROI end
+Total IR instructions: 7640723491983
