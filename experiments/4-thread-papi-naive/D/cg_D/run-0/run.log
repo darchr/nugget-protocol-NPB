@@ -1,0 +1,74 @@
+cset: --> last message, executed args into cpuset "/measurement/28_31", new pid is: 279241
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - CG Benchmark
+
+ Size:     1500000
+ Iterations:                    100
+ Number of available threads:     4
+
+ Initialization time =         580.698 seconds
+
+   iteration           ||r||                 zeta
+        1       0.13941024146646E-11   499.9996989885352
+        5       0.96367934026324E-15    50.6504113318739
+       10       0.10580445642882E-14    51.8233647190037
+       15       0.10987309068685E-14    52.2602520412808
+       20       0.11177217995245E-14    52.4207216938462
+       25       0.11247622923657E-14    52.4796792873360
+       30       0.11256762037243E-14    52.5014686735313
+       35       0.11287327176912E-14    52.5095881341492
+       40       0.11300225219115E-14    52.5126420639696
+       45       0.11315005726923E-14    52.5138021256251
+       50       0.11319894045729E-14    52.5142472814438
+       55       0.11320376516239E-14    52.5144198604529
+       60       0.11299607850839E-14    52.5144874496573
+       65       0.11302455724868E-14    52.5145141852294
+       70       0.11315679658324E-14    52.5145248630606
+       75       0.11299238019146E-14    52.5145291671040
+       80       0.11293431545858E-14    52.5145309171547
+       85       0.11300696437696E-14    52.5145316345663
+       90       0.11298360769357E-14    52.5145319309026
+       95       0.11302836249808E-14    52.5145320541807
+      100       0.11286392879505E-14    52.5145321057973
+ Benchmark completed 
+ VERIFICATION SUCCESSFUL 
+ Zeta is     0.5251453210580E+02
+ Error is    0.6372819391570E-13
+
+
+ CG Benchmark Completed.
+ Class           =                        D
+ Size            =                  1500000
+ Iterations      =                      100
+ Time in seconds =                 11117.25
+ Total threads   =                        4
+ Avail threads   =                        4
+ Mop/s total     =                   327.68
+ Mop/s/thread    =                    81.92
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.4.3
+ Compile date    =              22 Apr 2025
+
+ Compile options:
+    FC           = gfortran
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O3 -fopenmp
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = randi8
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+ROI started
+PAPI initialized
+PAPI region begin
+PAPI region end
+PAPI ended

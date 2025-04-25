@@ -1,0 +1,62 @@
+cset: --> last message, executed args into cpuset "/measurement2/98_105", new pid is: 279291
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - EP Benchmark
+
+ Number of random numbers generated:    137438953472
+ Number of available threads:                      8
+
+EP Benchmark Results:
+
+CPU Time =   392.046
+N = 2^   36
+No. Gaussian Pairs =   53972171957.
+Sums =     4.306350280815350D+10    4.306347571852914D+10
+Counts:
+  0   25154622775.
+  1   24017899906.
+  2    4508609839.
+  3     284201296.
+  4       6776403.
+  5         61541.
+  6           197.
+  7             0.
+  8             0.
+  9             0.
+
+
+ EP Benchmark Completed.
+ Class           =                        D
+ Size            =             137438953472
+ Iterations      =                        0
+ Time in seconds =                   392.05
+ Total threads   =                        8
+ Avail threads   =                        8
+ Mop/s total     =                   350.57
+ Mop/s/thread    =                    43.82
+ Operation type  = Random numbers generated
+ Verification    =               SUCCESSFUL
+ Version         =                    3.4.3
+ Compile date    =              22 Apr 2025
+
+ Compile options:
+    FC           = gfortran
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O3 -fopenmp
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = randi8
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+ROI started
+PAPI initialized
+PAPI region begin
+PAPI region end
+PAPI ended
