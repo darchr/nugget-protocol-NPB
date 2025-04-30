@@ -3,7 +3,7 @@ include(base_config)
 list(APPEND CMAKE_MODULE_PATH "${NUGGET_LIBRARY_PATH}")
 include(Nugget)
 
-set(TARGET_NAME "m5_nugget_4_threads_exe")
+set(TARGET_NAME "sniper_nugget_4_threads_exe")
 
 set(INFO_DIR ${CMAKE_CURRENT_LIST_DIR}/../../4-threads-info)
 set(KMEANS_INFO_DIR ${INFO_DIR}/k-means-selections)
@@ -26,7 +26,7 @@ set(ALL_NUGGET_RIDS_DIR "${KMEANS_INFO_DIR}")
 set(RID_CONFIG_FILE_NAME "selected-regions.txt")
 
 set(NUGGET_BC_FILE_DIR "${CMAKE_CURRENT_LIST_DIR}/../../../cbuild/llvm-bc")
-set(NUGGET_BC_FILE_BASENAME "m5_nugget_4_threads_bc")
+set(NUGGET_BC_FILE_BASENAME "sniper_nugget_4_threads_bc")
 
 message(STATUS "LLC_CMD: ${LLC_CMD}")
 
