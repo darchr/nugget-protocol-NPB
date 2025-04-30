@@ -4,10 +4,10 @@ set(NUGGET_LIBRARY_PATH "${NUGGET_UTIL_PATH}/cmake")
 set(NUGGET_HOOKS_PATH "${NUGGET_UTIL_PATH}/hook_helper")
 set(NUGGET_C_HOOKS_PATH "${NUGGET_HOOKS_PATH}/c_hooks")
 
-set(PAPI_PATH "${NUGGET_HOOKS_PATH}/other_tools/papi/aarch64")
-set(M5_PATH "${NUGGET_HOOKS_PATH}/other_tools/gem5/arm64")
+set(PAPI_PATH "${NUGGET_HOOKS_PATH}/other_tools/papi/x86_64")
+set(M5_PATH "${NUGGET_HOOKS_PATH}/other_tools/gem5/x86")
 set(M5_INCLUDE_PATH "${NUGGET_HOOKS_PATH}/other_tools/gem5/include")
-set(SNIPER_INCLUDE_PATH "${NUGGET_HOOKS_PATH}/other_tools/sniper/include")
+set(SNIPER_PATH "${NUGGET_HOOKS_PATH}/other_tools/sniper")
 
 set(LLVM_BC_DIR "${CMAKE_CURRENT_BINARY_DIR}/llvm-bc")
 

@@ -23,5 +23,7 @@ set(BC_FILE_BASENAME "sniper_naive_4_threads_bc")
 
 message(STATUS "LLC_CMD: ${LLC_CMD}")
 list(APPEND EXTRA_FLAGS -no-pie)
-set(EXTRA_INCLUDES -I${SNIPER_INCLUDE_PATH})
+
+set(EXTRA_LIB_PATHS -L${SNIPER_PATH})
+set(EXTRA_LIBS -lsniper)
 
