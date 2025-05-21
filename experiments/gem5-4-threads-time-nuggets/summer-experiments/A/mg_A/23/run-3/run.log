@@ -1,4 +1,4 @@
-cset: --> last message, executed args into cpuset "/measurement/18_23", new pid is: 13865
+cset: --> last message, executed args into cpuset "/measurement/12_17", new pid is: 502983
 
 
  NAS Parallel Benchmarks (NPB3.4-OMP) - MG Benchmark
@@ -8,7 +8,7 @@ cset: --> last message, executed args into cpuset "/measurement/18_23", new pid 
  Iterations:                      4
  Number of available threads:     4
 
- Initialization time:           0.200 seconds
+ Initialization time:           0.203 seconds
 
   iter   1
   iter   4
@@ -16,4 +16,4 @@ Warmup threshold: 462470
 Start threshold: 45766
 End threshold: 28405
 ROI begin
-Time taken: 9809429 ns
+Time taken: 10442435 ns

@@ -1,4 +1,4 @@
-cset: --> last message, executed args into cpuset "/measurement/18_23", new pid is: 17434
+cset: --> last message, executed args into cpuset "/measurement/18_23", new pid is: 500770
 
 
  NAS Parallel Benchmarks (NPB3.4-OMP) - BT Benchmark
@@ -22,11 +22,11 @@ cset: --> last message, executed args into cpuset "/measurement/18_23", new pid 
  Verification being performed for class A
  accuracy setting for epsilon =  0.1000000000000E-07
  Comparison of RMS-norms of residual
-           1 0.1080634671464E+03 0.1080634671464E+03 0.4865674203755E-14
-           2 0.1131973090122E+02 0.1131973090122E+02 0.2667737116131E-14
-           3 0.2597435451158E+02 0.2597435451158E+02 0.1641332958884E-14
-           4 0.2366562254468E+02 0.2366562254468E+02 0.1381115826692E-13
-           5 0.2527896321175E+03 0.2527896321175E+03 0.1371673561714E-13
+           1 0.1080634671464E+03 0.1080634671464E+03 0.5260188328384E-14
+           2 0.1131973090122E+02 0.1131973090122E+02 0.2040034265277E-14
+           3 0.2597435451158E+02 0.2597435451158E+02 0.3282665917769E-14
+           4 0.2366562254468E+02 0.2366562254468E+02 0.1351091569590E-13
+           5 0.2527896321175E+03 0.2527896321175E+03 0.1450376143124E-13
  Comparison of RMS-norms of solution error
            1 0.4234841604053E+01 0.4234841604053E+01 0.1887580817580E-14
            2 0.4439028249700E+00 0.4439028249700E+00 0.7628201567169E-14
@@ -40,11 +40,11 @@ cset: --> last message, executed args into cpuset "/measurement/18_23", new pid 
  Class           =                        A
  Size            =             64x  64x  64
  Iterations      =                      200
- Time in seconds =                    12.83
+ Time in seconds =                    13.36
  Total threads   =                        4
  Avail threads   =                        4
- Mop/s total     =                 13117.98
- Mop/s/thread    =                  3279.49
+ Mop/s total     =                 12597.94
+ Mop/s/thread    =                  3149.48
  Operation type  =           floating point
  Verification    =               SUCCESSFUL
  Version         =                    3.4.3

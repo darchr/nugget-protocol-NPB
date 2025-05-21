@@ -1,4 +1,4 @@
-cset: --> last message, executed args into cpuset "/measurement/6_11", new pid is: 17398
+cset: --> last message, executed args into cpuset "/measurement/12_17", new pid is: 500734
 
 
  NAS Parallel Benchmarks (NPB3.4-OMP) - FT Benchmark
@@ -21,11 +21,11 @@ cset: --> last message, executed args into cpuset "/measurement/6_11", new pid i
  Class           =                        A
  Size            =            256x 256x 128
  Iterations      =                        6
- Time in seconds =                     0.47
+ Time in seconds =                     0.50
  Total threads   =                        4
  Avail threads   =                        4
- Mop/s total     =                 15285.89
- Mop/s/thread    =                  3821.47
+ Mop/s total     =                 14318.30
+ Mop/s/thread    =                  3579.58
  Operation type  =           floating point
  Verification    =               SUCCESSFUL
  Version         =                    3.4.3

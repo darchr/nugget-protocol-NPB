@@ -1,4 +1,4 @@
-cset: --> last message, executed args into cpuset "/measurement/6_11", new pid is: 17410
+cset: --> last message, executed args into cpuset "/measurement/12_17", new pid is: 500746
 
 
  NAS Parallel Benchmarks (NPB3.4-OMP) - LU Benchmark
@@ -25,17 +25,17 @@ cset: --> last message, executed args into cpuset "/measurement/6_11", new pid i
  Verification being performed for class A
  Accuracy setting for epsilon =  0.1000000000000E-07
  Comparison of RMS-norms of residual
-           1   0.7790210760669E+03 0.7790210760669E+03 0.1532322850755E-13
-           2   0.6340276525969E+02 0.6340276525969E+02 0.4930996344622E-14
-           3   0.1949924972729E+03 0.1949924972729E+03 0.7433656172534E-14
-           4   0.1784530116042E+03 0.1784530116042E+03 0.7963359422996E-15
-           5   0.1838476034946E+04 0.1838476034946E+04 0.1360425908379E-13
+           1   0.7790210760669E+03 0.7790210760669E+03 0.1561509952674E-13
+           2   0.6340276525969E+02 0.6340276525969E+02 0.5267200640846E-14
+           3   0.1949924972729E+03 0.1949924972729E+03 0.8745477850039E-14
+           4   0.1784530116042E+03 0.1784530116042E+03 0.4778015653798E-15
+           5   0.1838476034946E+04 0.1838476034946E+04 0.1261485842315E-13
  Comparison of RMS-norms of solution error
-           1   0.2996408568547E+02 0.2996408568547E+02 0.1897051672375E-14
-           2   0.2819457636500E+01 0.2819457636500E+01 0.1338824259978E-13
-           3   0.7347341269878E+01 0.7347341269877E+01 0.6527753768624E-14
-           4   0.6713922568778E+01 0.6713922568778E+01 0.1984335708228E-14
-           5   0.7071531568839E+02 0.7071531568839E+02 0.7636428882779E-14
+           1   0.2996408568547E+02 0.2996408568547E+02 0.2015617401898E-14
+           2   0.2819457636500E+01 0.2819457636500E+01 0.1323073386331E-13
+           3   0.7347341269878E+01 0.7347341269877E+01 0.6285985110526E-14
+           4   0.6713922568778E+01 0.6713922568778E+01 0.2116624755443E-14
+           5   0.7071531568839E+02 0.7071531568839E+02 0.7837387537589E-14
  Comparison of surface integral
                0.2603092560489E+02 0.2603092560489E+02 0.0000000000000E+00
  Verification Successful
@@ -45,11 +45,11 @@ cset: --> last message, executed args into cpuset "/measurement/6_11", new pid i
  Class           =                        A
  Size            =             64x  64x  64
  Iterations      =                      250
- Time in seconds =                    11.33
+ Time in seconds =                    12.19
  Total threads   =                        4
  Avail threads   =                        4
- Mop/s total     =                 10525.45
- Mop/s/thread    =                  2631.36
+ Mop/s total     =                  9784.67
+ Mop/s/thread    =                  2446.17
  Operation type  =           floating point
  Verification    =               SUCCESSFUL
  Version         =                    3.4.3

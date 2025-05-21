@@ -1,4 +1,4 @@
-cset: --> last message, executed args into cpuset "/measurement/6_11", new pid is: 17494
+cset: --> last message, executed args into cpuset "/measurement/12_17", new pid is: 500850
 
 
  NAS Parallel Benchmarks (NPB3.4-OMP) - CG Benchmark
@@ -7,28 +7,28 @@ cset: --> last message, executed args into cpuset "/measurement/6_11", new pid i
  Iterations:                     15
  Number of available threads:     4
 
- Initialization time =           0.088 seconds
+ Initialization time =           0.091 seconds
 
    iteration           ||r||                 zeta
-        1       0.25585582802689E-12    19.9997581277040
-        5       0.24788137678058E-14    17.1302338856353
-       10       0.24567941833072E-14    17.1302350540284
-       15       0.23248047588201E-14    17.1302350540299
+        1       0.25638744506118E-12    19.9997581277040
+        5       0.25333480908129E-14    17.1302338856353
+       10       0.24903495822645E-14    17.1302350540284
+       15       0.23948790132264E-14    17.1302350540299
  Benchmark completed 
  VERIFICATION SUCCESSFUL 
  Zeta is     0.1713023505403E+02
- Error is    0.5226337199892E-13
+ Error is    0.5247076633225E-13
 
 
  CG Benchmark Completed.
  Class           =                        A
  Size            =                    14000
  Iterations      =                       15
- Time in seconds =                     0.26
+ Time in seconds =                     0.20
  Total threads   =                        4
  Avail threads   =                        4
- Mop/s total     =                  5799.54
- Mop/s/thread    =                  1449.88
+ Mop/s total     =                  7517.72
+ Mop/s/thread    =                  1879.43
  Operation type  =           floating point
  Verification    =               SUCCESSFUL
  Version         =                    3.4.3

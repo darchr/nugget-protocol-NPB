@@ -1,4 +1,4 @@
-cset: --> last message, executed args into cpuset "/measurement/6_11", new pid is: 17438
+cset: --> last message, executed args into cpuset "/measurement/12_17", new pid is: 500774
 
 
  NAS Parallel Benchmarks (NPB3.4-OMP) - IS Benchmark
@@ -33,8 +33,8 @@ PAPI ended
  Time in seconds =                     0.22
  Total threads   =                        4
  Avail threads   =                        4
- Mop/s total     =                   385.14
- Mop/s/thread    =                    96.29
+ Mop/s total     =                   383.18
+ Mop/s/thread    =                    95.79
  Operation type  =              keys ranked
  Verification    =               SUCCESSFUL
  Version         =                    3.4.3

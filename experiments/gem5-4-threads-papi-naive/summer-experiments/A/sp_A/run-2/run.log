@@ -1,4 +1,4 @@
-cset: --> last message, executed args into cpuset "/measurement/18_23", new pid is: 17524
+cset: --> last message, executed args into cpuset "/measurement/18_23", new pid is: 500880
 
 
  NAS Parallel Benchmarks (NPB3.4-OMP) - SP Benchmark
@@ -32,17 +32,17 @@ cset: --> last message, executed args into cpuset "/measurement/18_23", new pid 
  Verification being performed for class A
  accuracy setting for epsilon =  0.1000000000000E-07
  Comparison of RMS-norms of residual
-           1 0.2479982239930E+01 0.2479982239930E+01 0.5819759144942E-13
-           2 0.1127633796437E+01 0.1127633796437E+01 0.3938239624010E-14
-           3 0.1502897788877E+01 0.1502897788877E+01 0.2230939162452E-13
-           4 0.1421781621169E+01 0.1421781621170E+01 0.1468030853134E-13
-           5 0.2129211303514E+01 0.2129211303514E+01 0.3670828762022E-13
+           1 0.2479982239930E+01 0.2479982239930E+01 0.3957436218561E-13
+           2 0.1127633796437E+01 0.1127633796437E+01 0.9747143069425E-13
+           3 0.1502897788877E+01 0.1502897788877E+01 0.4195938557194E-13
+           4 0.1421781621170E+01 0.1421781621170E+01 0.7871144148717E-13
+           5 0.2129211303514E+01 0.2129211303514E+01 0.4004540467660E-13
  Comparison of RMS-norms of solution error
-           1 0.1090014029782E-03 0.1090014029782E-03 0.4390216279844E-12
-           2 0.3734395176928E-04 0.3734395176928E-04 0.3629109002657E-13
-           3 0.5009278540654E-04 0.5009278540654E-04 0.3625349686935E-13
-           4 0.4767109393954E-04 0.4767109393953E-04 0.1634680992348E-12
-           5 0.1362161339921E-03 0.1362161339921E-03 0.1002887614921E-12
+           1 0.1090014029782E-03 0.1090014029782E-03 0.4214906029077E-12
+           2 0.3734395176929E-04 0.3734395176928E-04 0.1235711615405E-12
+           3 0.5009278540654E-04 0.5009278540654E-04 0.1745037722443E-13
+           4 0.4767109393954E-04 0.4767109393953E-04 0.2332618702994E-12
+           5 0.1362161339921E-03 0.1362161339921E-03 0.5432307914157E-13
  Verification Successful
 
 
@@ -50,11 +50,11 @@ cset: --> last message, executed args into cpuset "/measurement/18_23", new pid 
  Class           =                        A
  Size            =             64x  64x  64
  Iterations      =                      400
- Time in seconds =                    13.64
+ Time in seconds =                    14.12
  Total threads   =                        4
  Avail threads   =                        4
- Mop/s total     =                  6232.32
- Mop/s/thread    =                  1558.08
+ Mop/s total     =                  6019.84
+ Mop/s/thread    =                  1504.96
  Operation type  =           floating point
  Verification    =               SUCCESSFUL
  Version         =                    3.4.3

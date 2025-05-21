@@ -1,4 +1,4 @@
-cset: --> last message, executed args into cpuset "/measurement/6_11", new pid is: 15038
+cset: --> last message, executed args into cpuset "/measurement/6_11", new pid is: 504148
 
 
  NAS Parallel Benchmarks (NPB3.4-OMP) - IS Benchmark
@@ -19,4 +19,4 @@ ROI begin
         4
         5
         6
-Time taken: 238789109 ns
+Time taken: 215645771 ns

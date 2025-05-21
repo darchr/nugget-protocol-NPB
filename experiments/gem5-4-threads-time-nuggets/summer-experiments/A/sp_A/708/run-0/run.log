@@ -1,4 +1,4 @@
-cset: --> last message, executed args into cpuset "/measurement/6_11", new pid is: 15174
+cset: --> last message, executed args into cpuset "/measurement/6_11", new pid is: 504264
 
 
  NAS Parallel Benchmarks (NPB3.4-OMP) - SP Benchmark
@@ -20,4 +20,4 @@ Warmup threshold: 590935
 Start threshold: 437
 End threshold: 3256
 ROI begin
-Time taken: 7817247 ns
+Time taken: 8051899 ns

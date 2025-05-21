@@ -1,4 +1,4 @@
-cset: --> last message, executed args into cpuset "/measurement/18_23", new pid is: 17422
+cset: --> last message, executed args into cpuset "/measurement/18_23", new pid is: 500758
 
 
  NAS Parallel Benchmarks (NPB3.4-OMP) - MG Benchmark
@@ -8,7 +8,7 @@ cset: --> last message, executed args into cpuset "/measurement/18_23", new pid 
  Iterations:                      4
  Number of available threads:     4
 
- Initialization time:           0.196 seconds
+ Initialization time:           0.195 seconds
 
   iter   1
   iter   4
@@ -16,7 +16,7 @@ cset: --> last message, executed args into cpuset "/measurement/18_23", new pid 
  Benchmark completed 
  VERIFICATION SUCCESSFUL 
  L2 Norm is  0.2433365309069E-05
- Error is    0.1907539543551E-12
+ Error is    0.1844883135186E-12
 
 
  MG Benchmark Completed.
@@ -26,8 +26,8 @@ cset: --> last message, executed args into cpuset "/measurement/18_23", new pid 
  Time in seconds =                     0.28
  Total threads   =                        4
  Avail threads   =                        4
- Mop/s total     =                 13667.12
- Mop/s/thread    =                  3416.78
+ Mop/s total     =                 13681.82
+ Mop/s/thread    =                  3420.46
  Operation type  =           floating point
  Verification    =               SUCCESSFUL
  Version         =                    3.4.3
