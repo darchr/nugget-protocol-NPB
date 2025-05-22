@@ -100,6 +100,41 @@ if(DEFINED ENV{NUGGET_PROCESS_TYPE})
 
         add_custom_target(${TARGET_NAME} DEPENDS ${ALL_BCS})
 
+    elseif("${NUGGET_PROCESS_TYPE}" STREQUAL "npb-papi-analysis-bc")
+        message(STATUS "Building npb-ir-bb-analysis-bc")
+        set(ALL_BCS "")
+
+        if("${SOURCE_BC_FILE_PATH}" STREQUAL "" OR "${SOURCE_BC_FILE_BASENAME}" STREQUAL "")
+            message(FATAL_ERROR "No SOURCE_BC_FILE_PATH or SOURCE_BC_FILE_BASENAME")
+        endif()
+        
+        foreach(benchmark ${TARGET_BENCHMARKS})
+            set(BB_INFO_OUTPUT_PATH "${CMAKE_CURRENT_BINARY_DIR}/papi-bb-info-output/${benchmark}")
+            if(NOT EXISTS ${BB_INFO_OUTPUT_PATH})
+                file(MAKE_DIRECTORY ${BB_INFO_OUTPUT_PATH})
+                if(NOT EXISTS ${BB_INFO_OUTPUT_PATH})
+                    message(FATAL_ERROR "Failed to create directory ${BB_INFO_OUTPUT_PATH}")
+                endif()
+            endif()
+            get_target_property(LINKER_LANG ${benchmark} LINKER_LANGUAGE)
+            llvmir_set_final_compiler(${LINKER_LANG})
+            nugget_papi_profiling_bc(
+                TARGET ${TARGET_NAME}_${benchmark}
+                REGION_LENGTH ${REGION_LENGTH}
+                BB_INFO_OUTPUT_PATH ${BB_INFO_OUTPUT_PATH}/basic-block-info.txt
+                SOURCE_BC_FILE_PATH ${SOURCE_BC_FILE_PATH}/${SOURCE_BC_FILE_BASENAME}_${benchmark}_source_opted_bc/${SOURCE_BC_FILE_BASENAME}_${benchmark}_source_opted_bc.bc
+                DEPEND_TARGETS ${benchmark}
+                EXTRA_FLAGS ${EXTRA_FLAGS}
+                EXTRA_INCLUDES ${EXTRA_INCLUDES}
+                EXTRA_LIBS ${EXTRA_LIBS}
+                EXTRA_LIB_PATHS ${EXTRA_LIB_PATHS}
+                HOOK_TARGET ${HOOK_TARGET}
+            )
+            list(APPEND ALL_BCS ${TARGET_NAME}_${benchmark})
+        endforeach()
+
+        add_custom_target(${TARGET_NAME} DEPENDS ${ALL_BCS})
+
     elseif("${NUGGET_PROCESS_TYPE}" STREQUAL "npb-analysis-exe")
         message(STATUS "Building npb-analysis-exe")
         message(STATUS "TARGET_NAME ${TARGET_NAME}")
