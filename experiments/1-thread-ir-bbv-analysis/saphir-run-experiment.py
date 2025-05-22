@@ -18,9 +18,12 @@ def run_this(run_ball):
     dir = run_ball["dir"]
     env = run_ball["env"]
 
-    cpuset_name = "measurement/core_"  # Moved inside to ensure it's accessible
+    core_num = int(core)
+    core_set_name = f"{core_num}_{core_num+1}/{core_num}"
+
+    cpuset_name = "measurement/"  # Moved inside to ensure it's accessible
     # cset proc --exec --set=measurement/core_32 --
-    command = ["cset", "proc","--exec", f"--set={cpuset_name}{str(core)}", "--" ] + cmd
+    command = ["cset", "proc","--exec", f"--set={cpuset_name}{core_set_name}", "--" ] + cmd
 
     start_time = time.perf_counter()
     start_datetime = datetime.now()
