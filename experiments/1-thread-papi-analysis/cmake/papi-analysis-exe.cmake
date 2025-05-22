@@ -22,3 +22,7 @@ set(BC_FILE_PATH "${CMAKE_CURRENT_LIST_DIR}/../../../cbuild/llvm-bc")
 set(BC_FILE_BASENAME "papi_analysis_bc")
 
 message(STATUS "LLC_CMD: ${LLC_CMD}")
+
+set(EXTRA_LIB_PATHS -L${PAPI_PATH}/lib)
+set(EXTRA_INCLUDES -I${PAPI_PATH}/include)
+set(EXTRA_LIBS -lpapi -lpfm)
