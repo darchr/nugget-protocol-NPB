@@ -75,7 +75,7 @@ def init_worker(core_queue, failed_list):
     failed_list_global = failed_list
 
 def main():
-    cores = ["3", "6"]
+    cores = ["3", "6", "21"]
     max_threads = len(cores)
 
     core_queue = multiprocessing.Queue()
