@@ -21,9 +21,12 @@ def run_this(run_ball):
     dir = run_ball["dir"]
     env = run_ball["env"]
 
+    core_num = int(core)
+    core_set_name = f"{core_num}_{core_num+1}/{core_num}"
+
     cpuset_name = "measurement/"  # Moved inside to ensure it's accessible
     # cset proc --exec --set=measurement/core_32 --
-    command = ["cset", "proc","--exec", f"--set={cpuset_name}{str(core)}", "--" ] + cmd
+    command = ["cset", "proc","--exec", f"--set={cpuset_name}{core_set_name}", "--" ] + cmd
 
     start_time = time.perf_counter()
     start_datetime = datetime.now()
@@ -72,10 +75,7 @@ def init_worker(core_queue, failed_list):
     failed_list_global = failed_list
 
 def main():
-    cores = ["20_21", "22_23", "24_25", "26_27", "28_29", "30_31", "32_33", 
-    "34_35", "36_37", "38_39", "40_41", "42_43", "44_45", "46_47",
-    "48_49", "50_51", "52_53", "54_55", "56_57", "58_59", "60_61",
-    "62_63", "64_65", "66_67"]    
+    cores = ["2", "4", "6", "8", "10", "12", "14", "16"]
     max_threads = len(cores)
 
     core_queue = multiprocessing.Queue()
