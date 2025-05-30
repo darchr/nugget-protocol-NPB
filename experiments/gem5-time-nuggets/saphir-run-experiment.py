@@ -91,8 +91,13 @@ def main():
     env["OMP_NUM_THREADS"] = "1"
     env["LD_LIBRARY_PATH"] = "/scr/studyztp/compiler/llvm-dir/lib/aarch64-unknown-linux-gnu;"
     env["LD_LIBRARY_PATH"] += f"{workdir}/nugget_util/hook_helper/other_tools/papi/aarch64/lib"
-    
-    env['PAPI_EVENTS'] = "PAPI_TOT_INS, PAPI_BR_INS, PAPI_TOT_CYC, PAPI_SYC_INS, PAPI_BR_MSP"
+
+    all_events = [['PAPI_RES_STL', 'PAPI_TLB_DM', 'PAPI_L2_DCM', 'PAPI_L1_ICM', 'PAPI_L1_DCM'],
+    ['PAPI_TOT_CYC', 'PAPI_BR_MSP', 'PAPI_HW_INT', 'PAPI_STL_ICY', 'PAPI_L2_LDM'],
+    ['PAPI_SR_INS', 'PAPI_LD_INS', 'PAPI_FP_INS', 'PAPI_TOT_INS', 'PAPI_BR_PRC'],
+    ['PAPI_L1_DCR', 'PAPI_L1_DCA', 'PAPI_LST_INS', 'PAPI_VEC_INS', 'PAPI_BR_INS'],
+    ['PAPI_L2_DCW', 'PAPI_L1_DCW', 'PAPI_L2_DCR', 'PAPI_L2_DCA', 'PAPI_SYC_INS'],
+    ['PAPI_L2_TCA', 'PAPI_L1_ICA', 'PAPI_L1_ICH', 'PAPI_L2_DCA', 'PAPI_L1_DCA']]
 
     size = "A"
     benchmarks = ["bt", "cg", "ep", "ft", "is", "lu", "mg", "sp"]
@@ -146,23 +151,23 @@ def main():
             if not benchmark_binary.exists():
                 print(f"Binary for {benchmark} does not exist")
                 exit(1)
-
-            for run in range(*runs_range):
-                run_experiments_dir = Path(rid_experiments_dir/f"run-{run}")
-                if run_experiments_dir.exists():
-                    if Path(run_experiments_dir/f"result.txt").exists():
-                        print(f"Run {run} already exists for {benchmark} {rid}")
-                        continue
-                
-                run_experiments_dir.mkdir(parents=True, exist_ok=False)
-
-                cmd = [benchmark_binary.as_posix()]
-                run_ball = {
-                    "cmd": cmd,
-                    "dir": run_experiments_dir.as_posix(),
-                    "env": env.copy()
-                }
-                all_run_balls.append(run_ball)
+            cmd = [benchmark_binary.as_posix()]
+            for event_index, event in enumerate(all_events):
+                event_env = env.copy()
+                event_env['PAPI_EVENTS'] = ', '.join(event)
+                event_dir = Path(benchmark_experiments_dir/f"event-{event_index}")
+                event_dir.mkdir(parents=True, exist_ok=True)
+                for run in range(*runs_range):
+                    run_dir = Path(event_dir/f"run-{run}")
+                    if(run_dir.exists()):
+                        shutil.rmtree(run_dir)
+                    run_dir.mkdir(parents=True, exist_ok=False)
+                    run_ball = {
+                        "cmd": cmd,
+                        "dir": run_dir.as_posix(),
+                        "env": event_env.copy()
+                    }
+                    all_run_balls.append(run_ball)
 
     random.shuffle(all_run_balls)
 

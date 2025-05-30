@@ -88,7 +88,12 @@ def main():
     env["OMP_NUM_THREADS"] = "4"
     env["LD_LIBRARY_PATH"] = "/home/ztpc/compiler/llvm-dir/lib/x86_64-unknown-linux-gnu;"
     env["LD_LIBRARY_PATH"] += f"{workdir}/nugget_util/hook_helper/other_tools/papi/x86/lib"
-
+    all_events = [['PAPI_L1_ICM', 'PAPI_L2_DCM', 'PAPI_L2_ICM', 'PAPI_TLB_DM', 'PAPI_BR_TKN'],
+    ['PAPI_BR_MSP', 'PAPI_TOT_INS', 'PAPI_FP_INS', 'PAPI_BR_INS', 'PAPI_TOT_CYC'],
+    ['PAPI_L2_DCH', 'PAPI_L1_DCA', 'PAPI_L2_DCR', 'PAPI_L2_ICH', 'PAPI_L2_ICR'],
+    ['PAPI_L1_ICM', 'PAPI_L2_DCM', 'PAPI_L2_ICM', 'PAPI_TLB_IM', 'PAPI_L2_ICR'],
+    ['PAPI_L1_ICM', 'PAPI_L2_DCM', 'PAPI_L2_ICM', 'PAPI_L2_ICR', 'PAPI_FP_OPS'],
+    ]
     size = "A"
     benchmarks = ["bt", "cg", "ep", "ft", "is", "lu", "mg", "sp"]
 
@@ -141,23 +146,23 @@ def main():
             if not benchmark_binary.exists():
                 print(f"Binary for {benchmark} does not exist")
                 exit(1)
-
-            for run in range(*runs_range):
-                run_experiments_dir = Path(rid_experiments_dir/f"run-{run}")
-                if run_experiments_dir.exists():
-                    if Path(run_experiments_dir/f"result.txt").exists():
-                        print(f"Run {run} already exists for {benchmark} {rid}")
-                        continue
-                
-                run_experiments_dir.mkdir(parents=True, exist_ok=True)
-
-                cmd = [benchmark_binary.as_posix()]
-                run_ball = {
-                    "cmd": cmd,
-                    "dir": run_experiments_dir.as_posix(),
-                    "env": env.copy()
-                }
-                all_run_balls.append(run_ball)
+            cmd = [benchmark_binary.as_posix()]
+            for event_index, event in enumerate(all_events):
+                event_env = env.copy()
+                event_env['PAPI_EVENTS'] = ', '.join(event)
+                event_dir = Path(benchmark_experiments_dir/f"event-{event_index}")
+                event_dir.mkdir(parents=True, exist_ok=True)
+                for run in range(*runs_range):
+                    run_dir = Path(event_dir/f"run-{run}")
+                    if(run_dir.exists()):
+                        shutil.rmtree(run_dir)
+                    run_dir.mkdir(parents=True, exist_ok=False)
+                    run_ball = {
+                        "cmd": cmd,
+                        "dir": run_dir.as_posix(),
+                        "env": event_env.copy()
+                    }
+                    all_run_balls.append(run_ball)
 
     random.shuffle(all_run_balls)
 
