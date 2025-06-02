@@ -88,7 +88,7 @@ def main():
     workdir = Path().cwd()
 
     env = os.environ.copy()
-    env["OMP_NUM_THREADS"] = "4"
+    env["OMP_NUM_THREADS"] = "1"
     env["LD_LIBRARY_PATH"] = "/home/ztpc/compiler/llvm-dir/lib/x86_64-unknown-linux-gnu;"
     env["LD_LIBRARY_PATH"] += f"{workdir}/nugget_util/hook_helper/other_tools/papi/x86_64/lib"
 

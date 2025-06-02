@@ -88,9 +88,9 @@ def main():
     workdir = Path().cwd()
 
     env = os.environ.copy()
-    env["OMP_NUM_THREADS"] = "4"
+    env["OMP_NUM_THREADS"] = "1"
     env["LD_LIBRARY_PATH"] = "/home/ztpc/compiler/llvm-dir/lib/x86_64-unknown-linux-gnu;"
-    env["LD_LIBRARY_PATH"] += f"{workdir}/nugget_util/hook_helper/other_tools/papi/x86/lib"
+    env["LD_LIBRARY_PATH"] += f"{workdir}/nugget_util/hook_helper/other_tools/papi/x86_64/lib"
     all_events = [['PAPI_L1_ICM', 'PAPI_L2_DCM', 'PAPI_L2_ICM', 'PAPI_TLB_DM', 'PAPI_BR_TKN'],
     ['PAPI_BR_MSP', 'PAPI_TOT_INS', 'PAPI_FP_INS', 'PAPI_BR_INS', 'PAPI_TOT_CYC'],
     ['PAPI_L2_DCH', 'PAPI_L1_DCA', 'PAPI_L2_DCR', 'PAPI_L2_ICH', 'PAPI_L2_ICR'],
