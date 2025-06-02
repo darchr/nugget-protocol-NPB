@@ -132,18 +132,7 @@ def main():
         for rid in all_benchmark_rids:
 
             rid_experiments_dir = Path(benchmark_experiments_dir/f"{rid}")
-            if rid_experiments_dir.exists():
-                all_done = True
-                for run in range(*runs_range):
-                    run_result_file = Path(benchmark_experiments_dir/f"{rid}/run-{run}/result.txt")
-                    if not run_result_file.exists():
-                        all_done = False
-                        break
-                if all_done:
-                    print(f"All runs done for {benchmark} {rid}")
-                    continue
-            else:
-                rid_experiments_dir.mkdir(parents=True, exist_ok=True)
+            rid_experiments_dir.mkdir(parents=True, exist_ok=True)
 
             benchmark_binary = Path(workdir/f"cbuild/llvm-exec/papi_nugget_exe_{benchmark}_{rid}/papi_nugget_exe_{benchmark}_{rid}")
             if not benchmark_binary.exists():
@@ -153,7 +142,7 @@ def main():
             for event_index, event in enumerate(all_events):
                 event_env = env.copy()
                 event_env['PAPI_EVENTS'] = ', '.join(event)
-                event_dir = Path(benchmark_experiments_dir/f"event-{event_index}")
+                event_dir = Path(rid_experiments_dir/f"event-{event_index}")
                 event_dir.mkdir(parents=True, exist_ok=True)
                 for run in range(*runs_range):
                     run_dir = Path(event_dir/f"run-{run}")
