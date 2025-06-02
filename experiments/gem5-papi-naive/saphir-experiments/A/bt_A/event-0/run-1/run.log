@@ -1,0 +1,73 @@
+cset: --> last message, executed args into cpuset "/measurement/10_11/10", new pid is: 339653
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - BT Benchmark
+
+ No input file inputbt.data. Using compiled defaults
+ Size:   64x  64x  64
+ Iterations:  200       dt:   0.0008000
+ Number of available threads:     1
+
+ Time step    1
+ Time step   20
+ Time step   40
+ Time step   60
+ Time step   80
+ Time step  100
+ Time step  120
+ Time step  140
+ Time step  160
+ Time step  180
+ Time step  200
+ Verification being performed for class A
+ accuracy setting for epsilon =  0.1000000000000E-07
+ Comparison of RMS-norms of residual
+           1 0.1080634671464E+03 0.1080634671464E+03 0.9205329574672E-14
+           2 0.1131973090122E+02 0.1131973090122E+02 0.1883108552563E-14
+           3 0.2597435451158E+02 0.2597435451158E+02 0.5471109862948E-15
+           4 0.2366562254468E+02 0.2366562254468E+02 0.1516224983651E-13
+           5 0.2527896321175E+03 0.2527896321175E+03 0.1135565817484E-13
+ Comparison of RMS-norms of solution error
+           1 0.4234841604053E+01 0.4234841604053E+01 0.2097312019534E-15
+           2 0.4439028249700E+00 0.4439028249700E+00 0.1250524847077E-15
+           3 0.9669248013635E+00 0.9669248013635E+00 0.1148199966595E-15
+           4 0.8830206303977E+00 0.8830206303977E+00 0.1257301343147E-15
+           5 0.9737990177083E+01 0.9737990177083E+01 0.1824151397873E-15
+ Verification Successful
+
+
+ BT Benchmark Completed.
+ Class           =                        A
+ Size            =             64x  64x  64
+ Iterations      =                      200
+ Time in seconds =                   124.56
+ Total threads   =                        1
+ Avail threads   =                        1
+ Mop/s total     =                  1351.08
+ Mop/s/thread    =                  1351.08
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.4.3
+ Compile date    =              15 Apr 2025
+
+ Compile options:
+    FC           = gfortran
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O3 -fopenmp
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = (none)
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+ROI started
+PAPI initialized
+PAPI region begin
+PAPI region end
+PAPI ended
