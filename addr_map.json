@@ -1,0 +1,1842 @@
+{
+    "1_thread_with_hook_nugget_exe_is_A_197": {
+        "end_marker_addr": "0000000000403120",
+        "start_marker_addr": "0000000000403110"
+    },
+    "1_thread_with_hook_nugget_exe_is_A_146": {
+        "end_marker_addr": "0000000000403110",
+        "start_marker_addr": "0000000000403100"
+    },
+    "1_thread_with_hook_nugget_exe_ep_A_57": {
+        "end_marker_addr": "0000000000404c40",
+        "start_marker_addr": "0000000000404c30"
+    },
+    "1_thread_with_hook_nugget_exe_mg_A_27": {
+        "end_marker_addr": "000000000040c800",
+        "start_marker_addr": "000000000040c7f0"
+    },
+    "1_thread_with_hook_nugget_exe_mg_A_142": {
+        "end_marker_addr": "000000000040c800",
+        "start_marker_addr": "000000000040c7f0"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_417": {
+        "end_marker_addr": "000000000041a7c0",
+        "start_marker_addr": "000000000041a7b0"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_506": {
+        "end_marker_addr": "000000000041a7c0",
+        "start_marker_addr": "000000000041a7b0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_370": {
+        "end_marker_addr": "0000000000419360",
+        "start_marker_addr": "0000000000419350"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_41": {
+        "end_marker_addr": "0000000000419220",
+        "start_marker_addr": "0000000000419210"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_513": {
+        "end_marker_addr": "0000000000419200",
+        "start_marker_addr": "00000000004191f0"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_317": {
+        "end_marker_addr": "0000000000419290",
+        "start_marker_addr": "0000000000419280"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_365": {
+        "end_marker_addr": "0000000000419840",
+        "start_marker_addr": "0000000000419830"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_542": {
+        "end_marker_addr": "00000000004191c0",
+        "start_marker_addr": "00000000004191b0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_336": {
+        "end_marker_addr": "0000000000419450",
+        "start_marker_addr": "0000000000419440"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_393": {
+        "end_marker_addr": "00000000004192b0",
+        "start_marker_addr": "00000000004192a0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_571": {
+        "end_marker_addr": "0000000000419170",
+        "start_marker_addr": "0000000000419160"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_343": {
+        "end_marker_addr": "0000000000419660",
+        "start_marker_addr": "0000000000419650"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_477": {
+        "end_marker_addr": "000000000041a6f0",
+        "start_marker_addr": "000000000041a6e0"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_451": {
+        "end_marker_addr": "000000000041a6f0",
+        "start_marker_addr": "000000000041a6e0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_416": {
+        "end_marker_addr": "0000000000419290",
+        "start_marker_addr": "0000000000419280"
+    },
+    "1_thread_with_hook_nugget_exe_is_A_89": {
+        "end_marker_addr": "0000000000403110",
+        "start_marker_addr": "0000000000403100"
+    },
+    "1_thread_with_hook_nugget_exe_cg_A_116": {
+        "end_marker_addr": "0000000000407f10",
+        "start_marker_addr": "0000000000407f00"
+    },
+    "1_thread_with_hook_nugget_exe_ep_A_58": {
+        "end_marker_addr": "0000000000404c50",
+        "start_marker_addr": "0000000000404c40"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_519": {
+        "end_marker_addr": "0000000000419290",
+        "start_marker_addr": "0000000000419280"
+    },
+    "1_thread_with_hook_nugget_exe_ft_A_268": {
+        "end_marker_addr": "000000000040a380",
+        "start_marker_addr": "000000000040a370"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_390": {
+        "end_marker_addr": "000000000041a750",
+        "start_marker_addr": "000000000041a740"
+    },
+    "1_thread_with_hook_nugget_exe_ft_A_270": {
+        "end_marker_addr": "000000000040a420",
+        "start_marker_addr": "000000000040a410"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_162": {
+        "end_marker_addr": "000000000041a740",
+        "start_marker_addr": "000000000041a730"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_511": {
+        "end_marker_addr": "000000000041a7c0",
+        "start_marker_addr": "000000000041a7b0"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_561": {
+        "end_marker_addr": "000000000041a7b0",
+        "start_marker_addr": "000000000041a7a0"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_318": {
+        "end_marker_addr": "0000000000419800",
+        "start_marker_addr": "00000000004197f0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_540": {
+        "end_marker_addr": "0000000000419170",
+        "start_marker_addr": "0000000000419160"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_474": {
+        "end_marker_addr": "000000000041a6f0",
+        "start_marker_addr": "000000000041a6e0"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_453": {
+        "end_marker_addr": "00000000004197e0",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_350": {
+        "end_marker_addr": "000000000041a760",
+        "start_marker_addr": "000000000041a750"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_436": {
+        "end_marker_addr": "00000000004191b0",
+        "start_marker_addr": "00000000004191a0"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_363": {
+        "end_marker_addr": "00000000004197f0",
+        "start_marker_addr": "00000000004197e0"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_470": {
+        "end_marker_addr": "0000000000419850",
+        "start_marker_addr": "0000000000419840"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_38": {
+        "end_marker_addr": "0000000000419800",
+        "start_marker_addr": "00000000004197f0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_565": {
+        "end_marker_addr": "00000000004192f0",
+        "start_marker_addr": "00000000004192e0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_310": {
+        "end_marker_addr": "00000000004192e0",
+        "start_marker_addr": "00000000004192d0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_445": {
+        "end_marker_addr": "0000000000419210",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_407": {
+        "end_marker_addr": "000000000041a780",
+        "start_marker_addr": "000000000041a770"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_423": {
+        "end_marker_addr": "00000000004191e0",
+        "start_marker_addr": "00000000004191d0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_405": {
+        "end_marker_addr": "0000000000419250",
+        "start_marker_addr": "0000000000419240"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_395": {
+        "end_marker_addr": "00000000004197b0",
+        "start_marker_addr": "00000000004197a0"
+    },
+    "1_thread_with_hook_nugget_exe_ft_A_265": {
+        "end_marker_addr": "000000000040a430",
+        "start_marker_addr": "000000000040a420"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_555": {
+        "end_marker_addr": "00000000004191a0",
+        "start_marker_addr": "0000000000419190"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_341": {
+        "end_marker_addr": "0000000000419800",
+        "start_marker_addr": "00000000004197f0"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_295": {
+        "end_marker_addr": "0000000000419820",
+        "start_marker_addr": "0000000000419810"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_339": {
+        "end_marker_addr": "0000000000419160",
+        "start_marker_addr": "0000000000419150"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_320": {
+        "end_marker_addr": "00000000004197f0",
+        "start_marker_addr": "00000000004197e0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_492": {
+        "end_marker_addr": "00000000004192f0",
+        "start_marker_addr": "00000000004192e0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_573": {
+        "end_marker_addr": "00000000004190f0",
+        "start_marker_addr": "00000000004190e0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_335": {
+        "end_marker_addr": "00000000004191b0",
+        "start_marker_addr": "00000000004191a0"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_396": {
+        "end_marker_addr": "00000000004197d0",
+        "start_marker_addr": "00000000004197c0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_388": {
+        "end_marker_addr": "0000000000419240",
+        "start_marker_addr": "0000000000419230"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_582": {
+        "end_marker_addr": "0000000000419250",
+        "start_marker_addr": "0000000000419240"
+    },
+    "1_thread_with_hook_nugget_exe_mg_A_310": {
+        "end_marker_addr": "000000000040c8b0",
+        "start_marker_addr": "000000000040c8a0"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_432": {
+        "end_marker_addr": "00000000004197d0",
+        "start_marker_addr": "00000000004197c0"
+    },
+    "1_thread_with_hook_nugget_exe_ft_A_275": {
+        "end_marker_addr": "000000000040a330",
+        "start_marker_addr": "000000000040a320"
+    },
+    "1_thread_with_hook_nugget_exe_cg_A_114": {
+        "end_marker_addr": "0000000000407f30",
+        "start_marker_addr": "0000000000407f20"
+    },
+    "1_thread_with_hook_nugget_exe_cg_A_115": {
+        "end_marker_addr": "0000000000407f30",
+        "start_marker_addr": "0000000000407f20"
+    },
+    "1_thread_with_hook_nugget_exe_mg_A_244": {
+        "end_marker_addr": "000000000040c850",
+        "start_marker_addr": "000000000040c840"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_501": {
+        "end_marker_addr": "000000000041a7b0",
+        "start_marker_addr": "000000000041a7a0"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_33": {
+        "end_marker_addr": "00000000004197f0",
+        "start_marker_addr": "00000000004197e0"
+    },
+    "1_thread_with_hook_nugget_exe_is_A_120": {
+        "end_marker_addr": "0000000000403110",
+        "start_marker_addr": "0000000000403100"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_381": {
+        "end_marker_addr": "0000000000419820",
+        "start_marker_addr": "0000000000419810"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_349": {
+        "end_marker_addr": "000000000041a770",
+        "start_marker_addr": "000000000041a760"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_297": {
+        "end_marker_addr": "0000000000419220",
+        "start_marker_addr": "0000000000419210"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_416": {
+        "end_marker_addr": "000000000041a750",
+        "start_marker_addr": "000000000041a740"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_454": {
+        "end_marker_addr": "0000000000419820",
+        "start_marker_addr": "0000000000419810"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_551": {
+        "end_marker_addr": "000000000041a7d0",
+        "start_marker_addr": "000000000041a7c0"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_316": {
+        "end_marker_addr": "0000000000419360",
+        "start_marker_addr": "0000000000419350"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_521": {
+        "end_marker_addr": "000000000041a8d0",
+        "start_marker_addr": "000000000041a8c0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_508": {
+        "end_marker_addr": "0000000000419240",
+        "start_marker_addr": "0000000000419230"
+    },
+    "1_thread_with_hook_nugget_exe_ep_A_66": {
+        "end_marker_addr": "0000000000404c60",
+        "start_marker_addr": "0000000000404c50"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_549": {
+        "end_marker_addr": "000000000041a7b0",
+        "start_marker_addr": "000000000041a7a0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_567": {
+        "end_marker_addr": "0000000000419160",
+        "start_marker_addr": "0000000000419150"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_479": {
+        "end_marker_addr": "000000000041a710",
+        "start_marker_addr": "000000000041a700"
+    },
+    "1_thread_with_hook_nugget_exe_ft_A_308": {
+        "end_marker_addr": "000000000040a3b0",
+        "start_marker_addr": "000000000040a3a0"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_415": {
+        "end_marker_addr": "000000000041a800",
+        "start_marker_addr": "000000000041a7f0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_497": {
+        "end_marker_addr": "00000000004191e0",
+        "start_marker_addr": "00000000004191d0"
+    },
+    "1_thread_with_hook_nugget_exe_ft_A_300": {
+        "end_marker_addr": "000000000040a3f0",
+        "start_marker_addr": "000000000040a3e0"
+    },
+    "1_thread_with_hook_nugget_exe_mg_A_223": {
+        "end_marker_addr": "000000000040c8b0",
+        "start_marker_addr": "000000000040c8a0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_566": {
+        "end_marker_addr": "0000000000419230",
+        "start_marker_addr": "0000000000419220"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_311": {
+        "end_marker_addr": "0000000000419320",
+        "start_marker_addr": "0000000000419310"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_568": {
+        "end_marker_addr": "00000000004191f0",
+        "start_marker_addr": "00000000004191e0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_498": {
+        "end_marker_addr": "0000000000419200",
+        "start_marker_addr": "00000000004191f0"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_443": {
+        "end_marker_addr": "00000000004198e0",
+        "start_marker_addr": "00000000004198d0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_36": {
+        "end_marker_addr": "0000000000419220",
+        "start_marker_addr": "0000000000419210"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_314": {
+        "end_marker_addr": "0000000000419800",
+        "start_marker_addr": "00000000004197f0"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_484": {
+        "end_marker_addr": "0000000000419820",
+        "start_marker_addr": "0000000000419810"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_401": {
+        "end_marker_addr": "000000000041a460",
+        "start_marker_addr": "000000000041a450"
+    },
+    "1_thread_with_hook_nugget_exe_mg_A_356": {
+        "end_marker_addr": "000000000040c840",
+        "start_marker_addr": "000000000040c830"
+    },
+    "1_thread_with_hook_nugget_exe_ft_A_339": {
+        "end_marker_addr": "000000000040a410",
+        "start_marker_addr": "000000000040a400"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_427": {
+        "end_marker_addr": "00000000004191c0",
+        "start_marker_addr": "00000000004191b0"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_472": {
+        "end_marker_addr": "00000000004198a0",
+        "start_marker_addr": "0000000000419890"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_457": {
+        "end_marker_addr": "0000000000419240",
+        "start_marker_addr": "0000000000419230"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_371": {
+        "end_marker_addr": "00000000004192d0",
+        "start_marker_addr": "00000000004192c0"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_483": {
+        "end_marker_addr": "000000000041a700",
+        "start_marker_addr": "000000000041a6f0"
+    },
+    "1_thread_with_hook_nugget_exe_ft_A_324": {
+        "end_marker_addr": "000000000040a490",
+        "start_marker_addr": "000000000040a480"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_529": {
+        "end_marker_addr": "000000000041a820",
+        "start_marker_addr": "000000000041a810"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_553": {
+        "end_marker_addr": "000000000041a6a0",
+        "start_marker_addr": "000000000041a690"
+    },
+    "1_thread_with_hook_nugget_exe_ft_A_269": {
+        "end_marker_addr": "000000000040a420",
+        "start_marker_addr": "000000000040a410"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_381": {
+        "end_marker_addr": "0000000000419310",
+        "start_marker_addr": "0000000000419300"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_387": {
+        "end_marker_addr": "0000000000419300",
+        "start_marker_addr": "00000000004192f0"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_480": {
+        "end_marker_addr": "000000000041a6e0",
+        "start_marker_addr": "000000000041a6d0"
+    },
+    "1_thread_with_hook_nugget_exe_mg_A_376": {
+        "end_marker_addr": "000000000040c820",
+        "start_marker_addr": "000000000040c810"
+    },
+    "1_thread_with_hook_nugget_exe_is_A_121": {
+        "end_marker_addr": "0000000000403110",
+        "start_marker_addr": "0000000000403100"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_416": {
+        "end_marker_addr": "00000000004196d0",
+        "start_marker_addr": "00000000004196c0"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_406": {
+        "end_marker_addr": "000000000041a740",
+        "start_marker_addr": "000000000041a730"
+    },
+    "1_thread_with_hook_nugget_exe_ft_A_267": {
+        "end_marker_addr": "000000000040a3a0",
+        "start_marker_addr": "000000000040a390"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_488": {
+        "end_marker_addr": "0000000000419820",
+        "start_marker_addr": "0000000000419810"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_327": {
+        "end_marker_addr": "00000000004192a0",
+        "start_marker_addr": "0000000000419290"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_334": {
+        "end_marker_addr": "00000000004191b0",
+        "start_marker_addr": "00000000004191a0"
+    },
+    "1_thread_with_hook_nugget_exe_ep_A_50": {
+        "end_marker_addr": "0000000000404c50",
+        "start_marker_addr": "0000000000404c40"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_406": {
+        "end_marker_addr": "0000000000419820",
+        "start_marker_addr": "0000000000419810"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_338": {
+        "end_marker_addr": "0000000000419810",
+        "start_marker_addr": "0000000000419800"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_586": {
+        "end_marker_addr": "00000000004191d0",
+        "start_marker_addr": "00000000004191c0"
+    },
+    "1_thread_with_hook_nugget_exe_mg_A_347": {
+        "end_marker_addr": "000000000040c870",
+        "start_marker_addr": "000000000040c860"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_290": {
+        "end_marker_addr": "00000000004197f0",
+        "start_marker_addr": "00000000004197e0"
+    },
+    "1_thread_with_hook_nugget_exe_ft_A_228": {
+        "end_marker_addr": "000000000040a440",
+        "start_marker_addr": "000000000040a430"
+    },
+    "1_thread_with_hook_nugget_exe_mg_A_318": {
+        "end_marker_addr": "000000000040c850",
+        "start_marker_addr": "000000000040c840"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_348": {
+        "end_marker_addr": "000000000041a750",
+        "start_marker_addr": "000000000041a740"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_300": {
+        "end_marker_addr": "0000000000419230",
+        "start_marker_addr": "0000000000419220"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_547": {
+        "end_marker_addr": "000000000041a720",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_552": {
+        "end_marker_addr": "000000000041a6c0",
+        "start_marker_addr": "000000000041a6b0"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_528": {
+        "end_marker_addr": "000000000041a830",
+        "start_marker_addr": "000000000041a820"
+    },
+    "1_thread_with_hook_nugget_exe_is_A_144": {
+        "end_marker_addr": "0000000000403130",
+        "start_marker_addr": "0000000000403120"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_493": {
+        "end_marker_addr": "000000000041a770",
+        "start_marker_addr": "000000000041a760"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_411": {
+        "end_marker_addr": "000000000041a5b0",
+        "start_marker_addr": "000000000041a5a0"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_339": {
+        "end_marker_addr": "0000000000419800",
+        "start_marker_addr": "00000000004197f0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_569": {
+        "end_marker_addr": "0000000000419150",
+        "start_marker_addr": "0000000000419140"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_579": {
+        "end_marker_addr": "0000000000419230",
+        "start_marker_addr": "0000000000419220"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_556": {
+        "end_marker_addr": "0000000000419130",
+        "start_marker_addr": "0000000000419120"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_570": {
+        "end_marker_addr": "00000000004191d0",
+        "start_marker_addr": "00000000004191c0"
+    },
+    "1_thread_with_hook_nugget_exe_ft_A_150": {
+        "end_marker_addr": "000000000040a3c0",
+        "start_marker_addr": "000000000040a3b0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_442": {
+        "end_marker_addr": "0000000000419200",
+        "start_marker_addr": "00000000004191f0"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_478": {
+        "end_marker_addr": "000000000041a740",
+        "start_marker_addr": "000000000041a730"
+    },
+    "1_thread_with_hook_nugget_exe_is_A_119": {
+        "end_marker_addr": "0000000000403130",
+        "start_marker_addr": "0000000000403120"
+    },
+    "1_thread_with_hook_nugget_exe_is_A_122": {
+        "end_marker_addr": "0000000000403110",
+        "start_marker_addr": "0000000000403100"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_541": {
+        "end_marker_addr": "000000000041a680",
+        "start_marker_addr": "000000000041a670"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_351": {
+        "end_marker_addr": "0000000000419230",
+        "start_marker_addr": "0000000000419220"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_482": {
+        "end_marker_addr": "000000000041a6e0",
+        "start_marker_addr": "000000000041a6d0"
+    },
+    "1_thread_with_hook_nugget_exe_ft_A_302": {
+        "end_marker_addr": "000000000040a440",
+        "start_marker_addr": "000000000040a430"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_469": {
+        "end_marker_addr": "0000000000419820",
+        "start_marker_addr": "0000000000419810"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_299": {
+        "end_marker_addr": "0000000000419230",
+        "start_marker_addr": "0000000000419220"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_473": {
+        "end_marker_addr": "0000000000419880",
+        "start_marker_addr": "0000000000419870"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_464": {
+        "end_marker_addr": "0000000000419260",
+        "start_marker_addr": "0000000000419250"
+    },
+    "1_thread_with_hook_nugget_exe_cg_A_96": {
+        "end_marker_addr": "0000000000407f40",
+        "start_marker_addr": "0000000000407f30"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_321": {
+        "end_marker_addr": "0000000000419800",
+        "start_marker_addr": "00000000004197f0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_389": {
+        "end_marker_addr": "00000000004192d0",
+        "start_marker_addr": "00000000004192c0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_496": {
+        "end_marker_addr": "00000000004191e0",
+        "start_marker_addr": "00000000004191d0"
+    },
+    "1_thread_with_hook_nugget_exe_cg_A_31": {
+        "end_marker_addr": "0000000000407ef0",
+        "start_marker_addr": "0000000000407ee0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_482": {
+        "end_marker_addr": "0000000000419230",
+        "start_marker_addr": "0000000000419220"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_545": {
+        "end_marker_addr": "000000000041a740",
+        "start_marker_addr": "000000000041a730"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_550": {
+        "end_marker_addr": "000000000041a6c0",
+        "start_marker_addr": "000000000041a6b0"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_322": {
+        "end_marker_addr": "00000000004197f0",
+        "start_marker_addr": "00000000004197e0"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_470": {
+        "end_marker_addr": "000000000041a7a0",
+        "start_marker_addr": "000000000041a790"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_457": {
+        "end_marker_addr": "000000000041a7a0",
+        "start_marker_addr": "000000000041a790"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_464": {
+        "end_marker_addr": "0000000000419850",
+        "start_marker_addr": "0000000000419840"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_390": {
+        "end_marker_addr": "0000000000419240",
+        "start_marker_addr": "0000000000419230"
+    },
+    "1_thread_with_hook_nugget_exe_cg_A_36": {
+        "end_marker_addr": "0000000000407ef0",
+        "start_marker_addr": "0000000000407ee0"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_464": {
+        "end_marker_addr": "000000000041a7c0",
+        "start_marker_addr": "000000000041a7b0"
+    },
+    "1_thread_with_hook_nugget_exe_is_A_145": {
+        "end_marker_addr": "0000000000403110",
+        "start_marker_addr": "0000000000403100"
+    },
+    "1_thread_with_hook_nugget_exe_mg_A_372": {
+        "end_marker_addr": "000000000040c830",
+        "start_marker_addr": "000000000040c820"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_548": {
+        "end_marker_addr": "000000000041a6f0",
+        "start_marker_addr": "000000000041a6e0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_441": {
+        "end_marker_addr": "0000000000419180",
+        "start_marker_addr": "0000000000419170"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_180": {
+        "end_marker_addr": "000000000041a730",
+        "start_marker_addr": "000000000041a720"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_552": {
+        "end_marker_addr": "00000000004191f0",
+        "start_marker_addr": "00000000004191e0"
+    },
+    "1_thread_with_hook_nugget_exe_mg_A_364": {
+        "end_marker_addr": "000000000040c890",
+        "start_marker_addr": "000000000040c880"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_474": {
+        "end_marker_addr": "0000000000419850",
+        "start_marker_addr": "0000000000419840"
+    },
+    "1_thread_with_hook_nugget_exe_ft_A_266": {
+        "end_marker_addr": "000000000040a3e0",
+        "start_marker_addr": "000000000040a3d0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_318": {
+        "end_marker_addr": "0000000000419190",
+        "start_marker_addr": "0000000000419180"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_546": {
+        "end_marker_addr": "0000000000419210",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_440": {
+        "end_marker_addr": "00000000004191e0",
+        "start_marker_addr": "00000000004191d0"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_483": {
+        "end_marker_addr": "0000000000419810",
+        "start_marker_addr": "0000000000419800"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_476": {
+        "end_marker_addr": "000000000041a730",
+        "start_marker_addr": "000000000041a720"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_572": {
+        "end_marker_addr": "00000000004191f0",
+        "start_marker_addr": "00000000004191e0"
+    },
+    "1_thread_with_hook_nugget_exe_ft_A_29": {
+        "end_marker_addr": "000000000040a3c0",
+        "start_marker_addr": "000000000040a3b0"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_438": {
+        "end_marker_addr": "0000000000419820",
+        "start_marker_addr": "0000000000419810"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_319": {
+        "end_marker_addr": "00000000004197f0",
+        "start_marker_addr": "00000000004197e0"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_481": {
+        "end_marker_addr": "000000000041a720",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_496": {
+        "end_marker_addr": "000000000041a7f0",
+        "start_marker_addr": "000000000041a7e0"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_527": {
+        "end_marker_addr": "000000000041a7b0",
+        "start_marker_addr": "000000000041a7a0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_363": {
+        "end_marker_addr": "0000000000419260",
+        "start_marker_addr": "0000000000419250"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_562": {
+        "end_marker_addr": "000000000041a7b0",
+        "start_marker_addr": "000000000041a7a0"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_347": {
+        "end_marker_addr": "000000000041a750",
+        "start_marker_addr": "000000000041a740"
+    },
+    "1_thread_with_hook_nugget_exe_is_A_173": {
+        "end_marker_addr": "0000000000403110",
+        "start_marker_addr": "0000000000403100"
+    },
+    "1_thread_with_hook_nugget_exe_ft_A_116": {
+        "end_marker_addr": "000000000040a470",
+        "start_marker_addr": "000000000040a460"
+    },
+    "1_thread_with_hook_nugget_exe_ft_A_291": {
+        "end_marker_addr": "000000000040a410",
+        "start_marker_addr": "000000000040a400"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_448": {
+        "end_marker_addr": "00000000004198d0",
+        "start_marker_addr": "00000000004198c0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_384": {
+        "end_marker_addr": "0000000000419330",
+        "start_marker_addr": "0000000000419320"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_294": {
+        "end_marker_addr": "0000000000419810",
+        "start_marker_addr": "0000000000419800"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_409": {
+        "end_marker_addr": "00000000004191f0",
+        "start_marker_addr": "00000000004191e0"
+    },
+    "1_thread_with_hook_nugget_exe_cg_A_119": {
+        "end_marker_addr": "0000000000407f70",
+        "start_marker_addr": "0000000000407f60"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_518": {
+        "end_marker_addr": "0000000000419130",
+        "start_marker_addr": "0000000000419120"
+    },
+    "1_thread_with_hook_nugget_exe_ft_A_331": {
+        "end_marker_addr": "000000000040a480",
+        "start_marker_addr": "000000000040a470"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_538": {
+        "end_marker_addr": "000000000041a6b0",
+        "start_marker_addr": "000000000041a6a0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_581": {
+        "end_marker_addr": "0000000000419240",
+        "start_marker_addr": "0000000000419230"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_516": {
+        "end_marker_addr": "000000000041a7a0",
+        "start_marker_addr": "000000000041a790"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_417": {
+        "end_marker_addr": "0000000000419840",
+        "start_marker_addr": "0000000000419830"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_475": {
+        "end_marker_addr": "00000000004196f0",
+        "start_marker_addr": "00000000004196e0"
+    },
+    "1_thread_with_hook_nugget_exe_is_A_171": {
+        "end_marker_addr": "0000000000403130",
+        "start_marker_addr": "0000000000403120"
+    },
+    "1_thread_with_hook_nugget_exe_ep_A_56": {
+        "end_marker_addr": "0000000000404c40",
+        "start_marker_addr": "0000000000404c30"
+    },
+    "1_thread_with_hook_nugget_exe_ft_A_243": {
+        "end_marker_addr": "000000000040a420",
+        "start_marker_addr": "000000000040a410"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_333": {
+        "end_marker_addr": "0000000000419260",
+        "start_marker_addr": "0000000000419250"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_433": {
+        "end_marker_addr": "00000000004191b0",
+        "start_marker_addr": "00000000004191a0"
+    },
+    "1_thread_with_hook_nugget_exe_is_A_172": {
+        "end_marker_addr": "0000000000403110",
+        "start_marker_addr": "0000000000403100"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_292": {
+        "end_marker_addr": "0000000000419810",
+        "start_marker_addr": "0000000000419800"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_344": {
+        "end_marker_addr": "00000000004195f0",
+        "start_marker_addr": "00000000004195e0"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_433": {
+        "end_marker_addr": "0000000000419800",
+        "start_marker_addr": "00000000004197f0"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_430": {
+        "end_marker_addr": "00000000004197d0",
+        "start_marker_addr": "00000000004197c0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_549": {
+        "end_marker_addr": "0000000000419180",
+        "start_marker_addr": "0000000000419170"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_543": {
+        "end_marker_addr": "00000000004191a0",
+        "start_marker_addr": "0000000000419190"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_311": {
+        "end_marker_addr": "0000000000419280",
+        "start_marker_addr": "0000000000419270"
+    },
+    "1_thread_with_hook_nugget_exe_ft_A_246": {
+        "end_marker_addr": "000000000040a430",
+        "start_marker_addr": "000000000040a420"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_405": {
+        "end_marker_addr": "000000000041a7b0",
+        "start_marker_addr": "000000000041a7a0"
+    },
+    "1_thread_with_hook_nugget_exe_lu_A_559": {
+        "end_marker_addr": "000000000041a7a0",
+        "start_marker_addr": "000000000041a790"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_411": {
+        "end_marker_addr": "00000000004197e0",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_439": {
+        "end_marker_addr": "0000000000419200",
+        "start_marker_addr": "00000000004191f0"
+    },
+    "1_thread_with_hook_nugget_exe_ep_A_23": {
+        "end_marker_addr": "0000000000404c60",
+        "start_marker_addr": "0000000000404c50"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_360": {
+        "end_marker_addr": "0000000000419850",
+        "start_marker_addr": "0000000000419840"
+    },
+    "1_thread_with_hook_nugget_exe_bt_A_366": {
+        "end_marker_addr": "00000000004197c0",
+        "start_marker_addr": "00000000004197b0"
+    },
+    "1_thread_with_hook_nugget_exe_mg_A_388": {
+        "end_marker_addr": "000000000040c850",
+        "start_marker_addr": "000000000040c840"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_503": {
+        "end_marker_addr": "0000000000419220",
+        "start_marker_addr": "0000000000419210"
+    },
+    "1_thread_with_hook_nugget_exe_sp_A_330": {
+        "end_marker_addr": "0000000000419250",
+        "start_marker_addr": "0000000000419240"
+    },
+    "1_thread_with_hook_nugget_exe_mg_A_237": {
+        "end_marker_addr": "000000000040c840",
+        "start_marker_addr": "000000000040c830"
+    },
+    "1_thread_with_hook_nugget_exe_mg_A_357": {
+        "end_marker_addr": "000000000040c840",
+        "start_marker_addr": "000000000040c830"
+    },
+    "1_thread_without_hook_nugget_exe_ft_A_300": {
+        "end_marker_addr": "0000000000408c14",
+        "start_marker_addr": "000000000040a3a0"
+    },
+    "1_thread_without_hook_nugget_exe_is_A_146": {
+        "end_marker_addr": "0000000000402402",
+        "start_marker_addr": "00000000004030f0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_497": {
+        "end_marker_addr": "00000000004187e7",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_503": {
+        "end_marker_addr": "0000000000418648",
+        "start_marker_addr": "0000000000419220"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_548": {
+        "end_marker_addr": "0000000000416bc4",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_430": {
+        "end_marker_addr": "0000000000417970",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_310": {
+        "end_marker_addr": "000000000040e60f",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_ft_A_246": {
+        "end_marker_addr": "0000000000407c27",
+        "start_marker_addr": "000000000040a3a0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_295": {
+        "end_marker_addr": "000000000040c03e",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_314": {
+        "end_marker_addr": "000000000040df63",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_451": {
+        "end_marker_addr": "0000000000418c2a",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_406": {
+        "end_marker_addr": "0000000000418c76",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_389": {
+        "end_marker_addr": "000000000040fd01",
+        "start_marker_addr": "0000000000419220"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_370": {
+        "end_marker_addr": "0000000000410f11",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_527": {
+        "end_marker_addr": "0000000000417e27",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_390": {
+        "end_marker_addr": "000000000040f7da",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_is_A_120": {
+        "end_marker_addr": "00000000004021b6",
+        "start_marker_addr": "00000000004030f0"
+    },
+    "1_thread_without_hook_nugget_exe_mg_A_142": {
+        "end_marker_addr": "0000000000405ebb",
+        "start_marker_addr": "000000000040c7d0"
+    },
+    "1_thread_without_hook_nugget_exe_ft_A_243": {
+        "end_marker_addr": "0000000000407ba5",
+        "start_marker_addr": "000000000040a3a0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_482": {
+        "end_marker_addr": "0000000000418b5b",
+        "start_marker_addr": "0000000000419210"
+    },
+    "1_thread_without_hook_nugget_exe_ft_A_270": {
+        "end_marker_addr": "00000000004086b3",
+        "start_marker_addr": "000000000040a3d0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_582": {
+        "end_marker_addr": "0000000000414bf3",
+        "start_marker_addr": "0000000000419210"
+    },
+    "1_thread_without_hook_nugget_exe_ep_A_23": {
+        "end_marker_addr": "0000000000403894",
+        "start_marker_addr": "0000000000404c30"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_388": {
+        "end_marker_addr": "000000000041050b",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_327": {
+        "end_marker_addr": "000000000040d6d7",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_33": {
+        "end_marker_addr": "000000000040373f",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_538": {
+        "end_marker_addr": "0000000000415e3d",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_mg_A_244": {
+        "end_marker_addr": "0000000000408512",
+        "start_marker_addr": "000000000040c7d0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_513": {
+        "end_marker_addr": "0000000000418309",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_ft_A_267": {
+        "end_marker_addr": "0000000000408078",
+        "start_marker_addr": "000000000040a3a0"
+    },
+    "1_thread_without_hook_nugget_exe_ft_A_308": {
+        "end_marker_addr": "0000000000408be3",
+        "start_marker_addr": "000000000040a3a0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_319": {
+        "end_marker_addr": "000000000040fa65",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_572": {
+        "end_marker_addr": "000000000041597b",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_553": {
+        "end_marker_addr": "0000000000415bc9",
+        "start_marker_addr": "000000000041a760"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_567": {
+        "end_marker_addr": "0000000000415ec3",
+        "start_marker_addr": "00000000004191c0"
+    },
+    "1_thread_without_hook_nugget_exe_is_A_122": {
+        "end_marker_addr": "00000000004021c1",
+        "start_marker_addr": "00000000004030f0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_393": {
+        "end_marker_addr": "000000000040f2af",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_516": {
+        "end_marker_addr": "000000000041828b",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_ft_A_324": {
+        "end_marker_addr": "0000000000409384",
+        "start_marker_addr": "000000000040a3b0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_363": {
+        "end_marker_addr": "00000000004147f4",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_350": {
+        "end_marker_addr": "000000000040e550",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_321": {
+        "end_marker_addr": "000000000041052c",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_493": {
+        "end_marker_addr": "00000000004185dd",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_mg_A_347": {
+        "end_marker_addr": "000000000040a362",
+        "start_marker_addr": "000000000040c7d0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_416": {
+        "end_marker_addr": "00000000004139df",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_cg_A_96": {
+        "end_marker_addr": "00000000004050d8",
+        "start_marker_addr": "0000000000407ed0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_474": {
+        "end_marker_addr": "0000000000419ca4",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_448": {
+        "end_marker_addr": "000000000041749d",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_347": {
+        "end_marker_addr": "000000000040e49d",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_is_A_197": {
+        "end_marker_addr": "00000000004027f5",
+        "start_marker_addr": "00000000004030f0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_559": {
+        "end_marker_addr": "00000000004154f0",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_432": {
+        "end_marker_addr": "0000000000417ab5",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_417": {
+        "end_marker_addr": "00000000004187af",
+        "start_marker_addr": "00000000004197c0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_333": {
+        "end_marker_addr": "000000000040e369",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_290": {
+        "end_marker_addr": "000000000040bf62",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_334": {
+        "end_marker_addr": "000000000040dad7",
+        "start_marker_addr": "00000000004191f0"
+    },
+    "1_thread_without_hook_nugget_exe_ep_A_57": {
+        "end_marker_addr": "0000000000403b30",
+        "start_marker_addr": "0000000000404c30"
+    },
+    "1_thread_without_hook_nugget_exe_cg_A_115": {
+        "end_marker_addr": "0000000000404bea",
+        "start_marker_addr": "0000000000407ed0"
+    },
+    "1_thread_without_hook_nugget_exe_mg_A_318": {
+        "end_marker_addr": "0000000000409f9a",
+        "start_marker_addr": "000000000040c7d0"
+    },
+    "1_thread_without_hook_nugget_exe_is_A_145": {
+        "end_marker_addr": "0000000000402402",
+        "start_marker_addr": "00000000004030f0"
+    },
+    "1_thread_without_hook_nugget_exe_mg_A_372": {
+        "end_marker_addr": "000000000040b093",
+        "start_marker_addr": "000000000040c7d0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_381": {
+        "end_marker_addr": "00000000004100dd",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_ft_A_291": {
+        "end_marker_addr": "0000000000408f77",
+        "start_marker_addr": "000000000040a3a0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_427": {
+        "end_marker_addr": "0000000000411db1",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_439": {
+        "end_marker_addr": "000000000041364d",
+        "start_marker_addr": "00000000004191a0"
+    },
+    "1_thread_without_hook_nugget_exe_ft_A_339": {
+        "end_marker_addr": "000000000040956a",
+        "start_marker_addr": "000000000040a3a0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_473": {
+        "end_marker_addr": "00000000004161f8",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_543": {
+        "end_marker_addr": "00000000004172f1",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_297": {
+        "end_marker_addr": "000000000040c380",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_477": {
+        "end_marker_addr": "0000000000419d71",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_546": {
+        "end_marker_addr": "0000000000417154",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_381": {
+        "end_marker_addr": "00000000004192db",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_ft_A_228": {
+        "end_marker_addr": "0000000000407627",
+        "start_marker_addr": "000000000040a3a0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_405": {
+        "end_marker_addr": "000000000041160b",
+        "start_marker_addr": "0000000000419210"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_417": {
+        "end_marker_addr": "00000000004148da",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_472": {
+        "end_marker_addr": "00000000004163a4",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_is_A_173": {
+        "end_marker_addr": "00000000004025e3",
+        "start_marker_addr": "00000000004030f0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_38": {
+        "end_marker_addr": "0000000000403ebc",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_322": {
+        "end_marker_addr": "0000000000410ca5",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_571": {
+        "end_marker_addr": "0000000000415aa7",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_474": {
+        "end_marker_addr": "00000000004160cc",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_528": {
+        "end_marker_addr": "0000000000417872",
+        "start_marker_addr": "000000000041a750"
+    },
+    "1_thread_without_hook_nugget_exe_mg_A_356": {
+        "end_marker_addr": "000000000040a99f",
+        "start_marker_addr": "000000000040c7c0"
+    },
+    "1_thread_without_hook_nugget_exe_mg_A_27": {
+        "end_marker_addr": "0000000000403993",
+        "start_marker_addr": "000000000040c7d0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_396": {
+        "end_marker_addr": "0000000000418f77",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_405": {
+        "end_marker_addr": "00000000004114d3",
+        "start_marker_addr": "000000000041a6f0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_529": {
+        "end_marker_addr": "0000000000417399",
+        "start_marker_addr": "000000000041a730"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_311": {
+        "end_marker_addr": "000000000040e6af",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_407": {
+        "end_marker_addr": "00000000004115d6",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_556": {
+        "end_marker_addr": "0000000000416bc3",
+        "start_marker_addr": "00000000004191a0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_542": {
+        "end_marker_addr": "00000000004172ff",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_566": {
+        "end_marker_addr": "0000000000415f0b",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_562": {
+        "end_marker_addr": "000000000041559b",
+        "start_marker_addr": "000000000041a720"
+    },
+    "1_thread_without_hook_nugget_exe_is_A_172": {
+        "end_marker_addr": "00000000004025da",
+        "start_marker_addr": "00000000004030f0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_488": {
+        "end_marker_addr": "0000000000415170",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_464": {
+        "end_marker_addr": "00000000004143e0",
+        "start_marker_addr": "00000000004191c0"
+    },
+    "1_thread_without_hook_nugget_exe_cg_A_31": {
+        "end_marker_addr": "000000000040346f",
+        "start_marker_addr": "0000000000407ed0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_300": {
+        "end_marker_addr": "000000000040c42d",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_498": {
+        "end_marker_addr": "00000000004187da",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_cg_A_116": {
+        "end_marker_addr": "0000000000404a32",
+        "start_marker_addr": "0000000000407ed0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_568": {
+        "end_marker_addr": "0000000000415de1",
+        "start_marker_addr": "0000000000419230"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_401": {
+        "end_marker_addr": "0000000000411284",
+        "start_marker_addr": "000000000041a690"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_371": {
+        "end_marker_addr": "0000000000410f1f",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_180": {
+        "end_marker_addr": "0000000000409f2f",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_470": {
+        "end_marker_addr": "0000000000416637",
+        "start_marker_addr": "00000000004198c0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_464": {
+        "end_marker_addr": "0000000000419355",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_547": {
+        "end_marker_addr": "0000000000416e22",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_483": {
+        "end_marker_addr": "0000000000418c9e",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_476": {
+        "end_marker_addr": "0000000000419f0d",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_is_A_119": {
+        "end_marker_addr": "000000000040217b",
+        "start_marker_addr": "00000000004030f0"
+    },
+    "1_thread_without_hook_nugget_exe_mg_A_357": {
+        "end_marker_addr": "000000000040a817",
+        "start_marker_addr": "000000000040c7d0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_411": {
+        "end_marker_addr": "000000000041458a",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_552": {
+        "end_marker_addr": "000000000041609e",
+        "start_marker_addr": "000000000041a720"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_586": {
+        "end_marker_addr": "00000000004149b0",
+        "start_marker_addr": "00000000004191a0"
+    },
+    "1_thread_without_hook_nugget_exe_mg_A_237": {
+        "end_marker_addr": "00000000004085a4",
+        "start_marker_addr": "000000000040c7a0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_339": {
+        "end_marker_addr": "000000000040c8cf",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_440": {
+        "end_marker_addr": "0000000000412d3c",
+        "start_marker_addr": "00000000004191c0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_311": {
+        "end_marker_addr": "000000000040e454",
+        "start_marker_addr": "0000000000419790"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_570": {
+        "end_marker_addr": "0000000000415c41",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_470": {
+        "end_marker_addr": "00000000004198e9",
+        "start_marker_addr": "000000000041a700"
+    },
+    "1_thread_without_hook_nugget_exe_ft_A_266": {
+        "end_marker_addr": "0000000000408000",
+        "start_marker_addr": "000000000040a3a0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_481": {
+        "end_marker_addr": "00000000004194cc",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_555": {
+        "end_marker_addr": "0000000000416ea6",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_433": {
+        "end_marker_addr": "0000000000412955",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_545": {
+        "end_marker_addr": "0000000000416a68",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_mg_A_223": {
+        "end_marker_addr": "000000000040815d",
+        "start_marker_addr": "000000000040c7d0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_464": {
+        "end_marker_addr": "000000000041625e",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_508": {
+        "end_marker_addr": "00000000004184d6",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_482": {
+        "end_marker_addr": "0000000000418d66",
+        "start_marker_addr": "000000000041a6b0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_36": {
+        "end_marker_addr": "0000000000403912",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_mg_A_388": {
+        "end_marker_addr": "000000000040b2db",
+        "start_marker_addr": "000000000040c7d0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_416": {
+        "end_marker_addr": "0000000000414eac",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_549": {
+        "end_marker_addr": "000000000041705d",
+        "start_marker_addr": "0000000000419250"
+    },
+    "1_thread_without_hook_nugget_exe_ft_A_331": {
+        "end_marker_addr": "0000000000409254",
+        "start_marker_addr": "000000000040a3a0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_363": {
+        "end_marker_addr": "00000000004110fb",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_351": {
+        "end_marker_addr": "000000000040ee18",
+        "start_marker_addr": "0000000000419210"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_411": {
+        "end_marker_addr": "0000000000418aa9",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_cg_A_36": {
+        "end_marker_addr": "00000000004034ee",
+        "start_marker_addr": "0000000000407ed0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_292": {
+        "end_marker_addr": "000000000040bf90",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_318": {
+        "end_marker_addr": "000000000040e4cf",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_506": {
+        "end_marker_addr": "000000000041844d",
+        "start_marker_addr": "000000000041a780"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_457": {
+        "end_marker_addr": "0000000000413ed7",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_518": {
+        "end_marker_addr": "0000000000418192",
+        "start_marker_addr": "00000000004191e0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_349": {
+        "end_marker_addr": "000000000040e56e",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_330": {
+        "end_marker_addr": "000000000040e04c",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_561": {
+        "end_marker_addr": "00000000004156ce",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_475": {
+        "end_marker_addr": "0000000000415f3e",
+        "start_marker_addr": "00000000004197a0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_343": {
+        "end_marker_addr": "000000000041265c",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_406": {
+        "end_marker_addr": "0000000000411c32",
+        "start_marker_addr": "000000000041a730"
+    },
+    "1_thread_without_hook_nugget_exe_is_A_144": {
+        "end_marker_addr": "00000000004023ac",
+        "start_marker_addr": "00000000004030f0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_569": {
+        "end_marker_addr": "0000000000415c4f",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_318": {
+        "end_marker_addr": "000000000040e71b",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_ep_A_66": {
+        "end_marker_addr": "0000000000403e5e",
+        "start_marker_addr": "0000000000404c30"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_387": {
+        "end_marker_addr": "0000000000410da6",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_cg_A_119": {
+        "end_marker_addr": "0000000000404a99",
+        "start_marker_addr": "0000000000407ed0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_416": {
+        "end_marker_addr": "00000000004188e2",
+        "start_marker_addr": "0000000000419740"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_423": {
+        "end_marker_addr": "000000000041380f",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_mg_A_310": {
+        "end_marker_addr": "0000000000409ca8",
+        "start_marker_addr": "000000000040c7d0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_469": {
+        "end_marker_addr": "000000000041667d",
+        "start_marker_addr": "00000000004197c0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_565": {
+        "end_marker_addr": "0000000000415b01",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_is_A_89": {
+        "end_marker_addr": "0000000000401ed3",
+        "start_marker_addr": "00000000004030f0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_479": {
+        "end_marker_addr": "0000000000419c30",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_ft_A_269": {
+        "end_marker_addr": "0000000000408347",
+        "start_marker_addr": "000000000040a3a0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_344": {
+        "end_marker_addr": "0000000000411bde",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_438": {
+        "end_marker_addr": "0000000000417922",
+        "start_marker_addr": "00000000004197e0"
+    },
+    "1_thread_without_hook_nugget_exe_mg_A_364": {
+        "end_marker_addr": "000000000040ad2a",
+        "start_marker_addr": "000000000040c7d0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_443": {
+        "end_marker_addr": "00000000004177c2",
+        "start_marker_addr": "00000000004197f0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_519": {
+        "end_marker_addr": "000000000041804b",
+        "start_marker_addr": "0000000000419220"
+    },
+    "1_thread_without_hook_nugget_exe_mg_A_376": {
+        "end_marker_addr": "000000000040aee2",
+        "start_marker_addr": "000000000040c7d0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_454": {
+        "end_marker_addr": "00000000004173a8",
+        "start_marker_addr": "0000000000419800"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_366": {
+        "end_marker_addr": "0000000000413b8b",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_390": {
+        "end_marker_addr": "000000000040daca",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_ft_A_150": {
+        "end_marker_addr": "00000000004056cc",
+        "start_marker_addr": "000000000040a3a0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_496": {
+        "end_marker_addr": "000000000041871f",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_ft_A_265": {
+        "end_marker_addr": "0000000000407f93",
+        "start_marker_addr": "000000000040a3a0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_573": {
+        "end_marker_addr": "000000000041584c",
+        "start_marker_addr": "00000000004191e0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_441": {
+        "end_marker_addr": "0000000000412546",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_409": {
+        "end_marker_addr": "000000000041198b",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_294": {
+        "end_marker_addr": "000000000040c04d",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_478": {
+        "end_marker_addr": "0000000000419d63",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_339": {
+        "end_marker_addr": "0000000000412da2",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_484": {
+        "end_marker_addr": "0000000000415375",
+        "start_marker_addr": "0000000000419820"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_348": {
+        "end_marker_addr": "000000000040e447",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_341": {
+        "end_marker_addr": "0000000000412863",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_501": {
+        "end_marker_addr": "000000000041856a",
+        "start_marker_addr": "000000000041a720"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_457": {
+        "end_marker_addr": "000000000041903a",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_360": {
+        "end_marker_addr": "0000000000414cb9",
+        "start_marker_addr": "00000000004197e0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_492": {
+        "end_marker_addr": "00000000004184fa",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_581": {
+        "end_marker_addr": "0000000000414bed",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_483": {
+        "end_marker_addr": "000000000041533d",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_496": {
+        "end_marker_addr": "00000000004174ea",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_336": {
+        "end_marker_addr": "000000000040cdff",
+        "start_marker_addr": "00000000004191e0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_41": {
+        "end_marker_addr": "0000000000404051",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_316": {
+        "end_marker_addr": "000000000040dd5f",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_is_A_121": {
+        "end_marker_addr": "00000000004021b6",
+        "start_marker_addr": "00000000004030f0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_335": {
+        "end_marker_addr": "000000000040d2d9",
+        "start_marker_addr": "00000000004191f0"
+    },
+    "1_thread_without_hook_nugget_exe_ft_A_29": {
+        "end_marker_addr": "0000000000403210",
+        "start_marker_addr": "000000000040a3a0"
+    },
+    "1_thread_without_hook_nugget_exe_ep_A_56": {
+        "end_marker_addr": "0000000000403b6b",
+        "start_marker_addr": "0000000000404c30"
+    },
+    "1_thread_without_hook_nugget_exe_cg_A_114": {
+        "end_marker_addr": "0000000000404e0c",
+        "start_marker_addr": "0000000000407ee0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_384": {
+        "end_marker_addr": "0000000000410a78",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_511": {
+        "end_marker_addr": "0000000000418148",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_521": {
+        "end_marker_addr": "0000000000417627",
+        "start_marker_addr": "000000000041a700"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_453": {
+        "end_marker_addr": "00000000004175f9",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_ft_A_116": {
+        "end_marker_addr": "00000000004050fb",
+        "start_marker_addr": "000000000040a3a0"
+    },
+    "1_thread_without_hook_nugget_exe_is_A_171": {
+        "end_marker_addr": "00000000004025c1",
+        "start_marker_addr": "00000000004030f0"
+    },
+    "1_thread_without_hook_nugget_exe_ft_A_275": {
+        "end_marker_addr": "00000000004083b5",
+        "start_marker_addr": "000000000040a3a0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_338": {
+        "end_marker_addr": "0000000000412d97",
+        "start_marker_addr": "00000000004197c0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_540": {
+        "end_marker_addr": "00000000004171b0",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_ep_A_58": {
+        "end_marker_addr": "0000000000403bf1",
+        "start_marker_addr": "0000000000404c30"
+    },
+    "1_thread_without_hook_nugget_exe_ft_A_268": {
+        "end_marker_addr": "00000000004080cc",
+        "start_marker_addr": "000000000040a3a0"
+    },
+    "1_thread_without_hook_nugget_exe_ep_A_50": {
+        "end_marker_addr": "0000000000403a36",
+        "start_marker_addr": "0000000000404c30"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_550": {
+        "end_marker_addr": "00000000004169f9",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_549": {
+        "end_marker_addr": "0000000000416bb6",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_395": {
+        "end_marker_addr": "0000000000418f84",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_415": {
+        "end_marker_addr": "00000000004147a4",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_ft_A_302": {
+        "end_marker_addr": "0000000000408c57",
+        "start_marker_addr": "000000000040a3a0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_579": {
+        "end_marker_addr": "0000000000414b30",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_365": {
+        "end_marker_addr": "00000000004145fb",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_299": {
+        "end_marker_addr": "000000000040c440",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_480": {
+        "end_marker_addr": "0000000000419ac6",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_442": {
+        "end_marker_addr": "0000000000412044",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_445": {
+        "end_marker_addr": "0000000000411ac3",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_317": {
+        "end_marker_addr": "000000000040d29e",
+        "start_marker_addr": "00000000004197b0"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_541": {
+        "end_marker_addr": "000000000041608a",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_551": {
+        "end_marker_addr": "00000000004167b8",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_lu_A_162": {
+        "end_marker_addr": "0000000000409b25",
+        "start_marker_addr": "000000000041a710"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_436": {
+        "end_marker_addr": "000000000041334e",
+        "start_marker_addr": "0000000000419200"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_320": {
+        "end_marker_addr": "000000000040fc17",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_bt_A_433": {
+        "end_marker_addr": "0000000000417aa8",
+        "start_marker_addr": "00000000004197d0"
+    },
+    "1_thread_without_hook_nugget_exe_sp_A_552": {
+        "end_marker_addr": "0000000000416d52",
+        "start_marker_addr": "0000000000419200"
+    }
+}

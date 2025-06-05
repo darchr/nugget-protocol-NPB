@@ -1,0 +1,1434 @@
+CMake Error at nugget_util/hook_helper/c_hooks/nugget/CMakeLists.txt:86 (if):
+  Flow control statements are not properly nested.
+
+
+CMake Error at nugget_util/hook_helper/c_hooks/nugget/CMakeLists.txt:86 (if):
+  Flow control statements are not properly nested.
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:61 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:482 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:198 (llvmir_extract_library_linking)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:511 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:201 (llvmir_extract_library_compile_option)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library m is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtilInternal.cmake:434 (message):
+  Library -fopenmp is not a target.
+Call Stack (most recent call first):
+  nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:203 (llvmir_extract_library_include)
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+
+CMake Warning at nugget_util/cmake/my-llvm-ir-cmake-lib/LLVMIRUtil.cmake:472 (message):
+  Flag -cpp is not supported by the LLVM C compiler
+Call Stack (most recent call first):
+  nugget_util/cmake/Nugget.cmake:70 (llvm_generate_ir_target)
+  CMakeLists.txt:86 (nugget_bbv_profiling_bc)
+
+

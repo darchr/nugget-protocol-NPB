@@ -1,0 +1,1796 @@
+-- TARGET_CLASSES not set, using default A C D
+-- Built blk_par.h with BLKFAC=0
+-- Building BT classes: A;C;D
+-- Building CG classes: A;C;D
+-- Building EP classes: A;C;D
+-- Built blk_par.h with BLKFAC=32
+-- Building FT classes: A;C;D
+-- Building IS classes: A;C
+-- Building LU classes: A;C;D
+-- Building MG classes: A;C;D
+-- Built blk_par.h with BLKFAC=0
+-- Building SP classes: A;C;D
+-- NUGGET_PROCESS_TYPE: npb-ir-bb-analysis-bc
+-- NUGGET_CONFIG_FILE: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/../experiments/1-thread-ir-bbv-analysis/cmake/ir-bb-analysis-bc.make
+-- CMAKE_MODULE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../cmake;/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/cmake/../../nugget_util/cmake;/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/cmake/../../nugget_util/hook_helper/c_hooks
+-- PAPI_PATH=/other_tools/papi/x86_64
+-- M5_PATH=/other_tools/gem5/x86
+-- M5_INCLUDE_PATH=/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/cmake/../../nugget_util/hook_helper/other_tools/gem5/include
+-- SNIPER_PATH=/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/cmake/../../nugget_util/hook_helper/other_tools/sniper
+-- Before linking m5-naive:
+-- Include dirs: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/naive
+-- Link dirs: LINK_DIRS-NOTFOUND
+-- Link libs: LINK_LIBS-NOTFOUND
+-- After linking m5-naive:
+-- Include dirs: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/naive;/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/cmake/../../nugget_util/hook_helper/other_tools/gem5/include
+-- Link dirs: /other_tools/gem5/x86
+-- Link libs: /other_tools/gem5/x86/libm5.a
+-- Before linking openmp-m5-nugget:
+-- Include dirs: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/nugget
+-- Link dirs: LINK_DIRS-NOTFOUND
+-- Link libs: LINK_LIBS-NOTFOUND
+-- After linking openmp-m5-nugget:
+-- Include dirs: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/nugget;/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/cmake/../../nugget_util/hook_helper/other_tools/gem5/include
+-- Link dirs: /other_tools/gem5/x86
+-- Link libs: /other_tools/gem5/x86/libm5.a
+-- Before linking single-threaded-m5-nugget:
+-- Include dirs: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/nugget
+-- Link dirs: LINK_DIRS-NOTFOUND
+-- Link libs: LINK_LIBS-NOTFOUND
+-- After linking single-threaded-m5-nugget:
+-- Include dirs: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/nugget;/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/cmake/../../nugget_util/hook_helper/other_tools/gem5/include
+-- Link dirs: /other_tools/gem5/x86
+-- Link libs: /other_tools/gem5/x86/libm5.a
+-- LLVM IR Utils setup
+-- TARGET_BENCHMARKS: bt_A;bt_C;bt_D;cg_A;cg_C;cg_D;ep_A;ep_C;ep_D;ft_A;ft_C;ft_D;is_A;is_C;lu_A;lu_C;lu_D;mg_A;mg_C;mg_D;sp_A;sp_C;sp_D
+-- Building npb-ir-bb-analysis-bc
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_bt_A
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/bt_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/bt.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/add.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/adi.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/error.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/exact_rhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/exact_solution.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/rhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/set_constants.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/solve_subs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/verify.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/work_lhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/x_solve.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/y_solve.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/z_solve.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common/wtime.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT/A;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_bt_C
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/bt_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/bt.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/add.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/adi.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/error.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/exact_rhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/exact_solution.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/rhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/set_constants.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/solve_subs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/verify.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/work_lhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/x_solve.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/y_solve.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/z_solve.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common/wtime.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT/C;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_bt_D
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/bt_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/bt.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/add.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/adi.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/error.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/exact_rhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/exact_solution.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/rhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/set_constants.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/solve_subs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/verify.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/work_lhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/x_solve.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/y_solve.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/z_solve.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common/wtime.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT/D;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_cg_A
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/cg_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/cg.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common/randi8.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common/wtime.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG/A;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_cg_C
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/cg_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/cg.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common/randi8.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common/wtime.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG/C;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_cg_D
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/cg_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/cg.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common/randi8.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common/wtime.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG/D;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_ep_A
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/ep_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/ep.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/verify.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common/randi8.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common/wtime.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP/A;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_ep_C
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/ep_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/ep.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/verify.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common/randi8.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common/wtime.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP/C;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_ep_D
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/ep_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/ep.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/verify.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common/randi8.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common/wtime.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP/D;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_ft_A
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/ft_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/ft.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common/randi8.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common/wtime.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT/A;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_ft_C
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/ft_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/ft.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common/randi8.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common/wtime.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT/C;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_ft_D
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/ft_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/ft.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common/randi8.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common/wtime.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT/D;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/IS/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/IS;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/IS/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_is_A
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/IS/is.c
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/IS/../common/c_print_results.c
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/IS/../common/c_timers.c
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/IS/../common/wtime.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/IS/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/IS;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/IS/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/IS/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/IS;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/IS/A;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/IS/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/IS;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/IS/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_is_C
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/IS/is.c
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/IS/../common/c_print_results.c
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/IS/../common/c_timers.c
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/IS/../common/wtime.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/IS/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/IS;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/IS/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/IS/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/IS;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/IS/C;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_lu_A
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/lu_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/lu.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/read_input.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/domain.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/setcoeff.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/setbv.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/exact.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/setiv.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/erhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/ssor.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/rhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/l2norm.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/jacld.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/blts.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/jacu.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/buts.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/error.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/pintgr.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/verify.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common/wtime.c
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/syncs.f90
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU/A;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_lu_C
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/lu_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/lu.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/read_input.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/domain.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/setcoeff.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/setbv.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/exact.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/setiv.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/erhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/ssor.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/rhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/l2norm.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/jacld.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/blts.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/jacu.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/buts.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/error.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/pintgr.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/verify.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common/wtime.c
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/syncs.f90
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU/C;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_lu_D
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/lu_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/lu.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/read_input.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/domain.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/setcoeff.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/setbv.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/exact.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/setiv.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/erhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/ssor.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/rhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/l2norm.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/jacld.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/blts.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/jacu.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/buts.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/error.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/pintgr.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/verify.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common/wtime.c
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/syncs.f90
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU/D;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_mg_A
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/mg_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/mg.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common/randi8.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common/wtime.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG/A;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_mg_C
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/mg_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/mg.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common/randi8.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common/wtime.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG/C;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_mg_D
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/mg_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/mg.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common/randi8.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common/wtime.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG/D;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_sp_A
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/sp_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/sp.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/exact_solution.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/exact_rhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/set_constants.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/adi.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/rhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/work_lhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/x_solve.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/ninvr.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/y_solve.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/pinvr.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/z_solve.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/tzetar.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/add.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/txinvr.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/error.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/verify.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common/wtime.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP/A;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_sp_C
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/sp_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/sp.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/exact_solution.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/exact_rhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/set_constants.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/adi.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/rhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/work_lhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/x_solve.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/ninvr.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/y_solve.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/pinvr.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/z_solve.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/tzetar.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/add.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/txinvr.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/error.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/verify.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common/wtime.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP/C;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- EXTRA FLAGS: -lm;-fopenmp;-DUSE_NUGGET;-cpp
+-- OPT_CMD: -O2
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: 
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis/single-threaded-ir-bb-analysis-balance.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- ADD_CMDS: 
+-- ALl the manually added dependencies: generate_npbparams_sp_D
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/sp_data.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/sp.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/exact_solution.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/exact_rhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/set_constants.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/adi.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/rhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/work_lhs.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/x_solve.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/ninvr.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/y_solve.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/pinvr.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/z_solve.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/tzetar.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/add.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/txinvr.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/error.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/verify.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common/print_results.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common/timers.f90
+-- Generating IR for /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common/wtime.c
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP/D;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/analysis
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- Configuring done (39.3s)
+-- Generating done (0.2s)
+-- Build files have been written to: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild

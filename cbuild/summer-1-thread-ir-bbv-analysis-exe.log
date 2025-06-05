@@ -1,0 +1,626 @@
+-- TARGET_CLASSES not set, using default A C D
+-- Built blk_par.h with BLKFAC=0
+-- Building BT classes: A;C;D
+-- Building CG classes: A;C;D
+-- Building EP classes: A;C;D
+-- Built blk_par.h with BLKFAC=32
+-- Building FT classes: A;C;D
+-- Building IS classes: A;C
+-- Building LU classes: A;C;D
+-- Building MG classes: A;C;D
+-- Built blk_par.h with BLKFAC=0
+-- Building SP classes: A;C;D
+-- NUGGET_PROCESS_TYPE: npb-analysis-exe
+-- NUGGET_CONFIG_FILE: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/../experiments/1-thread-ir-bbv-analysis/cmake/ir-bb-analysis-exe.cmake
+-- LLC_CMD: -relocation-model=pic;-O2;-mtriple=x86_64-unknown-linux-gnu
+-- CMAKE_MODULE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../cmake;/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/cmake/../../nugget_util/cmake;/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/cmake/my-llvm-ir-cmake-lib;/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/cmake/../../nugget_util/cmake;/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/cmake/../../nugget_util/hook_helper/c_hooks
+-- PAPI_PATH=/other_tools/papi/x86_64
+-- M5_PATH=/other_tools/gem5/x86
+-- M5_INCLUDE_PATH=/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/cmake/../../nugget_util/hook_helper/other_tools/gem5/include
+-- SNIPER_PATH=/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/cmake/../../nugget_util/hook_helper/other_tools/sniper
+-- Before linking m5-naive:
+-- Include dirs: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/naive
+-- Link dirs: LINK_DIRS-NOTFOUND
+-- Link libs: LINK_LIBS-NOTFOUND
+-- After linking m5-naive:
+-- Include dirs: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/naive;/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/cmake/../../nugget_util/hook_helper/other_tools/gem5/include
+-- Link dirs: /other_tools/gem5/x86
+-- Link libs: /other_tools/gem5/x86/libm5.a
+-- Before linking openmp-m5-nugget:
+-- Include dirs: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/nugget
+-- Link dirs: LINK_DIRS-NOTFOUND
+-- Link libs: LINK_LIBS-NOTFOUND
+-- After linking openmp-m5-nugget:
+-- Include dirs: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/nugget;/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/cmake/../../nugget_util/hook_helper/other_tools/gem5/include
+-- Link dirs: /other_tools/gem5/x86
+-- Link libs: /other_tools/gem5/x86/libm5.a
+-- Before linking single-threaded-m5-nugget:
+-- Include dirs: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/nugget
+-- Link dirs: LINK_DIRS-NOTFOUND
+-- Link libs: LINK_LIBS-NOTFOUND
+-- After linking single-threaded-m5-nugget:
+-- Include dirs: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/nugget_util/hook_helper/c_hooks/nugget;/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/cmake/../../nugget_util/hook_helper/other_tools/gem5/include
+-- Link dirs: /other_tools/gem5/x86
+-- Link libs: /other_tools/gem5/x86/libm5.a
+-- LLVM IR Utils setup
+-- TARGET_BENCHMARKS: bt_A;bt_C;bt_D;cg_A;cg_C;cg_D;ep_A;ep_C;ep_D;ft_A;ft_C;ft_D;is_A;is_C;lu_A;lu_C;lu_D;mg_A;mg_C;mg_D;sp_A;sp_C;sp_D
+-- Building npb-analysis-exe
+-- TARGET_NAME 1_thread_ir_bb_analysis_exe
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_bt_A/1_thread_ir_bb_analysis_bc_bt_A.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_bt_C/1_thread_ir_bb_analysis_bc_bt_C.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_bt_D/1_thread_ir_bb_analysis_bc_bt_D.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/BT/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_cg_A/1_thread_ir_bb_analysis_bc_cg_A.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_cg_C/1_thread_ir_bb_analysis_bc_cg_C.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_cg_D/1_thread_ir_bb_analysis_bc_cg_D.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/CG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/CG/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_ep_A/1_thread_ir_bb_analysis_bc_ep_A.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_ep_C/1_thread_ir_bb_analysis_bc_ep_C.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_ep_D/1_thread_ir_bb_analysis_bc_ep_D.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/EP/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_ft_A/1_thread_ir_bb_analysis_bc_ft_A.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_ft_C/1_thread_ir_bb_analysis_bc_ft_C.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_ft_D/1_thread_ir_bb_analysis_bc_ft_D.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/FT/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/FT/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_is_A/1_thread_ir_bb_analysis_bc_is_A.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/IS/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/IS;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/IS/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/IS/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/IS;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/IS/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_is_C/1_thread_ir_bb_analysis_bc_is_C.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/IS/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/IS;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/IS/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/IS/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/IS;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/IS/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_lu_A/1_thread_ir_bb_analysis_bc_lu_A.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_lu_C/1_thread_ir_bb_analysis_bc_lu_C.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_lu_D/1_thread_ir_bb_analysis_bc_lu_D.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/LU/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/LU/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_mg_A/1_thread_ir_bb_analysis_bc_mg_A.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_mg_C/1_thread_ir_bb_analysis_bc_mg_C.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_mg_D/1_thread_ir_bb_analysis_bc_mg_D.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/MG/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/MG/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_sp_A/1_thread_ir_bb_analysis_bc_sp_A.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP/A
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_sp_C/1_thread_ir_bb_analysis_bc_sp_C.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP/C
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- If EXTRACT_HOOK: 
+-- BC_FILE_PATH: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/experiments/1-thread-ir-bbv-analysis/cmake/../../../cbuild/llvm-bc/1_thread_ir_bb_analysis_bc_sp_D/1_thread_ir_bb_analysis_bc_sp_D.bc
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- temp_library_target_list: 
+-- GLOBAL_INCLUDES: -I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/../common;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP;-I/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild/SP/D
+-- GLOBAL_DEFINITION: 
+-- GLOBAL_COMPILE_OPTIONS: 
+-- GLOBAL_COMPILE_FLAGS: 
+-- GLOBAL_C_FLAGS: 
+-- GLOBAL_CXX_FLAGS: 
+-- GLOBAL_Fortran_FLAGS: 
+-- GLOBAL_LIB_LINKING_LIB_PATHS: 
+-- GLOBAL_LIB_LINKING_LIBS: 
+-- GLOBAL_LIB_INCLUDES: 
+-- GLOBAL_LIB_OPTIONS: 
+-- Configuring done (0.1s)
+-- Generating done (0.1s)
+-- Build files have been written to: /home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/cbuild

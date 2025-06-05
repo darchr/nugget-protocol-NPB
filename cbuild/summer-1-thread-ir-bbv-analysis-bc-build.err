@@ -1,0 +1,780 @@
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:107:14: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+               call exact_solution(xi, eta, zeta, temp)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:58:23: previous reference to 'exact_solution'
+                        call exact_solution(Pxi, eta, zeta,  &
+                        ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:126:14: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+               call exact_solution(xi, eta, zeta, temp)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:58:23: previous reference to 'exact_solution'
+                        call exact_solution(Pxi, eta, zeta,  &
+                        ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:145:14: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+               call exact_solution(xi, eta, zeta, temp)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:58:23: previous reference to 'exact_solution'
+                        call exact_solution(Pxi, eta, zeta,  &
+                        ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:165:14: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+               call exact_solution(xi, eta, zeta, temp)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:58:23: previous reference to 'exact_solution'
+                        call exact_solution(Pxi, eta, zeta,  &
+                        ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:184:14: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+               call exact_solution(xi, eta, zeta, temp)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:58:23: previous reference to 'exact_solution'
+                        call exact_solution(Pxi, eta, zeta,  &
+                        ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:203:14: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+               call exact_solution(xi, eta, zeta, temp)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:58:23: previous reference to 'exact_solution'
+                        call exact_solution(Pxi, eta, zeta,  &
+                        ^
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:103:13: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+              call exact_solution(xi, eta, zeta, temp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:57:19: previous reference to 'exact_solution'
+                    call exact_solution(dble(ix-1), eta, zeta,   &
+                    ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:122:13: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+              call exact_solution(xi, eta, zeta, temp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:57:19: previous reference to 'exact_solution'
+                    call exact_solution(dble(ix-1), eta, zeta,   &
+                    ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:140:13: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+              call exact_solution(xi, eta, zeta, temp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:57:19: previous reference to 'exact_solution'
+                    call exact_solution(dble(ix-1), eta, zeta,   &
+                    ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:159:13: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+              call exact_solution(xi, eta, zeta, temp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:57:19: previous reference to 'exact_solution'
+                    call exact_solution(dble(ix-1), eta, zeta,   &
+                    ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:177:13: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+              call exact_solution(xi, eta, zeta, temp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:57:19: previous reference to 'exact_solution'
+                    call exact_solution(dble(ix-1), eta, zeta,   &
+                    ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:195:13: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+              call exact_solution(xi, eta, zeta, temp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:57:19: previous reference to 'exact_solution'
+                    call exact_solution(dble(ix-1), eta, zeta,   &
+                    ^
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:103:13: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+              call exact_solution(xi, eta, zeta, temp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:57:19: previous reference to 'exact_solution'
+                    call exact_solution(dble(ix-1), eta, zeta,   &
+                    ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:122:13: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+              call exact_solution(xi, eta, zeta, temp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:57:19: previous reference to 'exact_solution'
+                    call exact_solution(dble(ix-1), eta, zeta,   &
+                    ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:140:13: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+              call exact_solution(xi, eta, zeta, temp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:57:19: previous reference to 'exact_solution'
+                    call exact_solution(dble(ix-1), eta, zeta,   &
+                    ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:159:13: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+              call exact_solution(xi, eta, zeta, temp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:57:19: previous reference to 'exact_solution'
+                    call exact_solution(dble(ix-1), eta, zeta,   &
+                    ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:177:13: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+              call exact_solution(xi, eta, zeta, temp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:57:19: previous reference to 'exact_solution'
+                    call exact_solution(dble(ix-1), eta, zeta,   &
+                    ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:195:13: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+              call exact_solution(xi, eta, zeta, temp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:57:19: previous reference to 'exact_solution'
+                    call exact_solution(dble(ix-1), eta, zeta,   &
+                    ^
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:103:13: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+              call exact_solution(xi, eta, zeta, temp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:57:19: previous reference to 'exact_solution'
+                    call exact_solution(dble(ix-1), eta, zeta,   &
+                    ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:122:13: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+              call exact_solution(xi, eta, zeta, temp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:57:19: previous reference to 'exact_solution'
+                    call exact_solution(dble(ix-1), eta, zeta,   &
+                    ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:140:13: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+              call exact_solution(xi, eta, zeta, temp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:57:19: previous reference to 'exact_solution'
+                    call exact_solution(dble(ix-1), eta, zeta,   &
+                    ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:159:13: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+              call exact_solution(xi, eta, zeta, temp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:57:19: previous reference to 'exact_solution'
+                    call exact_solution(dble(ix-1), eta, zeta,   &
+                    ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:177:13: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+              call exact_solution(xi, eta, zeta, temp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:57:19: previous reference to 'exact_solution'
+                    call exact_solution(dble(ix-1), eta, zeta,   &
+                    ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:195:13: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+              call exact_solution(xi, eta, zeta, temp)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/BT/initialize.f90:57:19: previous reference to 'exact_solution'
+                    call exact_solution(dble(ix-1), eta, zeta,   &
+                    ^
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/ep.f90:127:7: warning: Reference to the procedure 'vranlc' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+        call vranlc(0, t1, a, x)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/ep.f90:106:7: previous reference to 'vranlc'
+        call vranlc(0, dum(1), dum(2), dum(3))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/ep.f90:179:10: warning: Reference to the procedure 'vranlc' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+           call vranlc(2 * nk, t1, a, x)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/ep.f90:106:7: previous reference to 'vranlc'
+        call vranlc(0, dum(1), dum(2), dum(3))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/ep.f90:127:7: warning: Reference to the procedure 'vranlc' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+        call vranlc(0, t1, a, x)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/ep.f90:106:7: previous reference to 'vranlc'
+        call vranlc(0, dum(1), dum(2), dum(3))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/ep.f90:179:10: warning: Reference to the procedure 'vranlc' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+           call vranlc(2 * nk, t1, a, x)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/ep.f90:106:7: previous reference to 'vranlc'
+        call vranlc(0, dum(1), dum(2), dum(3))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/ep.f90:127:7: warning: Reference to the procedure 'vranlc' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+        call vranlc(0, t1, a, x)
+        ^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/ep.f90:106:7: previous reference to 'vranlc'
+        call vranlc(0, dum(1), dum(2), dum(3))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/ep.f90:179:10: warning: Reference to the procedure 'vranlc' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+           call vranlc(2 * nk, t1, a, x)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/EP/ep.f90:106:7: previous reference to 'vranlc'
+        call vranlc(0, dum(1), dum(2), dum(3))
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:107:14: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+               call exact_solution(xi, eta, zeta, temp)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:58:23: previous reference to 'exact_solution'
+                        call exact_solution(Pxi, eta, zeta,  &
+                        ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:126:14: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+               call exact_solution(xi, eta, zeta, temp)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:58:23: previous reference to 'exact_solution'
+                        call exact_solution(Pxi, eta, zeta,  &
+                        ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:145:14: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+               call exact_solution(xi, eta, zeta, temp)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:58:23: previous reference to 'exact_solution'
+                        call exact_solution(Pxi, eta, zeta,  &
+                        ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:165:14: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+               call exact_solution(xi, eta, zeta, temp)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:58:23: previous reference to 'exact_solution'
+                        call exact_solution(Pxi, eta, zeta,  &
+                        ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:184:14: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+               call exact_solution(xi, eta, zeta, temp)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:58:23: previous reference to 'exact_solution'
+                        call exact_solution(Pxi, eta, zeta,  &
+                        ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:203:14: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+               call exact_solution(xi, eta, zeta, temp)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:58:23: previous reference to 'exact_solution'
+                        call exact_solution(Pxi, eta, zeta,  &
+                        ^
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:107:14: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+               call exact_solution(xi, eta, zeta, temp)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:58:23: previous reference to 'exact_solution'
+                        call exact_solution(Pxi, eta, zeta,  &
+                        ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:126:14: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+               call exact_solution(xi, eta, zeta, temp)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:58:23: previous reference to 'exact_solution'
+                        call exact_solution(Pxi, eta, zeta,  &
+                        ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:145:14: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+               call exact_solution(xi, eta, zeta, temp)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:58:23: previous reference to 'exact_solution'
+                        call exact_solution(Pxi, eta, zeta,  &
+                        ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:165:14: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+               call exact_solution(xi, eta, zeta, temp)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:58:23: previous reference to 'exact_solution'
+                        call exact_solution(Pxi, eta, zeta,  &
+                        ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:184:14: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+               call exact_solution(xi, eta, zeta, temp)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:58:23: previous reference to 'exact_solution'
+                        call exact_solution(Pxi, eta, zeta,  &
+                        ^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:203:14: warning: Reference to the procedure 'exact_solution' has an implicit interface that is distinct from another reference: incompatible dummy argument #4: incompatible dummy data object shapes
+               call exact_solution(xi, eta, zeta, temp)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+/home/ztpc/experiments/nugget-eval/dynamoRIO/nugget-protocol-NPB/SP/initialize.f90:58:23: previous reference to 'exact_solution'
+                        call exact_solution(Pxi, eta, zeta,  &
+                        ^
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+flang-new: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+clang: warning: -lm: 'linker' input unused [-Wunused-command-line-argument]
+Threshold: 100000000
+Skipping function: write_down_data
+Skipping function: reset_array
+Skipping function: increase_array
+Skipping function: init_array
+Skipping function: process_data
+Skipping function: bb_hook
+Skipping function: roi_begin_
+Skipping function: roi_end_
+Skipping function: delete_array
