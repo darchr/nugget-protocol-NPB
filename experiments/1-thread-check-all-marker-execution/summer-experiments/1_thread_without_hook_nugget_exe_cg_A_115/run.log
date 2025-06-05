@@ -1,0 +1,61 @@
+Configured marker[0] = 0x0000000000404bea
+Marker Tracker initialized (tracking 1 marker(s))
+Inserted clean call for marker[0] at PC 0x0000000000404bea
+Inserted clean call for marker[0] at PC 0x0000000000404bea
+Inserted clean call for marker[0] at PC 0x0000000000404bea
+Received syscall 888 — tracking enabled
+Inserted clean call for marker[0] at PC 0x0000000000404bea
+Received syscall 889 — tracking disabled
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - CG Benchmark
+
+ Size:       14000
+ Iterations:                     15
+ Number of available threads:     1
+
+ Initialization time =           0.563 seconds
+
+   iteration           ||r||                 zeta
+        1       0.26065081214763E-12    19.9997581277040
+        5       0.25110613524700E-14    17.1302338856353
+       10       0.24771507610856E-14    17.1302350540284
+       15       0.24296673223448E-14    17.1302350540299
+ Benchmark completed 
+ VERIFICATION SUCCESSFUL 
+ Zeta is     0.1713023505403E+02
+ Error is    0.5122640033228E-13
+
+
+ CG Benchmark Completed.
+ Class           =                        A
+ Size            =                    14000
+ Iterations      =                       15
+ Time in seconds =                     4.20
+ Total threads   =                        1
+ Avail threads   =                        1
+ Mop/s total     =                   356.06
+ Mop/s/thread    =                   356.06
+ Operation type  =           floating point
+ Verification    =               SUCCESSFUL
+ Version         =                    3.4.3
+ Compile date    =              03 Jun 2025
+
+ Compile options:
+    FC           = gfortran
+    FLINK        = $(FC)
+    F_LIB        = (none)
+    F_INC        = (none)
+    FFLAGS       = -O3 -fopenmp
+    FLINKFLAGS   = $(FFLAGS)
+    RAND         = randi8
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+
+ROI begin
+ROI end

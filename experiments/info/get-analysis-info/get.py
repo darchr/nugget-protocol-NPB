@@ -9,7 +9,6 @@ parser = argparse.ArgumentParser(description="Process some data.")
 
 parser.add_argument("--analysis_csv", type=str, help="Path to the analysis dataframe")
 parser.add_argument("--out_analysis_file", type=str, help="Path to the bb info file")
-
 args = parser.parse_args()
 
 analysis_csv = Path(args.analysis_csv)
@@ -22,12 +21,7 @@ from nugget_util.python_processing.analysis_functions import (
     form_dataframe_from_csv,
 )
 
-region_length = 100_000_000
-grace_perc = 0.98
-num_warmup_region = 1
-
 def produce_df_and_marker(csv_path, out_analysis_file):
-    global region_length, grace_perc, num_warmup_region
     df = form_dataframe_from_csv(csv_path)
     df.to_csv(out_analysis_file, index=False)
 

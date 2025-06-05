@@ -3,6 +3,16 @@ import pandas as pd
 from multiprocessing import Pool
 import subprocess
 
+import argparse
+
+parser = argparse.ArgumentParser(description="Get analysis info from CSV files.")
+parser.add_argument("--experiment_dir", type=str, help="Path to the experiment directory")
+parser.add_argument("--output_dir", type=str, help="Path to the output directory")
+parser.add_argument("--bb_info_dir", type=str, help="Path to the basic block info directory")
+parser.add_argument("--size", type=str, default="A", help="Size of the experiment (default: A)")
+parser.add_argument("--num_threads", type=int, default=1, help="Number of threads for the benchmarks")
+args = parser.parse_args()
+
 root_path = Path(Path.cwd()).absolute()
 current_dir = Path(__file__).parent
 print(current_dir)
@@ -10,11 +20,12 @@ print(current_dir)
 # Note that for all parameters used in creating and selecting the nuggets
 # the following values were used:
 
-size = "A"
+size = args.size
+num_threads = args.num_threads
 
-output_dir = Path(root_path/"experiments/info/get-analysis-info")
-experiment_dir = Path(f"{root_path}/experiments/gem5-ir-bbv-analysis/{size}")
-bb_info_dir = Path(f"{root_path}/experiments/info/bb-info-output")
+output_dir = Path(f"{args.output_dir}/{num_threads}/{size}")
+experiment_dir = Path(f"{args.experiment_dir}/{size}")
+bb_info_dir = Path(args.bb_info_dir)
 
 # 
 # The reason why the parameters are not passed as arguments is because this set
@@ -49,7 +60,8 @@ if __name__ == "__main__":
         out_analysis_file = Path(benchmark_output_dir/f"{benchmark}_df.csv")
         cmd = ["python3", f"{current_dir}/get.py",
             "--analysis_csv", str(analysis_csv),
-            "--out_analysis_file", str(out_analysis_file)]
+            "--out_analysis_file", str(out_analysis_file)
+            ]
         run_ball = {
             "cmd": cmd,
         }
