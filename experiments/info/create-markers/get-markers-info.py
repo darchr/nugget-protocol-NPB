@@ -27,7 +27,7 @@ num_threads = args.num_threads
 if_make_all_markers = args.if_make_all_markers
 
 output_dir = Path(f"{args.output_dir}/{num_threads}/{size}/{grace_perc}")
-df_dir = Path(root_path/"experiments/info/get-analysis-info")
+df_dir = Path(root_path/f"experiments/info/get-analysis-info/{num_threads}/{size}")
 bb_info_dir = Path(f"{root_path}/experiments/info/bb-info-output")
 
 k_means_clustering_dir = Path(f"{root_path}/experiments/info/k-means-selections")

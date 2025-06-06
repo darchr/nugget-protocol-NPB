@@ -37,6 +37,9 @@ all_runs = []
 for binary_name, addrs in addr_map.items():
     binary_path = Path(executable_dir/f"{binary_name}/{binary_name}")
     track_pc = addrs["end_marker_addr"]
+
+
+
     cmd = [
         f"{dynamorio_dir.as_posix()}/build/bin64/drrun",
         "-c",
@@ -47,6 +50,9 @@ for binary_name, addrs in addr_map.items():
         f"{binary_path.as_posix()}"
     ]
     binary_experiment_dir = experiment_dir / binary_name
+    if Path(f"{binary_experiment_dir}/run.err").exists():
+        print(f"Skipping {binary_name} as it has already been run.")
+        continue
     binary_experiment_dir.mkdir(parents=True, exist_ok=True)
     run_ball = {
         "cmd": cmd,

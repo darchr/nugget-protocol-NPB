@@ -1,3 +1,4 @@
 {
-    "1_thread_with_hook_nugget_exe_is_A_89": "Marker counts do not match: Marker at 0x0000000000403110 executed 10 times != Marker at 0x0000000000401ed3 executed 60 times"
+    "1_thread_with_hook_nugget_exe_is_A_89": "Marker counts do not match: Marker at 0x0000000000403110 executed 10 times != Marker at 0x0000000000401ed3 executed 60 times",
+    "1_thread_without_hook_nugget_0.9_O2_exe_is_A_89": "Count mismatch: 60 != 10"
 }

@@ -3,10 +3,12 @@ include(base_config)
 list(APPEND CMAKE_MODULE_PATH "${NUGGET_LIBRARY_PATH}")
 include(Nugget)
 
-set(TARGET_NAME 1_thread_without_hook_nugget_bc)
+set(GRACE_PERC 0.9)
+
+set(TARGET_NAME 1_thread_without_hook_nugget_${GRACE_PERC}_bc)
 
 set(INFO_DIR ${CMAKE_CURRENT_LIST_DIR}/../../info)
-set(UNIQUE_BID_DIR ${INFO_DIR}/find-all-unique-markers/1/A/1)
+set(UNIQUE_BID_DIR ${INFO_DIR}/find-all-unique-markers/1/A/${GRACE_PERC})
 set(MARKER_DIR ${UNIQUE_BID_DIR})
 set(BB_INFO_INPUT_DIR ${INFO_DIR}/bb-info-output)
 
