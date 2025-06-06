@@ -83,6 +83,20 @@ def main():
             if exe.is_file() and os.access(exe, os.X_OK):
                 tasks.append((exe, False))
 
+    for subdir in cbuild_dir.glob("1_thread_without_hook_nugget_0.9_O2_exe_*"):
+        if not subdir.is_dir():
+            continue
+        for exe in subdir.glob("1_thread_without_hook_nugget_0.9_O2_exe_*"):
+            if exe.is_file() and os.access(exe, os.X_OK):
+                tasks.append((exe, False))
+
+    for subdir in cbuild_dir.glob("1_thread_without_hook_nugget_0.9_O3_exe_*"):
+        if not subdir.is_dir():
+            continue
+        for exe in subdir.glob("1_thread_without_hook_nugget_0.9_O3_exe_*"):
+            if exe.is_file() and os.access(exe, os.X_OK):
+                tasks.append((exe, False))
+
     # Use ThreadPoolExecutor to process each executable in parallel
     max_workers = min(18, len(tasks))  # Limit to 32 threads or number of tasks
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
