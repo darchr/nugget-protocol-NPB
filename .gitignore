@@ -2,7 +2,4 @@ cbuild/
 
 !cbuild/bb-info-output/
 !cbuild/llvm-bc
-experiments/1-thread-ir-bbv-analysis/experiments/
-experiments/1-thread-papi-analysis/experiments/
-experiments/1-thread-papi-naive/experiments/
 
