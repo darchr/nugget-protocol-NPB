@@ -3,15 +3,9 @@ include(base_config)
 list(APPEND CMAKE_MODULE_PATH "${NUGGET_LIBRARY_PATH}")
 include(Nugget)
 
-set(GRACE_PERC 0.99)
 set(OPT_LEVEL O2)
 
-set(TARGET_NAME 1_thread_with_hook_m5_nugget_${GRACE_PERC}_${OPT_LEVEL}_exe)
-
-set(HOOK_TARGET single-threaded-empty-m5-nugget)
-
-set(INFO_DIR ${CMAKE_CURRENT_LIST_DIR}/../../info)
-set(RANDOM_SELECTION_DIR ${INFO_DIR}/random-selections/1/A)
+set(TARGET_NAME 1_thread_papi_naive_${OPT_LEVEL}_exe)
 
 set(LLC_EXTRATION_FILE_PATH
     ${NUGGET_UTIL_PATH}/cmake/check-cpu-features/llc-command.txt)
@@ -28,15 +22,10 @@ else()
     set(LLC_CMD -relocation-model=pic -${OPT_LEVEL} -mtriple=${ARCH}-unknown-linux-gnu )
 endif()
 
-set(ALL_NUGGET_RIDS_DIR "${RANDOM_SELECTION_DIR}")
-set(RID_CONFIG_FILE_NAME "selected-regions.txt")
-
-set(NUGGET_BC_FILE_DIR "${CMAKE_CURRENT_LIST_DIR}/../../../cbuild/llvm-bc")
-set(NUGGET_BC_FILE_BASENAME 1_thread_with_hook_m5_nugget_${GRACE_PERC}_bc)
+set(BC_FILE_PATH "${CMAKE_CURRENT_LIST_DIR}/../../../cbuild/llvm-bc")
+set(BC_FILE_BASENAME "1_thread_papi_naive_bc")
 
 message(STATUS "LLC_CMD: ${LLC_CMD}")
-
-list(APPEND EXTRA_FLAGS -no-pie)
-set(EXTRA_LIB_PATHS -L${M5_PATH})
-set(EXTRA_INCLUDES -I${M5_INCLUDE_PATH})
-set(EXTRA_LIBS -lm5)
+set(EXTRA_LIB_PATHS -L${PAPI_PATH}/lib)
+set(EXTRA_INCLUDES -I${PAPI_PATH}/include)
+set(EXTRA_LIBS -lpapi -lpfm)
