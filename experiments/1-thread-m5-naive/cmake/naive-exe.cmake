@@ -23,7 +23,7 @@ else()
 endif()
 
 set(BC_FILE_PATH "${CMAKE_CURRENT_LIST_DIR}/../../../cbuild/llvm-bc")
-set(BC_FILE_BASENAME "1_thread_ir_bb_analysis_bc")
+set(BC_FILE_BASENAME "1_thread_m5_naive_bc")
 
 message(STATUS "LLC_CMD: ${LLC_CMD}")
 list(APPEND EXTRA_FLAGS -no-pie)
