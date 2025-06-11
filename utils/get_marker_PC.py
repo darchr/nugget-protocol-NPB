@@ -4,6 +4,7 @@ import re
 import os
 from pathlib import Path
 import json
+import psutil
 import sys
 from typing import Optional, Tuple, Dict
 from concurrent.futures import ThreadPoolExecutor, as_completed
@@ -67,6 +68,13 @@ def main():
     # Gather all (exe_path, is_with_hook) tasks
     tasks = []
 
+    for subdir in cbuild_dir.glob("1_thread_with_hook_m5_nugget_exe_*"):
+        if not subdir.is_dir():
+            continue
+        for exe in subdir.glob("1_thread_with_hook_m5_nugget_exe_*"):
+            if exe.is_file() and os.access(exe, os.X_OK):
+                tasks.append((exe, True))
+
     # "with_hook" pattern
     for subdir in cbuild_dir.glob("1_thread_with_hook_nugget_exe_*"):
         if not subdir.is_dir():
@@ -98,7 +106,9 @@ def main():
                 tasks.append((exe, False))
 
     # Use ThreadPoolExecutor to process each executable in parallel
-    max_workers = min(18, len(tasks))  # Limit to 32 threads or number of tasks
+    print(f"{psutil.cpu_count(logical=False)} physical CPU cores detected.")
+    print(f"Found {len(tasks)} executables to process.")
+    max_workers = min(psutil.cpu_count(logical=False), len(tasks))  # Limit to 32 threads or number of tasks
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         future_to_exe = {
             executor.submit(process_executable, exe_path, is_with_hook): exe_path
