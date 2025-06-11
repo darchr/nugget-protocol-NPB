@@ -68,10 +68,10 @@ def main():
     # Gather all (exe_path, is_with_hook) tasks
     tasks = []
 
-    for subdir in cbuild_dir.glob("1_thread_with_hook_m5_nugget_exe_*"):
+    for subdir in cbuild_dir.glob("1_thread_with_hook_m5_nugget_0.99_O2_exe_*"):
         if not subdir.is_dir():
             continue
-        for exe in subdir.glob("1_thread_with_hook_m5_nugget_exe_*"):
+        for exe in subdir.glob("1_thread_with_hook_m5_nugget_0.99_O2_exe_*"):
             if exe.is_file() and os.access(exe, os.X_OK):
                 tasks.append((exe, True))
 
