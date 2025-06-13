@@ -76,7 +76,7 @@ def init_worker(core_queue, failed_list):
 
 def main():
     cores = []
-    
+
     for i in range(60, 80):
         if i %2 == 0:
             cores.append(str(i))
@@ -96,8 +96,13 @@ def main():
 
     env = os.environ.copy()
     env["OMP_NUM_THREADS"] = "1"
-    env["LD_LIBRARY_PATH"] = f"/home/ztpc/compiler/llvm-dir/lib/{arch}-unknown-linux-gnu;"
+    env["LD_LIBRARY_PATH"] = f"/scr/studyztp/compiler/llvm-dir/lib/{arch}-unknown-linux-gnu;"
     env["LD_LIBRARY_PATH"] += f"{workdir}/nugget_util/hook_helper/other_tools/papi/{arch}/lib"
+
+    print("Environment variables:"
+          f"\nOMP_NUM_THREADS: {env['OMP_NUM_THREADS']}"
+          f"\nLD_LIBRARY_PATH: {env['LD_LIBRARY_PATH']}"
+    )
 
     all_events = [['PAPI_RES_STL', 'PAPI_TLB_DM', 'PAPI_L2_DCM', 'PAPI_L1_ICM', 'PAPI_L1_DCM'],
     ['PAPI_TOT_CYC', 'PAPI_BR_MSP', 'PAPI_HW_INT', 'PAPI_STL_ICY', 'PAPI_L2_LDM'],
