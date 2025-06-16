@@ -1,0 +1,57 @@
+cset: --> last message, executed args into cpuset "/measurement/40_41/40", new pid is: 133954
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - IS Benchmark
+
+ Size:  8388608  (class A)
+ Iterations:  10
+ Number of available threads:  1
+
+
+   iteration
+ROI started
+PAPI initialized
+PAPI region begin
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        10
+PAPI region end
+PAPI ended
+
+
+ IS Benchmark Completed
+ Class           =                        A
+ Size            =                  8388608
+ Iterations      =                       10
+ Time in seconds =                     2.90
+ Total threads   =                        1
+ Avail threads   =                        1
+ Mop/s total     =                    28.96
+ Mop/s/thread    =                    28.96
+ Operation type  =              keys ranked
+ Verification    =               SUCCESSFUL
+ Version         =                    3.4.3
+ Compile date    =              03 Jun 2025
+
+ Compile options:
+    CC           = gcc
+    CLINK        = $(CC)
+    C_LIB        = -lm
+    C_INC        = (none)
+    CFLAGS       = -O3 -fopenmp
+    CLINKFLAGS   = $(CFLAGS)
+
+
+ Please send all errors/feedbacks to:
+
+ NPB Development Team
+ npb@nas.nasa.gov
+
+

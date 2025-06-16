@@ -1,0 +1,22 @@
+cset: --> last message, executed args into cpuset "/measurement/64_65/64", new pid is: 135380
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - BT Benchmark
+
+ No input file inputbt.data. Using compiled defaults
+ Size:   64x  64x  64
+ Iterations:  200       dt:   0.0008000
+ Number of available threads:     1
+
+ Time step    1
+ Time step   20
+Warmup threshold: 83867
+Start threshold: 374
+End threshold: 48
+ROI begin
+Warm up marker met
+Warmup event
+Start marker met
+Start event
+End marker met
+End event
