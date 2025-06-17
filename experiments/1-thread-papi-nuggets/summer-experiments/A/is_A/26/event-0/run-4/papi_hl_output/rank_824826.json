@@ -1,0 +1,45 @@
+{
+  "papi_version":"7.2.0.0",
+  "cpu_info":"AMD Ryzen Threadripper 3960X 24-Core Processor",
+  "max_cpu_rate_mhz":"4568",
+  "min_cpu_rate_mhz":"2200",
+  "event_definitions":{
+    "PAPI_L1_ICM":{
+      "component":"perf_event",
+      "type":"delta"
+    },
+    "PAPI_L2_DCM":{
+      "component":"perf_event",
+      "type":"delta"
+    },
+    "PAPI_L2_ICM":{
+      "component":"perf_event",
+      "type":"delta"
+    },
+    "PAPI_TLB_DM":{
+      "component":"perf_event",
+      "type":"delta"
+    },
+    "PAPI_BR_TKN":{
+      "component":"perf_event",
+      "type":"delta"
+    }
+  },
+  "threads":{
+    "0":{
+      "regions":{
+        "0":{
+          "name":"0",
+          "parent_region_id":"-1",
+          "cycles":"69444430",
+          "real_time_nsec":"18305840",
+          "PAPI_L1_ICM":"13194",
+          "PAPI_L2_DCM":"15899",
+          "PAPI_L2_ICM":"11495",
+          "PAPI_TLB_DM":"204815",
+          "PAPI_BR_TKN":"5797410"
+        }
+      }
+    }
+  }
+}
