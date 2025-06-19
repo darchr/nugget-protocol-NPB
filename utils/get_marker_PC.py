@@ -24,38 +24,28 @@ def get_marker_address(executable: Path, marker: str) -> Optional[str]:
         print(f"Error running objdump on {executable}: {e}", file=sys.stderr)
         return None
 
-    # Allow optional leading whitespace and both uppercase/lowercase hex digits
     pattern = re.compile(
         r"^\s*([0-9A-Fa-f]+)\s+<" + re.escape(marker) + r">:",
         re.MULTILINE
     )
     match = pattern.search(output)
-    if match:
-        return match.group(1)
-
-    # If no match, return None
-    return None
+    return match.group(1) if match else None
 
 def process_executable(exe_path: Path, is_with_hook: bool) -> Tuple[str, Dict[str, Optional[str]]]:
     """
-    Worker function to run get_marker_address on a single executable.
-    - If is_with_hook is True, look for 'end_hook'.
-    - If is_with_hook is False, look for 'End_Marker'.
-    Returns: (exe_name, { "start_marker_addr": ..., "end_marker_addr": ... })
+    Extracts addresses of start_hook, end_hook or End_Marker, and warmup_hook.
     """
     exe_name = exe_path.name
-
-    if is_with_hook:
-        end_marker_name = "end_hook"
-    else:
-        end_marker_name = "End_Marker"
+    end_marker_name = "end_hook" if is_with_hook else "End_Marker"
 
     start_addr = get_marker_address(exe_path, "start_hook")
     end_addr = get_marker_address(exe_path, end_marker_name)
+    warmup_addr = get_marker_address(exe_path, "warmup_hook")
 
     return exe_name, {
+        "start_marker_addr": start_addr,
         "end_marker_addr": end_addr,
-        "start_marker_addr": start_addr
+        "warmup_marker_addr": warmup_addr,
     }
 
 def main():
@@ -65,50 +55,36 @@ def main():
     cbuild_dir = current_dir / "cbuild" / "llvm-exec"
     print(f"Scanning executables under: {cbuild_dir}")
 
-    # Gather all (exe_path, is_with_hook) tasks
     tasks = []
 
-    for subdir in cbuild_dir.glob("1_thread_with_hook_m5_nugget_0.99_O2_exe_*"):
-        if not subdir.is_dir():
-            continue
-        for exe in subdir.glob("1_thread_with_hook_m5_nugget_0.99_O2_exe_*"):
-            if exe.is_file() and os.access(exe, os.X_OK):
-                tasks.append((exe, True))
+    # Add patterns for all relevant executables
+    patterns = [
+        "1_thread_with_hook_m5_nugget_0.99_O2_exe*",
+        "1_thread_with_hook_nugget_exe_*",
+        "1_thread_without_hook_nugget_exe_*",
+        "1_thread_without_hook_nugget_0.9_O2_exe_*",
+        "1_thread_without_hook_nugget_0.9_O3_exe_*",
+        "1_thread_all_empty_m5_nugget_0.99_O2_exe*",
+        "1_thread_dynamorio_count_nugget_0.99_O2_exe*",
+        "1_thread_dynamorio_warmup_counted_nugget_0.99_O2_exe*"
+    ]
 
-    # "with_hook" pattern
-    for subdir in cbuild_dir.glob("1_thread_with_hook_nugget_exe_*"):
-        if not subdir.is_dir():
-            continue
-        for exe in subdir.glob("1_thread_with_hook_nugget_exe_*"):
-            if exe.is_file() and os.access(exe, os.X_OK):
-                tasks.append((exe, True))
+    for pattern in patterns:
+        for subdir in cbuild_dir.glob(pattern):
+            if not subdir.is_dir():
+                continue
+            for exe in subdir.glob("*"):
+                if exe.is_file() and os.access(exe, os.X_OK):
+                    is_with_hook = (
+                        "with_hook" in pattern or
+                        "dynamorio" in pattern or
+                        "all_empty" in pattern
+                    )
+                    tasks.append((exe, is_with_hook))
 
-    # "without_hook" pattern
-    for subdir in cbuild_dir.glob("1_thread_without_hook_nugget_exe_*"):
-        if not subdir.is_dir():
-            continue
-        for exe in subdir.glob("1_thread_without_hook_nugget_exe_*"):
-            if exe.is_file() and os.access(exe, os.X_OK):
-                tasks.append((exe, False))
-
-    for subdir in cbuild_dir.glob("1_thread_without_hook_nugget_0.9_O2_exe_*"):
-        if not subdir.is_dir():
-            continue
-        for exe in subdir.glob("1_thread_without_hook_nugget_0.9_O2_exe_*"):
-            if exe.is_file() and os.access(exe, os.X_OK):
-                tasks.append((exe, False))
-
-    for subdir in cbuild_dir.glob("1_thread_without_hook_nugget_0.9_O3_exe_*"):
-        if not subdir.is_dir():
-            continue
-        for exe in subdir.glob("1_thread_without_hook_nugget_0.9_O3_exe_*"):
-            if exe.is_file() and os.access(exe, os.X_OK):
-                tasks.append((exe, False))
-
-    # Use ThreadPoolExecutor to process each executable in parallel
     print(f"{psutil.cpu_count(logical=False)} physical CPU cores detected.")
     print(f"Found {len(tasks)} executables to process.")
-    max_workers = min(psutil.cpu_count(logical=False), len(tasks))  # Limit to 32 threads or number of tasks
+    max_workers = min(psutil.cpu_count(logical=False), len(tasks))
     with ThreadPoolExecutor(max_workers=max_workers) as executor:
         future_to_exe = {
             executor.submit(process_executable, exe_path, is_with_hook): exe_path
@@ -123,7 +99,6 @@ def main():
             except Exception as exc:
                 print(f"[!] {exe_path} generated an exception: {exc}", file=sys.stderr)
 
-    # Write out the combined JSON
     output_file = Path("addr_map.json")
     with open(output_file, "w") as f:
         json.dump(result_dict, f, indent=4)
