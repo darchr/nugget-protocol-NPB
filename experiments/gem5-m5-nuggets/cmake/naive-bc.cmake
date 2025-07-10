@@ -10,7 +10,7 @@ set(KMEANS_INFO_DIR ${INFO_DIR}/k-means-selections)
 set(MARKER_DIR ${INFO_DIR}/create-markers/0.98)
 set(BB_INFO_INPUT_DIR ${INFO_DIR}/bb-info-output)
 
-set(HOOK_TARGET openmp-m5-nugget)
+set(HOOK_TARGET openmp-empty-m5-nugget)
 
 set(ALL_NUGGET_RIDS_DIR "${KMEANS_INFO_DIR}")
 set(RID_CONFIG_FILE_NAME "selected-regions.txt")
@@ -20,9 +20,6 @@ set(MARKER_CONFIG_FILE_EXT "-marker.txt")
 
 set(SOURCE_BC_FILE_PATH "${CMAKE_CURRENT_LIST_DIR}/../../../cbuild/llvm-bc")
 set(SOURCE_BC_FILE_BASENAME "ir_bb_analysis_bc")
-
-set(LABEL_TARGET "x86_64")
-set(LABEL_WARMUP "false")
 
 set(EXTRA_LIB_PATHS -L${M5_PATH})
 set(EXTRA_INCLUDES -I${M5_INCLUDE_PATH})
