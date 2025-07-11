@@ -25,6 +25,7 @@ set(BC_FILE_BASENAME "m5_naive_bc")
 
 message(STATUS "LLC_CMD: ${LLC_CMD}")
 
+list(APPEND EXTRA_FLAGS -no-pie)
 set(EXTRA_LIB_PATHS -L${M5_PATH})
 set(EXTRA_INCLUDES -I${M5_INCLUDE_PATH})
 set(EXTRA_LIBS -lm5)
