@@ -15,7 +15,15 @@ else()
     set(TARGET_CLASSES ${CLASSES_FROM_ENV})
 endif()
 
-set(TARGET_BENCHMARKS BT CG EP FT IS LU MG SP)
+if (NOT DEFINED ENV{TARGET_BENCHMARKS})
+    message(STATUS "TARGET_BENCHMARKS not set, using default BT CG EP FT IS LU MG SP")
+    set(TARGET_BENCHMARKS BT CG EP FT IS LU MG SP)
+else()
+    string(REPLACE " " ";" BENCHMARKS_FROM_ENV "$ENV{TARGET_BENCHMARKS}")
+    message(STATUS "Using benchmarks from environment variable: $ENV{TARGET_BENCHMARKS}")
+    message(STATUS "Benchmarks: ${BENCHMARKS_FROM_ENV}")
+    set(TARGET_BENCHMARKS ${BENCHMARKS_FROM_ENV})
+endif()
 
 # Allow specific classes to be selected via cmake option
 set(CLASSES ${TARGET_CLASSES})
