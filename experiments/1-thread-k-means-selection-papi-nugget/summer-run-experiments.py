@@ -75,7 +75,7 @@ def init_worker(core_queue, failed_list):
     failed_list_global = failed_list
 
 def main():
-    cores = ["3", "6", "21"]
+    cores = ["3", "6", "9", "12"]
     max_threads = len(cores)
 
     core_queue = multiprocessing.Queue()
@@ -153,7 +153,7 @@ def main():
                     if(Path(run_dir/"papi_hl_output").exists()):
                         print(f"Run directory {run_dir} already exists, skipping")
                         continue
-                    run_dir.mkdir(parents=True, exist_ok=False)
+                    run_dir.mkdir(parents=True, exist_ok=True)
                     run_ball = {
                         "cmd": cmd,
                         "dir": run_dir.as_posix(),

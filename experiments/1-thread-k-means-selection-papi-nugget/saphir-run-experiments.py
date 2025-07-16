@@ -166,7 +166,7 @@ def main():
                     if(Path(run_dir/"papi_hl_output").exists()):
                         print(f"Run directory {run_dir} already exists, skipping")
                         continue
-                    run_dir.mkdir(parents=True, exist_ok=False)
+                    run_dir.mkdir(parents=True, exist_ok=True)
                     run_ball = {
                         "cmd": cmd,
                         "dir": run_dir.as_posix(),
