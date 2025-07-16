@@ -150,8 +150,9 @@ def main():
                 event_dir.mkdir(parents=True, exist_ok=True)
                 for run in range(*runs_range):
                     run_dir = Path(event_dir/f"run-{run}")
-                    if(run_dir.exists()):
-                        shutil.rmtree(run_dir)
+                    if(Path(run_dir/"papi_hl_output").exists()):
+                        print(f"Run directory {run_dir} already exists, skipping")
+                        continue
                     run_dir.mkdir(parents=True, exist_ok=False)
                     run_ball = {
                         "cmd": cmd,
