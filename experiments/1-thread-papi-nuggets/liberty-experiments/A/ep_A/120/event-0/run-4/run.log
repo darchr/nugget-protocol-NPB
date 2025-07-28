@@ -1,0 +1,19 @@
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - EP Benchmark
+
+ Number of random numbers generated:       536870912
+ Number of available threads:                      1
+
+Warmup threshold: 173543977
+Start threshold: 29
+End threshold: 29
+ROI begin
+Warm up marker met
+Warmup event
+Start marker met
+Start event
+PAPI_hl_region_begin failed due to -1.
+End marker met
+PAPI_hl_region_end failed due to -14.
+End event

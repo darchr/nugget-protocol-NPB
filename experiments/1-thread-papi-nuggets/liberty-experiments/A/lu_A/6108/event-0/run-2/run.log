@@ -1,0 +1,32 @@
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - LU Benchmark
+
+ Size:   64x  64x  64
+ Iterations:                    250
+ Number of available threads:     1
+
+ Time step    1
+ Time step   20
+ Time step   40
+ Time step   60
+ Time step   80
+ Time step  100
+ Time step  120
+ Time step  140
+ Time step  160
+ Time step  180
+ Time step  200
+ Time step  220
+Warmup threshold: 14805
+Start threshold: 458
+End threshold: 115
+ROI begin
+Warm up marker met
+Warmup event
+Start marker met
+Start event
+PAPI_hl_region_begin failed due to -1.
+End marker met
+PAPI_hl_region_end failed due to -14.
+End event

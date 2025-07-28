@@ -1,0 +1,24 @@
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - CG Benchmark
+
+ Size:       14000
+ Iterations:                     15
+ Number of available threads:     1
+
+ Initialization time =           0.360 seconds
+
+   iteration           ||r||                 zeta
+        1       0.26065081214763E-12    19.9997581277040
+Warmup threshold: 1022480
+Start threshold: 8938
+End threshold: 30853
+ROI begin
+Warm up marker met
+Warmup event
+Start marker met
+Start event
+PAPI_hl_region_begin failed due to -1.
+End marker met
+PAPI_hl_region_end failed due to -14.
+End event

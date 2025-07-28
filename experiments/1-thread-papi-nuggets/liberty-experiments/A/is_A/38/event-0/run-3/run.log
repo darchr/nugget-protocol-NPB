@@ -1,0 +1,28 @@
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - IS Benchmark
+
+ Size:  8388608  (class A)
+ Iterations:  10
+ Number of available threads:  1
+
+
+   iteration
+Warmup threshold: 48315499
+Start threshold: 1485023
+End threshold: 3125000
+ROI begin
+        1
+        2
+        3
+        4
+        5
+        6
+Warm up marker met
+Warmup event
+Start marker met
+Start event
+PAPI_hl_region_begin failed due to -1.
+End marker met
+PAPI_hl_region_end failed due to -14.
+End event
