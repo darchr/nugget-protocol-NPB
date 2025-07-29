@@ -1,0 +1,16 @@
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - MG Benchmark
+
+ No input file. Using compiled defaults 
+ Size:  256x 256x 256  (class A)
+ Iterations:                      4
+ Number of available threads:     1
+
+ Initialization time:           0.610 seconds
+
+  iter   1
+  iter   4
+ROI started
+ROI ended
+Time taken: 942958842 ns

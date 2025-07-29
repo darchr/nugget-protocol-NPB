@@ -1,0 +1,23 @@
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - MG Benchmark
+
+ No input file. Using compiled defaults 
+ Size:  256x 256x 256  (class A)
+ Iterations:                      4
+ Number of available threads:     1
+
+ Initialization time:           0.616 seconds
+
+  iter   1
+  iter   4
+Warmup threshold: 515412
+Start threshold: 2002
+End threshold: 11137
+ROI begin
+Warm up marker met
+Warmup event
+Start marker met
+Start event
+End marker met
+Time taken: 7654248 ns

@@ -1,0 +1,23 @@
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - IS Benchmark
+
+ Size:  8388608  (class A)
+ Iterations:  10
+ Number of available threads:  1
+
+
+   iteration
+ROI started
+        1
+        2
+        3
+        4
+        5
+        6
+        7
+        8
+        9
+        10
+ROI ended
+Time taken: 612575649 ns

@@ -1,0 +1,18 @@
+
+
+ NAS Parallel Benchmarks (NPB3.4-OMP) - FT Benchmark
+
+ Size                :  256x 256x 128
+ Iterations                  :      6
+ Number of available threads :      1
+
+Warmup threshold: 1
+Start threshold: 1
+End threshold: 22
+ROI begin
+Warm up marker met
+Warmup event
+Start marker met
+Start event
+End marker met
+Time taken: 58781618 ns
