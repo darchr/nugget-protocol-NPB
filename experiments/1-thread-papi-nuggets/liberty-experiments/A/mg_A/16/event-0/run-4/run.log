@@ -7,7 +7,7 @@
  Iterations:                      4
  Number of available threads:     1
 
- Initialization time:           0.402 seconds
+ Initialization time:           0.401 seconds
 
   iter   1
 Warmup threshold: 66097
@@ -18,7 +18,5 @@ Warm up marker met
 Warmup event
 Start marker met
 Start event
-PAPI_hl_region_begin failed due to -1.
 End marker met
-PAPI_hl_region_end failed due to -14.
-End event
+Time taken: 5346432 ns

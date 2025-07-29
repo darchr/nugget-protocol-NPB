@@ -23,8 +23,6 @@ Warm up marker met
 Warmup event
 Start marker met
 Start event
-PAPI_hl_region_begin failed due to -1.
         8
 End marker met
-PAPI_hl_region_end failed due to -14.
-End event
+Time taken: 9071520 ns
