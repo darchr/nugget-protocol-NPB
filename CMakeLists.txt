@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.30 FATAL_ERROR)
+cmake_minimum_required(VERSION 3.27 FATAL_ERROR)
 project(NPB LANGUAGES Fortran C)
 
 set(SYS_DIR ${CMAKE_CURRENT_SOURCE_DIR}/sys)
@@ -15,7 +15,16 @@ else()
     set(TARGET_CLASSES ${CLASSES_FROM_ENV})
 endif()
 
-set(TARGET_BENCHMARKS BT CG EP FT IS LU MG SP)
+# Allow overriding benchmarks via environment, similar to TARGET_CLASSES
+if (NOT DEFINED ENV{TARGET_BENCHMARKS})
+    message(STATUS "TARGET_BENCHMARKS not set, using default BT CG EP FT IS LU MG SP")
+    set(TARGET_BENCHMARKS BT CG EP FT IS LU MG SP)
+else()
+    string(REPLACE " " ";" BENCH_FROM_ENV "$ENV{TARGET_BENCHMARKS}")
+    message(STATUS "Using benchmarks from environment variable: $ENV{TARGET_BENCHMARKS}")
+    message(STATUS "Benchmarks: ${BENCH_FROM_ENV}")
+    set(TARGET_BENCHMARKS ${BENCH_FROM_ENV})
+endif()
 
 # Allow specific classes to be selected via cmake option
 set(CLASSES ${TARGET_CLASSES})
