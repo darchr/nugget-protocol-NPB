@@ -174,29 +174,41 @@ def measure_binary(bin_path: Path, workdir: Path, threads: int):
 	run_subprocess([str(bin_path)], cwd=workdir, env=env, stdout_path=stdout_path, stderr_path=stderr_path)
 	duration = time.perf_counter() - start
 	(workdir / "execution_time.txt").write_text(f"{duration:.6f}\n")
-	return duration
+	# if not Path(workdir / "result.txt").exists():
+	# 	raise RuntimeError(f"Expected result.txt in {workdir} after running {bin_path}")
+	# # sleep for a bit to ensure the file is fully written
+	# time.sleep(10)
+	# with open(Path(workdir / "result.txt"), "r") as f:
+	# 	result = f.read().strip()
+	# result = result.split(" ")[2]
+	result = duration
+	return result
 
 
-def find_nugget_binaries(llvm_exec: Path, size: str):
+def find_nugget_binaries(llvm_exec: Path, size: str, benches: list[str]):
 	nuggets = []
 	for p in llvm_exec.glob(f"time_nugget_exe_*_{size}_*"):
 		parts = p.name.split("_")
 		if len(parts) < 6:
 			continue
 		bench = parts[3]
+		if bench.upper() not in benches:
+			continue
 		rid = parts[5]
 		exe_path = p / p.name if p.is_dir() else p
 		nuggets.append((bench, rid, exe_path))
 	return nuggets
 
 
-def find_naive_binaries(llvm_exec: Path, size: str):
+def find_naive_binaries(llvm_exec: Path, size: str, benches: list[str]):
 	naives = []
 	for p in llvm_exec.glob(f"time_naive_exe_*_{size}"):
 		parts = p.name.split("_")
 		if len(parts) < 5:
 			continue
 		bench = parts[3]
+		if bench.upper() not in benches:
+			continue
 		exe_path = p / p.name if p.is_dir() else p
 		naives.append((bench, exe_path))
 	return naives
@@ -248,8 +260,8 @@ def main():
 	parser.add_argument(
 		"--benchmarks",
 		"-b",
-		required=True,
 		help="Benchmarks to target, space/comma/semicolon separated (e.g., 'CG EP')",
+		default="BT CG EP FT IS MG SP LU"
 	)
 	parser.add_argument("--threads", "-t", type=int, default=4, help="Number of threads for runs")
 	parser.add_argument("--grace-perc", type=float, default=0.98, help="Grace percentage used in markers")
@@ -265,7 +277,7 @@ def main():
 	threads = args.threads
 	grace = args.grace_perc
 
-	# build_all(npb_root, size, benches, threads, grace)
+	build_all(npb_root, size, benches, threads, grace)
 
 	llvm_exec = npb_root / "ae-cbuild" / "llvm-exec"
 	if not llvm_exec.is_dir():
@@ -285,7 +297,7 @@ def main():
 
 	# Run naive binaries first to provide baselines
 	naive_times: dict[tuple[str, str], float] = {}
-	for bench, bin_path in find_naive_binaries(llvm_exec, size):
+	for bench, bin_path in find_naive_binaries(llvm_exec, size, benches):
 		out_dir = naive_out_root / bench
 		duration = measure_binary(bin_path, out_dir, threads)
 		naive_times[(bench, size)] = duration
@@ -297,14 +309,14 @@ def main():
 				"type": "naive",
 				"region_id": "",
 				"cluster_id": "",
-				"runtime_seconds": duration,
-				"baseline_naive_seconds": duration
+				"runtime_nseconds": duration,
+				"baseline_naive_nseconds": duration
 			}
 		)
 
 	# Run nugget binaries and collect runtimes per rid
 	runtime_by_rid: dict[tuple[str, str], float] = {}
-	for bench, rid, bin_path in find_nugget_binaries(llvm_exec, size):
+	for bench, rid, bin_path in find_nugget_binaries(llvm_exec, size, benches):
 		out_dir = nugget_out_root / bench / rid
 		duration = measure_binary(bin_path, out_dir, threads)
 		runtime_by_rid[(bench, rid)] = duration
@@ -325,8 +337,8 @@ def main():
 				"type": "nugget",
 				"region_id": rid,
 				"cluster_id": cluster_id,
-				"runtime_seconds": duration,
-				"baseline_naive_seconds": baseline if baseline is not None else ""
+				"runtime_nseconds": duration,
+				"baseline_naive_nseconds": baseline if baseline is not None else ""
 			}
 		)
 
@@ -408,6 +420,7 @@ def main():
 		writer = csv.DictWriter(f, fieldnames=pred_fieldnames)
 		writer.writeheader()
 		for bench in benches:
+			bench = bench.lower()
 			baseline = naive_times.get((bench, size))
 			# k-means prediction
 			km_pred = program_pred.get(bench)

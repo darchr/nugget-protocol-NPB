@@ -42,7 +42,7 @@ DEFAULT_NUM_PROJECTION = 100
 DEFAULT_RANDOM_SEED = 627
 
 
-def generate_k_means(nugget_info_path: Path, analysis_df_path: Path, num_ideal_nuggets: int, output_dir: Path):
+def generate_k_means(nugget_info_path: Path, analysis_df_path: Path, num_ideal_nuggets: int, output_dir: Path, dont_use_pca: bool):
 	"""Execute k-means region selection and write results to output_dir."""
 	num_projection = DEFAULT_NUM_PROJECTION
 
@@ -75,6 +75,7 @@ def generate_k_means(nugget_info_path: Path, analysis_df_path: Path, num_ideal_n
 		bb_id_map,
 		static_info,
 		num_projection,
+		if_use_pca=not dont_use_pca
 	)
 	print(f"Finished Clustering; Now storing at {output_dir.as_posix()}\n")
 
@@ -236,6 +237,7 @@ def _worker(run_ball: dict):
 			run_ball["df_path"],
 			run_ball["num_k_nuggets"],
 			run_ball["k_means_out_dir"],
+			dont_use_pca=run_ball["dont_use_pca"]
 		)
 
 		# Optional random selection
@@ -275,14 +277,14 @@ def parse_args():
 	parser.add_argument("--threads", "-t", type=int, default=4, help="Thread count used in the analysis runs.")
 	parser.add_argument("--num-k-nuggets", "-n", type=int, default=30, help="Number of k nuggets for clustering.")
 	parser.add_argument("--processes", "-p", type=int, default=1, help="Parallel processes for clustering jobs.")
-	parser.add_argument("--enable-random", action="store_true", help="Also generate random region selections.")
+	parser.add_argument("--disable-random", action="store_true", help="Also generate random region selections.")
 	parser.add_argument("--random-num-nuggets", type=int, default=30, help="How many random regions to select when enabled.")
 	parser.add_argument("--random-seed", type=int, default=DEFAULT_RANDOM_SEED, help="Seed for random region selection.")
 	parser.add_argument("--grace-perc", type=float, default=0.98, help="Grace percentage for marker creation.")
 	parser.add_argument("--region-length", type=int, default=400_000_000, help="Region length for marker creation.")
 	parser.add_argument("--num-warmup-region", type=int, default=1, help="Number of warmup regions for marker creation.")
+	parser.add_argument("--dont-use-pca", action="store_true", help="If use, then we use random linear projection instead of PCA.")
 	return parser.parse_args()
-
 
 def main():
 	args = parse_args()
@@ -296,13 +298,14 @@ def main():
 
 	# enrich run context
 	for run in runs:
-		run["enable_random"] = args.enable_random
+		run["enable_random"] = not args.disable_random
 		run["random_num"] = args.random_num_nuggets
 		run["random_seed"] = args.random_seed
 		run["region_length"] = args.region_length
 		run["grace_perc"] = args.grace_perc
 		run["num_k_nuggets"] = args.num_k_nuggets
 		run["num_warmup_region"] = args.num_warmup_region
+		run["dont_use_pca"] = args.dont_use_pca
 
 	processes = max(1, args.processes)
 	with Pool(processes=processes) as pool:
