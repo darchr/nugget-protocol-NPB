@@ -174,14 +174,13 @@ def measure_binary(bin_path: Path, workdir: Path, threads: int):
 	run_subprocess([str(bin_path)], cwd=workdir, env=env, stdout_path=stdout_path, stderr_path=stderr_path)
 	duration = time.perf_counter() - start
 	(workdir / "execution_time.txt").write_text(f"{duration:.6f}\n")
-	# if not Path(workdir / "result.txt").exists():
-	# 	raise RuntimeError(f"Expected result.txt in {workdir} after running {bin_path}")
-	# # sleep for a bit to ensure the file is fully written
-	# time.sleep(10)
-	# with open(Path(workdir / "result.txt"), "r") as f:
-	# 	result = f.read().strip()
-	# result = result.split(" ")[2]
-	result = duration
+	if not Path(workdir / "result.txt").exists():
+		raise RuntimeError(f"Expected result.txt in {workdir} after running {bin_path}")
+	# sleep for a bit to ensure the file is fully written
+	time.sleep(1)
+	with open(Path(workdir / "result.txt"), "r") as f:
+		result = f.read().strip()
+	result = int(result.split(" ")[2])
 	return result
 
 
@@ -238,7 +237,8 @@ def load_kmeans_clusters(sample_root: Path, benches: list[str], size: str) -> di
 def load_random_regions(random_root: Path, benches: list[str], size: str) -> dict[str, list[str]]:
 	random_rids: dict[str, list[str]] = {}
 	for bench in benches:
-		name = f"ir_bb_analysis_exe_{bench.lower()}_{size}"
+		bench = bench.lower()
+		name = f"{bench}_{size}"
 		txt_path = random_root / name / "selected-regions.txt"
 		if not txt_path.is_file():
 			RuntimeError(f"Unable to find selected-regions.txt for random {bench}")
@@ -292,6 +292,7 @@ def main():
 	random_root = npb_root / "ae-experiments" / "sample-selection" / f"threads-{threads}" / "random"
 	bench_clusters = load_kmeans_clusters(sample_root, benches, size)
 	random_rids = load_random_regions(random_root, benches, size)
+	print(random_rids)
 
 	measurements = []
 
@@ -395,8 +396,8 @@ def main():
 		"type",
 		"region_id",
 		"cluster_id",
-		"runtime_seconds",
-		"baseline_naive_seconds"
+		"runtime_nseconds",
+		"baseline_naive_nseconds"
 	]
 	with csv_path.open("w", newline="") as f:
 		writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -412,9 +413,9 @@ def main():
 		"size",
 		"threads",
 		"sample_selection_method",
-		"predicted_time_seconds",
-		"baseline_time_seconds",
-		"prediction_error",
+		"predicted_time_nseconds",
+		"baseline_time_nseconds",
+		"prediction_error(%)",
 	]
 	with pred_csv_path.open("w", newline="") as f:
 		writer = csv.DictWriter(f, fieldnames=pred_fieldnames)
@@ -425,31 +426,31 @@ def main():
 			# k-means prediction
 			km_pred = program_pred.get(bench)
 			if km_pred is not None and baseline is not None and baseline > 0:
-				km_err = (km_pred - baseline) / baseline
+				km_err = ((km_pred - baseline) / baseline) * 100
 				writer.writerow(
 					{
 						"benchmark": bench,
 						"size": size,
 						"threads": threads,
 						"sample_selection_method": "k-means",
-						"predicted_time_seconds": km_pred,
-						"baseline_time_seconds": baseline,
-						"prediction_error": km_err,
+						"predicted_time_nseconds": km_pred,
+						"baseline_time_nseconds": baseline,
+						"prediction_error(%)": km_err,
 					}
 				)
 			# random prediction
 			r_pred = random_pred.get(bench)
 			if r_pred is not None and baseline is not None and baseline > 0:
-				r_err = (r_pred - baseline) / baseline
+				r_err = ((r_pred - baseline) / baseline) * 100
 				writer.writerow(
 					{
 						"benchmark": bench,
 						"size": size,
 						"threads": threads,
 						"sample_selection_method": "random",
-						"predicted_time_seconds": r_pred,
-						"baseline_time_seconds": baseline,
-						"prediction_error": r_err,
+						"predicted_time_nseconds": r_pred,
+						"baseline_time_nseconds": baseline,
+						"prediction_error(%)": r_err,
 					}
 				)
 

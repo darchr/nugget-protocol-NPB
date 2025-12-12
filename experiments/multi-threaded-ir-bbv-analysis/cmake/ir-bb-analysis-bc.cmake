@@ -2,7 +2,11 @@ list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/../../cmake")
 include(base_config)
 
 set(TARGET_NAME "ir_bb_analysis_bc")
-set(REGION_LENGTH 400000000)
+if(DEFINED ENV{REGION_LENGTH} AND NOT "$ENV{REGION_LENGTH}" STREQUAL "")
+	set(REGION_LENGTH "$ENV{REGION_LENGTH}")
+else()
+    set(REGION_LENGTH 400000000)
+endif()
 set(HOOK_TARGET "openmp-ir-bb-analysis-balance")
 
 set(OPT_CMD "-O2")

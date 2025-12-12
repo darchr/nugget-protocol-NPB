@@ -3,7 +3,7 @@ include(base_config)
 list(APPEND CMAKE_MODULE_PATH "${NUGGET_LIBRARY_PATH}")
 include(Nugget)
 
-set(TARGET_NAME "ir_bb_analysis_exe")
+set(TARGET_NAME "single_threaded_ir_bb_analysis_exe")
 
 set(LLC_EXTRATION_FILE_PATH
     ${NUGGET_UTIL_PATH}/cmake/check-cpu-features/llc-command.txt)
@@ -18,7 +18,7 @@ if(LLC_CMD)
     list(APPEND LLC_CMD -relocation-model=pic -O2)
 endif()
 
-set(BC_FILE_PATH "${CMAKE_CURRENT_LIST_DIR}/../../../ae-cbuild/llvm-bc")
-set(BC_FILE_BASENAME "ir_bb_analysis_bc")
+set(BC_FILE_PATH "${CMAKE_CURRENT_LIST_DIR}/../../../cbuild/llvm-bc")
+set(BC_FILE_BASENAME "single_threaded_ir_bb_analysis_bc")
 
 message(STATUS "LLC_CMD: ${LLC_CMD}")

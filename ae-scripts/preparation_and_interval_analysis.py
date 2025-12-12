@@ -79,7 +79,7 @@ def run_analyses(npb_root: Path, llvm_exe_dir: Path, input_class: str, threads: 
     analysis_dir.mkdir(parents=True, exist_ok=True)
 
     for name, binary in binaries.items():
-        target_dir = analysis_dir / f"threads-{threads}" / name 
+        target_dir = analysis_dir / f"threads-{threads}/{name.split('_')[-2]}_{input_class}"
         target_dir.mkdir(parents=True, exist_ok=True)
 
         env = os.environ.copy()
