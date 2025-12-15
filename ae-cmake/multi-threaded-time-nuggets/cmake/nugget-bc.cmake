@@ -1,9 +1,13 @@
-list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/../../cmake")
+list(APPEND CMAKE_MODULE_PATH "${CMAKE_CURRENT_LIST_DIR}/../..")
 include(base_config)
 list(APPEND CMAKE_MODULE_PATH "${NUGGET_LIBRARY_PATH}")
 include(Nugget)
 
-set(TARGET_NAME time_nugget_bc)
+if (NOT DEFINED ENV{TARGET_NAME} OR "$ENV{TARGET_NAME}" STREQUAL "")
+	message(FATAL_ERROR "Environment variable TARGET_NAME must be set")
+endif()
+
+set(TARGET_NAME $ENV{TARGET_NAME}_bc)
 
 # Pull required paths from environment; fail fast if missing.
 if (NOT DEFINED ENV{ALL_NUGGET_RIDS_DIR} OR "$ENV{ALL_NUGGET_RIDS_DIR}" STREQUAL "")

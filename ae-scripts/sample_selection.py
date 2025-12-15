@@ -3,6 +3,7 @@
 
 import argparse
 import json
+import os
 import random
 import sys
 from multiprocessing import Pool
@@ -148,6 +149,7 @@ def parse_args():
 	parser.add_argument("--benchmarks", "-b", nargs="+", default=["bt", "cg", "ep", "ft", "is", "lu", "mg", "sp"], help="List of NPB benchmarks to process.")
 	parser.add_argument("--num-projections", "-p", type=int, default=100, help="Number of projections for K-means clustering.")
 	parser.add_argument("--use-random-linear-projections", action="store_true", help="Use random linear projections for K-means clustering.")
+	parser.add_argument("--architecture", "-a", type=str, default=os.uname().machine, help="Target architecture for the analysis binaries. (Default: host architecture)")
 	return parser.parse_args()
 
 def main():
@@ -158,9 +160,9 @@ def main():
 	if not npb_root.is_dir():
 		raise FileNotFoundError(f"Expected nugget-protocol-NPB under {project_dir}")
 		
-	analysis_root = npb_root / "ae-experiments" / "analysis" / f"threads-{args.threads}"
-	sample_root = npb_root / "ae-experiments" / "sample-selection" / f"threads-{args.threads}"
-	markers_root = npb_root / "ae-experiments" / "create-markers" / f"threads-{args.threads}" / f"{args.grace_perc}"
+	analysis_root = npb_root / "ae-experiments" / "analysis" / f"threads-{args.threads}" / f"{args.architecture}"
+	sample_root = npb_root / "ae-experiments" / "sample-selection" / f"threads-{args.threads}" / f"{args.architecture}"
+	markers_root = npb_root / "ae-experiments" / "create-markers" / f"threads-{args.threads}" / f"{args.grace_perc}" / f"{args.architecture}"
 
 	for bench in args.benchmarks:
 		bench_name = f"{bench}_{args.size}"

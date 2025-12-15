@@ -33,17 +33,18 @@ def parse_benchmarks(text: str) -> list[str]:
 	return parts
 
 
-def build_all(npb_root: Path, size: str, benches: list[str], threads: int, grace: float):
+def build_all(npb_root: Path, size: str, benches: list[str], threads: int, grace: float, selection_architecture: str, architecture: str):
 	build_dir = npb_root / "ae-cbuild"
 	build_dir.mkdir(parents=True, exist_ok=True)
 
-	k_means_sample_root = npb_root / "ae-experiments" / "sample-selection" / f"threads-{threads}" / "k-means"
-	random_sample_root = npb_root / "ae-experiments" / "sample-selection" / f"threads-{threads}" / "random"
-	markers_root = npb_root / "ae-experiments" / "create-markers" / f"threads-{threads}" / f"{grace}"
+	k_means_sample_root = npb_root / "ae-experiments" / "sample-selection" / f"threads-{threads}" / f"{selection_architecture}" / "k-means"
+	random_sample_root = npb_root / "ae-experiments" / "sample-selection" / f"threads-{threads}" / f"{selection_architecture}" / "random"
+	markers_root = npb_root / "ae-experiments" / "create-markers" / f"threads-{threads}" / f"{grace}" / f"{selection_architecture}" 
 	bb_info_dir = npb_root / "ae-cbuild" / "bb-info-output"
-	source_bc_dir = npb_root / "ae-cbuild" / "llvm-bc"
+	source_bc_dir = npb_root / "ae-cbuild" / "llvm-bc" 
 
-	bench_env_val = " ".join(benches)
+	bench_env_val = " ".join([b.upper() for b in benches])
+	target_name = f"time_nugget_{threads}"
 
 	def cmake_env(extra: dict) -> dict:
 		base = os.environ.copy()
@@ -51,6 +52,7 @@ def build_all(npb_root: Path, size: str, benches: list[str], threads: int, grace
 			{
 				"TARGET_CLASSES": size,
 				"TARGET_BENCHMARKS": bench_env_val,
+				"TARGET_NAME": target_name
 			}
 		)
 		base.update(extra)
@@ -64,7 +66,7 @@ def build_all(npb_root: Path, size: str, benches: list[str], threads: int, grace
 			{
 				"NUGGET_PROCESS_TYPE": "npb-nugget-bc",
 				"NUGGET_CONFIG_FILE": str(
-					npb_root / "experiments" / "multi-threaded-time-nuggets" / "cmake" / "nugget-bc.cmake"
+					npb_root / "ae-cmake" / "multi-threaded-time-nuggets" / "cmake" / "nugget-bc.cmake"
 				),
 				"ALL_NUGGET_RIDS_DIR": str(k_means_sample_root),
 				"MARKER_DIR": str(markers_root),
@@ -73,7 +75,7 @@ def build_all(npb_root: Path, size: str, benches: list[str], threads: int, grace
 			}
 		),
 	)
-	run_command(["cmake", "--build", ".", "--target=time_nugget_bc"], cwd=build_dir)
+	run_command(["cmake", "--build", ".", f"--target={target_name}_bc"], cwd=build_dir)
 
 	# nugget exe
 	run_command(
@@ -83,7 +85,7 @@ def build_all(npb_root: Path, size: str, benches: list[str], threads: int, grace
 			{
 				"NUGGET_PROCESS_TYPE": "npb-nugget-exe",
 				"NUGGET_CONFIG_FILE": str(
-					npb_root / "experiments" / "multi-threaded-time-nuggets" / "cmake" / "nugget-exe.cmake"
+					npb_root / "ae-cmake" / "multi-threaded-time-nuggets" / "cmake" / "nugget-exe.cmake"
 				),
 				"ALL_NUGGET_RIDS_DIR": str(k_means_sample_root),
 				"MARKER_DIR": str(markers_root),
@@ -92,7 +94,7 @@ def build_all(npb_root: Path, size: str, benches: list[str], threads: int, grace
 			}
 		),
 	)
-	run_command(["cmake", "--build", ".", "--target=time_nugget_exe"], cwd=build_dir)
+	run_command(["cmake", "--build", ".", f"--target={target_name}_{architecture}_exe"], cwd=build_dir)
 
     # random nugget bc
 	run_command(
@@ -102,7 +104,7 @@ def build_all(npb_root: Path, size: str, benches: list[str], threads: int, grace
 			{
 				"NUGGET_PROCESS_TYPE": "npb-nugget-bc",
 				"NUGGET_CONFIG_FILE": str(
-					npb_root / "experiments" / "multi-threaded-time-nuggets" / "cmake" / "nugget-bc.cmake"
+					npb_root / "ae-cmake" / "multi-threaded-time-nuggets" / "cmake" / "nugget-bc.cmake"
 				),
 				"ALL_NUGGET_RIDS_DIR": str(random_sample_root),
 				"MARKER_DIR": str(markers_root),
@@ -111,7 +113,7 @@ def build_all(npb_root: Path, size: str, benches: list[str], threads: int, grace
 			}
 		),
 	)
-	run_command(["cmake", "--build", ".", "--target=time_nugget_bc"], cwd=build_dir)
+	run_command(["cmake", "--build", ".", f"--target={target_name}_bc"], cwd=build_dir)
 
 	# nugget exe
 	run_command(
@@ -121,7 +123,7 @@ def build_all(npb_root: Path, size: str, benches: list[str], threads: int, grace
 			{
 				"NUGGET_PROCESS_TYPE": "npb-nugget-exe",
 				"NUGGET_CONFIG_FILE": str(
-					npb_root / "experiments" / "multi-threaded-time-nuggets" / "cmake" / "nugget-exe.cmake"
+					npb_root / "ae-cmake" / "multi-threaded-time-nuggets" / "cmake" / "nugget-exe.cmake"
 				),
 				"ALL_NUGGET_RIDS_DIR": str(random_sample_root),
 				"MARKER_DIR": str(markers_root),
@@ -130,7 +132,7 @@ def build_all(npb_root: Path, size: str, benches: list[str], threads: int, grace
 			}
 		),
 	)
-	run_command(["cmake", "--build", ".", "--target=time_nugget_exe"], cwd=build_dir)
+	run_command(["cmake", "--build", ".", f"--target={target_name}_{architecture}_exe"], cwd=build_dir)
 
 	# naive bc
 	run_command(
@@ -140,7 +142,7 @@ def build_all(npb_root: Path, size: str, benches: list[str], threads: int, grace
 			{
 				"NUGGET_PROCESS_TYPE": "npb-naive-bc",
 				"NUGGET_CONFIG_FILE": str(
-					npb_root / "experiments" / "multi-threaded-time-naive" / "cmake" / "naive-bc.cmake"
+					npb_root / "ae-cmake" / "multi-threaded-time-naive" / "cmake" / "naive-bc.cmake"
 				),
 				"SOURCE_BC_FILE_PATH": str(source_bc_dir),
 			}
@@ -156,13 +158,13 @@ def build_all(npb_root: Path, size: str, benches: list[str], threads: int, grace
 			{
 				"NUGGET_PROCESS_TYPE": "npb-naive-exe",
 				"NUGGET_CONFIG_FILE": str(
-					npb_root / "experiments" / "multi-threaded-time-naive" / "cmake" / "naive-exe.cmake"
+					npb_root / "ae-cmake" / "multi-threaded-time-naive" / "cmake" / "naive-exe.cmake"
 				),
 				"BC_FILE_PATH": str(source_bc_dir),
 			}
 		),
 	)
-	run_command(["cmake", "--build", ".", "--target=time_naive_exe"], cwd=build_dir)
+	run_command(["cmake", "--build", ".", f"--target=time_naive_{architecture}_exe"], cwd=build_dir)
 
 
 def measure_binary(bin_path: Path, workdir: Path, threads: int):
@@ -184,29 +186,29 @@ def measure_binary(bin_path: Path, workdir: Path, threads: int):
 	return result
 
 
-def find_nugget_binaries(llvm_exec: Path, size: str, benches: list[str]):
+def find_nugget_binaries(llvm_exec: Path, size: str, benches: list[str], architecture: str, threads: int):
 	nuggets = []
-	for p in llvm_exec.glob(f"time_nugget_exe_*_{size}_*"):
+	target_name = f"time_nugget_{threads}"
+	for p in llvm_exec.glob(f"{target_name}_{architecture}_exe_*_{size}_*"):
 		parts = p.name.split("_")
 		if len(parts) < 6:
 			continue
-		bench = parts[3]
-		if bench.upper() not in benches:
+		bench = parts[5]
+		if bench not in benches:
 			continue
-		rid = parts[5]
+		rid = parts[7]
 		exe_path = p / p.name if p.is_dir() else p
 		nuggets.append((bench, rid, exe_path))
 	return nuggets
 
-
-def find_naive_binaries(llvm_exec: Path, size: str, benches: list[str]):
+def find_naive_binaries(llvm_exec: Path, size: str, benches: list[str], architecture: str):
 	naives = []
-	for p in llvm_exec.glob(f"time_naive_exe_*_{size}"):
+	for p in llvm_exec.glob(f"time_naive_{architecture}_exe_*_{size}"):
 		parts = p.name.split("_")
 		if len(parts) < 5:
 			continue
-		bench = parts[3]
-		if bench.upper() not in benches:
+		bench = parts[4]
+		if bench not in benches:
 			continue
 		exe_path = p / p.name if p.is_dir() else p
 		naives.append((bench, exe_path))
@@ -260,11 +262,13 @@ def main():
 	parser.add_argument(
 		"--benchmarks",
 		"-b",
-		help="Benchmarks to target, space/comma/semicolon separated (e.g., 'CG EP')",
-		default="BT CG EP FT IS MG SP LU"
+		help="Benchmarks to target, space/comma/semicolon separated (e.g., 'cg ep ft')",
+		default=["bt", "cg", "ep", "ft", "is", "lu", "mg", "sp"],
 	)
 	parser.add_argument("--threads", "-t", type=int, default=4, help="Number of threads for runs")
 	parser.add_argument("--grace-perc", type=float, default=0.98, help="Grace percentage used in markers")
+	parser.add_argument("--architecture", "-a", type=str, default=os.uname().machine, help="Target architecture for the analysis binaries. (Default: host architecture)")
+	parser.add_argument("--selection-architecture", type=str, default=os.uname().machine, help="Target architecture used during sample selection. (Default: host architecture)")
 	args = parser.parse_args()
 
 	project_dir = Path(args.project_dir).expanduser().resolve()
@@ -273,23 +277,27 @@ def main():
 		raise FileNotFoundError(f"Expected nugget-protocol-NPB under {project_dir}")
 
 	size = args.size
-	benches = parse_benchmarks(args.benchmarks)
+	benches = args.benchmarks
 	threads = args.threads
 	grace = args.grace_perc
+	architecture = args.architecture
+	selection_architecture = args.selection_architecture
 
-	build_all(npb_root, size, benches, threads, grace)
+	print(f"Building binaries for size={size}, benches={benches}, threads={threads}, grace={grace}, architecture={architecture}, selection_architecture={selection_architecture}")
+
+	build_all(npb_root, size, benches, threads, grace, selection_architecture, architecture)
 
 	llvm_exec = npb_root / "ae-cbuild" / "llvm-exec"
 	if not llvm_exec.is_dir():
 		raise FileNotFoundError(f"Expected llvm-exec at {llvm_exec}")
 
-	nugget_out_root = npb_root / "ae-experiments" / "nugget-measurement" / f"threads-{threads}" / size
-	naive_out_root = npb_root / "ae-experiments" / "naive-measurement" / f"threads-{threads}" / size
+	nugget_out_root = npb_root / "ae-experiments" / "nugget-measurement" / f"threads-{threads}" / size / architecture
+	naive_out_root = npb_root / "ae-experiments" / "naive-measurement" / f"threads-{threads}" / size / architecture
 	nugget_out_root.mkdir(parents=True, exist_ok=True)
 	naive_out_root.mkdir(parents=True, exist_ok=True)
 
-	sample_root = npb_root / "ae-experiments" / "sample-selection" / f"threads-{threads}" / "k-means"
-	random_root = npb_root / "ae-experiments" / "sample-selection" / f"threads-{threads}" / "random"
+	sample_root = npb_root / "ae-experiments" / "sample-selection" / f"threads-{threads}" / f"{selection_architecture}" / "k-means"
+	random_root = npb_root / "ae-experiments" / "sample-selection" / f"threads-{threads}" / f"{selection_architecture}" / "random"
 	bench_clusters = load_kmeans_clusters(sample_root, benches, size)
 	random_rids = load_random_regions(random_root, benches, size)
 	print(random_rids)
@@ -298,7 +306,7 @@ def main():
 
 	# Run naive binaries first to provide baselines
 	naive_times: dict[tuple[str, str], float] = {}
-	for bench, bin_path in find_naive_binaries(llvm_exec, size, benches):
+	for bench, bin_path in find_naive_binaries(llvm_exec, size, benches, architecture):
 		out_dir = naive_out_root / bench
 		duration = measure_binary(bin_path, out_dir, threads)
 		naive_times[(bench, size)] = duration
@@ -317,7 +325,7 @@ def main():
 
 	# Run nugget binaries and collect runtimes per rid
 	runtime_by_rid: dict[tuple[str, str], float] = {}
-	for bench, rid, bin_path in find_nugget_binaries(llvm_exec, size, benches):
+	for bench, rid, bin_path in find_nugget_binaries(llvm_exec, size, benches, architecture, threads):
 		out_dir = nugget_out_root / bench / rid
 		duration = measure_binary(bin_path, out_dir, threads)
 		runtime_by_rid[(bench, rid)] = duration
@@ -387,7 +395,7 @@ def main():
 		random_pred[bench] = mean_runtime * scale
 
 	# Write CSV
-	csv_path = npb_root / "ae-experiments" / "nugget-measurement" / "measurements.csv"
+	csv_path = npb_root / "ae-experiments" / "nugget-measurement" / f"threads-{threads}" / size / architecture / "measurements.csv"
 	csv_path.parent.mkdir(parents=True, exist_ok=True)
 	fieldnames = [
 		"benchmark",
@@ -407,7 +415,7 @@ def main():
 			writer.writerow(row_out)
 
 	# Write prediction error CSV for k-means and random methods
-	pred_csv_path = npb_root / "ae-experiments" / "nugget-measurement" / "prediction-error.csv"
+	pred_csv_path = npb_root / "ae-experiments" / "nugget-measurement" / f"threads-{threads}" / size / architecture / "prediction-error.csv"
 	pred_fieldnames = [
 		"benchmark",
 		"size",
