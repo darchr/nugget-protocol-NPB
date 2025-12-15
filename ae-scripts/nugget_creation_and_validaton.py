@@ -58,113 +58,134 @@ def build_all(npb_root: Path, size: str, benches: list[str], threads: int, grace
 		base.update(extra)
 		return base
 
+	bc_built = False
+	exe_built = False
 	# k-means nugget bc
-	run_command(
-		["cmake", ".."],
-		cwd=build_dir,
-		env=cmake_env(
-			{
-				"NUGGET_PROCESS_TYPE": "npb-nugget-bc",
-				"NUGGET_CONFIG_FILE": str(
-					npb_root / "ae-cmake" / "multi-threaded-time-nuggets" / "cmake" / "nugget-bc.cmake"
-				),
-				"ALL_NUGGET_RIDS_DIR": str(k_means_sample_root),
-				"MARKER_DIR": str(markers_root),
-				"BB_INFO_INPUT_DIR": str(bb_info_dir),
-				"SOURCE_BC_FILE_PATH": str(source_bc_dir),
-			}
-		),
-	)
-	run_command(["cmake", "--build", ".", f"--target={target_name}_bc"], cwd=build_dir)
+	if Path(build_dir / f"llvm-bc/{target_name}_bc").exists():
+		print(f"Skipping rebuild of existing {target_name}_bc")
+		bc_built = True
+	else:
+		run_command(
+			["cmake", ".."],
+			cwd=build_dir,
+			env=cmake_env(
+				{
+					"NUGGET_PROCESS_TYPE": "npb-nugget-bc",
+					"NUGGET_CONFIG_FILE": str(
+						npb_root / "ae-cmake" / "multi-threaded-time-nuggets" / "cmake" / "nugget-bc.cmake"
+					),
+					"ALL_NUGGET_RIDS_DIR": str(k_means_sample_root),
+					"MARKER_DIR": str(markers_root),
+					"BB_INFO_INPUT_DIR": str(bb_info_dir),
+					"SOURCE_BC_FILE_PATH": str(source_bc_dir),
+				}
+			),
+		)
+		run_command(["cmake", "--build", ".", f"--target={target_name}_bc"], cwd=build_dir)
 
-	# nugget exe
-	run_command(
-		["cmake", ".."],
-		cwd=build_dir,
-		env=cmake_env(
-			{
-				"NUGGET_PROCESS_TYPE": "npb-nugget-exe",
-				"NUGGET_CONFIG_FILE": str(
-					npb_root / "ae-cmake" / "multi-threaded-time-nuggets" / "cmake" / "nugget-exe.cmake"
-				),
-				"ALL_NUGGET_RIDS_DIR": str(k_means_sample_root),
-				"MARKER_DIR": str(markers_root),
-				"BB_INFO_INPUT_DIR": str(bb_info_dir),
-				"SOURCE_BC_FILE_PATH": str(source_bc_dir),
-			}
-		),
-	)
-	run_command(["cmake", "--build", ".", f"--target={target_name}_{architecture}_exe"], cwd=build_dir)
+	if Path(build_dir / f"llvm-exec/{target_name}_{architecture}_exe").exists():
+		print(f"Skipping rebuild of existing {target_name}_{architecture}_exe")
+		exe_built = True
+	else:
+		# nugget exe
+		run_command(
+			["cmake", ".."],
+			cwd=build_dir,
+			env=cmake_env(
+				{
+					"NUGGET_PROCESS_TYPE": "npb-nugget-exe",
+					"NUGGET_CONFIG_FILE": str(
+						npb_root / "ae-cmake" / "multi-threaded-time-nuggets" / "cmake" / "nugget-exe.cmake"
+					),
+					"ALL_NUGGET_RIDS_DIR": str(k_means_sample_root),
+					"MARKER_DIR": str(markers_root),
+					"BB_INFO_INPUT_DIR": str(bb_info_dir),
+					"SOURCE_BC_FILE_PATH": str(source_bc_dir),
+				}
+			),
+		)
+		run_command(["cmake", "--build", ".", f"--target={target_name}_{architecture}_exe"], cwd=build_dir)
+	if (bc_built):
+		print("Reusing previously built nugget bc for random nugget build")
+	else:
+		# random nugget bc
+		run_command(
+			["cmake", ".."],
+			cwd=build_dir,
+			env=cmake_env(
+				{
+					"NUGGET_PROCESS_TYPE": "npb-nugget-bc",
+					"NUGGET_CONFIG_FILE": str(
+						npb_root / "ae-cmake" / "multi-threaded-time-nuggets" / "cmake" / "nugget-bc.cmake"
+					),
+					"ALL_NUGGET_RIDS_DIR": str(random_sample_root),
+					"MARKER_DIR": str(markers_root),
+					"BB_INFO_INPUT_DIR": str(bb_info_dir),
+					"SOURCE_BC_FILE_PATH": str(source_bc_dir),
+				}
+			),
+		)
+		run_command(["cmake", "--build", ".", f"--target={target_name}_bc"], cwd=build_dir)
 
-    # random nugget bc
-	run_command(
-		["cmake", ".."],
-		cwd=build_dir,
-		env=cmake_env(
-			{
-				"NUGGET_PROCESS_TYPE": "npb-nugget-bc",
-				"NUGGET_CONFIG_FILE": str(
-					npb_root / "ae-cmake" / "multi-threaded-time-nuggets" / "cmake" / "nugget-bc.cmake"
-				),
-				"ALL_NUGGET_RIDS_DIR": str(random_sample_root),
-				"MARKER_DIR": str(markers_root),
-				"BB_INFO_INPUT_DIR": str(bb_info_dir),
-				"SOURCE_BC_FILE_PATH": str(source_bc_dir),
-			}
-		),
-	)
-	run_command(["cmake", "--build", ".", f"--target={target_name}_bc"], cwd=build_dir)
-
-	# nugget exe
-	run_command(
-		["cmake", ".."],
-		cwd=build_dir,
-		env=cmake_env(
-			{
-				"NUGGET_PROCESS_TYPE": "npb-nugget-exe",
-				"NUGGET_CONFIG_FILE": str(
-					npb_root / "ae-cmake" / "multi-threaded-time-nuggets" / "cmake" / "nugget-exe.cmake"
-				),
-				"ALL_NUGGET_RIDS_DIR": str(random_sample_root),
-				"MARKER_DIR": str(markers_root),
-				"BB_INFO_INPUT_DIR": str(bb_info_dir),
-				"SOURCE_BC_FILE_PATH": str(source_bc_dir),
-			}
-		),
-	)
-	run_command(["cmake", "--build", ".", f"--target={target_name}_{architecture}_exe"], cwd=build_dir)
+	if (exe_built):
+		print("Reusing previously built nugget exe for random nugget build")
+	else:
+		# nugget exe
+		run_command(
+			["cmake", ".."],
+			cwd=build_dir,
+			env=cmake_env(
+				{
+					"NUGGET_PROCESS_TYPE": "npb-nugget-exe",
+					"NUGGET_CONFIG_FILE": str(
+						npb_root / "ae-cmake" / "multi-threaded-time-nuggets" / "cmake" / "nugget-exe.cmake"
+					),
+					"ALL_NUGGET_RIDS_DIR": str(random_sample_root),
+					"MARKER_DIR": str(markers_root),
+					"BB_INFO_INPUT_DIR": str(bb_info_dir),
+					"SOURCE_BC_FILE_PATH": str(source_bc_dir),
+				}
+			),
+		)
+		run_command(["cmake", "--build", ".", f"--target={target_name}_{architecture}_exe"], cwd=build_dir)
 
 	# naive bc
-	run_command(
-		["cmake", ".."],
-		cwd=build_dir,
-		env=cmake_env(
-			{
-				"NUGGET_PROCESS_TYPE": "npb-naive-bc",
-				"NUGGET_CONFIG_FILE": str(
-					npb_root / "ae-cmake" / "multi-threaded-time-naive" / "cmake" / "naive-bc.cmake"
-				),
-				"SOURCE_BC_FILE_PATH": str(source_bc_dir),
-			}
-		),
-	)
-	run_command(["cmake", "--build", ".", "--target=time_naive_bc"], cwd=build_dir)
+	if Path(build_dir / f"llvm-bc/time_naive_bc").exists():
+		print("Skipping rebuild of existing time_naive_bc")
+	else:
+		run_command(
+			["cmake", ".."],
+			cwd=build_dir,
+			env=cmake_env(
+				{
+					"NUGGET_PROCESS_TYPE": "npb-naive-bc",
+					"NUGGET_CONFIG_FILE": str(
+						npb_root / "ae-cmake" / "multi-threaded-time-naive" / "cmake" / "naive-bc.cmake"
+					),
+					"SOURCE_BC_FILE_PATH": str(source_bc_dir),
+				}
+			),
+		)
+		run_command(["cmake", "--build", ".", "--target=time_naive_bc"], cwd=build_dir)
 
-	# naive exe
-	run_command(
-		["cmake", ".."],
-		cwd=build_dir,
-		env=cmake_env(
-			{
-				"NUGGET_PROCESS_TYPE": "npb-naive-exe",
-				"NUGGET_CONFIG_FILE": str(
-					npb_root / "ae-cmake" / "multi-threaded-time-naive" / "cmake" / "naive-exe.cmake"
-				),
-				"BC_FILE_PATH": str(source_bc_dir),
-			}
-		),
-	)
-	run_command(["cmake", "--build", ".", f"--target=time_naive_{architecture}_exe"], cwd=build_dir)
+	if Path(build_dir / f"llvm-exec/time_naive_{architecture}_exe").exists():
+		print(f"Skipping rebuild of existing time_naive_{architecture}_exe")
+	else:
+		# naive exe
+		run_command(
+			["cmake", ".."],
+			cwd=build_dir,
+			env=cmake_env(
+				{
+					"NUGGET_PROCESS_TYPE": "npb-naive-exe",
+					"NUGGET_CONFIG_FILE": str(
+						npb_root / "ae-cmake" / "multi-threaded-time-naive" / "cmake" / "naive-exe.cmake"
+					),
+					"BC_FILE_PATH": str(source_bc_dir),
+				}
+			),
+		)
+		run_command(["cmake", "--build", ".", f"--target=time_naive_{architecture}_exe"], cwd=build_dir)
 
 
 def measure_binary(bin_path: Path, workdir: Path, threads: int):
@@ -189,25 +210,28 @@ def measure_binary(bin_path: Path, workdir: Path, threads: int):
 def find_nugget_binaries(llvm_exec: Path, size: str, benches: list[str], architecture: str, threads: int):
 	nuggets = []
 	target_name = f"time_nugget_{threads}"
+	offset = architecture.count("_")
 	for p in llvm_exec.glob(f"{target_name}_{architecture}_exe_*_{size}_*"):
 		parts = p.name.split("_")
 		if len(parts) < 6:
 			continue
-		bench = parts[5]
+		bench = parts[5+offset]
 		if bench not in benches:
 			continue
-		rid = parts[7]
+		rid = parts[7+offset]
 		exe_path = p / p.name if p.is_dir() else p
 		nuggets.append((bench, rid, exe_path))
 	return nuggets
 
 def find_naive_binaries(llvm_exec: Path, size: str, benches: list[str], architecture: str):
 	naives = []
+	# count the '_' in the architecture to determine how many parts to skip
+	offset = architecture.count("_")
 	for p in llvm_exec.glob(f"time_naive_{architecture}_exe_*_{size}"):
 		parts = p.name.split("_")
 		if len(parts) < 5:
 			continue
-		bench = parts[4]
+		bench = parts[4+offset]
 		if bench not in benches:
 			continue
 		exe_path = p / p.name if p.is_dir() else p
